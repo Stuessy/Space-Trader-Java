@@ -29,6 +29,7 @@ public class NumericUpDown extends WinformControl
 					final JTextComponent textComponent = ((JTextComponent)e.getSource());
 					SwingUtilities.invokeLater(new Runnable()
 					{
+						@Override
 						public void run()
 						{
 							textComponent.selectAll();
@@ -53,6 +54,7 @@ public class NumericUpDown extends WinformControl
 	{
 		asJSpinner().addChangeListener(new ChangeListener()
 		{
+			@Override
 			public void stateChanged(ChangeEvent e)
 			{
 				valueChanged.handle(NumericUpDown.this, null);

@@ -4,6 +4,7 @@ import java.awt.Dialog.ModalityType;
 import java.awt.Dimension;
 
 import javax.swing.JDialog;
+import javax.swing.WindowConstants;
 
 // TODO make Closing etc work.
 public class WinformForm extends WinformPane
@@ -19,7 +20,7 @@ public class WinformForm extends WinformPane
 		// super(new WinformJPanel());
 		super(new JDialog());
 		jdialog = (JDialog)swingVersion;
-		jdialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		jdialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		panel = new WinformJPanel(this);
 		jdialog.setContentPane(panel);
 		Controls = panel;
@@ -135,7 +136,7 @@ public class WinformForm extends WinformPane
 
 	public void setControlBox(boolean controlBox)
 	{
-		jdialog.setDefaultCloseOperation(controlBox ? JDialog.DISPOSE_ON_CLOSE : JDialog.DO_NOTHING_ON_CLOSE);
+		jdialog.setDefaultCloseOperation(controlBox ? WindowConstants.DISPOSE_ON_CLOSE : WindowConstants.DO_NOTHING_ON_CLOSE);
 	}
 
 	// TODO ShowInTaskbar

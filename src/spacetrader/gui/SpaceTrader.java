@@ -599,6 +599,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		dlgSave.setInitialDirectory(Consts.SaveDirectory);
 	}
 
+	@Override
 	public void SetInGameControlsEnabled(boolean enabled)
 	{
 		mnuGameSave.setEnabled(enabled);
@@ -624,6 +625,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		}
 	}
 
+	@Override
 	public void UpdateAll()
 	{
 		dockBox.Update();
@@ -830,6 +832,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 
 	// #endregion
 
+	@Override
 	public void setGame(Game game)
 	{
 		this.game = game;
@@ -849,6 +852,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 	/**
 	 * TODO remove?
 	 */
+	@Override
 	public void UpdateStatusBar()
 	{
 		statusBar.Update();

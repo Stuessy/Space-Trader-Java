@@ -17,6 +17,7 @@ public enum SpecialResource implements SpaceTraderEnum// : int
 	Artistic, // = 11,
 	Warlike, // = 12
 	;
+	@Override
 	public int CastToInt()
 	{
 		return ordinal() - 1;

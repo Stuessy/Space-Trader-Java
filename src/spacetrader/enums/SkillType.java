@@ -7,6 +7,7 @@ public enum SkillType implements SpaceTraderEnum// : int
 	Fighter, // = 1,
 	Trader, // = 2,
 	Engineer;// = 3
+	@Override
 	public int CastToInt()
 	{
 		return ordinal() - 1;

@@ -16,30 +16,36 @@ public class OriginalGuiImplementationProvider implements ImplementationProvider
 		this.spaceTrader = spaceTrader;
 	}
 
+	@Override
 	public ImageProvider getImageProvider()
 	{
 		return new ImageProvider()
 		{
+			@Override
 			public ImageList getEquipmentImages()
 			{
 				return spaceTrader.EquipmentImages();
 			}
 
+			@Override
 			public ImageList getShipImages()
 			{
 				return spaceTrader.ShipImages();
 			}
 
+			@Override
 			public Image[] getCustomShipImages()
 			{
 				return spaceTrader.CustomShipImages();
 			}
 
+			@Override
 			public void setCustomShipImages(Image[] value)
 			{
 				spaceTrader.setCustomShipImages(value);
 			}
 
+			@Override
 			public Image[] getDirectionImages()
 			{
 				return spaceTrader.DirectionImages().getImages();
@@ -47,15 +53,18 @@ public class OriginalGuiImplementationProvider implements ImplementationProvider
 		};
 	}
 
+	@Override
 	public CheatGui getCheatGuiProvider()
 	{
 		return new CheatGui()
 		{
+			@Override
 			public void showMonsterForm()
 			{
 				(new FormMonster()).Show();
 			}
 
+			@Override
 			public void showTestForm()
 			{
 				(new FormTest()).Show();

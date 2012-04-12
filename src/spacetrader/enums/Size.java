@@ -11,6 +11,7 @@ public enum Size implements SpaceTraderEnum// : int
 	Gargantuan // = 5
 	;
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

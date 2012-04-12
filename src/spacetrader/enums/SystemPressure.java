@@ -14,5 +14,6 @@ package spacetrader.enums;
 		{
 return values()[i];
 		}			
+		@Override
 		public int CastToInt(){return ordinal();}
 	};

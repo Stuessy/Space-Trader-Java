@@ -148,6 +148,7 @@ import spacetrader.guifacade.GuiFacade;
 			this.btnTestAlert.setText("Test");
 			this.btnTestAlert.setClick(new EventHandler<Object, EventArgs>()
 {
+@Override
 public void handle(Object sender, jwinforms.EventArgs e)
 	{
 btnTestAlert_Click(sender, e);}});
@@ -234,6 +235,7 @@ btnTestAlert_Click(sender, e);}});
 			this.btnTestSpecialEvent.setText("Test");
 			this.btnTestSpecialEvent.setClick(new EventHandler<Object, EventArgs>()
 {
+@Override
 public void handle(Object sender, jwinforms.EventArgs e)
 	{
 btnTestSpecialEvent_Click(sender, e);}});

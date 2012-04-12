@@ -13,6 +13,7 @@ package spacetrader.enums;
 		Narcotics	,//					= 8,
 		Robots		;//					= 9
 		
+		@Override
 		public int CastToInt(){ return ordinal()-1;}
 		
 	};

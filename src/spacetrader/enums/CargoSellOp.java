@@ -6,6 +6,7 @@ package spacetrader.enums;
 		Dump,
 		Jettison;
 
+		@Override
 		public int CastToInt()
 		{
 return ordinal();

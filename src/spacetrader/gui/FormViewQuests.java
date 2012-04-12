@@ -118,6 +118,7 @@ public class FormViewQuests extends SpaceTraderForm
 				+ "Claim your moon at Utopia.");
 		this.lblQuests.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
 		{
+			@Override
 			public void handle(Object sender,
 					jwinforms.LinkLabelLinkClickedEventArgs e)
 			{

@@ -66,6 +66,7 @@ import spacetrader.util.Hashtable;
 		}
 
 		public int CompareTo(HighScoreRecord value){return compareTo(value);}
+		@Override
 		public int compareTo(HighScoreRecord value)
 		{
 			int							compared;

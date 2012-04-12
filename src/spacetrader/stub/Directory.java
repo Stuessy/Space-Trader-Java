@@ -30,6 +30,7 @@ public class Directory
 
 		File[] files = new File(path).listFiles(new FilenameFilter()
 		{
+			@Override
 			public boolean accept(File arg0, String filename)
 			{
 				return filename.endsWith(suffix);
@@ -43,6 +44,7 @@ public class Directory
 		}
 		List<String> names = Lisp.map(files, new Convertor<String, File>()
 		{
+			@Override
 			public String convert(File file)
 			{
 				return file.getPath();

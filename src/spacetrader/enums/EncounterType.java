@@ -37,6 +37,7 @@ public enum EncounterType implements SpaceTraderEnum// : int
 	TraderDisabled, // = 32,
 	TraderBuy, // = 33,
 	TraderSell; // = 34
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

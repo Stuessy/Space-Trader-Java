@@ -11,6 +11,7 @@ public enum TechLevel implements SpaceTraderEnum// : int
 	PostIndustrial, // = 6,
 	HiTech, // = 7,
 	Unavailable;// = 8
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

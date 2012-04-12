@@ -8,6 +8,7 @@ public enum GameEndType implements SpaceTraderEnum// : int
 	BoughtMoon, // = 2,
 	BoughtMoonGirl; // = 3
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal() - 1;

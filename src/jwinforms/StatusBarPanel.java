@@ -44,12 +44,14 @@ public class StatusBarPanel implements ISupportInitialize
 		jpanel.setMinimumSize(new Dimension(width, height));
 	}
 
+	@Override
 	public void BeginInit()
 	{
 	// TODO Auto-generated method stub
 
 	}
 
+	@Override
 	public void EndInit()
 	{
 	// TODO Auto-generated method stub

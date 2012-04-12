@@ -58,6 +58,7 @@ public enum CrewMemberId implements SpaceTraderEnum
 	Xizor, // = 52,
 	Princess, // = 53,
 	Scorpion;// = 54
+	@Override
 	public int CastToInt()
 	{
 		return ordinal() - 1;

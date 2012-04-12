@@ -52,12 +52,13 @@ public class Button extends WinformControl
 	{
 		userAction = new AbstractAction()
 		{
+			@Override
 			public void actionPerformed(ActionEvent arg0)
 			{
 				click.handle(Button.this, null);
 			}
 		};
-		userAction.putValue(AbstractAction.NAME, getText());
+		userAction.putValue(Action.NAME, getText());
 		asJButtton().setAction(userAction);
 		super.setClick(click);
 	}

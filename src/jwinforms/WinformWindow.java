@@ -8,6 +8,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 public class WinformWindow extends WinformPane
 {
@@ -27,7 +28,7 @@ public class WinformWindow extends WinformPane
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		Controls = panel;
 		frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 	}
 
 	private EventHandler<Object, CancelEventArgs> onClosing;

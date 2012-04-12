@@ -171,6 +171,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkFuel.setText("Get full fuel tanks on arrival");
 		this.chkFuel.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -186,6 +187,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkContinuousAttack.setText("Continuous attack and flight");
 		this.chkContinuousAttack.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -201,6 +203,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkAttackFleeing.setText("Continue attacking fleeing ship");
 		this.chkAttackFleeing.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -216,6 +219,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkNewspaper.setText("Always pay for newspaper");
 		this.chkNewspaper.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -231,6 +235,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkRange.setText("Show range to tracked system");
 		this.chkRange.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -246,6 +251,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkStopTracking.setText("Stop tracking on arrival");
 		this.chkStopTracking.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -261,6 +267,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkLoan.setText("Remind about loans");
 		this.chkLoan.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -276,6 +283,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkIgnoreTradersDealing.setText("Ignore dealing traders");
 		this.chkIgnoreTradersDealing.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -291,6 +299,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkReserveMoney.setText("Reserve money for warp costs");
 		this.chkReserveMoney.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -306,6 +315,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkIgnoreTraders.setText("Traders");
 		this.chkIgnoreTraders.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -321,6 +331,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkIgnorePirates.setText("Pirates");
 		this.chkIgnorePirates.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -336,6 +347,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkIgnorePolice.setText("Police");
 		this.chkIgnorePolice.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -351,6 +363,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkRepair.setText("Get full hull repairs on arrival");
 		this.chkRepair.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -376,6 +389,7 @@ public class FormOptions extends SpaceTraderForm
 		this.numEmpty.setValue(88);
 		this.numEmpty.setValueChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -392,6 +406,7 @@ public class FormOptions extends SpaceTraderForm
 		this.btnSave.setText("Save As Defaults");
 		this.btnSave.setClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				btnSave_Click(sender, e);
@@ -408,6 +423,7 @@ public class FormOptions extends SpaceTraderForm
 		this.btnLoad.setText("Load from Defaults");
 		this.btnLoad.setClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				btnLoad_Click(sender, e);
@@ -423,6 +439,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkNewspaperShow.setText("Show newspaper on arrival");
 		this.chkNewspaperShow.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);
@@ -438,6 +455,7 @@ public class FormOptions extends SpaceTraderForm
 		this.chkDisable.setText("Attempt to disable opponents when possible");
 		this.chkDisable.setCheckedChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				controlChanged(sender, e);

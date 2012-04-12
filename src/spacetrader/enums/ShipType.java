@@ -20,6 +20,7 @@ public enum ShipType implements SpaceTraderEnum
 	Custom,		// 15
 	Scorpion;	// 16
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

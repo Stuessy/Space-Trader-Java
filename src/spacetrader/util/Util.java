@@ -22,6 +22,7 @@ public class Util
 	{
 		Arrays.sort(array, new Comparator<T>()
 		{
+			@Override
 			public int compare(T o1, T o2)
 			{
 				if (o1 == o2)

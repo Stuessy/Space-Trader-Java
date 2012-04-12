@@ -15,6 +15,7 @@ public enum PoliceRecordType implements SpaceTraderEnum// : int
 	Liked, // = 8,
 	Hero; // = 9
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

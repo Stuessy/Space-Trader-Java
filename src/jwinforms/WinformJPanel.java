@@ -21,6 +21,7 @@ public class WinformJPanel extends JPanel
 
 		setFocusTraversalPolicy(new SortingFocusTraversalPolicy(new Comparator<Component>()
 		{
+			@Override
 			public int compare(Component o1, Component o2)
 			{
 				return tabOrderMap.get(o1).compareTo(tabOrderMap.get(o2));

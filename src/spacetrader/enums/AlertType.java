@@ -215,6 +215,7 @@ public enum AlertType implements SpaceTraderEnum
 	WildWontStayAboardLaser,
 	WildWontStayAboardReactor;
 
+	@Override
 	public int CastToInt()
 	{
 return ordinal();

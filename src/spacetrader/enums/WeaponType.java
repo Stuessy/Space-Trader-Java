@@ -11,6 +11,7 @@ public enum WeaponType implements SpaceTraderEnum , EquipmentSubType
 	PhotonDisruptor, // = 4,
 	QuantumDistruptor; // = 5
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

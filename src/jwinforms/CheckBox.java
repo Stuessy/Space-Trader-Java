@@ -40,6 +40,7 @@ public class CheckBox extends WinformControl
 	{
 		asJCheckBox().addChangeListener(new ChangeListener()
 		{
+			@Override
 			public void stateChanged(ChangeEvent e)
 			{
 				handler.handle(CheckBox.this, null);

@@ -6,6 +6,7 @@ public enum ShieldType implements SpaceTraderEnum , EquipmentSubType
 {
 	Energy, Reflective, Lightning;
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

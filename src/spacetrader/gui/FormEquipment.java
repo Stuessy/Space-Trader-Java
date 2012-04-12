@@ -261,6 +261,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.lstSellGadget.setTabIndex(3);
 		this.lstSellGadget.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SellClick(sender, e);
@@ -268,6 +269,7 @@ public class FormEquipment extends SpaceTraderForm
 		});
 		this.lstSellGadget.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -283,6 +285,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.lstSellShield.setTabIndex(2);
 		this.lstSellShield.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SellClick(sender, e);
@@ -290,6 +293,7 @@ public class FormEquipment extends SpaceTraderForm
 		});
 		this.lstSellShield.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -305,6 +309,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.lstSellWeapon.setTabIndex(1);
 		this.lstSellWeapon.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SellClick(sender, e);
@@ -312,6 +317,7 @@ public class FormEquipment extends SpaceTraderForm
 		});
 		this.lstSellWeapon.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -399,6 +405,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.lstBuyGadget.setTabIndex(6);
 		this.lstBuyGadget.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				BuyClick(sender, e);
@@ -406,6 +413,7 @@ public class FormEquipment extends SpaceTraderForm
 		});
 		this.lstBuyGadget.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -421,6 +429,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.lstBuyShield.setTabIndex(5);
 		this.lstBuyShield.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				BuyClick(sender, e);
@@ -428,6 +437,7 @@ public class FormEquipment extends SpaceTraderForm
 		});
 		this.lstBuyShield.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -443,6 +453,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.lstBuyWeapon.setTabIndex(4);
 		this.lstBuyWeapon.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				BuyClick(sender, e);
@@ -450,6 +461,7 @@ public class FormEquipment extends SpaceTraderForm
 		});
 		this.lstBuyWeapon.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -555,6 +567,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.btnSell.setText("Sell");
 		this.btnSell.setClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SellClick(sender, e);
@@ -571,6 +584,7 @@ public class FormEquipment extends SpaceTraderForm
 		this.btnBuy.setText("Buy");
 		this.btnBuy.setClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				BuyClick(sender, e);

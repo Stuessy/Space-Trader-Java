@@ -81,6 +81,7 @@ public class TradeItem implements Comparable<TradeItem> // : IComparable
 		_roundOff = roundOff;
 	}
 
+	@Override
 	public int compareTo(TradeItem o)
 	{
 		return CompareTo(o);

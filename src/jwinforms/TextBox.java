@@ -15,15 +15,18 @@ public class TextBox extends WinformControl
 	{
 		asJTextField().getDocument().addDocumentListener(new DocumentListener()
 		{
+			@Override
 			public void changedUpdate(DocumentEvent e)
 			{
 			}
 
+			@Override
 			public void insertUpdate(DocumentEvent e)
 			{
 				valueChanged.handle(TextBox.this, null);
 			}
 
+			@Override
 			public void removeUpdate(DocumentEvent e)
 			{
 				valueChanged.handle(TextBox.this, null);

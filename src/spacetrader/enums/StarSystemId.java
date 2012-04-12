@@ -131,6 +131,7 @@ public enum StarSystemId implements SpaceTraderEnum// : int
 	Rae, // ,//= 125,
 	Weytahn, // ,//= 126,
 	Zonama;// ,//= 127
+	@Override
 	public int CastToInt()
 	{
 		return ordinal() - 1;

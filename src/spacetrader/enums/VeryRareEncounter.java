@@ -10,6 +10,7 @@ public enum VeryRareEncounter implements SpaceTraderEnum// : int
 	BottleGood, // = 5
 		;
 	
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

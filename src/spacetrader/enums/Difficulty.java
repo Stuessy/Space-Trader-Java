@@ -4,6 +4,7 @@ public enum Difficulty implements SpaceTraderEnum// : int
 {
 	Beginner(1), Easy(1), Normal(0), Hard(-1), Impossible(-1);
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

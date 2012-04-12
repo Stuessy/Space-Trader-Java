@@ -9,6 +9,7 @@ public enum ShipyardId implements SpaceTraderEnum// : int
 	Sienar, // = 3,
 	Sorosuub;// = 4
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal() - 1;

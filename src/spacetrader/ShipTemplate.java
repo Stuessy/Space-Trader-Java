@@ -84,6 +84,7 @@ public class ShipTemplate extends STSerializableObject implements Comparable<Shi
 		_images = GetValueFromHash(hash, "_images", _images);
 	}
 
+	@Override
 	public int compareTo(ShipTemplate other)
 	{
 		if (other == null)

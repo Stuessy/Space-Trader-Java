@@ -22,6 +22,7 @@ public enum PoliticalSystemType implements SpaceTraderEnum//: int
 	Technocracy, //= 15,
 	Theocracy;//= 16
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

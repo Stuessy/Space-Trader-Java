@@ -137,6 +137,7 @@ public class FormViewPersonnel extends SpaceTraderForm
 		this.lstCrew.setTabIndex(6);
 		this.lstCrew.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				HireFire(sender, e);
@@ -144,6 +145,7 @@ public class FormViewPersonnel extends SpaceTraderForm
 		});
 		this.lstCrew.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -170,6 +172,7 @@ public class FormViewPersonnel extends SpaceTraderForm
 		this.lstForHire.setTabIndex(5);
 		this.lstForHire.setDoubleClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				HireFire(sender, e);
@@ -177,6 +180,7 @@ public class FormViewPersonnel extends SpaceTraderForm
 		});
 		this.lstForHire.setSelectedIndexChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				SelectedIndexChanged(sender, e);
@@ -213,6 +217,7 @@ public class FormViewPersonnel extends SpaceTraderForm
 		this.btnHireFire.setText("Hire");
 		this.btnHireFire.setClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				HireFire(sender, e);

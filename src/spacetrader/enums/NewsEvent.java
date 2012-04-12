@@ -42,6 +42,7 @@ public enum NewsEvent implements SpaceTraderEnum// : int
 	PrincessRescued, // = 37,
 	PrincessReturned;// = 38
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

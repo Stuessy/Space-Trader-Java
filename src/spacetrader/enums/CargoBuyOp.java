@@ -5,6 +5,7 @@ public enum CargoBuyOp implements SpaceTraderEnum
 		BuyTrader,
 		Plunder;
 
+		@Override
 		public int CastToInt()
 		{
 return ordinal();

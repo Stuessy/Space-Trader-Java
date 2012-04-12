@@ -117,6 +117,7 @@ public class FormGetLoan extends SpaceTraderForm
 		this.btnMax.setText("Max");
 		this.btnMax.setClick(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				btnMax_Click(sender, e);

@@ -57,6 +57,7 @@ public class Shield extends Equipment
 		_charge = GetValueFromHash(hash, "_charge", Integer.class);
 	}
 
+	@Override
 	public Equipment Clone()
 	{
 		Shield shield = new Shield(_type, _power, _price, _minTech, _chance);
@@ -64,6 +65,7 @@ public class Shield extends Equipment
 		return shield;
 	}
 
+	@Override
 	public Hashtable Serialize()
 	{
 		Hashtable hash = super.Serialize();
@@ -75,6 +77,7 @@ public class Shield extends Equipment
 		return hash;
 	}
 
+	@Override
 	public boolean TypeEquals(Object type)
 	{
 		try
@@ -89,6 +92,7 @@ public class Shield extends Equipment
 
 	private int Charge;
 
+	@Override
 	public String Name()
 	{
 		return Strings.ShieldNames[_type.CastToInt()];
@@ -106,6 +110,7 @@ public class Shield extends Equipment
 		return _type;
 	}
 
+	@Override
 	public EquipmentSubType SubType()
 	{
 		return Type();

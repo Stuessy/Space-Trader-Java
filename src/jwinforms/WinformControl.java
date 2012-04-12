@@ -267,12 +267,14 @@ public class WinformControl implements ISupportInitialize
 
 	}
 
+	@Override
 	public void BeginInit()
 	{
 	// TODO Auto-generated method stub
 
 	}
 
+	@Override
 	public void EndInit()
 	{
 	// TODO Auto-generated method stub

@@ -121,6 +121,7 @@ public class FormNewCommander extends SpaceTraderForm
 		this.txtName.setText("");
 		this.txtName.setTextChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				txtName_TextChanged(sender, e);
@@ -212,6 +213,7 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numPilot.setValue(1);
 		this.numPilot.setEnter(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueEnter(sender, e);
@@ -219,6 +221,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numPilot.setValueChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);
@@ -226,6 +229,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numPilot.setLeave(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);
@@ -244,6 +248,7 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numFighter.setValue(1);
 		this.numFighter.setEnter(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueEnter(sender, e);
@@ -251,6 +256,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numFighter.setValueChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);
@@ -258,6 +264,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numFighter.setLeave(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);
@@ -276,6 +283,7 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numTrader.setValue(1);
 		this.numTrader.setEnter(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueEnter(sender, e);
@@ -283,6 +291,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numTrader.setValueChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);
@@ -290,6 +299,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numTrader.setLeave(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);
@@ -308,6 +318,7 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numEngineer.setValue(1);
 		this.numEngineer.setEnter(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueEnter(sender, e);
@@ -315,6 +326,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numEngineer.setValueChanged(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);
@@ -322,6 +334,7 @@ public class FormNewCommander extends SpaceTraderForm
 		});
 		this.numEngineer.setLeave(new EventHandler<Object, EventArgs>()
 		{
+			@Override
 			public void handle(Object sender, jwinforms.EventArgs e)
 			{
 				num_ValueChanged(sender, e);

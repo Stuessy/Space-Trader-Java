@@ -72,7 +72,7 @@ public class Font extends java.awt.Font
 		if (stream == null)
 			throw new IOException("Resource not found: " + name);
 
-		java.awt.Font font = java.awt.Font.createFont(Font.TRUETYPE_FONT, stream);
+		java.awt.Font font = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT, stream);
 		GraphicsEnvironment.getLocalGraphicsEnvironment().registerFont(font);
 		return font;
 	}

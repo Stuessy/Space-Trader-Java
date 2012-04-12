@@ -14,6 +14,7 @@ public enum ReputationType implements SpaceTraderEnum// : int
 	Deadly, // = 7,
 	Elite;// = 8
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();

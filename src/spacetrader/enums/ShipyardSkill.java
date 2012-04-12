@@ -8,6 +8,7 @@ public enum ShipyardSkill implements SpaceTraderEnum// : int
 	ShieldSlotUnits, // = 3, // Shield Slots take up 2 fewer units
 	WeaponSlotUnits;// = 4 // Weapon Slots take up 2 fewer units
 
+	@Override
 	public int CastToInt()
 	{
 		return ordinal();
