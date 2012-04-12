@@ -83,13 +83,13 @@ public class FormAbout extends jwinforms.WinformForm
 		this.lblTitle.setName("lblTitle");
 		this.lblTitle.setSize(new Size(187, 13));
 		this.lblTitle.setTabIndex(33);
-		this.lblTitle.setText("Space Trader for Windows 2.01");
+		this.lblTitle.setText("Java Space Trader");
 		// 
 		// lblAbout
 		// 
 		this.lblAbout.setLocation(new Point(172, 32));
 		this.lblAbout.setName("lblAbout");
-		this.lblAbout.setSize(new Size(272, 160));
+		this.lblAbout.setSize(new Size(272, 190));
 		this.lblAbout.setTabIndex(34);
 		this.lblAbout.setText(resources.GetString("lblAbout.Text"));
 		// 
@@ -106,7 +106,7 @@ public class FormAbout extends jwinforms.WinformForm
 		// 
 		this.setAutoScaleBaseSize(new Size(5, 13));
 		this.setCancelButton(this.btnClose);
-		this.setClientSize(new Size(446, 191));
+		this.setClientSize(new Size(446, 250));
 		this.Controls.add(this.picLogo);
 		this.Controls.add(this.lblAbout);
 		this.Controls.add(this.lblTitle);
