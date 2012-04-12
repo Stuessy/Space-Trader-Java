@@ -25,7 +25,24 @@
 package spacetrader;
 
 import jwinforms.Rectangle;
-import spacetrader.enums.*;
+import spacetrader.enums.Activity;
+import spacetrader.enums.CrewMemberId;
+import spacetrader.enums.GadgetType;
+import spacetrader.enums.PoliceRecordType;
+import spacetrader.enums.PoliticalSystemType;
+import spacetrader.enums.ReputationType;
+import spacetrader.enums.ShieldType;
+import spacetrader.enums.ShipType;
+import spacetrader.enums.ShipyardId;
+import spacetrader.enums.ShipyardSkill;
+import spacetrader.enums.Size;
+import spacetrader.enums.SkillType;
+import spacetrader.enums.SpecialEventType;
+import spacetrader.enums.SpecialResource;
+import spacetrader.enums.SystemPressure;
+import spacetrader.enums.TechLevel;
+import spacetrader.enums.TradeItemType;
+import spacetrader.enums.WeaponType;
 import spacetrader.util.Environment;
 import util.Path;
 

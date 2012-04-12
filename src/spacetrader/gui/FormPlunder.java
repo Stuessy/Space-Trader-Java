@@ -28,7 +28,13 @@
 // using System.Windows.Forms;
 package spacetrader.gui;
 
-import jwinforms.*;
+import jwinforms.Button;
+import jwinforms.Container;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
 import spacetrader.Game;
 import spacetrader.Ship;
 import spacetrader.guifacade.Facaded;

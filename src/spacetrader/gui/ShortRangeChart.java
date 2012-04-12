@@ -3,8 +3,20 @@ package spacetrader.gui;
 import java.awt.Color;
 import java.awt.Point;
 
-import jwinforms.*;
-import spacetrader.*;
+import jwinforms.Brush;
+import jwinforms.Font;
+import jwinforms.MouseButtons;
+import jwinforms.MouseEventArgs;
+import jwinforms.PaintEventArgs;
+import jwinforms.Pen;
+import jwinforms.SizeF;
+import jwinforms.SolidBrush;
+import spacetrader.Commander;
+import spacetrader.Consts;
+import spacetrader.Functions;
+import spacetrader.StarSystem;
+import spacetrader.Strings;
+import spacetrader.SystemTracker;
 import spacetrader.enums.StarSystemId;
 
 public class ShortRangeChart extends jwinforms.GroupBox

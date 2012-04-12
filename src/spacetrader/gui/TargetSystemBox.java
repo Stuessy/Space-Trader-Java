@@ -4,10 +4,13 @@ import java.awt.Point;
 
 import jwinforms.EventArgs;
 import jwinforms.EventHandler;
-import jwinforms.Font;
-import jwinforms.FontStyle;
-import jwinforms.GraphicsUnit;
-import spacetrader.*;
+import spacetrader.Commander;
+import spacetrader.Functions;
+import spacetrader.GameController;
+import spacetrader.GameEndException;
+import spacetrader.StarSystem;
+import spacetrader.Strings;
+import spacetrader.SystemTracker;
 
 public class TargetSystemBox extends jwinforms.GroupBox
 {

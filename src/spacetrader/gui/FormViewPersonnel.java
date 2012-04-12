@@ -24,9 +24,18 @@
 // using System.Windows.Forms;
 package spacetrader.gui;
 
-import jwinforms.*;
-import spacetrader.*;
-import spacetrader.enums.*;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.ListBox;
+import spacetrader.CrewMember;
+import spacetrader.Functions;
+import spacetrader.Game;
+import spacetrader.Strings;
+import spacetrader.enums.AlertType;
+import spacetrader.enums.CrewMemberId;
 import spacetrader.guifacade.GuiFacade;
 
 public class FormViewPersonnel extends SpaceTraderForm

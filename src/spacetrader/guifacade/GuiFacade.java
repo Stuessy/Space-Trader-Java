@@ -2,11 +2,16 @@ package spacetrader.guifacade;
 
 import jwinforms.DialogResult;
 import jwinforms.WinformPane;
-import spacetrader.gui.*;
 import spacetrader.enums.AlertType;
 import spacetrader.enums.CargoBuyOp;
 import spacetrader.enums.CargoSellOp;
 import spacetrader.enums.EncounterResult;
+import spacetrader.gui.FormAlert;
+import spacetrader.gui.FormCargoBuy;
+import spacetrader.gui.FormCargoSell;
+import spacetrader.gui.FormEncounter;
+import spacetrader.gui.FormJettison;
+import spacetrader.gui.FormPlunder;
 
 /**
  * Ment to be the connecting link between the game engien and the GUI. Will help later

@@ -3,8 +3,18 @@ package spacetrader.gui;
 import java.awt.Color;
 import java.awt.Point;
 
-import jwinforms.*;
-import spacetrader.*;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import spacetrader.Commander;
+import spacetrader.CrewMember;
+import spacetrader.CurrentSystemMgr;
+import spacetrader.Functions;
+import spacetrader.GameController;
+import spacetrader.GameEndException;
+import spacetrader.SpecialEvent;
+import spacetrader.StarSystem;
+import spacetrader.Strings;
 import spacetrader.enums.AlertType;
 import spacetrader.guifacade.GuiFacade;
 

@@ -25,7 +25,13 @@
 //using System;
 package spacetrader;
 
-import spacetrader.enums.*;
+import spacetrader.enums.Activity;
+import spacetrader.enums.Difficulty;
+import spacetrader.enums.OpponentType;
+import spacetrader.enums.PoliticalSystemType;
+import spacetrader.enums.ShipType;
+import spacetrader.enums.TechLevel;
+import spacetrader.enums.TradeItemType;
 
 public class PoliticalSystem
 {

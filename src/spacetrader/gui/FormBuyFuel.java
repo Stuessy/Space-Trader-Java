@@ -31,8 +31,11 @@ package spacetrader.gui;
 
 import java.util.Arrays;
 
-import jwinforms.*;
-
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormStartPosition;
+import jwinforms.ISupportInitialize;
 import spacetrader.Commander;
 import spacetrader.Game;
 

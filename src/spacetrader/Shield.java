@@ -27,8 +27,11 @@
 package spacetrader;
 
 
-import spacetrader.enums.*;
-import spacetrader.util.*;
+import spacetrader.enums.ShieldType;
+import spacetrader.enums.TechLevel;
+import spacetrader.util.EquipmentSubType;
+import spacetrader.util.Hashtable;
+import spacetrader.util.Log;
 
 public class Shield extends Equipment
 {

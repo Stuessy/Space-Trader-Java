@@ -25,7 +25,16 @@
 
 package spacetrader.gui;import java.awt.Color;
 
-import jwinforms.*;
+import jwinforms.Button;
+import jwinforms.Container;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormStartPosition;
+import jwinforms.IContainer;
+import jwinforms.PaintEventArgs;
+import jwinforms.PictureBox;
+import jwinforms.ResourceManager;
+import jwinforms.SystemColors;
 import spacetrader.Consts;
 import spacetrader.Functions;
 import spacetrader.Game;

@@ -4,7 +4,8 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import jwinforms.*;
+import jwinforms.DialogResult;
+import jwinforms.WinformForm;
 
 
 public class Launcher

@@ -34,8 +34,12 @@ import java.util.Arrays;
 
 import javax.swing.UnsupportedLookAndFeelException;
 
-import jwinforms.*;
-
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.FormStartPosition;
+import jwinforms.ISupportInitialize;
+import jwinforms.Size;
+import jwinforms.WinformControl;
 import spacetrader.Commander;
 import spacetrader.Game;
 

@@ -29,7 +29,12 @@ import java.awt.Point;
 
 import javax.swing.UnsupportedLookAndFeelException;
 
-import jwinforms.*;
+import jwinforms.ComponentResourceManager;
+import jwinforms.DialogResult;
+import jwinforms.FormStartPosition;
+import jwinforms.ISupportInitialize;
+import jwinforms.Image;
+import jwinforms.Size;
 
 
 public class FormAbout extends jwinforms.WinformForm

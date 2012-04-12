@@ -28,9 +28,13 @@
 package spacetrader;
 
 import jwinforms.Image;
-import spacetrader.util.*;
-import spacetrader.enums.*;
+import spacetrader.enums.Activity;
+import spacetrader.enums.EquipmentType;
+import spacetrader.enums.ShipType;
+import spacetrader.enums.Size;
+import spacetrader.enums.TechLevel;
 import spacetrader.guifacade.GuiEngine;
+import spacetrader.util.Hashtable;
 
 public class ShipSpec extends STSerializableObject
 {

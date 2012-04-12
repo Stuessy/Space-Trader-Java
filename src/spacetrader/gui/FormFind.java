@@ -30,7 +30,6 @@
 package spacetrader.gui;
 import jwinforms.DialogResult;
 import jwinforms.FormStartPosition;
-import jwinforms.WinformForm;
 
 public class FormFind extends SpaceTraderForm
 {

@@ -25,8 +25,20 @@
 
 package spacetrader.gui;
 
-import jwinforms.*;
-import spacetrader.*;
+import jwinforms.ContentAlignment;
+import jwinforms.DialogResult;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.LinkLabel;
+import jwinforms.LinkLabelLinkClickedEventArgs;
+import spacetrader.Consts;
+import spacetrader.CrewMember;
+import spacetrader.Functions;
+import spacetrader.Game;
+import spacetrader.SomeStringsForCheatSwitch;
+import spacetrader.StarSystem;
+import spacetrader.Strings;
 import spacetrader.enums.ShipyardId;
 import spacetrader.stub.ArrayList;
 import spacetrader.util.CheatCode;

@@ -29,7 +29,12 @@
 package spacetrader;
 
 import jwinforms.DialogResult;
-import spacetrader.enums.*;
+import spacetrader.enums.AlertType;
+import spacetrader.enums.CrewMemberId;
+import spacetrader.enums.GadgetType;
+import spacetrader.enums.ShieldType;
+import spacetrader.enums.ShipType;
+import spacetrader.enums.WeaponType;
 import spacetrader.guifacade.GuiFacade;
 import spacetrader.util.Hashtable;
 

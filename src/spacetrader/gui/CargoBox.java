@@ -23,8 +23,19 @@ package spacetrader.gui;
 import java.awt.Color;
 import java.awt.Point;
 
-import jwinforms.*;
-import spacetrader.*;
+import jwinforms.Button;
+import jwinforms.ContentAlignment;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.Font;
+import jwinforms.Label;
+import spacetrader.Commander;
+import spacetrader.Consts;
+import spacetrader.Functions;
+import spacetrader.GameController;
+import spacetrader.SpaceTraderGame;
+import spacetrader.StarSystem;
+import spacetrader.Strings;
 
 public class CargoBox extends jwinforms.GroupBox
 {

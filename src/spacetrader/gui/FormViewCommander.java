@@ -31,9 +31,17 @@ package spacetrader.gui;
 
 import java.util.Arrays;
 
-import jwinforms.*;
-
-import spacetrader.*;
+import jwinforms.ContentAlignment;
+import jwinforms.DialogResult;
+import jwinforms.FormStartPosition;
+import jwinforms.WinformControl;
+import spacetrader.Commander;
+import spacetrader.Consts;
+import spacetrader.Functions;
+import spacetrader.Game;
+import spacetrader.PoliceRecord;
+import spacetrader.Reputation;
+import spacetrader.Strings;
 
 public class FormViewCommander extends SpaceTraderForm
 {

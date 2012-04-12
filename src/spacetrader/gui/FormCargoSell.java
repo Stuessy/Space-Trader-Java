@@ -29,9 +29,19 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
-import jwinforms.*;
-import spacetrader.*;
-import spacetrader.enums.*;
+import jwinforms.Container;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.ISupportInitialize;
+import spacetrader.Commander;
+import spacetrader.Consts;
+import spacetrader.Functions;
+import spacetrader.Game;
+import spacetrader.Strings;
+import spacetrader.enums.CargoSellOp;
 import spacetrader.guifacade.Facaded;
 
 @Facaded

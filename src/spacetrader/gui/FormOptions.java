@@ -29,8 +29,17 @@
 //using System.Windows.Forms;
 package spacetrader.gui;import java.awt.Point;
 
-import jwinforms.*;
-
+import jwinforms.Button;
+import jwinforms.CheckBox;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FlatStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.ISupportInitialize;
+import jwinforms.Label;
+import jwinforms.NumericUpDown;
+import jwinforms.Size;
 import spacetrader.Game;
 import spacetrader.GameOptions;
 import spacetrader.enums.AlertType;

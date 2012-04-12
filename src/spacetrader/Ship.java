@@ -26,7 +26,16 @@
 //using System.Collections;
 package spacetrader;
 
-import spacetrader.enums.*;
+import spacetrader.enums.CrewMemberId;
+import spacetrader.enums.Difficulty;
+import spacetrader.enums.EquipmentType;
+import spacetrader.enums.GadgetType;
+import spacetrader.enums.OpponentType;
+import spacetrader.enums.ShieldType;
+import spacetrader.enums.ShipType;
+import spacetrader.enums.SkillType;
+import spacetrader.enums.StarSystemId;
+import spacetrader.enums.WeaponType;
 import spacetrader.stub.ArrayList;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Util;

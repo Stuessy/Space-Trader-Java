@@ -19,7 +19,15 @@
  ******************************************************************************/
 package spacetrader.gui;
 
-import jwinforms.*;
+import jwinforms.Container;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormStartPosition;
+import jwinforms.Graphics;
+import jwinforms.IContainer;
+import jwinforms.ResourceManager;
+import jwinforms.SizeF;
 import spacetrader.Functions;
 import spacetrader.Game;
 import spacetrader.Strings;

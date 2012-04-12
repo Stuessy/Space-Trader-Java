@@ -29,10 +29,16 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
-import java.util.*;
+import java.util.Arrays;
 
-import jwinforms.*;
-import spacetrader.enums.*;
+import jwinforms.ContentAlignment;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormStartPosition;
+import jwinforms.ISupportInitialize;
+import jwinforms.NumericUpDown;
+import spacetrader.enums.Difficulty;
 
 public class FormNewCommander extends SpaceTraderForm
 {

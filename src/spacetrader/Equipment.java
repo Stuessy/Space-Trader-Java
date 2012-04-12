@@ -20,9 +20,11 @@
 package spacetrader;
 
 import jwinforms.Image;
-import spacetrader.util.*;
-import spacetrader.enums.*;
+import spacetrader.enums.EquipmentType;
+import spacetrader.enums.TechLevel;
 import spacetrader.guifacade.GuiEngine;
+import spacetrader.util.EquipmentSubType;
+import spacetrader.util.Hashtable;
 
 public abstract class Equipment extends STSerializableObject implements Cloneable
 {

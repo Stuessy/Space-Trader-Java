@@ -28,10 +28,19 @@
 //using System.ComponentModel;
 //using System.Windows.Forms;
 
-package spacetrader.gui;import java.util.*;
+package spacetrader.gui;import java.util.Arrays;
 
-import jwinforms.*;
-import spacetrader.*;import spacetrader.enums.*;
+import jwinforms.Container;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.WinformControl;
+import spacetrader.Consts;
+import spacetrader.SpecialEvent;
+import spacetrader.enums.AlertType;
+import spacetrader.enums.SpecialEventType;
 import spacetrader.guifacade.GuiFacade;
 	public class FormTest extends SpaceTraderForm
 	{

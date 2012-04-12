@@ -31,8 +31,12 @@ package spacetrader.gui;
 
 import java.util.Arrays;
 
-import jwinforms.*;
-
+import jwinforms.Container;
+import jwinforms.DialogResult;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.LinkLabelLinkClickedEventArgs;
 import spacetrader.Consts;
 import spacetrader.Functions;
 import spacetrader.Game;
@@ -40,7 +44,7 @@ import spacetrader.SpecialEvent;
 import spacetrader.Strings;
 import spacetrader.enums.CrewMemberId;
 import spacetrader.enums.SpecialEventType;
-import spacetrader.stub.*;
+import spacetrader.stub.ArrayList;
 import spacetrader.util.Util;
 
 @SuppressWarnings("unchecked")

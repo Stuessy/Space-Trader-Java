@@ -30,8 +30,22 @@
 
 package spacetrader.gui;import java.util.Arrays;
 
-import jwinforms.*;
-import spacetrader.*;
+import jwinforms.Button;
+import jwinforms.Container;
+import jwinforms.ContentAlignment;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.Label;
+import jwinforms.WinformControl;
+import spacetrader.Consts;
+import spacetrader.Functions;
+import spacetrader.Game;
+import spacetrader.ShipSpec;
+import spacetrader.SpecialEvent;
+import spacetrader.Strings;
 import spacetrader.enums.AlertType;
 import spacetrader.guifacade.GuiFacade;
 	public class FormShipList extends SpaceTraderForm

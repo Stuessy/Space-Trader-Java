@@ -28,8 +28,16 @@ package spacetrader;
 
 import java.util.ArrayList;
 
-import spacetrader.util.*;
-import spacetrader.enums.*;
+import spacetrader.enums.PoliticalSystemType;
+import spacetrader.enums.ShipyardId;
+import spacetrader.enums.Size;
+import spacetrader.enums.SpecialEventType;
+import spacetrader.enums.SpecialResource;
+import spacetrader.enums.StarSystemId;
+import spacetrader.enums.SystemPressure;
+import spacetrader.enums.TechLevel;
+import spacetrader.enums.TradeItemType;
+import spacetrader.util.Hashtable;
 
 @SuppressWarnings("unchecked")
 public class StarSystem extends STSerializableObject

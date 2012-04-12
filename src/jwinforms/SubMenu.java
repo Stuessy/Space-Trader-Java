@@ -1,6 +1,6 @@
 package jwinforms;
 
-import javax.swing.*;
+import javax.swing.JMenu;
 
 public class SubMenu extends MenuItem
 {

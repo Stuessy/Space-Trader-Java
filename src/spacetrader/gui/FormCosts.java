@@ -27,7 +27,10 @@
 //using System.Collections;
 //using System.ComponentModel;
 //using System.Windows.Forms;
-package spacetrader.gui;import jwinforms.*;
+package spacetrader.gui;import jwinforms.Container;
+import jwinforms.ContentAlignment;
+import jwinforms.DialogResult;
+import jwinforms.FormStartPosition;
 import spacetrader.Functions;
 import spacetrader.Game;
 

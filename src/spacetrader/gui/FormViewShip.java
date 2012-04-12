@@ -24,13 +24,22 @@
 // using System.Windows.Forms;
 package spacetrader.gui;
 
-import java.util.*;
+import java.util.Arrays;
 
-import jwinforms.*;
+import jwinforms.Container;
+import jwinforms.DialogResult;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
+import jwinforms.WinformControl;
+import spacetrader.Consts;
+import spacetrader.Functions;
+import spacetrader.Game;
+import spacetrader.Ship;
+import spacetrader.SpecialEvent;
+import spacetrader.Strings;
+import spacetrader.enums.GadgetType;
 import spacetrader.stub.ArrayList;
-import spacetrader.util.*;
-import spacetrader.*;
-import spacetrader.enums.*;
+import spacetrader.util.Util;
 
 
 @SuppressWarnings("unchecked")

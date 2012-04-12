@@ -1,7 +1,7 @@
 package jwinforms;
 
-import java.awt.Dimension;
 import java.awt.Dialog.ModalityType;
+import java.awt.Dimension;
 
 import javax.swing.JDialog;
 

@@ -25,7 +25,14 @@ import java.awt.Point;
 
 import javax.swing.UIManager;
 
-import jwinforms.*;
+import jwinforms.CancelEventArgs;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormStartPosition;
+import jwinforms.Icon;
+import jwinforms.Image;
+import jwinforms.ImageList;
 import spacetrader.Commander;
 import spacetrader.Consts;
 import spacetrader.Functions;
@@ -34,8 +41,8 @@ import spacetrader.GameController;
 import spacetrader.enums.AlertType;
 import spacetrader.enums.GameEndType;
 import spacetrader.enums.ShipType;
-import spacetrader.guifacade.GuiFacade;
 import spacetrader.guifacade.GuiEngine;
+import spacetrader.guifacade.GuiFacade;
 import spacetrader.guifacade.MainWindow;
 import spacetrader.stub.Directory;
 import spacetrader.stub.RegistryKey;

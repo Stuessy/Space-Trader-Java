@@ -26,8 +26,9 @@
 //using System.Collections;
 
 package spacetrader;
-import spacetrader.util.*;
-import spacetrader.enums.*;
+import spacetrader.enums.Difficulty;
+import spacetrader.enums.GameEndType;
+import spacetrader.util.Hashtable;
 	public class HighScoreRecord extends STSerializableObject implements Comparable<HighScoreRecord>// TODO implements Comparable
 	{
 		//#region Member Declarations

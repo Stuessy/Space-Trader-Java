@@ -1,6 +1,6 @@
 package jwinforms;
 
-import javax.swing.*;
+import javax.swing.JMenuBar;
 
 public class MainMenu extends WinformControl
 {

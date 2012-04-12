@@ -24,9 +24,13 @@ package spacetrader;
 // import java.util.ArrayList;
 import java.util.Arrays;
 
+import spacetrader.enums.CrewMemberId;
+import spacetrader.enums.Difficulty;
+import spacetrader.enums.SkillType;
+import spacetrader.enums.StarSystemId;
 import spacetrader.stub.ArrayList;
-import spacetrader.util.*;
-import spacetrader.enums.*;
+import spacetrader.util.Hashtable;
+import spacetrader.util.Util;
 
 @SuppressWarnings("unchecked")
 public class CrewMember extends STSerializableObject

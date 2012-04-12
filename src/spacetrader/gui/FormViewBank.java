@@ -30,7 +30,13 @@
 
 package spacetrader.gui;import java.util.Arrays;
 
-import jwinforms.*;
+import jwinforms.Container;
+import jwinforms.ContentAlignment;
+import jwinforms.DialogResult;
+import jwinforms.EventArgs;
+import jwinforms.EventHandler;
+import jwinforms.FormBorderStyle;
+import jwinforms.FormStartPosition;
 import spacetrader.Commander;
 import spacetrader.Consts;
 import spacetrader.Functions;
