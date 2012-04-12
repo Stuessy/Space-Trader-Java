@@ -6,67 +6,55 @@ import spacetrader.guifacade.GuiEngine.CheatGui;
 import spacetrader.guifacade.GuiEngine.ImageProvider;
 import spacetrader.guifacade.GuiEngine.ImplementationProvider;
 
-public class OriginalGuiImplementationProvider implements ImplementationProvider
-{
+public class OriginalGuiImplementationProvider implements
+		ImplementationProvider {
 	private final SpaceTrader spaceTrader;
 
-	public OriginalGuiImplementationProvider(SpaceTrader spaceTrader)
-	{
+	public OriginalGuiImplementationProvider(SpaceTrader spaceTrader) {
 		super();
 		this.spaceTrader = spaceTrader;
 	}
 
 	@Override
-	public ImageProvider getImageProvider()
-	{
-		return new ImageProvider()
-		{
+	public ImageProvider getImageProvider() {
+		return new ImageProvider() {
 			@Override
-			public ImageList getEquipmentImages()
-			{
+			public ImageList getEquipmentImages() {
 				return spaceTrader.EquipmentImages();
 			}
 
 			@Override
-			public ImageList getShipImages()
-			{
+			public ImageList getShipImages() {
 				return spaceTrader.ShipImages();
 			}
 
 			@Override
-			public Image[] getCustomShipImages()
-			{
+			public Image[] getCustomShipImages() {
 				return spaceTrader.CustomShipImages();
 			}
 
 			@Override
-			public void setCustomShipImages(Image[] value)
-			{
+			public void setCustomShipImages(Image[] value) {
 				spaceTrader.setCustomShipImages(value);
 			}
 
 			@Override
-			public Image[] getDirectionImages()
-			{
+			public Image[] getDirectionImages() {
 				return spaceTrader.DirectionImages().getImages();
 			}
 		};
 	}
 
 	@Override
-	public CheatGui getCheatGuiProvider()
-	{
-		return new CheatGui()
-		{
+	public CheatGui getCheatGuiProvider() {
+		return new CheatGui() {
 			@Override
-			public void showMonsterForm()
-			{
+			public void showMonsterForm() {
 				(new FormMonster()).Show();
 			}
 
 			@Override
-			public void showTestForm()
-			{
+			public void showTestForm() {
 				(new FormTest()).Show();
 			}
 		};

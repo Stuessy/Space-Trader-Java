@@ -37,13 +37,11 @@ import spacetrader.SpaceTraderGame;
 import spacetrader.StarSystem;
 import spacetrader.Strings;
 
-public class CargoBox extends jwinforms.GroupBox
-{
+public class CargoBox extends jwinforms.GroupBox {
 	private SpaceTraderGame game = null;
 	private GameController controller = null;
 
-	void setGame(SpaceTraderGame game, GameController controller)
-	{
+	void setGame(SpaceTraderGame game, GameController controller) {
 		this.game = game;
 		this.controller = controller;
 	}
@@ -178,45 +176,53 @@ public class CargoBox extends jwinforms.GroupBox
 	private Button[] btnBuyQty;
 	private Button[] btnBuyMax;
 
+	void FinishInit() {
+		lblSellPrice = new Label[] { lblSellPrice0, lblSellPrice1,
+				lblSellPrice2, lblSellPrice3, lblSellPrice4, lblSellPrice5,
+				lblSellPrice6, lblSellPrice7, lblSellPrice8, lblSellPrice9 };
 
-	void FinishInit()
-	{
-		lblSellPrice = new Label[] { lblSellPrice0, lblSellPrice1, lblSellPrice2, lblSellPrice3, lblSellPrice4,
-				lblSellPrice5, lblSellPrice6, lblSellPrice7, lblSellPrice8, lblSellPrice9 };
+		lblBuyPrice = new Label[] { lblBuyPrice0, lblBuyPrice1, lblBuyPrice2,
+				lblBuyPrice3, lblBuyPrice4, lblBuyPrice5, lblBuyPrice6,
+				lblBuyPrice7, lblBuyPrice8, lblBuyPrice9 };
 
-		lblBuyPrice = new Label[] { lblBuyPrice0, lblBuyPrice1, lblBuyPrice2, lblBuyPrice3, lblBuyPrice4, lblBuyPrice5,
-				lblBuyPrice6, lblBuyPrice7, lblBuyPrice8, lblBuyPrice9 };
+		lblTargetPrice = new Label[] { lblTargetPrice0, lblTargetPrice1,
+				lblTargetPrice2, lblTargetPrice3, lblTargetPrice4,
+				lblTargetPrice5, lblTargetPrice6, lblTargetPrice7,
+				lblTargetPrice8, lblTargetPrice9 };
 
-		lblTargetPrice = new Label[] { lblTargetPrice0, lblTargetPrice1, lblTargetPrice2, lblTargetPrice3,
-				lblTargetPrice4, lblTargetPrice5, lblTargetPrice6, lblTargetPrice7, lblTargetPrice8, lblTargetPrice9 };
+		lblTargetDiff = new Label[] { lblTargetDiff0, lblTargetDiff1,
+				lblTargetDiff2, lblTargetDiff3, lblTargetDiff4, lblTargetDiff5,
+				lblTargetDiff6, lblTargetDiff7, lblTargetDiff8, lblTargetDiff9 };
 
-		lblTargetDiff = new Label[] { lblTargetDiff0, lblTargetDiff1, lblTargetDiff2, lblTargetDiff3, lblTargetDiff4,
-				lblTargetDiff5, lblTargetDiff6, lblTargetDiff7, lblTargetDiff8, lblTargetDiff9 };
+		lblTargetPct = new Label[] { lblTargetPct0, lblTargetPct1,
+				lblTargetPct2, lblTargetPct3, lblTargetPct4, lblTargetPct5,
+				lblTargetPct6, lblTargetPct7, lblTargetPct8, lblTargetPct9 };
 
-		lblTargetPct = new Label[] { lblTargetPct0, lblTargetPct1, lblTargetPct2, lblTargetPct3, lblTargetPct4,
-				lblTargetPct5, lblTargetPct6, lblTargetPct7, lblTargetPct8, lblTargetPct9 };
+		btnSellQty = new Button[] { btnSellQty0, btnSellQty1, btnSellQty2,
+				btnSellQty3, btnSellQty4, btnSellQty5, btnSellQty6,
+				btnSellQty7, btnSellQty8, btnSellQty9 };
 
-		btnSellQty = new Button[] { btnSellQty0, btnSellQty1, btnSellQty2, btnSellQty3, btnSellQty4, btnSellQty5,
-				btnSellQty6, btnSellQty7, btnSellQty8, btnSellQty9 };
+		btnSellAll = new Button[] { btnSellAll0, btnSellAll1, btnSellAll2,
+				btnSellAll3, btnSellAll4, btnSellAll5, btnSellAll6,
+				btnSellAll7, btnSellAll8, btnSellAll9 };
 
-		btnSellAll = new Button[] { btnSellAll0, btnSellAll1, btnSellAll2, btnSellAll3, btnSellAll4, btnSellAll5,
-				btnSellAll6, btnSellAll7, btnSellAll8, btnSellAll9 };
+		btnBuyQty = new Button[] { btnBuyQty0, btnBuyQty1, btnBuyQty2,
+				btnBuyQty3, btnBuyQty4, btnBuyQty5, btnBuyQty6, btnBuyQty7,
+				btnBuyQty8, btnBuyQty9 };
 
-		btnBuyQty = new Button[] { btnBuyQty0, btnBuyQty1, btnBuyQty2, btnBuyQty3, btnBuyQty4, btnBuyQty5, btnBuyQty6,
-				btnBuyQty7, btnBuyQty8, btnBuyQty9 };
-
-		btnBuyMax = new Button[] { btnBuyMax0, btnBuyMax1, btnBuyMax2, btnBuyMax3, btnBuyMax4, btnBuyMax5, btnBuyMax6,
-				btnBuyMax7, btnBuyMax8, btnBuyMax9 };
+		btnBuyMax = new Button[] { btnBuyMax0, btnBuyMax1, btnBuyMax2,
+				btnBuyMax3, btnBuyMax4, btnBuyMax5, btnBuyMax6, btnBuyMax7,
+				btnBuyMax8, btnBuyMax9 };
 	}
 
 	// / <summary>
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	void InitializeComponent()
-	{
+	void InitializeComponent() {
 		components = new jwinforms.Container();
-		jwinforms.ResourceManager resources = new jwinforms.ResourceManager(SpaceTrader.class);
+		jwinforms.ResourceManager resources = new jwinforms.ResourceManager(
+				SpaceTrader.class);
 		picCargoLine3 = new jwinforms.PictureBox();
 		picCargoLine2 = new jwinforms.PictureBox();
 		picCargoLine0 = new jwinforms.PictureBox();
@@ -523,12 +529,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax9.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax9.setTabIndex(51);
 		btnBuyMax9.setText("Max");
-		btnBuyMax9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 
@@ -541,12 +545,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty9.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty9.setTabIndex(50);
 		btnBuyQty9.setText("88");
-		btnBuyQty9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -567,12 +569,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll9.setSize(new jwinforms.Size(44, 22));
 		btnSellAll9.setTabIndex(49);
 		btnSellAll9.setText("Dump");
-		btnSellAll9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -584,12 +584,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty9.setSize(new jwinforms.Size(28, 22));
 		btnSellQty9.setTabIndex(48);
 		btnSellQty9.setText("88");
-		btnSellQty9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -637,12 +635,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax8.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax8.setTabIndex(47);
 		btnBuyMax8.setText("Max");
-		btnBuyMax8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -654,12 +650,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty8.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty8.setTabIndex(46);
 		btnBuyQty8.setText("88");
-		btnBuyQty8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -680,12 +674,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll8.setSize(new jwinforms.Size(44, 22));
 		btnSellAll8.setTabIndex(45);
 		btnSellAll8.setText("All");
-		btnSellAll8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -697,12 +689,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty8.setSize(new jwinforms.Size(28, 22));
 		btnSellQty8.setTabIndex(44);
 		btnSellQty8.setText("88");
-		btnSellQty8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -751,12 +741,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax7.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax7.setTabIndex(43);
 		btnBuyMax7.setText("Max");
-		btnBuyMax7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -768,12 +756,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty7.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty7.setTabIndex(42);
 		btnBuyQty7.setText("88");
-		btnBuyQty7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -794,12 +780,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll7.setSize(new jwinforms.Size(44, 22));
 		btnSellAll7.setTabIndex(41);
 		btnSellAll7.setText("All");
-		btnSellAll7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -811,12 +795,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty7.setSize(new jwinforms.Size(28, 22));
 		btnSellQty7.setTabIndex(40);
 		btnSellQty7.setText("88");
-		btnSellQty7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -864,12 +846,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax6.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax6.setTabIndex(39);
 		btnBuyMax6.setText("Max");
-		btnBuyMax6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -881,12 +861,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty6.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty6.setTabIndex(38);
 		btnBuyQty6.setText("88");
-		btnBuyQty6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -907,12 +885,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll6.setSize(new jwinforms.Size(44, 22));
 		btnSellAll6.setTabIndex(37);
 		btnSellAll6.setText("All");
-		btnSellAll6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -924,12 +900,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty6.setSize(new jwinforms.Size(28, 22));
 		btnSellQty6.setTabIndex(36);
 		btnSellQty6.setText("88");
-		btnSellQty6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -977,12 +951,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax5.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax5.setTabIndex(35);
 		btnBuyMax5.setText("Max");
-		btnBuyMax5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -994,12 +966,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty5.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty5.setTabIndex(34);
 		btnBuyQty5.setText("88");
-		btnBuyQty5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1020,12 +990,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll5.setSize(new jwinforms.Size(44, 22));
 		btnSellAll5.setTabIndex(33);
 		btnSellAll5.setText("All");
-		btnSellAll5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1037,12 +1005,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty5.setSize(new jwinforms.Size(28, 22));
 		btnSellQty5.setTabIndex(32);
 		btnSellQty5.setText("88");
-		btnSellQty5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1090,12 +1056,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax4.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax4.setTabIndex(31);
 		btnBuyMax4.setText("Max");
-		btnBuyMax4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1107,12 +1071,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty4.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty4.setTabIndex(30);
 		btnBuyQty4.setText("88");
-		btnBuyQty4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1133,12 +1095,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll4.setSize(new jwinforms.Size(44, 22));
 		btnSellAll4.setTabIndex(29);
 		btnSellAll4.setText("All");
-		btnSellAll4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1150,12 +1110,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty4.setSize(new jwinforms.Size(28, 22));
 		btnSellQty4.setTabIndex(28);
 		btnSellQty4.setText("88");
-		btnSellQty4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1203,12 +1161,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax3.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax3.setTabIndex(27);
 		btnBuyMax3.setText("Max");
-		btnBuyMax3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1220,12 +1176,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty3.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty3.setTabIndex(26);
 		btnBuyQty3.setText("88");
-		btnBuyQty3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1246,12 +1200,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll3.setSize(new jwinforms.Size(44, 22));
 		btnSellAll3.setTabIndex(25);
 		btnSellAll3.setText("All");
-		btnSellAll3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1263,12 +1215,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty3.setSize(new jwinforms.Size(28, 22));
 		btnSellQty3.setTabIndex(24);
 		btnSellQty3.setText("88");
-		btnSellQty3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1316,12 +1266,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax2.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax2.setTabIndex(23);
 		btnBuyMax2.setText("Max");
-		btnBuyMax2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1333,12 +1281,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty2.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty2.setTabIndex(22);
 		btnBuyQty2.setText("88");
-		btnBuyQty2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1359,12 +1305,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll2.setSize(new jwinforms.Size(44, 22));
 		btnSellAll2.setTabIndex(21);
 		btnSellAll2.setText("All");
-		btnSellAll2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1376,12 +1320,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty2.setSize(new jwinforms.Size(28, 22));
 		btnSellQty2.setTabIndex(20);
 		btnSellQty2.setText("88");
-		btnSellQty2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1429,12 +1371,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax1.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax1.setTabIndex(19);
 		btnBuyMax1.setText("Max");
-		btnBuyMax1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1446,12 +1386,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty1.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty1.setTabIndex(18);
 		btnBuyQty1.setText("88");
-		btnBuyQty1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1526,12 +1464,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyMax0.setSize(new jwinforms.Size(36, 22));
 		btnBuyMax0.setTabIndex(15);
 		btnBuyMax0.setText("Max");
-		btnBuyMax0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyMax0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1543,12 +1479,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnBuyQty0.setSize(new jwinforms.Size(28, 22));
 		btnBuyQty0.setTabIndex(14);
 		btnBuyQty0.setText("88");
-		btnBuyQty0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBuyQty0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1569,12 +1503,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll1.setSize(new jwinforms.Size(44, 22));
 		btnSellAll1.setTabIndex(17);
 		btnSellAll1.setText("All");
-		btnSellAll1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1586,12 +1518,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty1.setSize(new jwinforms.Size(28, 22));
 		btnSellQty1.setTabIndex(16);
 		btnSellQty1.setText("88");
-		btnSellQty1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1612,12 +1542,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellAll0.setSize(new jwinforms.Size(44, 22));
 		btnSellAll0.setTabIndex(13);
 		btnSellAll0.setText("All");
-		btnSellAll0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellAll0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1629,12 +1557,10 @@ public class CargoBox extends jwinforms.GroupBox
 		btnSellQty0.setSize(new jwinforms.Size(28, 22));
 		btnSellQty0.setTabIndex(12);
 		btnSellQty0.setText("88");
-		btnSellQty0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSellQty0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
-				btnBuySell_Click(((Button)sender).getName());
+			public void handle(Object sender, jwinforms.EventArgs e) {
+				btnBuySell_Click(((Button) sender).getName());
 			}
 		});
 		//
@@ -1768,40 +1694,41 @@ public class CargoBox extends jwinforms.GroupBox
 		// ilChartImages
 		//
 		ilChartImages.setImageSize(new jwinforms.Size(7, 7));
-		ilChartImages.setImageStream(((jwinforms.ImageListStreamer)(resources.GetObject("ilChartImages.ImageStream"))));
+		ilChartImages.setImageStream(((jwinforms.ImageListStreamer) (resources
+				.GetObject("ilChartImages.ImageStream"))));
 		ilChartImages.setTransparentColor(Color.white);
 		//
 		// ilShipImages
 		//
 		ilShipImages.setImageSize(new jwinforms.Size(64, 52));
-		ilShipImages.setImageStream(((jwinforms.ImageListStreamer)(resources.GetObject("ilShipImages.ImageStream"))));
+		ilShipImages.setImageStream(((jwinforms.ImageListStreamer) (resources
+				.GetObject("ilShipImages.ImageStream"))));
 		ilShipImages.setTransparentColor(Color.white);
 		//
 		// ilDirectionImages
 		//
 		ilDirectionImages.setImageSize(new jwinforms.Size(13, 13));
-		ilDirectionImages.setImageStream(((jwinforms.ImageListStreamer)(resources
-				.GetObject("ilDirectionImages.ImageStream"))));
+		ilDirectionImages
+				.setImageStream(((jwinforms.ImageListStreamer) (resources
+						.GetObject("ilDirectionImages.ImageStream"))));
 		ilDirectionImages.setTransparentColor(Color.white);
 		//
 		// ilEquipmentImages
 		//
 		ilEquipmentImages.setImageSize(new jwinforms.Size(64, 52));
-		ilEquipmentImages.setImageStream(((jwinforms.ImageListStreamer)(resources
-				.GetObject("ilEquipmentImages.ImageStream"))));
+		ilEquipmentImages
+				.setImageStream(((jwinforms.ImageListStreamer) (resources
+						.GetObject("ilEquipmentImages.ImageStream"))));
 		ilEquipmentImages.setTransparentColor(Color.white);
 
 		FinishInit();
 	}
 
-	void Update()
-	{
+	void Update() {
 		int i;
 
-		if (game == null || game.Commander().getCurrentSystem() == null)
-		{
-			for (i = 0; i < lblSellPrice.length; i++)
-			{
+		if (game == null || game.Commander().getCurrentSystem() == null) {
+			for (i = 0; i < lblSellPrice.length; i++) {
 				lblSellPrice[i].setText("");
 				lblBuyPrice[i].setText("");
 				lblTargetPrice[i].setText("");
@@ -1819,16 +1746,18 @@ public class CargoBox extends jwinforms.GroupBox
 		Commander cmdr = game.Commander();
 		StarSystem warpSys = game.WarpSystem();
 
-		for (i = 0; i < lblSellPrice.length; i++)
-		{
-			int price = warpSys == null ? 0 : Consts.TradeItems[i].StandardPrice(warpSys);
+		for (i = 0; i < lblSellPrice.length; i++) {
+			int price = warpSys == null ? 0 : Consts.TradeItems[i]
+					.StandardPrice(warpSys);
 
-			lblSellPrice[i].setText(sell[i] > 0 ? Functions.FormatMoney(sell[i]) : Strings.CargoSellNA);
+			lblSellPrice[i].setText(sell[i] > 0 ? Functions
+					.FormatMoney(sell[i]) : Strings.CargoSellNA);
 			btnSellQty[i].setText("" + cmdr.getShip().Cargo()[i]);
 			btnSellQty[i].setVisible(true);
 			btnSellAll[i].setText(sell[i] > 0 ? "All" : "Dump");
 			btnSellAll[i].setVisible(true);
-			lblBuyPrice[i].setText(buy[i] > 0 ? Functions.FormatMoney(buy[i]) : Strings.CargoBuyNA);
+			lblBuyPrice[i].setText(buy[i] > 0 ? Functions.FormatMoney(buy[i])
+					: Strings.CargoBuyNA);
 			btnBuyQty[i].setText("" + cmdr.getCurrentSystem().TradeItems()[i]);
 			btnBuyQty[i].setVisible(buy[i] > 0);
 			btnBuyMax[i].setVisible(buy[i] > 0);
@@ -1843,15 +1772,15 @@ public class CargoBox extends jwinforms.GroupBox
 			else
 				lblTargetPrice[i].setText("-----------");
 
-			if (warpSys != null && warpSys.DestOk() && price > 0 && buy[i] > 0)
-			{
+			if (warpSys != null && warpSys.DestOk() && price > 0 && buy[i] > 0) {
 				int diff = price - buy[i];
-				lblTargetDiff[i].setText((diff > 0 ? "+" : "") + Functions.FormatMoney(diff));
-				lblTargetPct[i].setText((diff > 0 ? "+" : "") + Functions.FormatNumber(100 * diff / buy[i]) + "%");
-				lblBuyPrice[i].setFont((diff > 0 && cmdr.getCurrentSystem().TradeItems()[i] > 0) ? BOLD_FONT : lblBuy
-						.getFont());
-			} else
-			{
+				lblTargetDiff[i].setText((diff > 0 ? "+" : "")
+						+ Functions.FormatMoney(diff));
+				lblTargetPct[i].setText((diff > 0 ? "+" : "")
+						+ Functions.FormatNumber(100 * diff / buy[i]) + "%");
+				lblBuyPrice[i].setFont((diff > 0 && cmdr.getCurrentSystem()
+						.TradeItems()[i] > 0) ? BOLD_FONT : lblBuy.getFont());
+			} else {
 				lblTargetDiff[i].setText("------------");
 				lblTargetPct[i].setText("--------");
 				lblBuyPrice[i].setFont(lblBuy.getFont());
@@ -1863,10 +1792,10 @@ public class CargoBox extends jwinforms.GroupBox
 		}
 	}
 
-	private void btnBuySell_Click(String buttonName)
-	{
+	private void btnBuySell_Click(String buttonName) {
 		boolean all = buttonName.indexOf("Qty") < 0;
-		int index = Integer.parseInt(buttonName.substring(buttonName.length() - 1));
+		int index = Integer
+				.parseInt(buttonName.substring(buttonName.length() - 1));
 
 		if (buttonName.indexOf("Buy") < 0)
 			controller.CargoSell(index, all);

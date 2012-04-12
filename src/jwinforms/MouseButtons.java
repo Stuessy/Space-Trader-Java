@@ -1,7 +1,6 @@
 package jwinforms;
 
-public enum MouseButtons
-{
+public enum MouseButtons {
 	Left, Right
 
 }

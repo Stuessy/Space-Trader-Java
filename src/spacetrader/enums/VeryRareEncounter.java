@@ -8,11 +8,10 @@ public enum VeryRareEncounter implements SpaceTraderEnum// : int
 	CaptainHuie, // = 3,
 	BottleOld, // = 4,
 	BottleGood, // = 5
-		;
-	
+	;
+
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 }

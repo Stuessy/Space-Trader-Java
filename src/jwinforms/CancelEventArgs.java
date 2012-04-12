@@ -1,7 +1,6 @@
 package jwinforms;
 
-public class CancelEventArgs extends EventArgs
-{
+public class CancelEventArgs extends EventArgs {
 
 	public boolean Cancel;
 

@@ -45,8 +45,7 @@ import spacetrader.enums.CargoSellOp;
 import spacetrader.guifacade.Facaded;
 
 @Facaded
-public class FormCargoSell extends SpaceTraderForm
-{
+public class FormCargoSell extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Button btnOk;
@@ -69,8 +68,7 @@ public class FormCargoSell extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormCargoSell(int item, int maxAmount, CargoSellOp op, int price)
-	{
+	public FormCargoSell(int item, int maxAmount, CargoSellOp op, int price) {
 		InitializeComponent();
 
 		Commander cmdr = game.Commander();
@@ -87,14 +85,14 @@ public class FormCargoSell extends SpaceTraderForm
 				op == CargoSellOp.SellTrader ? Strings.CargoSellPaidTrader
 						: Strings.CargoSellPaid, Functions.FormatMoney(cost),
 				Functions.Multiples(maxAmount, Strings.CargoUnit)));
-		lblProfit.setText(Functions.StringVars(Strings.CargoSellProfit,
-				price >= cost ? "profit" : "loss", Functions
-						.FormatMoney(price >= cost ? price - cost : cost
-								- price)));
+		lblProfit.setText(Functions.StringVars(
+				Strings.CargoSellProfit,
+				price >= cost ? "profit" : "loss",
+				Functions.FormatMoney(price >= cost ? price - cost : cost
+						- price)));
 
 		// Override defaults for some ops.
-		switch (op)
-		{
+		switch (op) {
 		case Dump:
 			lblStatement.setText(Functions.StringVars(
 					Strings.CargoSellStatementDump,
@@ -111,14 +109,15 @@ public class FormCargoSell extends SpaceTraderForm
 			break;
 		case SellSystem:
 			lblStatement.setText(Functions.StringVars(
-					Strings.CargoSellStatement, Functions
-							.FormatNumber(maxAmount), Functions
-							.FormatMoney(price)));
+					Strings.CargoSellStatement,
+					Functions.FormatNumber(maxAmount),
+					Functions.FormatMoney(price)));
 			break;
 		case SellTrader:
 			lblStatement.setText(Functions.StringVars(
 					Strings.CargoSellStatementTrader,
-					Consts.TradeItems[item].Name(), Functions.FormatMoney(price)));
+					Consts.TradeItems[item].Name(),
+					Functions.FormatMoney(price)));
 			break;
 		}
 	}
@@ -128,8 +127,7 @@ public class FormCargoSell extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		lblQuestion = new jwinforms.Label();
 		lblStatement = new jwinforms.Label();
 		numAmount = new jwinforms.NumericUpDown();
@@ -155,7 +153,8 @@ public class FormCargoSell extends SpaceTraderForm
 		lblStatement.setName("lblStatement");
 		lblStatement.setSize(new jwinforms.Size(302, 13));
 		lblStatement.setTabIndex(3);
-		lblStatement.setText("The trader wants to by Machines, and offers 8,888 cr. each.");
+		lblStatement
+				.setText("The trader wants to by Machines, and offers 8,888 cr. each.");
 		//
 		// numAmount
 		//
@@ -185,11 +184,9 @@ public class FormCargoSell extends SpaceTraderForm
 		btnAll.setSize(new jwinforms.Size(41, 22));
 		btnAll.setTabIndex(3);
 		btnAll.setText("All");
-		btnAll.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnAll.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnAll_Click(sender, e);
 			}
 		});
@@ -250,8 +247,7 @@ public class FormCargoSell extends SpaceTraderForm
 
 	// #region Event Handlers
 
-	private void btnAll_Click(Object sender, EventArgs e)
-	{
+	private void btnAll_Click(Object sender, EventArgs e) {
 		numAmount.setValue(numAmount.getMaximum());
 	}
 
@@ -259,10 +255,7 @@ public class FormCargoSell extends SpaceTraderForm
 
 	// #region Properties
 
-
-
-	public int Amount()
-	{
+	public int Amount() {
 		return numAmount.getValue();
 	}
 

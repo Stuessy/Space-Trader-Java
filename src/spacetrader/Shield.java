@@ -26,48 +26,44 @@
 //using System.Collections;
 package spacetrader;
 
-
 import spacetrader.enums.ShieldType;
 import spacetrader.enums.TechLevel;
 import spacetrader.util.EquipmentSubType;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Log;
 
-public class Shield extends Equipment
-{
+public class Shield extends Equipment {
 	private ShieldType _type;
 	private int _power;
 	private int _charge;
 
 	public Shield(ShieldType type, int power, int price,
-			TechLevel minTechLevel, int chance)
-	{
-		super(spacetrader.enums.EquipmentType.Shield, price, minTechLevel, chance);
+			TechLevel minTechLevel, int chance) {
+		super(spacetrader.enums.EquipmentType.Shield, price, minTechLevel,
+				chance);
 		_type = type;
 		_power = power;
 
 		_charge = _power;
 	}
 
-	public Shield(Hashtable hash)
-	{
+	public Shield(Hashtable hash) {
 		super(hash);
-		_type = ShieldType.FromInt(GetValueFromHash(hash, "_type", Integer.class));
+		_type = ShieldType.FromInt(GetValueFromHash(hash, "_type",
+				Integer.class));
 		_power = GetValueFromHash(hash, "_power", Integer.class);
 		_charge = GetValueFromHash(hash, "_charge", Integer.class);
 	}
 
 	@Override
-	public Equipment Clone()
-	{
+	public Equipment Clone() {
 		Shield shield = new Shield(_type, _power, _price, _minTech, _chance);
 		shield.setCharge(Charge);
 		return shield;
 	}
 
 	@Override
-	public Hashtable Serialize()
-	{
+	public Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.put("_type", _type);
@@ -78,13 +74,10 @@ public class Shield extends Equipment
 	}
 
 	@Override
-	public boolean TypeEquals(Object type)
-	{
-		try
-		{
+	public boolean TypeEquals(Object type) {
+		try {
 			return (Type() == (ShieldType) type);
-		} catch (Exception e)
-		{
+		} catch (Exception e) {
 			Log.write("Ignored exception: " + e);
 			return false;
 		}
@@ -93,39 +86,29 @@ public class Shield extends Equipment
 	private int Charge;
 
 	@Override
-	public String Name()
-	{
+	public String Name() {
 		return Strings.ShieldNames[_type.CastToInt()];
 	}
 
-	public int Power()
-	{
+	public int Power() {
 		return _power;
 	}
 
-
-
-	public ShieldType Type()
-	{
+	public ShieldType Type() {
 		return _type;
 	}
 
 	@Override
-	public EquipmentSubType SubType()
-	{
+	public EquipmentSubType SubType() {
 		return Type();
 	}
 
-	public void setCharge(int charge)
-	{
+	public void setCharge(int charge) {
 		Charge = charge;
 	}
 
-	public int getCharge()
-	{
+	public int getCharge() {
 		return Charge;
 	}
-
-	
 
 }

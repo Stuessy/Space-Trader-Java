@@ -9,54 +9,47 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-public class PictureBox extends WinformControl implements ISupportInitialize
-{
+public class PictureBox extends WinformControl implements ISupportInitialize {
 	public PictureBoxSizeMode SizeMode;
 	private ImageMouseListener mouseListener;
 
-	public PictureBox()
-	{
+	public PictureBox() {
 		super(new SpecialImageJLabel());
 		asJLabel().pictureBox = this;
-		asJLabel().addMouseListener(mouseListener = new ImageMouseListener(this));
+		asJLabel().addMouseListener(
+				mouseListener = new ImageMouseListener(this));
 	}
 
-	public void setMouseDown(EventHandler<Object, MouseEventArgs> mouseDown)
-	{
+	public void setMouseDown(EventHandler<Object, MouseEventArgs> mouseDown) {
 		mouseListener.pressed = mouseDown;
 	}
 
 	@Override
-	public void setBackColor(Color backColor)
-	{
+	public void setBackColor(Color backColor) {
 		asJLabel().background = backColor;
 	}
 
-	public void Refresh()
-	{
+	public void Refresh() {
 		asJLabel().repaint();
 	}
 
-	public void setImage(Image image)
-	{
+	public void setImage(Image image) {
 		if (image != null)
 			asJLabel().setIcon(new ImageIcon(image.asSwingImage()));
 	}
 
-	public void setPaint(EventHandler<Object, PaintEventArgs> paint)
-	{
+	public void setPaint(EventHandler<Object, PaintEventArgs> paint) {
 		if (asJLabel().paintEventHandler != null)
 			throw new Error("2 handlers same event");
 		asJLabel().paintEventHandler = paint;
 	}
 
 	@Override
-	public void setBorderStyle(BorderStyle borderStyle)
-	{
-		switch (borderStyle)
-		{
+	public void setBorderStyle(BorderStyle borderStyle) {
+		switch (borderStyle) {
 		case FixedSingle:
-			asJLabel().setBorder(BorderFactory.createLineBorder(Color.black, 1));
+			asJLabel()
+					.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 			break;
 
 		default:
@@ -64,28 +57,24 @@ public class PictureBox extends WinformControl implements ISupportInitialize
 		}
 	}
 
-	private SpecialImageJLabel asJLabel()
-	{
-		return ((SpecialImageJLabel)swingVersion);
+	private SpecialImageJLabel asJLabel() {
+		return ((SpecialImageJLabel) swingVersion);
 	}
 }
 
-class SpecialImageJLabel extends JLabel
-{
+class SpecialImageJLabel extends JLabel {
 	EventHandler<Object, PaintEventArgs> paintEventHandler;
 	PictureBox pictureBox;
 	Color background;
 
 	@Override
-	public void paintComponent(Graphics graphics)
-	{
+	public void paintComponent(Graphics graphics) {
 		tryBackground(background, graphics);
 		tryEventHandler(paintEventHandler, graphics);
 		super.paintComponent(graphics);
 	}
 
-	private void tryBackground(Color background, Graphics graphics)
-	{
+	private void tryBackground(Color background, Graphics graphics) {
 		if (background == null)
 			return;
 
@@ -93,32 +82,29 @@ class SpecialImageJLabel extends JLabel
 		graphics.fillRect(0, 0, getWidth(), getHeight());
 	}
 
-	private void tryEventHandler(EventHandler<Object, PaintEventArgs> handler, Graphics graphics)
-	{
+	private void tryEventHandler(EventHandler<Object, PaintEventArgs> handler,
+			Graphics graphics) {
 		if (handler != null)
 			handler.handle(pictureBox, new PaintEventArgs(graphics));
 	}
 }
 
-class ImageMouseListener extends MouseAdapter
-{
+class ImageMouseListener extends MouseAdapter {
 
 	public EventHandler<Object, MouseEventArgs> pressed;
 	private final PictureBox pictureBox;
 
-	public ImageMouseListener(PictureBox pictureBox)
-	{
+	public ImageMouseListener(PictureBox pictureBox) {
 		this.pictureBox = pictureBox;
 	}
 
 	@Override
-	public void mousePressed(MouseEvent e)
-	{
+	public void mousePressed(MouseEvent e) {
 		tryEvent(pressed, new MouseEventArgs(e));
 	}
 
-	private void tryEvent(EventHandler<Object, MouseEventArgs> handler, MouseEventArgs e)
-	{
+	private void tryEvent(EventHandler<Object, MouseEventArgs> handler,
+			MouseEventArgs e) {
 		if (handler != null)
 			handler.handle(pictureBox, e);
 	}

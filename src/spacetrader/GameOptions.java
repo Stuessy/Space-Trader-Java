@@ -21,9 +21,8 @@ package spacetrader;
 
 import spacetrader.util.Hashtable;
 
-public class GameOptions extends STSerializableObject
-{
-//	 #region Member Declarations
+public class GameOptions extends STSerializableObject {
+	// #region Member Declarations
 
 	/**
 	 * Automatically ignores pirates when it is safe to do so
@@ -58,7 +57,8 @@ public class GameOptions extends STSerializableObject
 	 */
 	private boolean _continuousAttackFleeing = false;
 	/**
-	 * Disable opponents when possible (when you have disabling weapons and the opponent is a pirate, trader, or mantis)
+	 * Disable opponents when possible (when you have disabling weapons and the
+	 * opponent is a pirate, trader, or mantis)
 	 */
 	private boolean _disableOpponents = false;
 	/**
@@ -90,40 +90,44 @@ public class GameOptions extends STSerializableObject
 	 */
 	private int _leaveEmpty = 0;
 
-//	 #endregion
+	// #endregion
 
-//	 #region Methods
+	// #region Methods
 
-	public GameOptions(boolean loadFromDefaults)
-	{
+	public GameOptions(boolean loadFromDefaults) {
 		if (loadFromDefaults)
 			LoadFromDefaults(false);
 	}
 
-	public GameOptions(Hashtable hash)
-	{
+	public GameOptions(Hashtable hash) {
 		super(hash);
-		_alwaysIgnorePirates = GetValueFromHash(hash, "_alwaysIgnorePirates", _alwaysIgnorePirates);
-		_alwaysIgnorePolice = GetValueFromHash(hash, "_alwaysIgnorePolice", _alwaysIgnorePolice);
-		_alwaysIgnoreTradeInOrbit = GetValueFromHash(hash, "_alwaysIgnoreTradeInOrbit",
-				_alwaysIgnoreTradeInOrbit);
-		_alwaysIgnoreTraders = GetValueFromHash(hash, "_alwaysIgnoreTraders", _alwaysIgnoreTraders);
+		_alwaysIgnorePirates = GetValueFromHash(hash, "_alwaysIgnorePirates",
+				_alwaysIgnorePirates);
+		_alwaysIgnorePolice = GetValueFromHash(hash, "_alwaysIgnorePolice",
+				_alwaysIgnorePolice);
+		_alwaysIgnoreTradeInOrbit = GetValueFromHash(hash,
+				"_alwaysIgnoreTradeInOrbit", _alwaysIgnoreTradeInOrbit);
+		_alwaysIgnoreTraders = GetValueFromHash(hash, "_alwaysIgnoreTraders",
+				_alwaysIgnoreTraders);
 		_autoFuel = GetValueFromHash(hash, "_autoFuel", _autoFuel);
 		_autoRepair = GetValueFromHash(hash, "_autoRepair", _autoRepair);
-		_continuousAttack = GetValueFromHash(hash, "_continuousAttack", _continuousAttack);
-		_continuousAttackFleeing = GetValueFromHash(hash, "_continuousAttackFleeing", _continuousAttackFleeing);
-		_disableOpponents = GetValueFromHash(hash, "_disableOpponents", _disableOpponents);
+		_continuousAttack = GetValueFromHash(hash, "_continuousAttack",
+				_continuousAttack);
+		_continuousAttackFleeing = GetValueFromHash(hash,
+				"_continuousAttackFleeing", _continuousAttackFleeing);
+		_disableOpponents = GetValueFromHash(hash, "_disableOpponents",
+				_disableOpponents);
 		_newsAutoPay = GetValueFromHash(hash, "_newsAutoPay", _newsAutoPay);
 		_newsAutoShow = GetValueFromHash(hash, "_newsAutoShow", _newsAutoShow);
 		_remindLoans = GetValueFromHash(hash, "_remindLoans", _remindLoans);
 		_reserveMoney = GetValueFromHash(hash, "_reserveMoney", _reserveMoney);
-		_showTrackedRange = GetValueFromHash(hash, "_showTrackedRange", _showTrackedRange);
+		_showTrackedRange = GetValueFromHash(hash, "_showTrackedRange",
+				_showTrackedRange);
 		_trackAutoOff = GetValueFromHash(hash, "_trackAutoOff", _trackAutoOff);
 		_leaveEmpty = GetValueFromHash(hash, "_leaveEmpty", _leaveEmpty);
 	}
 
-	public void CopyValues(GameOptions source)
-	{
+	public void CopyValues(GameOptions source) {
 		setAlwaysIgnorePirates(source.getAlwaysIgnorePirates());
 		setAlwaysIgnorePolice(source.getAlwaysIgnorePolice());
 		setAlwaysIgnoreTradeInOrbit(source.getAlwaysIgnoreTradeInOrbit());
@@ -142,28 +146,26 @@ public class GameOptions extends STSerializableObject
 		setLeaveEmpty(source.getLeaveEmpty());
 	}
 
-	public void LoadFromDefaults(boolean errorIfFileNotFound)
-	{
+	public void LoadFromDefaults(boolean errorIfFileNotFound) {
 
 		GameOptions defaults = null;
 
-		Object obj = Functions.LoadFile(Consts.DefaultSettingsFile, !errorIfFileNotFound);
+		Object obj = Functions.LoadFile(Consts.DefaultSettingsFile,
+				!errorIfFileNotFound);
 		if (obj == null)
 			defaults = new GameOptions(false);
 		else
-			defaults = new GameOptions((Hashtable)obj);
+			defaults = new GameOptions((Hashtable) obj);
 
 		CopyValues(defaults);
 	}
 
-	public void SaveAsDefaults()
-	{
+	public void SaveAsDefaults() {
 		Functions.SaveFile(Consts.DefaultSettingsFile, Serialize());
 	}
 
 	public @Override
-	Hashtable Serialize()
-	{
+	Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.add("_alwaysIgnorePirates", _alwaysIgnorePirates);
@@ -186,168 +188,136 @@ public class GameOptions extends STSerializableObject
 		return hash;
 	}
 
-//	 #endregion
+	// #endregion
 
-//	 #region Properties
+	// #region Properties
 
-	public boolean getAlwaysIgnorePirates()
-	{
+	public boolean getAlwaysIgnorePirates() {
 		return _alwaysIgnorePirates;
 	}
 
-	public void setAlwaysIgnorePirates(boolean value)
-	{
+	public void setAlwaysIgnorePirates(boolean value) {
 		_alwaysIgnorePirates = value;
 	}
 
-	public boolean getAlwaysIgnorePolice()
-	{
+	public boolean getAlwaysIgnorePolice() {
 		return _alwaysIgnorePolice;
 	}
 
-	public void setAlwaysIgnorePolice(boolean value)
-	{
+	public void setAlwaysIgnorePolice(boolean value) {
 		_alwaysIgnorePolice = value;
 	}
 
-	public boolean getAlwaysIgnoreTradeInOrbit()
-	{
+	public boolean getAlwaysIgnoreTradeInOrbit() {
 		return _alwaysIgnoreTradeInOrbit;
 	}
 
-	public void setAlwaysIgnoreTradeInOrbit(boolean value)
-	{
+	public void setAlwaysIgnoreTradeInOrbit(boolean value) {
 		_alwaysIgnoreTradeInOrbit = value;
 	}
 
-	public boolean getAlwaysIgnoreTraders()
-	{
+	public boolean getAlwaysIgnoreTraders() {
 		return _alwaysIgnoreTraders;
 	}
 
-	public void setAlwaysIgnoreTraders(boolean value)
-	{
+	public void setAlwaysIgnoreTraders(boolean value) {
 		_alwaysIgnoreTraders = value;
 	}
 
-	public boolean getAutoFuel()
-	{
+	public boolean getAutoFuel() {
 		return _autoFuel;
 	}
 
-	public void setAutoFuel(boolean value)
-	{
+	public void setAutoFuel(boolean value) {
 		_autoFuel = value;
 	}
 
-	public boolean getAutoRepair()
-	{
+	public boolean getAutoRepair() {
 		return _autoRepair;
 	}
 
-	public void setAutoRepair(boolean value)
-	{
+	public void setAutoRepair(boolean value) {
 		_autoRepair = value;
 	}
 
-	public boolean getContinuousAttack()
-	{
+	public boolean getContinuousAttack() {
 		return _continuousAttack;
 	}
 
-	public void setContinuousAttack(boolean value)
-	{
+	public void setContinuousAttack(boolean value) {
 		_continuousAttack = value;
 	}
 
-	public boolean getContinuousAttackFleeing()
-	{
+	public boolean getContinuousAttackFleeing() {
 		return _continuousAttackFleeing;
 	}
 
-	public void setContinuousAttackFleeing(boolean value)
-	{
+	public void setContinuousAttackFleeing(boolean value) {
 		_continuousAttackFleeing = value;
 	}
 
-	public boolean getDisableOpponents()
-	{
+	public boolean getDisableOpponents() {
 		return _disableOpponents;
 	}
 
-	public void setDisableOpponents(boolean value)
-	{
+	public void setDisableOpponents(boolean value) {
 		_disableOpponents = value;
 	}
 
-	public int getLeaveEmpty()
-	{
+	public int getLeaveEmpty() {
 		return _leaveEmpty;
 	}
 
-	public void setLeaveEmpty(int value)
-	{
+	public void setLeaveEmpty(int value) {
 		_leaveEmpty = value;
 	}
 
-	public boolean getNewsAutoPay()
-	{
+	public boolean getNewsAutoPay() {
 		return _newsAutoPay;
 	}
 
-	public void setNewsAutoPay(boolean value)
-	{
+	public void setNewsAutoPay(boolean value) {
 		_newsAutoPay = value;
 	}
 
-	public boolean getNewsAutoShow()
-	{
+	public boolean getNewsAutoShow() {
 		return _newsAutoShow;
 	}
 
-	public void setNewsAutoShow(boolean value)
-	{
+	public void setNewsAutoShow(boolean value) {
 		_newsAutoShow = value;
 	}
 
-	public boolean getRemindLoans()
-	{
+	public boolean getRemindLoans() {
 		return _remindLoans;
 	}
 
-	public void setRemindLoans(boolean value)
-	{
+	public void setRemindLoans(boolean value) {
 		_remindLoans = value;
 	}
 
-	public boolean getReserveMoney()
-	{
+	public boolean getReserveMoney() {
 		return _reserveMoney;
 	}
 
-	public void setReserveMoney(boolean value)
-	{
+	public void setReserveMoney(boolean value) {
 		_reserveMoney = value;
 	}
 
-	public boolean getShowTrackedRange()
-	{
+	public boolean getShowTrackedRange() {
 		return _showTrackedRange;
 	}
 
-	public void setShowTrackedRange(boolean value)
-	{
+	public void setShowTrackedRange(boolean value) {
 		_showTrackedRange = value;
 	}
 
-	public boolean getTrackAutoOff()
-	{
+	public boolean getTrackAutoOff() {
 		return _trackAutoOff;
 	}
 
-	public void setTrackAutoOff(boolean value)
-	{
+	public void setTrackAutoOff(boolean value) {
 		_trackAutoOff = value;
 	}
-//	 #endregion
+	// #endregion
 }

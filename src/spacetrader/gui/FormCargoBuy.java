@@ -42,8 +42,7 @@ import spacetrader.Strings;
 import spacetrader.enums.CargoBuyOp;
 import spacetrader.guifacade.Facaded;
 
-public class FormCargoBuy extends SpaceTraderForm
-{
+public class FormCargoBuy extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Button btnOk;
@@ -58,38 +57,42 @@ public class FormCargoBuy extends SpaceTraderForm
 	private final Game game = Game.CurrentGame();
 
 	@Facaded
-	public FormCargoBuy(int item, int maxAmount, CargoBuyOp op)
-	{
+	public FormCargoBuy(int item, int maxAmount, CargoBuyOp op) {
 		InitializeComponent();
 
 		Commander cmdr = game.Commander();
 		numAmount.setMaximum(maxAmount);
 		numAmount.setValue(numAmount.getMinimum());
-		this.setText(Functions.StringVars(Strings.CargoTitle, Strings.CargoBuyOps[op.CastToInt()],
+		this.setText(Functions.StringVars(Strings.CargoTitle,
+				Strings.CargoBuyOps[op.CastToInt()],
 				Consts.TradeItems[item].Name()));
-		lblQuestion.setText(Functions.StringVars(Strings.CargoBuyQuestion, Strings.CargoBuyOps[op.CastToInt()]
-				.toLowerCase()));
+		lblQuestion.setText(Functions.StringVars(Strings.CargoBuyQuestion,
+				Strings.CargoBuyOps[op.CastToInt()].toLowerCase()));
 
-		switch (op)
-		{
+		switch (op) {
 		case BuySystem:
-			lblStatement.setText(Functions.StringVars(Strings.CargoBuyStatement, Functions.FormatMoney(game
-					.PriceCargoBuy()[item]), Functions.FormatNumber(maxAmount)));
+			lblStatement.setText(Functions.StringVars(
+					Strings.CargoBuyStatement,
+					Functions.FormatMoney(game.PriceCargoBuy()[item]),
+					Functions.FormatNumber(maxAmount)));
 
 			this.setHeight(btnOk.getTop() + btnOk.getHeight() + 34);
 			break;
 		case BuyTrader:
-			int afford = Math.min(cmdr.getCash() / game.PriceCargoBuy()[item], cmdr.getShip()
-					.FreeCargoBays());
+			int afford = Math.min(cmdr.getCash() / game.PriceCargoBuy()[item],
+					cmdr.getShip().FreeCargoBays());
 			if (afford < maxAmount)
 				numAmount.setMaximum(afford);
 
-			lblStatement.setText(Functions.StringVars(Strings.CargoBuyStatementTrader, Consts.TradeItems[item].Name(),
+			lblStatement.setText(Functions.StringVars(
+					Strings.CargoBuyStatementTrader,
+					Consts.TradeItems[item].Name(),
 					Functions.FormatMoney(game.PriceCargoBuy()[item])));
-			lblAvailable.setText(Functions.StringVars(Strings.CargoBuyAvailable, Functions.Multiples(game.getOpponent()
-					.Cargo()[item], Strings.CargoUnit)));
-			lblAfford.setText(Functions.StringVars(Strings.CargoBuyAfford, Functions.Multiples(afford,
-					Strings.CargoUnit)));
+			lblAvailable.setText(Functions.StringVars(
+					Strings.CargoBuyAvailable, Functions.Multiples(game
+							.getOpponent().Cargo()[item], Strings.CargoUnit)));
+			lblAfford.setText(Functions.StringVars(Strings.CargoBuyAfford,
+					Functions.Multiples(afford, Strings.CargoUnit)));
 
 			lblAvailable.setVisible(true);
 			lblAfford.setVisible(true);
@@ -102,8 +105,9 @@ public class FormCargoBuy extends SpaceTraderForm
 
 			break;
 		case Plunder:
-			lblStatement.setText(Functions.StringVars(Strings.CargoBuyStatementSteal, Functions.FormatNumber(game
-					.getOpponent().Cargo()[item])));
+			lblStatement.setText(Functions.StringVars(
+					Strings.CargoBuyStatementSteal,
+					Functions.FormatNumber(game.getOpponent().Cargo()[item])));
 
 			this.setHeight(btnOk.getTop() + btnOk.getHeight() + 34);
 			break;
@@ -115,8 +119,7 @@ public class FormCargoBuy extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		lblQuestion = new jwinforms.Label();
 		lblStatement = new jwinforms.Label();
 		numAmount = new jwinforms.NumericUpDown();
@@ -125,7 +128,7 @@ public class FormCargoBuy extends SpaceTraderForm
 		btnNone = new jwinforms.Button();
 		lblAvailable = new jwinforms.Label();
 		lblAfford = new jwinforms.Label();
-		((ISupportInitialize)(numAmount)).BeginInit();
+		((ISupportInitialize) (numAmount)).BeginInit();
 		this.SuspendLayout();
 		//
 		// lblQuestion
@@ -143,7 +146,8 @@ public class FormCargoBuy extends SpaceTraderForm
 		lblStatement.setName("lblStatement");
 		lblStatement.setSize(new jwinforms.Size(326, 13));
 		lblStatement.setTabIndex(3);
-		lblStatement.setText("The trader wants to sell Machines for the price of 8,888 cr. each.");
+		lblStatement
+				.setText("The trader wants to sell Machines for the price of 8,888 cr. each.");
 		//
 		// numAmount
 		//
@@ -174,11 +178,9 @@ public class FormCargoBuy extends SpaceTraderForm
 		btnAll.setSize(new jwinforms.Size(41, 22));
 		btnAll.setTabIndex(3);
 		btnAll.setText("All");
-		btnAll.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnAll.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnAll_Click(sender, e);
 			}
 		});
@@ -231,19 +233,16 @@ public class FormCargoBuy extends SpaceTraderForm
 		this.setShowInTaskbar(false);
 		this.setStartPosition(FormStartPosition.CenterParent);
 		this.setText("Buy Xxxxxxxxxx");
-		((ISupportInitialize)(numAmount)).EndInit();
+		((ISupportInitialize) (numAmount)).EndInit();
 
 	}
 
-	private void btnAll_Click(Object sender, EventArgs e)
-	{
+	private void btnAll_Click(Object sender, EventArgs e) {
 		numAmount.setValue(numAmount.getMaximum());
 	}
 
-
 	@Facaded
-	public int Amount()
-	{
+	public int Amount() {
 		return numAmount.getValue();
 	}
 }

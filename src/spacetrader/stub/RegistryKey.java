@@ -7,73 +7,57 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class RegistryKey
-{
+public class RegistryKey {
 	protected final Properties properties = new Properties();
 	private final File file;
 
-	public RegistryKey(File regfile)
-	{
+	public RegistryKey(File regfile) {
 		this.file = regfile;
 		FileInputStream stream = null;
-		try
-		{
+		try {
 			regfile.createNewFile();
 			stream = new FileInputStream(regfile);
 			properties.load(stream);
-		} catch (IOException e)
-		{
+		} catch (IOException e) {
 			throw new Error("Can't create/load regfile.");
-		} finally
-		{
+		} finally {
 			if (stream != null)
-				try
-				{
+				try {
 					stream.close();
-				} catch (IOException e)
-				{
+				} catch (IOException e) {
 					e.printStackTrace();
 				}
 		}
 	}
 
-	public void Close()
-	{
+	public void Close() {
 		FileOutputStream stream;
-		try
-		{
+		try {
 			stream = new FileOutputStream(file);
-		} catch (FileNotFoundException e)
-		{
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			return;
 		}
-		try
-		{
+		try {
 			properties.store(stream, "");
-		} catch (IOException e)
-		{
+		} catch (IOException e) {
 			e.printStackTrace();
-		} finally{
-			try
-			{
+		} finally {
+			try {
 				stream.close();
-			} catch (IOException e)
-			{
+			} catch (IOException e) {
 				e.printStackTrace();
 				return;
 			}
 		}
 	}
 
-	public void SetValue(String settingName, String settingValue)
-	{
+	public void SetValue(String settingName, String settingValue) {
 		properties.setProperty(settingName, settingValue);
 
 	}
 
-	public Object GetValue(String settingName)
-	{
+	public Object GetValue(String settingName) {
 		return properties.getProperty(settingName);
 	}
 

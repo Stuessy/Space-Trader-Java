@@ -27,15 +27,16 @@
 //using System.Collections;
 //using System.ComponentModel;
 //using System.Windows.Forms;
-package spacetrader.gui;import jwinforms.Container;
+package spacetrader.gui;
+
+import jwinforms.Container;
 import jwinforms.ContentAlignment;
 import jwinforms.DialogResult;
 import jwinforms.FormStartPosition;
 import spacetrader.Functions;
 import spacetrader.Game;
 
-public class FormCosts extends SpaceTraderForm
-{
+public class FormCosts extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Button btnClose;
@@ -62,8 +63,7 @@ public class FormCosts extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormCosts()
-	{
+	public FormCosts() {
 		InitializeComponent();
 
 		lblMerc.setText(Functions.FormatMoney(game.MercenaryCosts()));
@@ -78,8 +78,7 @@ public class FormCosts extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		this.btnClose = new jwinforms.Button();
 		this.lblMerc = new jwinforms.Label();
 		this.lblIns = new jwinforms.Label();
@@ -213,10 +212,10 @@ public class FormCosts extends SpaceTraderForm
 		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
 		this.setCancelButton(this.btnClose);
 		this.setClientSize(new jwinforms.Size(148, 99));
-		this.Controls.addAll(this.picLine, this.lblTotal,
-				this.lblTax, this.lblInt, this.lblIns, this.lblMerc,
-				this.btnClose, this.lblInsLabel, this.lblTotalLabel,
-				this.lblTaxLabel, this.lblIntLabel, this.lblMercLabel);
+		this.Controls.addAll(this.picLine, this.lblTotal, this.lblTax,
+				this.lblInt, this.lblIns, this.lblMerc, this.btnClose,
+				this.lblInsLabel, this.lblTotalLabel, this.lblTaxLabel,
+				this.lblIntLabel, this.lblMercLabel);
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);
 		this.setMaximizeBox(false);
 		this.setMinimizeBox(false);

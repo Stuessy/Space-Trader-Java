@@ -39,8 +39,7 @@ import jwinforms.ISupportInitialize;
 import spacetrader.Commander;
 import spacetrader.Game;
 
-public class FormBuyFuel extends SpaceTraderForm
-{
+public class FormBuyFuel extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Button btnOk;
@@ -59,12 +58,12 @@ public class FormBuyFuel extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormBuyFuel()
-	{
+	public FormBuyFuel() {
 		InitializeComponent();
 
 		Commander cmdr = game.Commander();
-		numAmount.setMaximum(Math.min(cmdr.getCash(), (cmdr.getShip().FuelTanks() - cmdr.getShip().getFuel())
+		numAmount.setMaximum(Math.min(cmdr.getCash(), (cmdr.getShip()
+				.FuelTanks() - cmdr.getShip().getFuel())
 				* cmdr.getShip().getFuelCost()));
 		numAmount.setValue(numAmount.getMaximum());
 	}
@@ -74,14 +73,13 @@ public class FormBuyFuel extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		this.lblQuestion = new jwinforms.Label();
 		this.numAmount = new jwinforms.NumericUpDown();
 		this.btnOk = new jwinforms.Button();
 		this.btnMax = new jwinforms.Button();
 		this.btnNothing = new jwinforms.Button();
-		((ISupportInitialize)(this.numAmount)).BeginInit();
+		((ISupportInitialize) (this.numAmount)).BeginInit();
 		this.SuspendLayout();
 		//
 		// lblQuestion
@@ -122,11 +120,9 @@ public class FormBuyFuel extends SpaceTraderForm
 		this.btnMax.setSize(new jwinforms.Size(41, 22));
 		this.btnMax.setTabIndex(3);
 		this.btnMax.setText("Max");
-		this.btnMax.setClick(new EventHandler<Object, EventArgs>()
-		{
+		this.btnMax.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnMax_Click(sender, e);
 			}
 		});
@@ -148,13 +144,14 @@ public class FormBuyFuel extends SpaceTraderForm
 		this.setCancelButton(this.btnNothing);
 		this.setClientSize(new jwinforms.Size(270, 63));
 		this.setControlBox(false);
-		this.Controls.addAll(Arrays.asList(this.btnNothing, this.btnMax, this.btnOk, this.numAmount, this.lblQuestion));
+		this.Controls.addAll(Arrays.asList(this.btnNothing, this.btnMax,
+				this.btnOk, this.numAmount, this.lblQuestion));
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);
 		this.setName("FormBuyFuel");
 		this.setShowInTaskbar(false);
 		this.setStartPosition(FormStartPosition.CenterParent);
 		this.setText("Buy Fuel");
-		((ISupportInitialize)(this.numAmount)).EndInit();
+		((ISupportInitialize) (this.numAmount)).EndInit();
 	}
 
 	// #endregion
@@ -163,8 +160,7 @@ public class FormBuyFuel extends SpaceTraderForm
 
 	// #region Event Handlers
 
-	private void btnMax_Click(Object sender, EventArgs e)
-	{
+	private void btnMax_Click(Object sender, EventArgs e) {
 		numAmount.setValue(numAmount.getMaximum());
 	}
 
@@ -172,8 +168,7 @@ public class FormBuyFuel extends SpaceTraderForm
 
 	// #region Properties
 
-	public int Amount()
-	{
+	public int Amount() {
 		return numAmount.getValue();
 	}
 }

@@ -15,13 +15,11 @@ public enum ReputationType implements SpaceTraderEnum// : int
 	Elite;// = 8
 
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 
-	public String getName()
-	{
+	public String getName() {
 		return Strings.ReputationNames[ordinal()];
 	}
 }

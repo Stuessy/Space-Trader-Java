@@ -37,13 +37,16 @@ public class TradeItem implements Comparable<TradeItem> // : IComparable
 	private final TradeItemType _type;
 	private final TechLevel _techProduction; // Tech level needed for production
 	private final TechLevel _techUsage; // Tech level needed to use
-	private final TechLevel _techTopProduction; // Tech level which produces this item
+	private final TechLevel _techTopProduction; // Tech level which produces
+												// this item
 	// the most
 	private final int _piceLowTech; // Medium price at lowest tech level
 	private final int _priceInc; // Price increase per tech level
-	private final int _priceVariance; // Max percentage above or below calculated
+	private final int _priceVariance; // Max percentage above or below
+										// calculated
 	// price
-	private final SystemPressure _pressurePriceHike; // Price increases considerably
+	private final SystemPressure _pressurePriceHike; // Price increases
+														// considerably
 	// when this event occurs
 	private final SpecialResource _resourceLowPrice; // When this resource is
 	// available, this trade item is
@@ -64,8 +67,7 @@ public class TradeItem implements Comparable<TradeItem> // : IComparable
 			int priceInc, int priceVariance, SystemPressure pressurePriceHike,
 			SpecialResource resourceLowPrice,
 			SpecialResource resourceHighPrice, int minTradePrice,
-			int maxTradePrice, int roundOff)
-	{
+			int maxTradePrice, int roundOff) {
 		_type = type;
 		_techProduction = techProduction;
 		_techUsage = techUsage;
@@ -82,19 +84,16 @@ public class TradeItem implements Comparable<TradeItem> // : IComparable
 	}
 
 	@Override
-	public int compareTo(TradeItem o)
-	{
+	public int compareTo(TradeItem o) {
 		return CompareTo(o);
 	}
 
-	public int CompareTo(Object value)
-	{
+	public int CompareTo(Object value) {
 		int compared = 0;
 
 		if (value == null)
 			compared = 1;
-		else
-		{
+		else {
 			compared = ((Integer) PriceLowTech()).compareTo(((TradeItem) value)
 					.PriceLowTech());
 			if (compared == 0)
@@ -105,14 +104,13 @@ public class TradeItem implements Comparable<TradeItem> // : IComparable
 		return compared;
 	}
 
-	public int StandardPrice(StarSystem target)
-	{
+	public int StandardPrice(StarSystem target) {
 		int price = 0;
 
-		if (target.ItemUsed(this))
-		{
+		if (target.ItemUsed(this)) {
 			// Determine base price on techlevel of system
-			price = PriceLowTech() + target.TechLevel().CastToInt() * PriceInc();
+			price = PriceLowTech() + target.TechLevel().CastToInt()
+					* PriceInc();
 
 			// If a good is highly requested, increase the price
 			if (target.PoliticalSystem().Wanted() == Type())
@@ -120,8 +118,8 @@ public class TradeItem implements Comparable<TradeItem> // : IComparable
 
 			// High trader activity decreases prices
 			price = price
-					* (100 - 2 * target.PoliticalSystem().ActivityTraders().CastToInt())
-					/ 100;
+					* (100 - 2 * target.PoliticalSystem().ActivityTraders()
+							.CastToInt()) / 100;
 
 			// Large system = high production decreases prices
 			price = price * (100 - target.Size().CastToInt()) / 100;
@@ -140,133 +138,73 @@ public class TradeItem implements Comparable<TradeItem> // : IComparable
 
 	// #region Properties
 
-	public boolean Illegal()
-	{
+	public boolean Illegal() {
 		return Type() == TradeItemType.Firearms
 				|| Type() == TradeItemType.Narcotics;
 
 	}
 
-	public int MaxTradePrice()
-	{
+	public int MaxTradePrice() {
 		return _maxTradePrice;
 
 	}
 
-	public int MinTradePrice()
-	{
+	public int MinTradePrice() {
 		return _minTradePrice;
 	}
 
-	
-public String Name()
-	{
+	public String Name() {
 		return Strings.TradeItemNames[_type.CastToInt()];
 
 	}
 
-	
-
-
-	public SystemPressure PressurePriceHike()
-	{
+	public SystemPressure PressurePriceHike() {
 		return _pressurePriceHike;
 
 	}
 
-	public int PriceInc()
-	{
+	public int PriceInc() {
 		return _priceInc;
 	}
 
-	public int PriceLowTech()
-	{
+	public int PriceLowTech() {
 		return _piceLowTech;
 
 	}
 
-	
-
-
-	
-
-
-	
-
-
-	
-
-
-	
-
-
-	
-
-
-	
-
-
-	
-
-
-	public int PriceVariance()
-	{
+	public int PriceVariance() {
 		return _priceVariance;
 
 	}
 
-	
-
-
-	public SpecialResource ResourceHighPrice()
-	{
+	public SpecialResource ResourceHighPrice() {
 		return _resourceHighPrice;
 
 	}
 
-	
-
-
-	public SpecialResource ResourceLowPrice()
-	{
+	public SpecialResource ResourceLowPrice() {
 		return _resourceLowPrice;
 	}
 
-	public int RoundOff()
-	{
+	public int RoundOff() {
 		return _roundOff;
 
 	}
 
-	
-
-
-	public TechLevel TechProduction()
-	{
+	public TechLevel TechProduction() {
 		return _techProduction;
 	}
 
-	
-
-
-	public TechLevel TechTopProduction()
-	{
+	public TechLevel TechTopProduction() {
 		return _techTopProduction;
 
 	}
 
-	
-
-	public TechLevel TechUsage()
-	{
+	public TechLevel TechUsage() {
 		return _techUsage;
 	}
 
-	
-
-
-	public TradeItemType Type()
-	{
+	public TradeItemType Type() {
 		return _type;
 	}
 }

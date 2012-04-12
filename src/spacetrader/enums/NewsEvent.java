@@ -43,13 +43,11 @@ public enum NewsEvent implements SpaceTraderEnum// : int
 	PrincessReturned;// = 38
 
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 
-	public static NewsEvent FromInt(int i)
-	{
-return values()[i];
+	public static NewsEvent FromInt(int i) {
+		return values()[i];
 	}
 }

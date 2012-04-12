@@ -33,16 +33,15 @@ import spacetrader.util.Hashtable;
 import spacetrader.util.Util;
 
 @SuppressWarnings("unchecked")
-public class CrewMember extends STSerializableObject
-{
+public class CrewMember extends STSerializableObject {
 	// #region Member Declarations
 
 	private CrewMemberId _id;
 	private int[] _skills = new int[4];
 	private StarSystemId _curSystemId = StarSystemId.NA;
 
-	public CrewMember(CrewMemberId id, int pilot, int fighter, int trader, int engineer, StarSystemId curSystemId)
-	{
+	public CrewMember(CrewMemberId id, int pilot, int fighter, int trader,
+			int engineer, StarSystemId curSystemId) {
 		_id = id;
 		Pilot(pilot);
 		Fighter(fighter);
@@ -51,8 +50,7 @@ public class CrewMember extends STSerializableObject
 		_curSystemId = curSystemId;
 	}
 
-	public CrewMember(CrewMember baseCrewMember)
-	{
+	public CrewMember(CrewMember baseCrewMember) {
 		_id = baseCrewMember.Id();
 		Pilot(baseCrewMember.Pilot());
 		Fighter(baseCrewMember.Fighter());
@@ -61,39 +59,39 @@ public class CrewMember extends STSerializableObject
 		_curSystemId = baseCrewMember.getCurrentSystemId();
 	}
 
-	public CrewMember(Hashtable hash)
-	{
+	public CrewMember(Hashtable hash) {
 		super(hash);
-		_id = CrewMemberId.FromInt(GetValueFromHash(hash, "_id", Integer.class));
+		_id = CrewMemberId
+				.FromInt(GetValueFromHash(hash, "_id", Integer.class));
 		_skills = GetValueFromHash(hash, "_skills", _skills, int[].class);
-		_curSystemId = StarSystemId.FromInt(GetValueFromHash(hash, "_curSystemId", _curSystemId, Integer.class));
+		_curSystemId = StarSystemId.FromInt(GetValueFromHash(hash,
+				"_curSystemId", _curSystemId, Integer.class));
 	}
 
-	private void ChangeRandomSkill(int amount)
-	{
+	private void ChangeRandomSkill(int amount) {
 		ArrayList skillIdList = new ArrayList(4);
-		for (int i = 0; i < Skills().length; i++)
-		{
-			if (Skills()[i] + amount > 0 && Skills()[i] + amount < Consts.MaxSkill)
+		for (int i = 0; i < Skills().length; i++) {
+			if (Skills()[i] + amount > 0
+					&& Skills()[i] + amount < Consts.MaxSkill)
 				skillIdList.add(i);
 		}
 
-		if (skillIdList.size() > 0)
-		{
-			int skill = (Integer)skillIdList.get(Functions.GetRandom(skillIdList.size()));
+		if (skillIdList.size() > 0) {
+			int skill = (Integer) skillIdList.get(Functions
+					.GetRandom(skillIdList.size()));
 
 			int curTrader = Game.CurrentGame().Commander().getShip().Trader();
 			Skills()[skill] += amount;
 			if (Game.CurrentGame().Commander().getShip().Trader() != curTrader)
-				Game.CurrentGame().RecalculateBuyPrices(Game.CurrentGame().Commander().getCurrentSystem());
+				Game.CurrentGame().RecalculateBuyPrices(
+						Game.CurrentGame().Commander().getCurrentSystem());
 		}
 	}
 
 	// *************************************************************************
 	// Increase one of the skills.
 	// *************************************************************************
-	public void IncreaseRandomSkill()
-	{
+	public void IncreaseRandomSkill() {
 		ChangeRandomSkill(1);
 	}
 
@@ -103,16 +101,12 @@ public class CrewMember extends STSerializableObject
 	// in the order of Pilot, Fighter, Trader, Engineer.
 	// JAF - rewrote this to be more efficient.
 	// *************************************************************************
-	public int NthLowestSkill(int n)
-	{
+	public int NthLowestSkill(int n) {
 		int[] skillIds = new int[] { 0, 1, 2, 3 };
 
-		for (int j = 0; j < 3; j++)
-		{
-			for (int i = 0; i < 3 - j; i++)
-			{
-				if (Skills()[skillIds[i]] > Skills()[skillIds[i + 1]])
-				{
+		for (int j = 0; j < 3; j++) {
+			for (int i = 0; i < 3 - j; i++) {
+				if (Skills()[skillIds[i]] > Skills()[skillIds[i + 1]]) {
 					int temp = skillIds[i];
 					skillIds[i] = skillIds[i + 1];
 					skillIds[i + 1] = temp;
@@ -124,8 +118,7 @@ public class CrewMember extends STSerializableObject
 	}
 
 	public @Override
-	Hashtable Serialize()
-	{
+	Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.add("_id", _id);
@@ -138,21 +131,19 @@ public class CrewMember extends STSerializableObject
 	// *************************************************************************
 	// Randomly tweak the skills.
 	// *************************************************************************
-	public void TonicTweakRandomSkill()
-	{
+	public void TonicTweakRandomSkill() {
 		int[] oldSkills = Arrays.copyOf(Skills(), Skills().length);
 
-		if (Game.CurrentGame().Difficulty().CastToInt() < Difficulty.Hard.CastToInt())
-		{
+		if (Game.CurrentGame().Difficulty().CastToInt() < Difficulty.Hard
+				.CastToInt()) {
 			// add one to a random skill, subtract one from a random skill
-			while (Skills()[0] == oldSkills[0] && Skills()[1] == oldSkills[1] && Skills()[2] == oldSkills[2]
-					&& Skills()[3] == oldSkills[3])
-			{
+			while (Skills()[0] == oldSkills[0] && Skills()[1] == oldSkills[1]
+					&& Skills()[2] == oldSkills[2]
+					&& Skills()[3] == oldSkills[3]) {
 				ChangeRandomSkill(1);
 				ChangeRandomSkill(-1);
 			}
-		} else
-		{
+		} else {
 			// add one to two random skills, subtract three from one random
 			// skill
 			ChangeRandomSkill(1);
@@ -162,8 +153,7 @@ public class CrewMember extends STSerializableObject
 	}
 
 	public @Override
-	String toString()
-	{
+	String toString() {
 		return Name();
 	}
 
@@ -171,84 +161,70 @@ public class CrewMember extends STSerializableObject
 
 	// #region Properties
 
-	public StarSystem getCurrentSystem()
-	{
-		return _curSystemId == StarSystemId.NA ? null : Game.CurrentGame().Universe()[_curSystemId.CastToInt()];
+	public StarSystem getCurrentSystem() {
+		return _curSystemId == StarSystemId.NA ? null : Game.CurrentGame()
+				.Universe()[_curSystemId.CastToInt()];
 	}
 
-	public void setCurrentSystem(StarSystem value)
-	{
+	public void setCurrentSystem(StarSystem value) {
 		_curSystemId = value.Id();
 	}
 
-	public void setCurrentSystemId(StarSystemId currentSystemId)
-	{
+	public void setCurrentSystemId(StarSystemId currentSystemId) {
 		_curSystemId = currentSystemId;
 	}
 
-	public StarSystemId getCurrentSystemId()
-	{
+	public StarSystemId getCurrentSystemId() {
 		return _curSystemId;
 	}
 
-	public int Engineer()
-	{
+	public int Engineer() {
 		return _skills[SkillType.Engineer.CastToInt()];
 	}
 
-	public void Engineer(int value)
-	{
+	public void Engineer(int value) {
 		_skills[SkillType.Engineer.CastToInt()] = value;
 	}
 
-	public int Fighter()
-	{
+	public int Fighter() {
 		return _skills[SkillType.Fighter.CastToInt()];
 	}
 
-	public void Fighter(int value)
-	{
+	public void Fighter(int value) {
 		_skills[SkillType.Fighter.CastToInt()] = value;
 	}
 
-	public CrewMemberId Id()
-	{
+	public CrewMemberId Id() {
 		return _id;
 	}
 
-	public String Name()
-	{
+	public String Name() {
 		return Strings.CrewMemberNames[_id.CastToInt()];
 	}
 
-	public int Pilot()
-	{
+	public int Pilot() {
 		return _skills[SkillType.Pilot.CastToInt()];
 	}
 
-	public void Pilot(int value)
-	{
+	public void Pilot(int value) {
 		_skills[SkillType.Pilot.CastToInt()] = value;
 	}
 
-	public int Rate()
-	{
-		return Util.ArrayContains(Consts.SpecialCrewMemberIds, Id()) || Id() == CrewMemberId.Zeethibal ? 0 : (Pilot()
-				+ Fighter() + Trader() + Engineer()) * 3;
+	public int Rate() {
+		return Util.ArrayContains(Consts.SpecialCrewMemberIds, Id())
+				|| Id() == CrewMemberId.Zeethibal ? 0 : (Pilot() + Fighter()
+				+ Trader() + Engineer()) * 3;
 	}
 
-	public int[] Skills()
-	{
+	public int[] Skills() {
 		return _skills;
 	}
 
-	public int Trader()
-	{
+	public int Trader() {
 		return _skills[SkillType.Trader.CastToInt()];
 	}
 
-	public void Trader(int value)
-	{
+	public void Trader(int value) {
 		_skills[SkillType.Trader.CastToInt()] = value;
 	}
 }

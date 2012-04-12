@@ -41,11 +41,9 @@ import spacetrader.enums.GadgetType;
 import spacetrader.stub.ArrayList;
 import spacetrader.util.Util;
 
-
 @SuppressWarnings("unchecked")
-public class FormViewShip extends SpaceTraderForm
-{
-	//#region Control Declarations
+public class FormViewShip extends SpaceTraderForm {
+	// #region Control Declarations
 
 	private jwinforms.Button btnClose;
 	private jwinforms.Label lblTypeLabel;
@@ -56,19 +54,18 @@ public class FormViewShip extends SpaceTraderForm
 	private jwinforms.Label lblEquip;
 	private Container components = null;
 
-	//#endregion
+	// #endregion
 
-	//#region Member Declarations
+	// #region Member Declarations
 
 	private Game game = Game.CurrentGame();
 	private Ship ship = Game.CurrentGame().Commander().getShip();
 
-	//#endregion
+	// #endregion
 
-	//#region Methods
+	// #region Methods
 
-	public FormViewShip()
-	{
+	public FormViewShip() {
 		InitializeComponent();
 
 		lblType.setText(ship.Name());
@@ -79,13 +76,12 @@ public class FormViewShip extends SpaceTraderForm
 		DisplaySpecialCargo();
 	}
 
-	//#region Windows Form Designer generated code
-	/// <summary>
-	/// Required method for Designer support - do not modify
-	/// the contents of this method with the code editor.
-	/// </summary>
-	private void InitializeComponent()
-	{
+	// #region Windows Form Designer generated code
+	// / <summary>
+	// / Required method for Designer support - do not modify
+	// / the contents of this method with the code editor.
+	// / </summary>
+	private void InitializeComponent() {
 		this.lblTypeLabel = new jwinforms.Label();
 		this.lblType = new jwinforms.Label();
 		this.btnClose = new jwinforms.Button();
@@ -95,9 +91,9 @@ public class FormViewShip extends SpaceTraderForm
 		this.lblSpecialCargo = new jwinforms.Label();
 		this.boxSpecialCargo.SuspendLayout();
 		this.SuspendLayout();
-		// 
+		//
 		// lblTypeLabel
-		// 
+		//
 		this.lblTypeLabel.setAutoSize(true);
 		this.lblTypeLabel.setFont(FontCollection.bold825);
 		this.lblTypeLabel.setLocation(new java.awt.Point(8, 8));
@@ -105,17 +101,17 @@ public class FormViewShip extends SpaceTraderForm
 		this.lblTypeLabel.setSize(new jwinforms.Size(34, 13));
 		this.lblTypeLabel.setTabIndex(2);
 		this.lblTypeLabel.setText("Type:");
-		// 
+		//
 		// lblType
-		// 
+		//
 		this.lblType.setLocation(new java.awt.Point(80, 8));
 		this.lblType.setName("lblType");
 		this.lblType.setSize(new jwinforms.Size(100, 13));
 		this.lblType.setTabIndex(4);
 		this.lblType.setText("Grasshopper");
-		// 
+		//
 		// btnClose
-		// 
+		//
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new java.awt.Point(-32, -32));
 		this.btnClose.setName("btnClose");
@@ -123,18 +119,19 @@ public class FormViewShip extends SpaceTraderForm
 		this.btnClose.setTabIndex(32);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
-		// 
+		//
 		// lblEquipLabel
-		// 
+		//
 		this.lblEquipLabel.setFont(FontCollection.bold825);
 		this.lblEquipLabel.setLocation(new java.awt.Point(8, 34));
 		this.lblEquipLabel.setName("lblEquipLabel");
 		this.lblEquipLabel.setSize(new jwinforms.Size(64, 176));
 		this.lblEquipLabel.setTabIndex(43);
-		this.lblEquipLabel.setText("Hull:\r\n\r\nEquipment:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUnfilled:");
-		// 
+		this.lblEquipLabel
+				.setText("Hull:\r\n\r\nEquipment:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nUnfilled:");
+		//
 		// lblEquip
-		// 
+		//
 		this.lblEquip.setLocation(new java.awt.Point(80, 34));
 		this.lblEquip.setName("lblEquip");
 		this.lblEquip.setSize(new jwinforms.Size(120, 176));
@@ -143,32 +140,34 @@ public class FormViewShip extends SpaceTraderForm
 				.setText("Hardened\r\n\r\n1 Military Laser\r\n1 Morgan\'s Laser\r\n1 Energy Shield\r\n1 Reflective Shi"
 						+ "eld\r\n1 Lightning Shield\r\nNavigating System\r\nAuto-Repair System\r\n10 Extra Cargo Bays\r\nAn Escape Pod\r\n"
 						+ "\r\n1 weapon slot\r\n1 gadget slot");
-		// 
+		//
 		// boxSpecialCargo
-		// 
-		this.boxSpecialCargo.Controls.addAll((new WinformControl[] { this.lblSpecialCargo }));
+		//
+		this.boxSpecialCargo.Controls
+				.addAll((new WinformControl[] { this.lblSpecialCargo }));
 		this.boxSpecialCargo.setLocation(new java.awt.Point(192, 8));
 		this.boxSpecialCargo.setName("boxSpecialCargo");
 		this.boxSpecialCargo.setSize(new jwinforms.Size(200, 204));
 		this.boxSpecialCargo.setTabIndex(64);
 		this.boxSpecialCargo.setTabStop(false);
 		this.boxSpecialCargo.setText("Special Cargo");
-		// 
+		//
 		// lblSpecialCargo
-		// 
+		//
 		this.lblSpecialCargo.setLocation(new java.awt.Point(8, 16));
 		this.lblSpecialCargo.setName("lblSpecialCargo");
 		this.lblSpecialCargo.setSize(new jwinforms.Size(190, 176));
 		this.lblSpecialCargo.setTabIndex(0);
 		this.lblSpecialCargo.setText("No special items.");
-		// 
+		//
 		// FormViewShip
-		// 
+		//
 		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
 		this.setCancelButton(this.btnClose);
 		this.setClientSize(new jwinforms.Size(402, 219));
-		this.Controls.addAll(Arrays.asList(this.boxSpecialCargo, this.lblEquip, this.lblEquipLabel, this.btnClose,
-				this.lblTypeLabel, this.lblType));
+		this.Controls.addAll(Arrays.asList(this.boxSpecialCargo, this.lblEquip,
+				this.lblEquipLabel, this.btnClose, this.lblTypeLabel,
+				this.lblType));
 		this.setFormBorderStyle(FormBorderStyle.FixedDialog);
 		this.setMaximizeBox(false);
 		this.setMinimizeBox(false);
@@ -178,118 +177,120 @@ public class FormViewShip extends SpaceTraderForm
 		this.setText("Current Ship");
 	}
 
-	//#endregion
+	// #endregion
 
-	private void DisplayEquipment()
-	{
-		if (game.getQuestStatusScarab() == SpecialEvent.StatusScarabDone)
-		{
-			lblEquipLabel.setText(lblEquipLabel.getText() + ("Hull:" + Strings.newline + Strings.newline));
-			lblEquip.setText(lblEquip.getText() + ("Hardened" + Strings.newline + Strings.newline));
+	private void DisplayEquipment() {
+		if (game.getQuestStatusScarab() == SpecialEvent.StatusScarabDone) {
+			lblEquipLabel.setText(lblEquipLabel.getText()
+					+ ("Hull:" + Strings.newline + Strings.newline));
+			lblEquip.setText(lblEquip.getText()
+					+ ("Hardened" + Strings.newline + Strings.newline));
 		}
 
 		boolean equipPrinted = false;
 
-		for (int i = 0; i < Consts.Weapons.length; i++)
-		{
+		for (int i = 0; i < Consts.Weapons.length; i++) {
 			int count = 0;
-			for (int j = 0; j < ship.Weapons().length; j++)
-			{
-				if (ship.Weapons()[j] != null && ship.Weapons()[j].Type() == Consts.Weapons[i].Type())
+			for (int j = 0; j < ship.Weapons().length; j++) {
+				if (ship.Weapons()[j] != null
+						&& ship.Weapons()[j].Type() == Consts.Weapons[i].Type())
 					count++;
 			}
-			if (count > 0)
-			{
+			if (count > 0) {
 				lblEquipLabel.setText(lblEquipLabel.getText()
-						+ (equipPrinted ? Strings.newline : "Equipment:" + Strings.newline));
+						+ (equipPrinted ? Strings.newline : "Equipment:"
+								+ Strings.newline));
 				lblEquip.setText(lblEquip.getText()
 						+ (Functions.Multiples(count, Consts.Weapons[i].Name()) + Strings.newline));
 				equipPrinted = true;
 			}
 		}
 
-		for (int i = 0; i < Consts.Shields.length; i++)
-		{
+		for (int i = 0; i < Consts.Shields.length; i++) {
 			int count = 0;
-			for (int j = 0; j < ship.Shields().length; j++)
-			{
-				if (ship.Shields()[j] != null && ship.Shields()[j].Type() == Consts.Shields[i].Type())
+			for (int j = 0; j < ship.Shields().length; j++) {
+				if (ship.Shields()[j] != null
+						&& ship.Shields()[j].Type() == Consts.Shields[i].Type())
 					count++;
 			}
-			if (count > 0)
-			{
+			if (count > 0) {
 				lblEquipLabel.setText(lblEquipLabel.getText()
-						+ (equipPrinted ? Strings.newline : "Equipment:" + Strings.newline));
+						+ (equipPrinted ? Strings.newline : "Equipment:"
+								+ Strings.newline));
 				lblEquip.setText(lblEquip.getText()
 						+ (Functions.Multiples(count, Consts.Shields[i].Name()) + Strings.newline));
 				equipPrinted = true;
 			}
 		}
 
-		for (int i = 0; i < Consts.Gadgets.length; i++)
-		{
+		for (int i = 0; i < Consts.Gadgets.length; i++) {
 			int count = 0;
-			for (int j = 0; j < ship.Gadgets().length; j++)
-			{
-				if (ship.Gadgets()[j] != null && ship.Gadgets()[j].Type() == Consts.Gadgets[i].Type())
+			for (int j = 0; j < ship.Gadgets().length; j++) {
+				if (ship.Gadgets()[j] != null
+						&& ship.Gadgets()[j].Type() == Consts.Gadgets[i].Type())
 					count++;
 			}
-			if (count > 0)
-			{
+			if (count > 0) {
 				lblEquipLabel.setText(lblEquipLabel.getText()
-						+ (equipPrinted ? Strings.newline : "Equipment:" + Strings.newline));
+						+ (equipPrinted ? Strings.newline : "Equipment:"
+								+ Strings.newline));
 
-				if (i == GadgetType.ExtraCargoBays.CastToInt() || i == GadgetType.HiddenCargoBays.CastToInt())
-				{
+				if (i == GadgetType.ExtraCargoBays.CastToInt()
+						|| i == GadgetType.HiddenCargoBays.CastToInt()) {
 					count *= 5;
-					lblEquip
-							.setText(lblEquip.getText()
-									+ (Functions.FormatNumber(count) + Consts.Gadgets[i].Name().substring(1) + Strings.newline));
+					lblEquip.setText(lblEquip.getText()
+							+ (Functions.FormatNumber(count)
+									+ Consts.Gadgets[i].Name().substring(1) + Strings.newline));
 				} else
 					lblEquip.setText(lblEquip.getText()
-							+ (Functions.Multiples(count, Consts.Gadgets[i].Name()) + Strings.newline));
+							+ (Functions.Multiples(count,
+									Consts.Gadgets[i].Name()) + Strings.newline));
 
 				equipPrinted = true;
 			}
 		}
 
-		if (ship.getEscapePod())
-		{
+		if (ship.getEscapePod()) {
 			lblEquipLabel.setText(lblEquipLabel.getText()
-					+ (equipPrinted ? Strings.newline : "Equipment:" + Strings.newline));
-			lblEquip.setText(lblEquip.getText() + ("1 " + Strings.ShipInfoEscapePod + Strings.newline));
+					+ (equipPrinted ? Strings.newline : "Equipment:"
+							+ Strings.newline));
+			lblEquip.setText(lblEquip.getText()
+					+ ("1 " + Strings.ShipInfoEscapePod + Strings.newline));
 			equipPrinted = true;
 		}
 
-		if (ship.FreeSlots() > 0)
-		{
-			lblEquipLabel.setText(lblEquipLabel.getText() + ((equipPrinted ? Strings.newline : "") + "Unfilled:"));
-			lblEquip.setText(lblEquip.getText() + (equipPrinted ? Strings.newline : ""));
+		if (ship.FreeSlots() > 0) {
+			lblEquipLabel.setText(lblEquipLabel.getText()
+					+ ((equipPrinted ? Strings.newline : "") + "Unfilled:"));
+			lblEquip.setText(lblEquip.getText()
+					+ (equipPrinted ? Strings.newline : ""));
 
 			if (ship.FreeSlotsWeapon() > 0)
 				lblEquip.setText(lblEquip.getText()
-						+ (Functions.Multiples(ship.FreeSlotsWeapon(), "weapon slot") + Strings.newline));
+						+ (Functions.Multiples(ship.FreeSlotsWeapon(),
+								"weapon slot") + Strings.newline));
 
 			if (ship.FreeSlotsShield() > 0)
 				lblEquip.setText(lblEquip.getText()
-						+ (Functions.Multiples(ship.FreeSlotsShield(), "shield slot") + Strings.newline));
+						+ (Functions.Multiples(ship.FreeSlotsShield(),
+								"shield slot") + Strings.newline));
 
 			if (ship.FreeSlotsGadget() > 0)
 				lblEquip.setText(lblEquip.getText()
-						+ (Functions.Multiples(ship.FreeSlotsGadget(), "gadget slot") + Strings.newline));
+						+ (Functions.Multiples(ship.FreeSlotsGadget(),
+								"gadget slot") + Strings.newline));
 		}
 	}
 
-	private void DisplaySpecialCargo()
-	{
+	private void DisplaySpecialCargo() {
 		ArrayList specialCargo = new ArrayList(12);
 
-		if (ship.getTribbles() > 0)
-		{
+		if (ship.getTribbles() > 0) {
 			if (ship.getTribbles() == Consts.MaxTribbles)
 				specialCargo.add(Strings.SpecialCargoTribblesInfest);
 			else
-				specialCargo.add(Functions.Multiples(ship.getTribbles(), Strings.SpecialCargoTribblesCute) + ".");
+				specialCargo.add(Functions.Multiples(ship.getTribbles(),
+						Strings.SpecialCargoTribblesCute) + ".");
 		}
 
 		if (game.getQuestStatusJapori() == SpecialEvent.StatusJaporiInTransit)
@@ -301,10 +302,10 @@ public class FormViewShip extends SpaceTraderForm
 		if (game.getQuestStatusJarek() == SpecialEvent.StatusJarekDone)
 			specialCargo.add(Strings.SpecialCargoJarek);
 
-		if (ship.ReactorOnBoard())
-		{
+		if (ship.ReactorOnBoard()) {
 			specialCargo.add(Strings.SpecialCargoReactor);
-			specialCargo.add(Functions.Multiples(10 - ((game.getQuestStatusReactor() - 1) / 2), "bay")
+			specialCargo.add(Functions.Multiples(
+					10 - ((game.getQuestStatusReactor() - 1) / 2), "bay")
 					+ Strings.SpecialCargoReactorBays);
 		}
 
@@ -314,9 +315,11 @@ public class FormViewShip extends SpaceTraderForm
 		if (game.getCanSuperWarp())
 			specialCargo.add(Strings.SpecialCargoExperiment);
 
-		lblSpecialCargo.setText(specialCargo.size() == 0 ? Strings.SpecialCargoNone : Util.StringsJoin(Strings.newline
-				+ Strings.newline, Functions.ArrayListtoStringArray(specialCargo)));
+		lblSpecialCargo
+				.setText(specialCargo.size() == 0 ? Strings.SpecialCargoNone
+						: Util.StringsJoin(Strings.newline + Strings.newline,
+								Functions.ArrayListtoStringArray(specialCargo)));
 	}
 
-	//#endregion
+	// #endregion
 }

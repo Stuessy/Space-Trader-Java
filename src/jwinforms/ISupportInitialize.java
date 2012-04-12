@@ -1,7 +1,6 @@
 package jwinforms;
 
-public interface ISupportInitialize
-{
+public interface ISupportInitialize {
 
 	void BeginInit();
 

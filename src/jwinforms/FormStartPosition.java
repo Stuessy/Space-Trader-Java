@@ -1,6 +1,5 @@
 package jwinforms;
 
-public enum FormStartPosition
-{
+public enum FormStartPosition {
 	Manual, CenterParent
 }

@@ -9,52 +9,42 @@ import javax.swing.Action;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
-public class Button extends WinformControl
-{
-	public Button()
-	{
+public class Button extends WinformControl {
+	public Button() {
 		super(new JButton());
 	}
 
 	DialogResult DialogResult;
 	Action userAction;
 
-	public void setText(String text)
-	{
+	public void setText(String text) {
 		asJButtton().setText(text);
 	}
 
-	public String getText()
-	{
+	public String getText() {
 		return asJButtton().getText();
 	}
 
 	@Override
-	public void setSize(Dimension size)
-	{
+	public void setSize(Dimension size) {
 		// width should be bigger because font is bigger(?).
 		super.setSize(new Dimension(size.width, size.height));
 	}
 
-	public JButton asJButtton()
-	{
-		return (JButton)swingVersion;
+	public JButton asJButtton() {
+		return (JButton) swingVersion;
 	}
 
-	public void setDialogResult(DialogResult dialogResult)
-	{
+	public void setDialogResult(DialogResult dialogResult) {
 		DialogResult = dialogResult;
 	}
 
-//	@SuppressWarnings("serial")
+	// @SuppressWarnings("serial")
 	@Override
-	public void setClick(final EventHandler<Object, EventArgs> click)
-	{
-		userAction = new AbstractAction()
-		{
+	public void setClick(final EventHandler<Object, EventArgs> click) {
+		userAction = new AbstractAction() {
 			@Override
-			public void actionPerformed(ActionEvent arg0)
-			{
+			public void actionPerformed(ActionEvent arg0) {
 				click.handle(Button.this, null);
 			}
 		};
@@ -63,10 +53,8 @@ public class Button extends WinformControl
 		super.setClick(click);
 	}
 
-		public void setFlatStyle(FlatStyle flatStyle)
-	{
-		switch (flatStyle)
-		{
+	public void setFlatStyle(FlatStyle flatStyle) {
+		switch (flatStyle) {
 		case Flat:
 			asJButtton().setBorder(BorderFactory.createLineBorder(Color.black));
 			return;
@@ -75,6 +63,6 @@ public class Button extends WinformControl
 			throw new Error("Unknown FlatStyle");
 		}
 		// I think this is default.
-		//asJButtton().setBorder(BorderFactory.createRaisedBevelBorder());
+		// asJButtton().setBorder(BorderFactory.createRaisedBevelBorder());
 	}
 }

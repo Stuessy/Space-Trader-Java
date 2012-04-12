@@ -1,3 +1,3 @@
-
 @Deprecated
 package spacetrader.stub;
+

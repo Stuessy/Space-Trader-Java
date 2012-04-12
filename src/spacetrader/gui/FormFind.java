@@ -28,11 +28,11 @@
 //using System.ComponentModel;
 //using System.Windows.Forms;
 package spacetrader.gui;
+
 import jwinforms.DialogResult;
 import jwinforms.FormStartPosition;
 
-public class FormFind extends SpaceTraderForm
-{
+public class FormFind extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Label lblText;
@@ -45,8 +45,7 @@ public class FormFind extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormFind()
-	{
+	public FormFind() {
 		InitializeComponent();
 
 		txtSystem.setText("");
@@ -58,8 +57,7 @@ public class FormFind extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		lblText = new jwinforms.Label();
 		btnOk = new jwinforms.Button();
 		btnCancel = new jwinforms.Button();
@@ -119,8 +117,7 @@ public class FormFind extends SpaceTraderForm
 		this.setCancelButton(btnCancel);
 		this.setClientSize(new jwinforms.Size(184, 97));
 		this.setControlBox(false);
-		Controls.addAll(chkTrack, txtSystem,
-				btnCancel, btnOk, lblText);
+		Controls.addAll(chkTrack, txtSystem, btnCancel, btnOk, lblText);
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);
 		this.setName("FormFind");
 		this.setShowInTaskbar(false);
@@ -128,13 +125,11 @@ public class FormFind extends SpaceTraderForm
 		this.setText("Find System");
 	}
 
-	public String SystemName()
-	{
+	public String SystemName() {
 		return txtSystem.getText();
 	}
 
-	public boolean TrackSystem()
-	{
+	public boolean TrackSystem() {
 		return chkTrack.isChecked();
 	}
 }

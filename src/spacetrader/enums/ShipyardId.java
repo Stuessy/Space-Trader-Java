@@ -10,13 +10,11 @@ public enum ShipyardId implements SpaceTraderEnum// : int
 	Sorosuub;// = 4
 
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal() - 1;
 	}
 
-	public static ShipyardId FromInt(int i)
-	{
-		return values()[i+1];
+	public static ShipyardId FromInt(int i) {
+		return values()[i + 1];
 	}
 }

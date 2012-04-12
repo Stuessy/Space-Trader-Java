@@ -40,8 +40,7 @@ import jwinforms.ISupportInitialize;
 import jwinforms.NumericUpDown;
 import spacetrader.enums.Difficulty;
 
-public class FormNewCommander extends SpaceTraderForm
-{
+public class FormNewCommander extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Label lblName;
@@ -66,8 +65,7 @@ public class FormNewCommander extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormNewCommander()
-	{
+	public FormNewCommander() {
 		InitializeComponent();
 
 		selDifficulty.setSelectedIndex(2);
@@ -78,8 +76,7 @@ public class FormNewCommander extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		this.lblName = new jwinforms.Label();
 		this.txtName = new jwinforms.TextBox();
 		this.btnClose = new jwinforms.Button();
@@ -97,10 +94,10 @@ public class FormNewCommander extends SpaceTraderForm
 		this.btnOk = new jwinforms.Button();
 		this.lblPointsRemaining = new jwinforms.Label();
 		this.lblPoints = new jwinforms.Label();
-		((ISupportInitialize)(this.numPilot)).BeginInit();
-		((ISupportInitialize)(this.numFighter)).BeginInit();
-		((ISupportInitialize)(this.numTrader)).BeginInit();
-		((ISupportInitialize)(this.numEngineer)).BeginInit();
+		((ISupportInitialize) (this.numPilot)).BeginInit();
+		((ISupportInitialize) (this.numFighter)).BeginInit();
+		((ISupportInitialize) (this.numTrader)).BeginInit();
+		((ISupportInitialize) (this.numEngineer)).BeginInit();
 		this.SuspendLayout();
 		//
 		// lblName
@@ -119,11 +116,9 @@ public class FormNewCommander extends SpaceTraderForm
 		this.txtName.setSize(new jwinforms.Size(120, 20));
 		this.txtName.setTabIndex(1);
 		this.txtName.setText("");
-		this.txtName.setTextChanged(new EventHandler<Object, EventArgs>()
-		{
+		this.txtName.setTextChanged(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				txtName_TextChanged(sender, e);
 			}
 		});
@@ -195,7 +190,8 @@ public class FormNewCommander extends SpaceTraderForm
 		// selDifficulty
 		//
 		this.selDifficulty.DropDownStyle = jwinforms.ComboBoxStyle.DropDownList;
-		this.selDifficulty.Items.AddRange(new Object[] { "Beginner", "Easy", "Normal", "Hard", "Impossible" });
+		this.selDifficulty.Items.AddRange(new Object[] { "Beginner", "Easy",
+				"Normal", "Hard", "Impossible" });
 		this.selDifficulty.setLocation(new java.awt.Point(72, 37));
 		this.selDifficulty.setName("selDifficulty");
 		this.selDifficulty.setSize(new jwinforms.Size(120, 21));
@@ -211,27 +207,21 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numPilot.setTabIndex(3);
 		this.numPilot.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numPilot.setValue(1);
-		this.numPilot.setEnter(new EventHandler<Object, EventArgs>()
-		{
+		this.numPilot.setEnter(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueEnter(sender, e);
 			}
 		});
-		this.numPilot.setValueChanged(new EventHandler<Object, EventArgs>()
-		{
+		this.numPilot.setValueChanged(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
-		this.numPilot.setLeave(new EventHandler<Object, EventArgs>()
-		{
+		this.numPilot.setLeave(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
@@ -246,27 +236,21 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numFighter.setTabIndex(4);
 		this.numFighter.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numFighter.setValue(1);
-		this.numFighter.setEnter(new EventHandler<Object, EventArgs>()
-		{
+		this.numFighter.setEnter(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueEnter(sender, e);
 			}
 		});
-		this.numFighter.setValueChanged(new EventHandler<Object, EventArgs>()
-		{
+		this.numFighter.setValueChanged(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
-		this.numFighter.setLeave(new EventHandler<Object, EventArgs>()
-		{
+		this.numFighter.setLeave(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
@@ -281,27 +265,21 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numTrader.setTabIndex(5);
 		this.numTrader.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numTrader.setValue(1);
-		this.numTrader.setEnter(new EventHandler<Object, EventArgs>()
-		{
+		this.numTrader.setEnter(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueEnter(sender, e);
 			}
 		});
-		this.numTrader.setValueChanged(new EventHandler<Object, EventArgs>()
-		{
+		this.numTrader.setValueChanged(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
-		this.numTrader.setLeave(new EventHandler<Object, EventArgs>()
-		{
+		this.numTrader.setLeave(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
@@ -316,27 +294,21 @@ public class FormNewCommander extends SpaceTraderForm
 		this.numEngineer.setTabIndex(6);
 		this.numEngineer.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numEngineer.setValue(1);
-		this.numEngineer.setEnter(new EventHandler<Object, EventArgs>()
-		{
+		this.numEngineer.setEnter(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueEnter(sender, e);
 			}
 		});
-		this.numEngineer.setValueChanged(new EventHandler<Object, EventArgs>()
-		{
+		this.numEngineer.setValueChanged(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
-		this.numEngineer.setLeave(new EventHandler<Object, EventArgs>()
-		{
+		this.numEngineer.setLeave(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				num_ValueChanged(sender, e);
 			}
 		});
@@ -377,10 +349,12 @@ public class FormNewCommander extends SpaceTraderForm
 		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
 		this.setCancelButton(this.btnClose);
 		this.setClientSize(new jwinforms.Size(202, 231));
-		this.Controls.addAll(Arrays.asList(this.lblPoints, this.lblPointsRemaining, this.lblEngineer, this.lblTrader,
-				this.lblFighter, this.lblPilot, this.lblSkillPoints, this.lblDifficulty, this.lblName, this.btnOk,
-				this.numEngineer, this.numTrader, this.numFighter, this.numPilot, this.selDifficulty, this.btnClose,
-				this.txtName));
+		this.Controls.addAll(Arrays.asList(this.lblPoints,
+				this.lblPointsRemaining, this.lblEngineer, this.lblTrader,
+				this.lblFighter, this.lblPilot, this.lblSkillPoints,
+				this.lblDifficulty, this.lblName, this.btnOk, this.numEngineer,
+				this.numTrader, this.numFighter, this.numPilot,
+				this.selDifficulty, this.btnClose, this.txtName));
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);
 		this.setMaximizeBox(false);
 		this.setMinimizeBox(false);
@@ -388,26 +362,25 @@ public class FormNewCommander extends SpaceTraderForm
 		this.setShowInTaskbar(false);
 		this.setStartPosition(FormStartPosition.CenterParent);
 		this.setText("New Commander");
-		((ISupportInitialize)(this.numPilot)).EndInit();
-		((ISupportInitialize)(this.numFighter)).EndInit();
-		((ISupportInitialize)(this.numTrader)).EndInit();
-		((ISupportInitialize)(this.numEngineer)).EndInit();
+		((ISupportInitialize) (this.numPilot)).EndInit();
+		((ISupportInitialize) (this.numFighter)).EndInit();
+		((ISupportInitialize) (this.numTrader)).EndInit();
+		((ISupportInitialize) (this.numEngineer)).EndInit();
 
 	}
 
 	// #endregion
 
-	private void UpdateOkEnabled()
-	{
-		btnOk.setEnabled(lblPoints.getText().equals("0") && txtName.getText().length() > 0);
+	private void UpdateOkEnabled() {
+		btnOk.setEnabled(lblPoints.getText().equals("0")
+				&& txtName.getText().length() > 0);
 	}
 
 	// #endregion
 
 	// #region Event Handlers
 
-	private void num_ValueChanged(Object sender, EventArgs e)
-	{
+	private void num_ValueChanged(Object sender, EventArgs e) {
 		int points = 20 - (Pilot() + Fighter() + Trader() + Engineer());
 		lblPoints.setText("" + points);
 		numPilot.setMaximum(Math.min(10, Pilot() + points));
@@ -418,13 +391,12 @@ public class FormNewCommander extends SpaceTraderForm
 		UpdateOkEnabled();
 	}
 
-	private void num_ValueEnter(Object sender, EventArgs e)
-	{
-		((NumericUpDown)sender).Select(0, ("" + ((NumericUpDown)sender).getValue()).length());
+	private void num_ValueEnter(Object sender, EventArgs e) {
+		((NumericUpDown) sender).Select(0,
+				("" + ((NumericUpDown) sender).getValue()).length());
 	}
 
-	private void txtName_TextChanged(Object sender, EventArgs e)
-	{
+	private void txtName_TextChanged(Object sender, EventArgs e) {
 		UpdateOkEnabled();
 	}
 
@@ -432,37 +404,27 @@ public class FormNewCommander extends SpaceTraderForm
 
 	// #region Properties
 
-
-	public String CommanderName()
-	{
+	public String CommanderName() {
 		return txtName.getText();
 	}
 
-
-	public Difficulty Difficulty()
-	{
+	public Difficulty Difficulty() {
 		return Difficulty.FromInt(selDifficulty.getSelectedIndex());
 	}
 
-	public int Pilot()
-	{
+	public int Pilot() {
 		return numPilot.getValue();
 	}
 
-
-	public int Fighter()
-	{
+	public int Fighter() {
 		return numFighter.getValue();
 	}
 
-
-	public int Trader()
-	{
+	public int Trader() {
 		return numTrader.getValue();
 	}
 
-	public int Engineer()
-	{
+	public int Engineer() {
 		return numEngineer.getValue();
 	}
 

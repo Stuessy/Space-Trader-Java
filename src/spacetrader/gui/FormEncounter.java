@@ -23,7 +23,9 @@
  *
  ******************************************************************************/
 
-package spacetrader.gui;import java.awt.Color;
+package spacetrader.gui;
+
+import java.awt.Color;
 
 import jwinforms.Button;
 import jwinforms.Container;
@@ -45,8 +47,7 @@ import spacetrader.guifacade.Facaded;
 import spacetrader.guifacade.GuiFacade;
 
 @Facaded
-public class FormEncounter extends SpaceTraderForm
-{
+public class FormEncounter extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Label lblEncounter;
@@ -153,8 +154,7 @@ public class FormEncounter extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormEncounter()
-	{
+	public FormEncounter() {
 		InitializeComponent();
 
 		// Set up the Game encounter variables.
@@ -173,7 +173,8 @@ public class FormEncounter extends SpaceTraderForm
 		UpdateButtons();
 
 		if (game.EncounterImageIndex() >= 0)
-			picEncounterType.setImage(ilEncounterType.getImages()[game.EncounterImageIndex()]);
+			picEncounterType.setImage(ilEncounterType.getImages()[game
+					.EncounterImageIndex()]);
 		else
 			picEncounterType.setVisible(false);
 
@@ -186,8 +187,7 @@ public class FormEncounter extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		components = new Container();
 		ResourceManager resources = new ResourceManager(FormEncounter.class);
 		lblEncounter = new jwinforms.Label();
@@ -218,8 +218,7 @@ public class FormEncounter extends SpaceTraderForm
 		picContinuous = new jwinforms.PictureBox();
 		ilContinuous = new jwinforms.ImageList(components);
 		picEncounterType = new jwinforms.PictureBox();
-		ilEncounterType = new jwinforms.ImageList(
-				components);
+		ilEncounterType = new jwinforms.ImageList(components);
 		picTrib00 = new jwinforms.PictureBox();
 		ilTribbles = new jwinforms.ImageList(components);
 		picTrib50 = new jwinforms.PictureBox();
@@ -266,7 +265,8 @@ public class FormEncounter extends SpaceTraderForm
 		lblEncounter.setName("lblEncounter");
 		lblEncounter.setSize(new jwinforms.Size(232, 26));
 		lblEncounter.setTabIndex(0);
-		lblEncounter.setText("At 20 clicks from Tarchannen, you encounter the famous Captain Ahab.");
+		lblEncounter
+				.setText("At 20 clicks from Tarchannen, you encounter the famous Captain Ahab.");
 		//
 		// picShipYou
 		//
@@ -277,11 +277,9 @@ public class FormEncounter extends SpaceTraderForm
 		picShipYou.setSize(new jwinforms.Size(70, 58));
 		picShipYou.setTabIndex(13);
 		picShipYou.setTabStop(false);
-		picShipYou.setPaint(new EventHandler<Object, PaintEventArgs>()
-		{
+		picShipYou.setPaint(new EventHandler<Object, PaintEventArgs>() {
 			@Override
-			public void handle(Object sender, PaintEventArgs e)
-			{
+			public void handle(Object sender, PaintEventArgs e) {
 				picShipYou_Paint(sender, e);
 			}
 		});
@@ -295,11 +293,9 @@ public class FormEncounter extends SpaceTraderForm
 		picShipOpponent.setSize(new jwinforms.Size(70, 58));
 		picShipOpponent.setTabIndex(14);
 		picShipOpponent.setTabStop(false);
-		picShipOpponent.setPaint(new EventHandler<Object, PaintEventArgs>()
-		{
+		picShipOpponent.setPaint(new EventHandler<Object, PaintEventArgs>() {
 			@Override
-			public void handle(Object sender, PaintEventArgs e)
-			{
+			public void handle(Object sender, PaintEventArgs e) {
 				picShipOpponent_Paint(sender, e);
 			}
 		});
@@ -310,8 +306,9 @@ public class FormEncounter extends SpaceTraderForm
 		lblAction.setName("lblAction");
 		lblAction.setSize(new jwinforms.Size(232, 39));
 		lblAction.setTabIndex(15);
-		lblAction.setText("\"We know you removed illegal goods from the Marie Celeste. You must give them up "
-				+ "at once!\"");
+		lblAction
+				.setText("\"We know you removed illegal goods from the Marie Celeste. You must give them up "
+						+ "at once!\"");
 		//
 		// lblOpponentLabel
 		//
@@ -390,11 +387,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnAttack.setTabIndex(24);
 		btnAttack.setText("Attack");
 		btnAttack.setVisible(false);
-		btnAttack.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnAttack.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnAttack_Click(sender, e);
 			}
 		});
@@ -408,11 +403,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnFlee.setTabIndex(25);
 		btnFlee.setText("Flee");
 		btnFlee.setVisible(false);
-		btnFlee.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnFlee.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnFlee_Click(sender, e);
 			}
 		});
@@ -426,11 +419,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnSubmit.setTabIndex(26);
 		btnSubmit.setText("Submit");
 		btnSubmit.setVisible(false);
-		btnSubmit.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSubmit.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnSubmit_Click(sender, e);
 			}
 		});
@@ -444,11 +435,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnBribe.setTabIndex(27);
 		btnBribe.setText("Bribe");
 		btnBribe.setVisible(false);
-		btnBribe.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBribe.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnBribe_Click(sender, e);
 			}
 		});
@@ -462,11 +451,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnSurrender.setTabIndex(28);
 		btnSurrender.setText("Surrender");
 		btnSurrender.setVisible(false);
-		btnSurrender.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSurrender.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnSurrender_Click(sender, e);
 			}
 		});
@@ -480,11 +467,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnIgnore.setTabIndex(29);
 		btnIgnore.setText("Ignore");
 		btnIgnore.setVisible(false);
-		btnIgnore.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnIgnore.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnIgnore_Click(sender, e);
 			}
 		});
@@ -498,11 +483,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnTrade.setTabIndex(30);
 		btnTrade.setText("Trade");
 		btnTrade.setVisible(false);
-		btnTrade.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnTrade.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnTrade_Click(sender, e);
 			}
 		});
@@ -516,11 +499,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnPlunder.setTabIndex(31);
 		btnPlunder.setText("Plunder");
 		btnPlunder.setVisible(false);
-		btnPlunder.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunder.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -534,11 +515,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnBoard.setTabIndex(32);
 		btnBoard.setText("Board");
 		btnBoard.setVisible(false);
-		btnBoard.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnBoard.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnBoard_Click(sender, e);
 			}
 		});
@@ -552,11 +531,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnMeet.setTabIndex(34);
 		btnMeet.setText("Meet");
 		btnMeet.setVisible(false);
-		btnMeet.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnMeet.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnMeet_Click(sender, e);
 			}
 		});
@@ -570,11 +547,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnDrink.setTabIndex(35);
 		btnDrink.setText("Drink");
 		btnDrink.setVisible(false);
-		btnDrink.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnDrink.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnDrink_Click(sender, e);
 			}
 		});
@@ -588,11 +563,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnInt.setTabIndex(36);
 		btnInt.setText("Int.");
 		btnInt.setVisible(false);
-		btnInt.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnInt.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnInt_Click(sender, e);
 			}
 		});
@@ -606,11 +579,9 @@ public class FormEncounter extends SpaceTraderForm
 		btnYield.setTabIndex(37);
 		btnYield.setText("Yield");
 		btnYield.setVisible(false);
-		btnYield.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnYield.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnYield_Click(sender, e);
 			}
 		});
@@ -642,8 +613,9 @@ public class FormEncounter extends SpaceTraderForm
 		// ilEncounterType
 		//
 		ilEncounterType.setImageSize(new jwinforms.Size(12, 12));
-		ilEncounterType.setImageStream(((jwinforms.ImageListStreamer) (resources
-				.GetObject("ilEncounterType.ImageStream"))));
+		ilEncounterType
+				.setImageStream(((jwinforms.ImageListStreamer) (resources
+						.GetObject("ilEncounterType.ImageStream"))));
 		ilEncounterType.setTransparentColor(Color.white);
 		//
 		// picTrib00
@@ -655,11 +627,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib00.setTabIndex(41);
 		picTrib00.setTabStop(false);
 		picTrib00.setVisible(false);
-		picTrib00.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib00.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -680,11 +650,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib50.setTabIndex(42);
 		picTrib50.setTabStop(false);
 		picTrib50.setVisible(false);
-		picTrib50.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib50.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -698,11 +666,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib10.setTabIndex(43);
 		picTrib10.setTabStop(false);
 		picTrib10.setVisible(false);
-		picTrib10.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib10.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -716,11 +682,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib40.setTabIndex(44);
 		picTrib40.setTabStop(false);
 		picTrib40.setVisible(false);
-		picTrib40.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib40.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -734,11 +698,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib20.setTabIndex(45);
 		picTrib20.setTabStop(false);
 		picTrib20.setVisible(false);
-		picTrib20.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib20.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -752,11 +714,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib30.setTabIndex(46);
 		picTrib30.setTabStop(false);
 		picTrib30.setVisible(false);
-		picTrib30.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib30.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -770,11 +730,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib04.setTabIndex(47);
 		picTrib04.setTabStop(false);
 		picTrib04.setVisible(false);
-		picTrib04.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib04.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -788,11 +746,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib03.setTabIndex(48);
 		picTrib03.setTabStop(false);
 		picTrib03.setVisible(false);
-		picTrib03.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib03.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -806,11 +762,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib02.setTabIndex(49);
 		picTrib02.setTabStop(false);
 		picTrib02.setVisible(false);
-		picTrib02.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib02.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -824,11 +778,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib01.setTabIndex(50);
 		picTrib01.setTabStop(false);
 		picTrib01.setVisible(false);
-		picTrib01.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib01.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -842,11 +794,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib05.setTabIndex(51);
 		picTrib05.setTabStop(false);
 		picTrib05.setVisible(false);
-		picTrib05.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib05.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -860,11 +810,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib11.setTabIndex(52);
 		picTrib11.setTabStop(false);
 		picTrib11.setVisible(false);
-		picTrib11.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib11.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -878,11 +826,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib12.setTabIndex(53);
 		picTrib12.setTabStop(false);
 		picTrib12.setVisible(false);
-		picTrib12.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib12.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -896,11 +842,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib13.setTabIndex(54);
 		picTrib13.setTabStop(false);
 		picTrib13.setVisible(false);
-		picTrib13.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib13.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -914,11 +858,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib14.setTabIndex(55);
 		picTrib14.setTabStop(false);
 		picTrib14.setVisible(false);
-		picTrib14.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib14.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -932,11 +874,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib15.setTabIndex(56);
 		picTrib15.setTabStop(false);
 		picTrib15.setVisible(false);
-		picTrib15.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib15.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -950,11 +890,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib21.setTabIndex(57);
 		picTrib21.setTabStop(false);
 		picTrib21.setVisible(false);
-		picTrib21.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib21.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -968,11 +906,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib22.setTabIndex(58);
 		picTrib22.setTabStop(false);
 		picTrib22.setVisible(false);
-		picTrib22.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib22.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -986,11 +922,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib23.setTabIndex(59);
 		picTrib23.setTabStop(false);
 		picTrib23.setVisible(false);
-		picTrib23.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib23.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1004,11 +938,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib24.setTabIndex(60);
 		picTrib24.setTabStop(false);
 		picTrib24.setVisible(false);
-		picTrib24.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib24.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1022,11 +954,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib25.setTabIndex(61);
 		picTrib25.setTabStop(false);
 		picTrib25.setVisible(false);
-		picTrib25.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib25.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1040,11 +970,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib31.setTabIndex(62);
 		picTrib31.setTabStop(false);
 		picTrib31.setVisible(false);
-		picTrib31.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib31.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1058,11 +986,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib32.setTabIndex(63);
 		picTrib32.setTabStop(false);
 		picTrib32.setVisible(false);
-		picTrib32.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib32.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1076,11 +1002,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib33.setTabIndex(64);
 		picTrib33.setTabStop(false);
 		picTrib33.setVisible(false);
-		picTrib33.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib33.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1094,11 +1018,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib34.setTabIndex(65);
 		picTrib34.setTabStop(false);
 		picTrib34.setVisible(false);
-		picTrib34.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib34.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1112,11 +1034,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib35.setTabIndex(66);
 		picTrib35.setTabStop(false);
 		picTrib35.setVisible(false);
-		picTrib35.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib35.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1130,11 +1050,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib41.setTabIndex(67);
 		picTrib41.setTabStop(false);
 		picTrib41.setVisible(false);
-		picTrib41.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib41.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1148,11 +1066,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib51.setTabIndex(68);
 		picTrib51.setTabStop(false);
 		picTrib51.setVisible(false);
-		picTrib51.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib51.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1166,11 +1082,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib42.setTabIndex(69);
 		picTrib42.setTabStop(false);
 		picTrib42.setVisible(false);
-		picTrib42.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib42.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1184,11 +1098,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib52.setTabIndex(70);
 		picTrib52.setTabStop(false);
 		picTrib52.setVisible(false);
-		picTrib52.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib52.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1202,11 +1114,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib43.setTabIndex(71);
 		picTrib43.setTabStop(false);
 		picTrib43.setVisible(false);
-		picTrib43.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib43.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1220,11 +1130,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib53.setTabIndex(72);
 		picTrib53.setTabStop(false);
 		picTrib53.setVisible(false);
-		picTrib53.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib53.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1238,11 +1146,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib44.setTabIndex(73);
 		picTrib44.setTabStop(false);
 		picTrib44.setVisible(false);
-		picTrib44.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib44.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1256,11 +1162,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib45.setTabIndex(74);
 		picTrib45.setTabStop(false);
 		picTrib45.setVisible(false);
-		picTrib45.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib45.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1274,11 +1178,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib54.setTabIndex(75);
 		picTrib54.setTabStop(false);
 		picTrib54.setVisible(false);
-		picTrib54.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib54.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1292,11 +1194,9 @@ public class FormEncounter extends SpaceTraderForm
 		picTrib55.setTabIndex(76);
 		picTrib55.setTabStop(false);
 		picTrib55.setVisible(false);
-		picTrib55.setClick(new EventHandler<Object, EventArgs>()
-		{
+		picTrib55.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				picTrib_Click(sender, e);
 			}
 		});
@@ -1304,11 +1204,9 @@ public class FormEncounter extends SpaceTraderForm
 		// tmrTick
 		//
 		tmrTick.setInterval(1000);
-		tmrTick.Tick = new EventHandler<Object, EventArgs>()
-		{
+		tmrTick.Tick = new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				tmrTick_Tick(sender, e);
 			}
 		};
@@ -1393,8 +1291,7 @@ public class FormEncounter extends SpaceTraderForm
 
 	// #endregion
 
-	private void DisableAuto()
-	{
+	private void DisableAuto() {
 		tmrTick.Stop();
 
 		game.setEncounterContinueFleeing(false);
@@ -1403,10 +1300,8 @@ public class FormEncounter extends SpaceTraderForm
 		picContinuous.setVisible(false);
 	}
 
-	private void ExecuteAction()
-	{
-		if ((_result = game.EncounterExecuteAction()) == EncounterResult.Continue)
-		{
+	private void ExecuteAction() {
+		if ((_result = game.EncounterExecuteAction()) == EncounterResult.Continue) {
 			UpdateButtons();
 			UpdateShipStats();
 
@@ -1420,18 +1315,15 @@ public class FormEncounter extends SpaceTraderForm
 			Close();
 	}
 
-	private void Exit(EncounterResult result)
-	{
+	private void Exit(EncounterResult result) {
 		_result = result;
 		Close();
 	}
 
-	private void UpdateButtons()
-	{
+	private void UpdateButtons() {
 		boolean[] visible = new boolean[buttons.length];
 
-		switch (game.getEncounterType())
-		{
+		switch (game.getEncounterType()) {
 		case BottleGood:
 		case BottleOld:
 			visible[DRINK] = true;
@@ -1511,13 +1403,12 @@ public class FormEncounter extends SpaceTraderForm
 			break;
 		}
 
-		if (game.getEncounterContinueAttacking() || game.getEncounterContinueFleeing())
+		if (game.getEncounterContinueAttacking()
+				|| game.getEncounterContinueFleeing())
 			visible[INT] = true;
 
-		for (int i = 0; i < visible.length; i++)
-		{
-			if (visible[i] != buttons[i].getVisible())
-			{
+		for (int i = 0; i < visible.length; i++) {
+			if (visible[i] != buttons[i].getVisible()) {
 				buttons[i].setVisible(visible[i]);
 				if (i == INT)
 					picContinuous.setVisible(visible[i]);
@@ -1525,19 +1416,18 @@ public class FormEncounter extends SpaceTraderForm
 		}
 
 		if (picContinuous.getVisible())
-			picContinuous.setImage(ilContinuous.getImages()[contImg = (contImg + 1) % 2]);
+			picContinuous
+					.setImage(ilContinuous.getImages()[contImg = (contImg + 1) % 2]);
 	}
 
-	private void UpdateShipInfo()
-	{
+	private void UpdateShipInfo() {
 		lblYouShip.setText(cmdrship.Name());
 		lblOpponentShip.setText(opponent.Name());
 
 		UpdateShipStats();
 	}
 
-	private void UpdateShipStats()
-	{
+	private void UpdateShipStats() {
 		lblYouHull.setText(cmdrship.HullText());
 		lblYouShields.setText(cmdrship.ShieldText());
 		lblOpponentHull.setText(opponent.HullText());
@@ -1547,8 +1437,7 @@ public class FormEncounter extends SpaceTraderForm
 		picShipOpponent.Refresh();
 	}
 
-	private void UpdateTribbles()
-	{
+	private void UpdateTribbles() {
 		PictureBox[] tribbles = new PictureBox[] { picTrib00, picTrib01,
 				picTrib02, picTrib03, picTrib04, picTrib05, picTrib10,
 				picTrib11, picTrib12, picTrib13, picTrib14, picTrib15,
@@ -1557,13 +1446,13 @@ public class FormEncounter extends SpaceTraderForm
 				picTrib34, picTrib35, picTrib40, picTrib41, picTrib42,
 				picTrib43, picTrib44, picTrib45, picTrib50, picTrib51,
 				picTrib52, picTrib53, picTrib54, picTrib55 };
-		int toShow = Math.min(tribbles.length, (int) Math
-				.sqrt(cmdrship.getTribbles()
+		int toShow = Math.min(
+				tribbles.length,
+				(int) Math.sqrt(cmdrship.getTribbles()
 						/ Math.ceil(Consts.MaxTribbles
 								/ Math.pow(tribbles.length + 1, 2))));
 
-		for (int i = 0; i < toShow; i++)
-		{
+		for (int i = 0; i < toShow; i++) {
 			int index = Functions.GetRandom(tribbles.length);
 			while (tribbles[index].getVisible())
 				index = (index + 1) % tribbles.length;
@@ -1578,62 +1467,53 @@ public class FormEncounter extends SpaceTraderForm
 
 	// #region Event Handlers
 
-	private void btnAttack_Click(Object sender, EventArgs e)
-	{
+	private void btnAttack_Click(Object sender, EventArgs e) {
 		DisableAuto();
 
 		if (game.EncounterVerifyAttack())
 			ExecuteAction();
 	}
 
-	private void btnBoard_Click(Object sender, EventArgs e)
-	{
+	private void btnBoard_Click(Object sender, EventArgs e) {
 		if (game.EncounterVerifyBoard())
 			Exit(EncounterResult.Normal);
 	}
 
-	private void btnBribe_Click(Object sender, EventArgs e)
-	{
+	private void btnBribe_Click(Object sender, EventArgs e) {
 		if (game.EncounterVerifyBribe())
 			Exit(EncounterResult.Normal);
 	}
 
-	private void btnDrink_Click(Object sender, EventArgs e)
-	{
+	private void btnDrink_Click(Object sender, EventArgs e) {
 		game.EncounterDrink();
 
 		Exit(EncounterResult.Normal);
 	}
 
-	private void btnFlee_Click(Object sender, EventArgs e)
-	{
+	private void btnFlee_Click(Object sender, EventArgs e) {
 		DisableAuto();
 
 		if (game.EncounterVerifyFlee())
 			ExecuteAction();
 	}
 
-	private void btnIgnore_Click(Object sender, EventArgs e)
-	{
+	private void btnIgnore_Click(Object sender, EventArgs e) {
 		DisableAuto();
 
 		Exit(EncounterResult.Normal);
 	}
 
-	private void btnInt_Click(Object sender, EventArgs e)
-	{
+	private void btnInt_Click(Object sender, EventArgs e) {
 		DisableAuto();
 	}
 
-	private void btnMeet_Click(Object sender, EventArgs e)
-	{
+	private void btnMeet_Click(Object sender, EventArgs e) {
 		game.EncounterMeet();
 
 		Exit(EncounterResult.Normal);
 	}
 
-	private void btnPlunder_Click(Object sender, EventArgs e)
-	{
+	private void btnPlunder_Click(Object sender, EventArgs e) {
 		DisableAuto();
 
 		game.EncounterPlunder();
@@ -1641,54 +1521,45 @@ public class FormEncounter extends SpaceTraderForm
 		Exit(EncounterResult.Normal);
 	}
 
-	private void btnSubmit_Click(Object sender, EventArgs e)
-	{
+	private void btnSubmit_Click(Object sender, EventArgs e) {
 		if (game.EncounterVerifySubmit())
 			Exit(cmdrship.IllegalSpecialCargo() ? EncounterResult.Arrested
 					: EncounterResult.Normal);
 	}
 
-	private void btnSurrender_Click(Object sender, EventArgs e)
-	{
+	private void btnSurrender_Click(Object sender, EventArgs e) {
 		DisableAuto();
 
 		if ((_result = game.EncounterVerifySurrender()) != EncounterResult.Continue)
 			Close();
 	}
 
-	private void btnTrade_Click(Object sender, EventArgs e)
-	{
+	private void btnTrade_Click(Object sender, EventArgs e) {
 		game.EncounterTrade();
 
 		Exit(EncounterResult.Normal);
 	}
 
-	private void btnYield_Click(Object sender, EventArgs e)
-	{
+	private void btnYield_Click(Object sender, EventArgs e) {
 		if ((_result = game.EncounterVerifyYield()) != EncounterResult.Continue)
 			Close();
 	}
 
-	private void picShipOpponent_Paint(Object sender,
-			jwinforms.PaintEventArgs e)
-	{
+	private void picShipOpponent_Paint(Object sender, jwinforms.PaintEventArgs e) {
 		Functions.PaintShipImage(opponent, e.Graphics,
 				picShipOpponent.getBackColor());
 	}
 
-	private void picShipYou_Paint(Object sender,
-			jwinforms.PaintEventArgs e)
-	{
-		Functions.PaintShipImage(cmdrship, e.Graphics, picShipYou.getBackColor());
+	private void picShipYou_Paint(Object sender, jwinforms.PaintEventArgs e) {
+		Functions.PaintShipImage(cmdrship, e.Graphics,
+				picShipYou.getBackColor());
 	}
 
-	private void picTrib_Click(Object sender, EventArgs e)
-	{
+	private void picTrib_Click(Object sender, EventArgs e) {
 		GuiFacade.alert(AlertType.TribblesSqueek);
 	}
 
-	private void tmrTick_Tick(Object sender, EventArgs e)
-	{
+	private void tmrTick_Tick(Object sender, EventArgs e) {
 		DisableAuto();
 
 		ExecuteAction();
@@ -1698,9 +1569,7 @@ public class FormEncounter extends SpaceTraderForm
 
 	// #region Properties
 
-
-	public EncounterResult Result()
-	{
+	public EncounterResult Result() {
 		return _result;
 	}
 

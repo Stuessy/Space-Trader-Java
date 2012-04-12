@@ -28,8 +28,7 @@ package spacetrader;
 
 import spacetrader.enums.SpecialEventType;
 
-public class SpecialEvent
-{
+public class SpecialEvent {
 	// #region Constants
 	public final static int MoonCost = 500000;
 
@@ -111,16 +110,15 @@ public class SpecialEvent
 	private int _occurrence;
 	private boolean _messageOnly;
 
-	public SpecialEvent(SpecialEventType type, int price, int occurrence, boolean messageOnly)
-	{
+	public SpecialEvent(SpecialEventType type, int price, int occurrence,
+			boolean messageOnly) {
 		_type = type;
 		_price = price;
 		_occurrence = occurrence;
 		_messageOnly = messageOnly;
 	}
 
-	public StarSystem Location()
-	{
+	public StarSystem Location() {
 		StarSystem location = null;
 		StarSystem[] universe = Game.CurrentGame().Universe();
 
@@ -131,33 +129,27 @@ public class SpecialEvent
 		return location;
 	}
 
-	public boolean MessageOnly()
-	{
+	public boolean MessageOnly() {
 		return _messageOnly;
 	}
 
-	public int Occurrence()
-	{
+	public int Occurrence() {
 		return _occurrence;
 	}
 
-	public int Price()
-	{
+	public int Price() {
 		return _price;
 	}
 
-	public String String()
-	{
+	public String String() {
 		return Strings.SpecialEventStrings[_type.CastToInt()];
 	}
 
-	public String Title()
-	{
+	public String Title() {
 		return Strings.SpecialEventTitles[_type.CastToInt()];
 	}
 
-	public SpecialEventType Type()
-	{
+	public SpecialEventType Type() {
 		return _type;
 	}
 }

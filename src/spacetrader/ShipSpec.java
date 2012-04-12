@@ -36,8 +36,7 @@ import spacetrader.enums.TechLevel;
 import spacetrader.guifacade.GuiEngine;
 import spacetrader.util.Hashtable;
 
-public class ShipSpec extends STSerializableObject
-{
+public class ShipSpec extends STSerializableObject {
 	private ShipType _type = ShipType.Custom;
 	private Size _size = spacetrader.enums.Size.Tiny;
 	private int _cargoBays = 0;
@@ -58,13 +57,14 @@ public class ShipSpec extends STSerializableObject
 	private boolean _hullUpgraded = false;
 	private int _imageIndex = Consts.ShipImgUseDefault;
 
-	public ShipSpec()
-	{}
+	public ShipSpec() {
+	}
 
-	public ShipSpec(ShipType type, Size size, int cargoBays, int weaponSlots, int shieldSlots, int gadgetSlots,
-			int crewQuarters, int fuelTanks, int fuelCost, int hullStrength, int repairCost, int price, int occurrence,
-			Activity police, Activity pirates, Activity traders, TechLevel minTechLevel)
-	{
+	public ShipSpec(ShipType type, Size size, int cargoBays, int weaponSlots,
+			int shieldSlots, int gadgetSlots, int crewQuarters, int fuelTanks,
+			int fuelCost, int hullStrength, int repairCost, int price,
+			int occurrence, Activity police, Activity pirates,
+			Activity traders, TechLevel minTechLevel) {
 		_type = type;
 		_size = size;
 		_cargoBays = cargoBays;
@@ -84,11 +84,12 @@ public class ShipSpec extends STSerializableObject
 		_minTech = minTechLevel;
 	}
 
-	public ShipSpec(Hashtable hash)
-	{
+	public ShipSpec(Hashtable hash) {
 		super(hash);
-		_type = ShipType.FromInt( GetValueFromHash(hash, "_type", _type, Integer.class));
-		_size = Size.FromInt( GetValueFromHash(hash, "_size", _size, Integer.class));
+		_type = ShipType.FromInt(GetValueFromHash(hash, "_type", _type,
+				Integer.class));
+		_size = Size.FromInt(GetValueFromHash(hash, "_size", _size,
+				Integer.class));
 		_cargoBays = GetValueFromHash(hash, "_cargoBays", _cargoBays);
 		_weaponSlots = GetValueFromHash(hash, "_weaponSlots", _weaponSlots);
 		_shieldSlots = GetValueFromHash(hash, "_shieldSlots", _shieldSlots);
@@ -100,34 +101,40 @@ public class ShipSpec extends STSerializableObject
 		_repairCost = GetValueFromHash(hash, "_repairCost", _repairCost);
 		_price = GetValueFromHash(hash, "_price", _price);
 		_occurrence = GetValueFromHash(hash, "_occurrence", _occurrence);
-		_police = Activity.FromInt( GetValueFromHash(hash, "_police", _police, Integer.class));
-		_pirates = Activity.FromInt( GetValueFromHash(hash, "_pirates", _pirates, Integer.class));
-		_traders = Activity.FromInt( GetValueFromHash(hash, "_traders", _traders, Integer.class));
-		_minTech = TechLevel.FromInt( GetValueFromHash(hash, "_minTech", _minTech, Integer.class));
+		_police = Activity.FromInt(GetValueFromHash(hash, "_police", _police,
+				Integer.class));
+		_pirates = Activity.FromInt(GetValueFromHash(hash, "_pirates",
+				_pirates, Integer.class));
+		_traders = Activity.FromInt(GetValueFromHash(hash, "_traders",
+				_traders, Integer.class));
+		_minTech = TechLevel.FromInt(GetValueFromHash(hash, "_minTech",
+				_minTech, Integer.class));
 		_hullUpgraded = GetValueFromHash(hash, "_hullUpgraded", _hullUpgraded);
-		_imageIndex = GetValueFromHash(hash, "_imageIndex", Consts.ShipImgUseDefault);
+		_imageIndex = GetValueFromHash(hash, "_imageIndex",
+				Consts.ShipImgUseDefault);
 
 		// Get the images if the ship uses the custom images.
 		if (ImageIndex() == ShipType.Custom.CastToInt())
-			GuiEngine.imageProvider.setCustomShipImages(GetValueFromHash(hash, "_images", GuiEngine.imageProvider
-					.getCustomShipImages()));
+			GuiEngine.imageProvider.setCustomShipImages(GetValueFromHash(hash,
+					"_images", GuiEngine.imageProvider.getCustomShipImages()));
 
 		// Get the name if the ship is a custom design.
-		if (Type() == ShipType.Custom)
-		{
-			Strings.ShipNames[ShipType.Custom.CastToInt()] = GetValueFromHash(hash, "_name",
+		if (Type() == ShipType.Custom) {
+			Strings.ShipNames[ShipType.Custom.CastToInt()] = GetValueFromHash(
+					hash, "_name",
 					Strings.ShipNames[ShipType.Custom.CastToInt()]);
 
-			Consts.ShipSpecs[ShipType.Custom.CastToInt()] = new ShipSpec(_type, _size, _cargoBays, _weaponSlots,
-					_shieldSlots, _gadgetSlots, _crewQuarters, _fuelTanks, _fuelCost, _hullStrength, _repairCost,
-					_price, _occurrence, _police, _pirates, _traders, _minTech);
+			Consts.ShipSpecs[ShipType.Custom.CastToInt()] = new ShipSpec(_type,
+					_size, _cargoBays, _weaponSlots, _shieldSlots,
+					_gadgetSlots, _crewQuarters, _fuelTanks, _fuelCost,
+					_hullStrength, _repairCost, _price, _occurrence, _police,
+					_pirates, _traders, _minTech);
 			UpdateCustomImageOffsetConstants();
 		}
 	}
 
 	@Override
-	public Hashtable Serialize()
-	{
+	public Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.put("_type", _type.CastToInt());
@@ -164,8 +171,7 @@ public class ShipSpec extends STSerializableObject
 		return hash;
 	}
 
-	protected void SetValues(ShipType type)
-	{
+	protected void SetValues(ShipType type) {
 		int typeInt = type.CastToInt();
 
 		_type = type;
@@ -189,12 +195,10 @@ public class ShipSpec extends STSerializableObject
 		_imageIndex = Consts.ShipSpecs[typeInt]._imageIndex;
 	}
 
-	public int Slots(EquipmentType type)
-	{
+	public int Slots(EquipmentType type) {
 		int count = 0;
 
-		switch (type)
-		{
+		switch (type) {
 		case Weapon:
 			count = getWeaponSlots();
 			break;
@@ -209,8 +213,7 @@ public class ShipSpec extends STSerializableObject
 		return count;
 	}
 
-	public void UpdateCustomImageOffsetConstants()
-	{
+	public void UpdateCustomImageOffsetConstants() {
 		Image image = GuiEngine.imageProvider.getCustomShipImages()[0];
 		int custIndex = ShipType.Custom.CastToInt();
 
@@ -219,195 +222,161 @@ public class ShipSpec extends STSerializableObject
 		int x = Functions.GetColumnOfFirstNonWhitePixel(image, 1);
 		int width = Functions.GetColumnOfFirstNonWhitePixel(image, -1) - x + 1;
 		Consts.ShipImageOffsets[custIndex].X = Math.max(2, x);
-		Consts.ShipImageOffsets[custIndex].Width = Math.min(62 - Consts.ShipImageOffsets[custIndex].X, width);
+		Consts.ShipImageOffsets[custIndex].Width = Math.min(
+				62 - Consts.ShipImageOffsets[custIndex].X, width);
 	}
 
-	public int CargoBays()
-	{
+	public int CargoBays() {
 		return _cargoBays;
 	}
 
-	public void CargoBays(int value)
-	{
+	public void CargoBays(int value) {
 		_cargoBays = value;
 	}
 
-	public int FuelTanks()
-	{
+	public int FuelTanks() {
 		return _fuelTanks;
 	}
 
-	public void FuelTanks(int value)
-	{
+	public void FuelTanks(int value) {
 		_fuelTanks = value;
 	}
 
-	public void setWeaponSlots(int weaponSlots)
-	{
+	public void setWeaponSlots(int weaponSlots) {
 		_weaponSlots = weaponSlots;
 	}
 
-	public int getWeaponSlots()
-	{
+	public int getWeaponSlots() {
 		return _weaponSlots;
 	}
 
-	public void setSize(Size size)
-	{
+	public void setSize(Size size) {
 		_size = size;
 	}
 
-	public Size getSize()
-	{
+	public Size getSize() {
 		return _size;
 	}
 
-	public void setShieldSlots(int shieldSlots)
-	{
+	public void setShieldSlots(int shieldSlots) {
 		_shieldSlots = shieldSlots;
 	}
 
-	public int getShieldSlots()
-	{
+	public int getShieldSlots() {
 		return _shieldSlots;
 	}
 
-	public void setRepairCost(int repairCost)
-	{
+	public void setRepairCost(int repairCost) {
 		_repairCost = repairCost;
 	}
 
-	public int getRepairCost()
-	{
+	public int getRepairCost() {
 		return _repairCost;
 	}
 
-	public void setPrice(int price)
-	{
+	public void setPrice(int price) {
 		_price = price;
 	}
 
-	public int getPrice()
-	{
+	public int getPrice() {
 		return _price;
 	}
 
-	public void setHullUpgraded(boolean hullUpgraded)
-	{
+	public void setHullUpgraded(boolean hullUpgraded) {
 		_hullUpgraded = hullUpgraded;
 	}
 
-	public boolean getHullUpgraded()
-	{
+	public boolean getHullUpgraded() {
 		return _hullUpgraded;
 	}
 
-	public void setGadgetSlots(int gadgetSlots)
-	{
+	public void setGadgetSlots(int gadgetSlots) {
 		_gadgetSlots = gadgetSlots;
 	}
 
-	public int getGadgetSlots()
-	{
+	public int getGadgetSlots() {
 		return _gadgetSlots;
 	}
 
-	public void setFuelCost(int fuelCost)
-	{
+	public void setFuelCost(int fuelCost) {
 		_fuelCost = fuelCost;
 	}
 
-	public int getFuelCost()
-	{
+	public int getFuelCost() {
 		return _fuelCost;
 	}
 
-	public void setCrewQuarters(int crewQuarters)
-	{
+	public void setCrewQuarters(int crewQuarters) {
 		_crewQuarters = crewQuarters;
 	}
 
-	public int getCrewQuarters()
-	{
+	public int getCrewQuarters() {
 		return _crewQuarters;
 	}
 
-	public int HullStrength()
-	{
+	public int HullStrength() {
 		return _hullStrength + (getHullUpgraded() ? Consts.HullUpgrade : 0);
 	}
 
-	public void HullStrength(int value)
-	{
+	public void HullStrength(int value) {
 		_hullStrength = value;
 	}
 
-	public Image Image()
-	{
-		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex() * Consts.ImagesPerShip
-				+ Consts.ShipImgOffsetNormal];
+	public Image Image() {
+		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex()
+				* Consts.ImagesPerShip + Consts.ShipImgOffsetNormal];
 	}
 
-	public Image ImageDamaged()
-	{
-		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex() * Consts.ImagesPerShip
-				+ Consts.ShipImgOffsetDamage];
+	public Image ImageDamaged() {
+		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex()
+				* Consts.ImagesPerShip + Consts.ShipImgOffsetDamage];
 	}
 
-	public Image ImageDamagedWithShields()
-	{
-		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex() * Consts.ImagesPerShip
-				+ Consts.ShipImgOffsetSheildDamage];
+	public Image ImageDamagedWithShields() {
+		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex()
+				* Consts.ImagesPerShip + Consts.ShipImgOffsetSheildDamage];
 	}
 
-	public int ImageIndex()
-	{
-		return (_imageIndex == Consts.ShipImgUseDefault ? (int)Type().CastToInt() : _imageIndex);
+	public int ImageIndex() {
+		return (_imageIndex == Consts.ShipImgUseDefault ? (int) Type()
+				.CastToInt() : _imageIndex);
 	}
 
-	public void ImageIndex(int value)
-	{
-		_imageIndex = (value == Type().CastToInt() ? Consts.ShipImgUseDefault : value);
+	public void ImageIndex(int value) {
+		_imageIndex = (value == Type().CastToInt() ? Consts.ShipImgUseDefault
+				: value);
 	}
 
-	public Image ImageWithShields()
-	{
-		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex() * Consts.ImagesPerShip
-				+ Consts.ShipImgOffsetShield];
+	public Image ImageWithShields() {
+		return GuiEngine.imageProvider.getShipImages().getImages()[ImageIndex()
+				* Consts.ImagesPerShip + Consts.ShipImgOffsetShield];
 	}
 
-	public TechLevel MinimumTechLevel()
-	{
+	public TechLevel MinimumTechLevel() {
 		return _minTech;
 	}
 
-	public String Name()
-	{
+	public String Name() {
 		return Strings.ShipNames[Type().CastToInt()];
 	}
 
-	public int Occurrence()
-	{
+	public int Occurrence() {
 		return _occurrence;
 	}
 
-	public Activity Police()
-	{
+	public Activity Police() {
 		return _police;
 	}
 
-	public Activity Pirates()
-	{
+	public Activity Pirates() {
 		return _pirates;
 	}
 
-	public Activity Traders()
-	{
+	public Activity Traders() {
 		return _traders;
 	}
 
-	public ShipType Type()
-	{
+	public ShipType Type() {
 		return _type;
 	}
 

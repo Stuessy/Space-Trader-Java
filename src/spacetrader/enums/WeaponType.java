@@ -2,8 +2,7 @@ package spacetrader.enums;
 
 import spacetrader.util.EquipmentSubType;
 
-public enum WeaponType implements SpaceTraderEnum , EquipmentSubType
-{
+public enum WeaponType implements SpaceTraderEnum, EquipmentSubType {
 	PulseLaser, // = 0,
 	BeamLaser, // = 1,
 	MilitaryLaser, // = 2,
@@ -12,13 +11,11 @@ public enum WeaponType implements SpaceTraderEnum , EquipmentSubType
 	QuantumDistruptor; // = 5
 
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 
-	public static WeaponType FromInt(int i)
-	{
+	public static WeaponType FromInt(int i) {
 		return values()[i];
 	}
 }

@@ -1,7 +1,6 @@
 package jwinforms;
 
-public enum AnchorStyles
-{
+public enum AnchorStyles {
 	Top_Right
 
 }

@@ -12,13 +12,11 @@ public enum TechLevel implements SpaceTraderEnum// : int
 	HiTech, // = 7,
 	Unavailable;// = 8
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 
-	public static TechLevel FromInt(int i)
-	{
+	public static TechLevel FromInt(int i) {
 		return values()[i];
 	}
 }

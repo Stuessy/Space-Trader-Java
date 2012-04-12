@@ -46,8 +46,7 @@ import spacetrader.enums.WeaponType;
 import spacetrader.util.Environment;
 import util.Path;
 
-public class Consts
-{
+public class Consts {
 	// #region Individual Constants
 
 	// Directory structure and File Constsants.
@@ -300,7 +299,7 @@ public class Consts
 
 	// #region ShipImageOffsets
 	public static Rectangle[] ShipImageOffsets = new Rectangle[] {
-	// We only care about X and Width, so set Y and Height to 0.
+			// We only care about X and Width, so set Y and Height to 0.
 			new Rectangle(22, 0, 19, 0), // Flea
 			new Rectangle(18, 0, 27, 0), // Gnat
 			new Rectangle(18, 0, 27, 0), // Firefly
@@ -390,14 +389,12 @@ public class Consts
 					ShipyardSkill.WeaponSlotUnits),
 			new Shipyard(ShipyardId.Sorosuub, Size.Small,
 					ShipyardSkill.FuelBase) };
-	//TODO was ArrayList
-	public static CrewMemberId[] SpecialCrewMemberIds =// new ArrayList(
-			new CrewMemberId[] { CrewMemberId.Commander,
-					CrewMemberId.Dragonfly, CrewMemberId.FamousCaptain,
-					CrewMemberId.Jarek, CrewMemberId.Opponent,
-					CrewMemberId.Princess, CrewMemberId.Scarab,
-					CrewMemberId.Scorpion, CrewMemberId.SpaceMonster,
-					CrewMemberId.Wild };
+	// TODO was ArrayList
+	public static CrewMemberId[] SpecialCrewMemberIds = // new ArrayList(
+	new CrewMemberId[] { CrewMemberId.Commander, CrewMemberId.Dragonfly,
+			CrewMemberId.FamousCaptain, CrewMemberId.Jarek,
+			CrewMemberId.Opponent, CrewMemberId.Princess, CrewMemberId.Scarab,
+			CrewMemberId.Scorpion, CrewMemberId.SpaceMonster, CrewMemberId.Wild };
 
 	public static SpecialEvent[] SpecialEvents = new SpecialEvent[] {
 			new SpecialEvent(SpecialEventType.Artifact, 0, 1, false),

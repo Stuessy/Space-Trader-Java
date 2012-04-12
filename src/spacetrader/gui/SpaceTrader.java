@@ -47,8 +47,7 @@ import spacetrader.guifacade.MainWindow;
 import spacetrader.stub.Directory;
 import spacetrader.stub.RegistryKey;
 
-public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
-{
+public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow {
 	// #region Control Declarations
 
 	private DockBox dockBox;
@@ -96,8 +95,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 	private GameController controller;
 	private Commander commander;
 
-	public SpaceTrader(String loadFileName)
-	{
+	public SpaceTrader(String loadFileName) {
 		InitializeComponent();
 
 		InitFileStructure();
@@ -108,18 +106,18 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		UpdateAll();
 	}
 
-	public static void main(String[] args) throws Exception
-	{
-		try
-		{
+	public static void main(String[] args) throws Exception {
+		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 			UIManager.put("swing.boldMetal", Boolean.FALSE);
-		} catch (Exception e)
-		{
-			// TODO: We get here if there's no windows UI; I think no special treatment is needed.
+		} catch (Exception e) {
+			// TODO: We get here if there's no windows UI; I think no special
+			// treatment is needed.
 		}
-		SpaceTrader spaceTrader = new SpaceTrader(args.length > 0 ? args[0] : null);
-		GuiEngine.installImplementation(new OriginalGuiImplementationProvider(spaceTrader));
+		SpaceTrader spaceTrader = new SpaceTrader(args.length > 0 ? args[0]
+				: null);
+		GuiEngine.installImplementation(new OriginalGuiImplementationProvider(
+				spaceTrader));
 		spaceTrader.ShowWindow();
 	}
 
@@ -128,10 +126,10 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		components = new jwinforms.Container();
-		jwinforms.ResourceManager resources = new jwinforms.ResourceManager(SpaceTrader.class);
+		jwinforms.ResourceManager resources = new jwinforms.ResourceManager(
+				SpaceTrader.class);
 		mnuMain = new jwinforms.MainMenu();
 		mnuGame = new jwinforms.SubMenu();
 		mnuGameNew = new jwinforms.MenuItem();
@@ -187,19 +185,17 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		// mnuGame
 		//
 		mnuGame.Index = 0;
-		mnuGame.addAll(mnuGameNew, mnuGameLoad, mnuGameSave, mnuGameSaveAs, mnuGameLine1, mnuRetire, mnuGameLine2,
-				mnuGameExit);
+		mnuGame.addAll(mnuGameNew, mnuGameLoad, mnuGameSave, mnuGameSaveAs,
+				mnuGameLine1, mnuRetire, mnuGameLine2, mnuGameExit);
 		mnuGame.setText("&Game");
 		//
 		// mnuGameNew
 		//
 		mnuGameNew.Index = 0;
 		mnuGameNew.setText("&New...");
-		mnuGameNew.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuGameNew.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuGameNew_Click(sender, e);
 			}
 		});
@@ -209,11 +205,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuGameLoad.Index = 1;
 		mnuGameLoad.Shortcut = jwinforms.Shortcut.CtrlL;
 		mnuGameLoad.setText("&Load...");
-		mnuGameLoad.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuGameLoad.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuGameLoad_Click(sender, e);
 			}
 		});
@@ -224,11 +218,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuGameSave.Index = 2;
 		mnuGameSave.Shortcut = jwinforms.Shortcut.CtrlS;
 		mnuGameSave.setText("&Save");
-		mnuGameSave.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuGameSave.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuGameSave_Click(sender, e);
 			}
 		});
@@ -239,11 +231,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuGameSaveAs.Index = 3;
 		mnuGameSaveAs.Shortcut = jwinforms.Shortcut.CtrlA;
 		mnuGameSaveAs.setText("Save &As...");
-		mnuGameSaveAs.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuGameSaveAs.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuGameSaveAs_Click(sender, e);
 			}
 		});
@@ -258,11 +248,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuRetire.setEnabled(false);
 		mnuRetire.Index = 5;
 		mnuRetire.setText("&Retire");
-		mnuRetire.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuRetire.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuRetire_Click(sender, e);
 			}
 		});
@@ -276,11 +264,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		//
 		mnuGameExit.Index = 7;
 		mnuGameExit.setText("E&xit");
-		mnuGameExit.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuGameExit.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuGameExit_Click(sender, e);
 			}
 		});
@@ -288,8 +274,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		// mnuView
 		//
 		mnuView.Index = 1;
-		mnuView.addAll(mnuViewCommander, mnuViewShip, mnuViewPersonnel, mnuViewQuests, mnuViewBank, mnuViewLine1,
-				mnuHighScores, mnuViewLine2, mnuOptions);
+		mnuView.addAll(mnuViewCommander, mnuViewShip, mnuViewPersonnel,
+				mnuViewQuests, mnuViewBank, mnuViewLine1, mnuHighScores,
+				mnuViewLine2, mnuOptions);
 		mnuView.setText("&View");
 		//
 		// mnuViewCommander
@@ -298,11 +285,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuViewCommander.Index = 0;
 		mnuViewCommander.Shortcut = jwinforms.Shortcut.CtrlC;
 		mnuViewCommander.setText("&Commander Status");
-		mnuViewCommander.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuViewCommander.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuViewCommander_Click(sender, e);
 			}
 		});
@@ -313,11 +298,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuViewShip.Index = 1;
 		mnuViewShip.Shortcut = jwinforms.Shortcut.CtrlH;
 		mnuViewShip.setText("&Ship");
-		mnuViewShip.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuViewShip.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuViewShip_Click(sender, e);
 			}
 		});
@@ -328,11 +311,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuViewPersonnel.Index = 2;
 		mnuViewPersonnel.Shortcut = jwinforms.Shortcut.CtrlP;
 		mnuViewPersonnel.setText("&Personnel");
-		mnuViewPersonnel.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuViewPersonnel.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuViewPersonnel_Click(sender, e);
 			}
 		});
@@ -343,11 +324,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuViewQuests.Index = 3;
 		mnuViewQuests.Shortcut = jwinforms.Shortcut.CtrlQ;
 		mnuViewQuests.setText("&Quests");
-		mnuViewQuests.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuViewQuests.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuViewQuests_Click(sender, e);
 			}
 		});
@@ -358,11 +337,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuViewBank.Index = 4;
 		mnuViewBank.Shortcut = jwinforms.Shortcut.CtrlB;
 		mnuViewBank.setText("&Bank");
-		mnuViewBank.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuViewBank.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuViewBank_Click(sender, e);
 			}
 		});
@@ -376,11 +353,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		//
 		mnuHighScores.Index = 6;
 		mnuHighScores.setText("&High Scores");
-		mnuHighScores.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuHighScores.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuHighScores_Click(sender, e);
 			}
 		});
@@ -394,11 +369,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		//
 		mnuOptions.Index = 8;
 		mnuOptions.setText("Options");
-		mnuOptions.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuOptions.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuOptions_Click(sender, e);
 			}
 		});
@@ -413,11 +386,9 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		//
 		mnuHelpAbout.Index = 0;
 		mnuHelpAbout.setText("&About Space Trader");
-		mnuHelpAbout.setClick(new EventHandler<Object, EventArgs>()
-		{
+		mnuHelpAbout.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				mnuHelpAbout_Click(sender, e);
 			}
 		});
@@ -491,27 +462,31 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		// ilChartImages
 		//
 		ilChartImages.setImageSize(new jwinforms.Size(7, 7));
-		ilChartImages.setImageStream(((jwinforms.ImageListStreamer)(resources.GetObject("ilChartImages.ImageStream"))));
+		ilChartImages.setImageStream(((jwinforms.ImageListStreamer) (resources
+				.GetObject("ilChartImages.ImageStream"))));
 		ilChartImages.setTransparentColor(Color.white);
 		//
 		// ilShipImages
 		//
 		ilShipImages.setImageSize(new jwinforms.Size(64, 52));
-		ilShipImages.setImageStream(((jwinforms.ImageListStreamer)(resources.GetObject("ilShipImages.ImageStream"))));
+		ilShipImages.setImageStream(((jwinforms.ImageListStreamer) (resources
+				.GetObject("ilShipImages.ImageStream"))));
 		ilShipImages.setTransparentColor(Color.white);
 		//
 		// ilDirectionImages
 		//
 		ilDirectionImages.setImageSize(new jwinforms.Size(13, 13));
-		ilDirectionImages.setImageStream(((jwinforms.ImageListStreamer)(resources
-				.GetObject("ilDirectionImages.ImageStream"))));
+		ilDirectionImages
+				.setImageStream(((jwinforms.ImageListStreamer) (resources
+						.GetObject("ilDirectionImages.ImageStream"))));
 		ilDirectionImages.setTransparentColor(Color.white);
 		//
 		// ilEquipmentImages
 		//
 		ilEquipmentImages.setImageSize(new jwinforms.Size(64, 52));
-		ilEquipmentImages.setImageStream(((jwinforms.ImageListStreamer)(resources
-				.GetObject("ilEquipmentImages.ImageStream"))));
+		ilEquipmentImages
+				.setImageStream(((jwinforms.ImageListStreamer) (resources
+						.GetObject("ilEquipmentImages.ImageStream"))));
 		ilEquipmentImages.setTransparentColor(Color.white);
 
 		//
@@ -529,34 +504,28 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		Controls.add(system);
 		Controls.add(shipyard);
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedSingle);
-		this.setIcon(((Icon)(resources.GetObject("$this.Icon"))));
+		this.setIcon(((Icon) (resources.GetObject("$this.Icon"))));
 		this.setMaximizeBox(false);
 		this.setMenu(mnuMain);
 		this.setName("SpaceTrader");
 		this.setStartPosition(FormStartPosition.Manual);
 		this.setText("Space Trader");
-		this.setClosing(new jwinforms.EventHandler<Object, CancelEventArgs>()
-		{
+		this.setClosing(new jwinforms.EventHandler<Object, CancelEventArgs>() {
 			@Override
-			public void handle(Object sender, CancelEventArgs e)
-			{
+			public void handle(Object sender, CancelEventArgs e) {
 				SpaceTrader_Closing(sender, e);
 			}
 		});
-		this.setClosed(new jwinforms.EventHandler<Object, EventArgs>()
-		{
+		this.setClosed(new jwinforms.EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, EventArgs e)
-			{
+			public void handle(Object sender, EventArgs e) {
 				SpaceTrader_Closed(sender, e);
 			}
 		});
 
-		this.setLoad(new EventHandler<Object, EventArgs>()
-		{
+		this.setLoad(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, EventArgs e)
-			{
+			public void handle(Object sender, EventArgs e) {
 				SpaceTrader_Load(sender, e);
 			}
 		});
@@ -564,19 +533,16 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 
 	// #endregion
 
-	private String GetRegistrySetting(String settingName, String defaultValue)
-	{
+	private String GetRegistrySetting(String settingName, String defaultValue) {
 		String settingValue = defaultValue;
 
-		try
-		{
+		try {
 			RegistryKey key = Functions.GetRegistryKey();
 			Object ObjectValue = key.GetValue(settingName);
 			if (ObjectValue != null)
 				settingValue = ObjectValue.toString();
 			key.Close();
-		} catch (NullPointerException ex)
-		{
+		} catch (NullPointerException ex) {
 			GuiFacade.alert(AlertType.RegistryError, ex.getMessage());
 		}
 
@@ -584,13 +550,12 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 	}
 
 	// Make sure all directories exists.
-	private void InitFileStructure()
-	{
-		String[] paths = new String[] { Consts.CustomDirectory, Consts.CustomImagesDirectory,
-				Consts.CustomTemplatesDirectory, Consts.DataDirectory, Consts.SaveDirectory };
+	private void InitFileStructure() {
+		String[] paths = new String[] { Consts.CustomDirectory,
+				Consts.CustomImagesDirectory, Consts.CustomTemplatesDirectory,
+				Consts.DataDirectory, Consts.SaveDirectory };
 
-		for (String path : paths)
-		{
+		for (String path : paths) {
 			if (!Directory.Exists(path))
 				Directory.CreateDirectory(path);
 		}
@@ -600,8 +565,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 	}
 
 	@Override
-	public void SetInGameControlsEnabled(boolean enabled)
-	{
+	public void SetInGameControlsEnabled(boolean enabled) {
 		mnuGameSave.setEnabled(enabled);
 		mnuGameSaveAs.setEnabled(enabled);
 		mnuRetire.setEnabled(enabled);
@@ -612,22 +576,18 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		mnuViewBank.setEnabled(enabled);
 	}
 
-	private void SetRegistrySetting(String settingName, String settingValue)
-	{
-		try
-		{
+	private void SetRegistrySetting(String settingName, String settingValue) {
+		try {
 			RegistryKey key = Functions.GetRegistryKey();
 			key.SetValue(settingName, settingValue);
 			key.Close();
-		} catch (NullPointerException ex)
-		{
+		} catch (NullPointerException ex) {
 			GuiFacade.alert(AlertType.RegistryError, ex.getMessage());
 		}
 	}
 
 	@Override
-	public void UpdateAll()
-	{
+	public void UpdateAll() {
 		dockBox.Update();
 		cargoBox.Update();
 		shipyard.Update();
@@ -638,13 +598,11 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		shortRangeChart.Refresh();
 	}
 
-	private void SpaceTrader_Closing(Object sender, jwinforms.CancelEventArgs e)
-	{
-		if (game == null || commander.getDays() == controller.SaveGameDays
-				|| GuiFacade.alert(AlertType.GameAbandonConfirm) == DialogResult.Yes)
-		{
-			if (WindowState == FormWindowState.Normal)
-			{
+	private void SpaceTrader_Closing(Object sender, jwinforms.CancelEventArgs e) {
+		if (game == null
+				|| commander.getDays() == controller.SaveGameDays
+				|| GuiFacade.alert(AlertType.GameAbandonConfirm) == DialogResult.Yes) {
+			if (WindowState == FormWindowState.Normal) {
 				SetRegistrySetting("X", Left.toString());
 				SetRegistrySetting("Y", Top.toString());
 			}
@@ -652,13 +610,11 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 			e.Cancel = true;
 	}
 
-	private void SpaceTrader_Closed(Object sender, jwinforms.EventArgs e)
-	{
+	private void SpaceTrader_Closed(Object sender, jwinforms.EventArgs e) {
 		FormsOwnerTree.pop(this);
 	}
 
-	private void SpaceTrader_Load(Object sender, jwinforms.EventArgs e)
-	{
+	private void SpaceTrader_Load(Object sender, jwinforms.EventArgs e) {
 		Left = Integer.parseInt(GetRegistrySetting("X", "0"));
 		Top = Integer.parseInt(GetRegistrySetting("Y", "0"));
 
@@ -667,19 +623,18 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		GuiFacade.alert(AlertType.AppStart);
 	}
 
-	private void mnuGameExit_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuGameExit_Click(Object sender, jwinforms.EventArgs e) {
 		Close();
 	}
 
-	private void mnuGameNew_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuGameNew_Click(Object sender, jwinforms.EventArgs e) {
 		FormNewCommander form = new FormNewCommander();
-		if ((game == null || commander.getDays() == controller.SaveGameDays || GuiFacade.alert(AlertType.GameAbandonConfirm) == DialogResult.Yes)
-				&& form.ShowDialog(this) == DialogResult.OK)
-		{
-			setGame(new Game(form.CommanderName(), form.Difficulty(), form.Pilot(), form.Fighter(), form.Trader(), form
-					.Engineer(), this));
+		if ((game == null || commander.getDays() == controller.SaveGameDays || GuiFacade
+				.alert(AlertType.GameAbandonConfirm) == DialogResult.Yes)
+				&& form.ShowDialog(this) == DialogResult.OK) {
+			setGame(new Game(form.CommanderName(), form.Difficulty(),
+					form.Pilot(), form.Fighter(), form.Trader(),
+					form.Engineer(), this));
 			controller.SaveGameFile = null;
 			controller.SaveGameDays = 0;
 
@@ -691,17 +646,15 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		}
 	}
 
-	private void mnuGameLoad_Click(Object sender, jwinforms.EventArgs e)
-	{
-		if ((game == null || commander.getDays() == controller.SaveGameDays || GuiFacade.alert(AlertType.GameAbandonConfirm) == DialogResult.Yes)
+	private void mnuGameLoad_Click(Object sender, jwinforms.EventArgs e) {
+		if ((game == null || commander.getDays() == controller.SaveGameDays || GuiFacade
+				.alert(AlertType.GameAbandonConfirm) == DialogResult.Yes)
 				&& dlgOpen.ShowDialog(this) == DialogResult.OK)
 			controller.LoadGame(dlgOpen.getFileName());
 	}
 
-	private void mnuGameSave_Click(Object sender, jwinforms.EventArgs e)
-	{
-		if (Game.CurrentGame() != null)
-		{
+	private void mnuGameSave_Click(Object sender, jwinforms.EventArgs e) {
+		if (Game.CurrentGame() != null) {
 			if (controller.SaveGameFile != null)
 				controller.SaveGame(controller.SaveGameFile, false);
 			else
@@ -709,69 +662,57 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		}
 	}
 
-	private void mnuGameSaveAs_Click(Object sender, jwinforms.EventArgs e)
-	{
-		if (Game.CurrentGame() != null && dlgSave.ShowDialog(this) == DialogResult.OK)
+	private void mnuGameSaveAs_Click(Object sender, jwinforms.EventArgs e) {
+		if (Game.CurrentGame() != null
+				&& dlgSave.ShowDialog(this) == DialogResult.OK)
 			controller.SaveGame(dlgSave.getFileName(), true);
 	}
 
-	private void mnuHelpAbout_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuHelpAbout_Click(Object sender, jwinforms.EventArgs e) {
 		(new FormAbout()).ShowDialog(this);
 	}
 
-	private void mnuHighScores_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuHighScores_Click(Object sender, jwinforms.EventArgs e) {
 		(new FormViewHighScores()).ShowDialog(this);
 	}
 
-	private void mnuOptions_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuOptions_Click(Object sender, jwinforms.EventArgs e) {
 		FormOptions form = new FormOptions();
-		if (form.ShowDialog(this) == DialogResult.OK)
-		{
+		if (form.ShowDialog(this) == DialogResult.OK) {
 			game.Options().CopyValues(form.Options());
 			UpdateAll();
 		}
 	}
 
-	private void mnuRetire_Click(Object sender, jwinforms.EventArgs e)
-	{
-		if (GuiFacade.alert(AlertType.GameRetire) == DialogResult.Yes)
-		{
+	private void mnuRetire_Click(Object sender, jwinforms.EventArgs e) {
+		if (GuiFacade.alert(AlertType.GameRetire) == DialogResult.Yes) {
 			game.setEndStatus(GameEndType.Retired);
 			controller.GameEnd();
 			UpdateAll();
 		}
 	}
 
-	private void mnuViewBank_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuViewBank_Click(Object sender, jwinforms.EventArgs e) {
 		ShowBank();
 	}
 
-	public void ShowBank()
-	{
+	public void ShowBank() {
 		(new FormViewBank()).ShowDialog(this);
 	}
 
-	private void mnuViewCommander_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuViewCommander_Click(Object sender, jwinforms.EventArgs e) {
 		(new FormViewCommander()).ShowDialog(this);
 	}
 
-	private void mnuViewPersonnel_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuViewPersonnel_Click(Object sender, jwinforms.EventArgs e) {
 		(new FormViewPersonnel()).ShowDialog(this);
 	}
 
-	private void mnuViewQuests_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuViewQuests_Click(Object sender, jwinforms.EventArgs e) {
 		(new FormViewQuests()).ShowDialog(this);
 	}
 
-	private void mnuViewShip_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void mnuViewShip_Click(Object sender, jwinforms.EventArgs e) {
 		(new FormViewShip()).ShowDialog(this);
 	}
 
@@ -779,8 +720,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 
 	// #region Properties
 
-	public Image[] CustomShipImages()
-	{
+	public Image[] CustomShipImages() {
 		Image[] images = new Image[Consts.ImagesPerShip];
 		int baseIndex = ShipType.Custom.CastToInt() * Consts.ImagesPerShip;
 		for (int index = 0; index < Consts.ImagesPerShip; index++)
@@ -789,31 +729,26 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		return images;
 	}
 
-	public void CustomShipImages(Image[] value)
-	{
+	public void CustomShipImages(Image[] value) {
 		Image[] images = value;
 		int baseIndex = ShipType.Custom.CastToInt() * Consts.ImagesPerShip;
 		for (int index = 0; index < Consts.ImagesPerShip; index++)
 			ilShipImages.getImages()[baseIndex + index] = images[index];
 	}
 
-	public ImageList DirectionImages()
-	{
+	public ImageList DirectionImages() {
 		return ilDirectionImages;
 	}
 
-	public ImageList EquipmentImages()
-	{
+	public ImageList EquipmentImages() {
 		return ilEquipmentImages;
 	}
 
-	public ImageList ShipImages()
-	{
+	public ImageList ShipImages() {
 		return ilShipImages;
 	}
 
-	public Image[] getCustomShipImages()
-	{
+	public Image[] getCustomShipImages() {
 		Image[] images = new Image[Consts.ImagesPerShip];
 		int baseIndex = ShipType.Custom.CastToInt() * Consts.ImagesPerShip;
 		for (int index = 0; index < Consts.ImagesPerShip; index++)
@@ -822,8 +757,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 		return images;
 	}
 
-	public void setCustomShipImages(Image[] value)
-	{
+	public void setCustomShipImages(Image[] value) {
 		Image[] images = value;
 		int baseIndex = ShipType.Custom.CastToInt() * Consts.ImagesPerShip;
 		for (int index = 0; index < Consts.ImagesPerShip; index++)
@@ -833,8 +767,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 	// #endregion
 
 	@Override
-	public void setGame(Game game)
-	{
+	public void setGame(Game game) {
 		this.game = game;
 		controller = new GameController(game, this);
 		commander = game == null ? null : game.Commander();
@@ -853,8 +786,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow
 	 * TODO remove?
 	 */
 	@Override
-	public void UpdateStatusBar()
-	{
+	public void UpdateStatusBar() {
 		statusBar.Update();
 	}
 }

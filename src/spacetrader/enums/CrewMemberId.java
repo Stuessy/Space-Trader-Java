@@ -1,7 +1,6 @@
 package spacetrader.enums;
 
-public enum CrewMemberId implements SpaceTraderEnum
-{
+public enum CrewMemberId implements SpaceTraderEnum {
 	NA, // = -1,
 	Commander, // = 0,
 	Alyssa, // = 1,
@@ -59,13 +58,11 @@ public enum CrewMemberId implements SpaceTraderEnum
 	Princess, // = 53,
 	Scorpion;// = 54
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal() - 1;
 	}
 
-	public static CrewMemberId FromInt(int i)
-	{
-		return values()[i+1];
+	public static CrewMemberId FromInt(int i) {
+		return values()[i + 1];
 	}
 }

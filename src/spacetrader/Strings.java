@@ -24,8 +24,7 @@
  ******************************************************************************/
 package spacetrader;
 
-public class Strings
-{
+public class Strings {
 	public static final String newline = String.format("%n");
 
 	public static final String BankInsuranceButtonText = "^1 Insurance";
@@ -249,12 +248,13 @@ public class Strings
 	// #region String Arrays
 
 	// #region ActivityLevels
-	public static final String[] ActivityLevels = new String[] { "Absent", "Minimal",
-			"Few", "Some", "Moderate", "Many", "Abundant", "Swarms" };
+	public static final String[] ActivityLevels = new String[] { "Absent",
+			"Minimal", "Few", "Some", "Moderate", "Many", "Abundant", "Swarms" };
 	// #endregion
 
 	// #region CargoBuyOps
-	public static final String[] CargoBuyOps = new String[] { "Buy", "Buy", "Steal" };
+	public static final String[] CargoBuyOps = new String[] { "Buy", "Buy",
+			"Steal" };
 	// #endregion
 
 	// #region CargoSellOps
@@ -329,24 +329,25 @@ public class Strings
 	// #endregion
 
 	// #region EquipmentTypes
-	public static final String[] EquipmentTypes = new String[] { "Weapon", "Shield",
-			"Gadget" };
+	public static final String[] EquipmentTypes = new String[] { "Weapon",
+			"Shield", "Gadget" };
 	// #endregion
 
 	// #region GadgetNames
-	public static final String[] GadgetNames = new String[] { "5 Extra Cargo Bays",
-			"Auto-Repair System", "Navigating System", "Targeting System",
-			"Cloaking Device", "Fuel Compactor", "5 Hidden Cargo Bays" };
+	public static final String[] GadgetNames = new String[] {
+			"5 Extra Cargo Bays", "Auto-Repair System", "Navigating System",
+			"Targeting System", "Cloaking Device", "Fuel Compactor",
+			"5 Hidden Cargo Bays" };
 	// #endregion
 
 	// #region GameCompletionTypes
-	public static final String[] GameCompletionTypes = new String[] { "Was killed",
-			"Retired", "Claimed moon" };
+	public static final String[] GameCompletionTypes = new String[] {
+			"Was killed", "Retired", "Claimed moon" };
 	// #endregion
 
 	// #region ListStrings
-	public static final String[] ListStrings = new String[] { "", "^1", "^1 and ^2",
-			"^1, ^2, and ^3", "^1, ^2, ^3, and ^4" };
+	public static final String[] ListStrings = new String[] { "", "^1",
+			"^1 and ^2", "^1, ^2, and ^3", "^1, ^2, ^3, and ^4" };
 	// #endregion
 
 	// #region NewsEvent
@@ -519,8 +520,8 @@ public class Strings
 	// #endregion
 
 	// #region NewsPressureExternalPressures
-	public static final String[] NewsPressureExternalPressures = new String[] { "",
-			"Strife and War", "Plague Outbreaks", "Severe Drought",
+	public static final String[] NewsPressureExternalPressures = new String[] {
+			"", "Strife and War", "Plague Outbreaks", "Severe Drought",
 			"Terrible Boredom", "Cold Weather", "Crop Failures",
 			"Labor Shortages" };
 	// #endregion
@@ -534,14 +535,14 @@ public class Strings
 	// #endregion
 
 	// #region PoliceRecordNames
-	public static final String[] PoliceRecordNames = new String[] { "Psychopath",
-			"Villain", "Criminal", "Crook", "Dubious", "Clean", "Lawful",
-			"Trusted", "Liked", "Hero" };
+	public static final String[] PoliceRecordNames = new String[] {
+			"Psychopath", "Villain", "Criminal", "Crook", "Dubious", "Clean",
+			"Lawful", "Trusted", "Liked", "Hero" };
 	// #endregion
 
 	// #region PoliticalSystemNames
-	public static final String[] PoliticalSystemNames = new String[] { "Anarchy",
-			"Capitalist State", "Communist State", "Confederacy",
+	public static final String[] PoliticalSystemNames = new String[] {
+			"Anarchy", "Capitalist State", "Communist State", "Confederacy",
 			"Corporate State", "Cybernetic State", "Democracy", "Dictatorship",
 			"Fascist State", "Feudal State", "Military State", "Monarchy",
 			"Pacifist State", "Socialist State", "State of Satori",
@@ -567,8 +568,8 @@ public class Strings
 	// #endregion
 
 	// #region ShipyardEngineers
-	public static final String[] ShipyardEngineers = new String[] { "Wedge", "Luke",
-			"Lando", "Mara", "Obi-Wan" };
+	public static final String[] ShipyardEngineers = new String[] { "Wedge",
+			"Luke", "Lando", "Mara", "Obi-Wan" };
 	// #endregion
 
 	// #region ShipyardNames
@@ -587,13 +588,14 @@ public class Strings
 	// #endregion
 
 	// #region ShipyardSkills
-	public static final String[] ShipyardSkills = new String[] { "Crew Quartering",
-			"Fuel Efficienty", "Hull Strength", "Shielding", "Weaponry" };
+	public static final String[] ShipyardSkills = new String[] {
+			"Crew Quartering", "Fuel Efficienty", "Hull Strength", "Shielding",
+			"Weaponry" };
 	// #endregion
 
 	// #region Sizes
-	public static final String[] Sizes = new String[] { "Tiny", "Small", "Medium",
-			"Large", "Huge", "Gargantuan" };
+	public static final String[] Sizes = new String[] { "Tiny", "Small",
+			"Medium", "Large", "Huge", "Gargantuan" };
 	// #endregion
 
 	// #region SpecialEventStrings
@@ -667,11 +669,11 @@ public class Strings
 	// #endregion
 
 	// #region SpecialResources
-	public static final String[] SpecialResources = new String[] { "Nothing Special",
-			"Mineral Rich", "Mineral Poor", "Desert", "Sweetwater Oceans",
-			"Rich Soil", "Poor Soil", "Rich Fauna", "Lifeless",
-			"Weird Mushrooms", "Special Herbs", "Artistic Populace",
-			"Warlike Populace" };
+	public static final String[] SpecialResources = new String[] {
+			"Nothing Special", "Mineral Rich", "Mineral Poor", "Desert",
+			"Sweetwater Oceans", "Rich Soil", "Poor Soil", "Rich Fauna",
+			"Lifeless", "Weird Mushrooms", "Special Herbs",
+			"Artistic Populace", "Warlike Populace" };
 	// #endregion
 
 	// *************************************************************************
@@ -681,8 +683,9 @@ public class Strings
 	// JAF - Except where noted these comments are the previous author's.
 	// *************************************************************************
 	// #region SystemNames
-	public static final String[] SystemNames = new String[] { "Acamar", // JAF - TNG
-																	// "The Vengeance Factor (Acamar III)"
+	public static final String[] SystemNames = new String[] { "Acamar", // JAF -
+																		// TNG
+			// "The Vengeance Factor (Acamar III)"
 			"Adahn", // The alternate personality for The Nameless One in
 						// "Planescape: Torment"
 			"Aldea", // JAF - TNG "When the Bough Breaks"
@@ -829,21 +832,21 @@ public class Strings
 	// #endregion
 
 	// #region TechLevelNames
-	public static final String[] TechLevelNames = new String[] { "Pre-Agricultural",
-			"Agricultural", "Medieval", "Renaissance", "Early Industrial",
-			"Industrial", "Post-Industrial", "Hi-Tech" };
+	public static final String[] TechLevelNames = new String[] {
+			"Pre-Agricultural", "Agricultural", "Medieval", "Renaissance",
+			"Early Industrial", "Industrial", "Post-Industrial", "Hi-Tech" };
 	// #endregion
 
 	// #region TradeItemNames
-	public static final String[] TradeItemNames = new String[] { "Water", "Furs",
-			"Food", "Ore", "Games", "Firearms", "Medicine", "Machines",
+	public static final String[] TradeItemNames = new String[] { "Water",
+			"Furs", "Food", "Ore", "Games", "Firearms", "Medicine", "Machines",
 			"Narcotics", "Robots" };
 	// #endregion
 
 	// #region VeryRareEncounters
-	public static final String[] VeryRareEncounters = new String[] { "Marie Celeste",
-			"Captain Ahab", "Captain Conrad", "Captain Huie", "Dated Tonic",
-			"Good Tonic" };
+	public static final String[] VeryRareEncounters = new String[] {
+			"Marie Celeste", "Captain Ahab", "Captain Conrad", "Captain Huie",
+			"Dated Tonic", "Good Tonic" };
 	// #endregion
 
 	// #region WeaponNames

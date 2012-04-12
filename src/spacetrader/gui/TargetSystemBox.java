@@ -12,14 +12,13 @@ import spacetrader.StarSystem;
 import spacetrader.Strings;
 import spacetrader.SystemTracker;
 
-public class TargetSystemBox extends jwinforms.GroupBox
-{
+public class TargetSystemBox extends jwinforms.GroupBox {
 	private SystemTracker game = null;
 	private GameController controller = null;
 	private Commander commander;
 
-	void setGame(SystemTracker game, GameController controller, Commander commander)
-	{
+	void setGame(SystemTracker game, GameController controller,
+			Commander commander) {
 		this.game = game;
 		this.controller = controller;
 		this.commander = commander;
@@ -27,13 +26,11 @@ public class TargetSystemBox extends jwinforms.GroupBox
 
 	private final SpaceTrader mainWindow;
 
-	public TargetSystemBox(SpaceTrader mainWindow)
-	{
+	public TargetSystemBox(SpaceTrader mainWindow) {
 		this.mainWindow = mainWindow;
 	}
 
-	private void UpdateAll()
-	{
+	private void UpdateAll() {
 		// todo inline when done
 		mainWindow.UpdateAll();
 	}
@@ -60,8 +57,7 @@ public class TargetSystemBox extends jwinforms.GroupBox
 	private jwinforms.Label lblTargetTechLabel;
 	private jwinforms.Label lblTargetSizeLabel;
 
-	void InitializeComponent()
-	{
+	void InitializeComponent() {
 		btnTrack = new jwinforms.Button();
 		btnNextSystem = new jwinforms.Button();
 		btnPrevSystem = new jwinforms.Button();
@@ -121,11 +117,9 @@ public class TargetSystemBox extends jwinforms.GroupBox
 		btnTrack.setTabIndex(60);
 		btnTrack.setText("Track");
 		btnTrack.setVisible(false);
-		btnTrack.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnTrack.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnTrack_Click(sender, e);
 			}
 		});
@@ -138,11 +132,9 @@ public class TargetSystemBox extends jwinforms.GroupBox
 		btnNextSystem.setSize(new jwinforms.Size(18, 18));
 		btnNextSystem.setTabIndex(58);
 		btnNextSystem.setText(">");
-		btnNextSystem.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnNextSystem.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnNextSystem_Click(sender, e);
 			}
 		});
@@ -155,11 +147,9 @@ public class TargetSystemBox extends jwinforms.GroupBox
 		btnPrevSystem.setSize(new jwinforms.Size(18, 18));
 		btnPrevSystem.setTabIndex(57);
 		btnPrevSystem.setText("<");
-		btnPrevSystem.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPrevSystem.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPrevSystem_Click(sender, e);
 			}
 		});
@@ -180,11 +170,9 @@ public class TargetSystemBox extends jwinforms.GroupBox
 		btnWarp.setSize(new jwinforms.Size(44, 44));
 		btnWarp.setTabIndex(59);
 		btnWarp.setText("Warp");
-		btnWarp.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnWarp.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnWarp_Click(sender, e);
 			}
 		});
@@ -335,35 +323,29 @@ public class TargetSystemBox extends jwinforms.GroupBox
 
 	}
 
-	private void btnTrack_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnTrack_Click(Object sender, jwinforms.EventArgs e) {
 		game.setTrackedSystemId(game.SelectedSystemId());
 		UpdateAll();
 	}
 
-	private void btnWarp_Click(Object sender, jwinforms.EventArgs e)
-	{
-		try
-		{
+	private void btnWarp_Click(Object sender, jwinforms.EventArgs e) {
+		try {
 			controller.autoSave_depart();
 
 			game.Warp(false);
 
 			controller.autoSave_arive();
-		} catch (GameEndException ex)
-		{
+		} catch (GameEndException ex) {
 			controller.GameEnd();
 		}
 		UpdateAll();
 	}
 
-	void Update()
-	{
+	void Update() {
 		btnNextSystem.setVisible(game != null);
 		btnPrevSystem.setVisible(game != null);
 
-		if (game == null || game.WarpSystem() == null)
-		{
+		if (game == null || game.WarpSystem() == null) {
 			lblTargetName.setText("");
 			lblTargetSize.setText("");
 			lblTargetTech.setText("");
@@ -375,34 +357,38 @@ public class TargetSystemBox extends jwinforms.GroupBox
 			lblTargetOutOfRange.setVisible(false);
 			btnWarp.setVisible(false);
 			btnTrack.setVisible(false);
-		} else
-		{
+		} else {
 			StarSystem system = game.WarpSystem();
-			int distance = Functions.Distance(commander.getCurrentSystem(), system);
+			int distance = Functions.Distance(commander.getCurrentSystem(),
+					system);
 
 			lblTargetName.setText(system.Name());
 			lblTargetSize.setText(Strings.Sizes[system.Size().CastToInt()]);
-			lblTargetTech.setText(Strings.TechLevelNames[system.TechLevel().CastToInt()]);
+			lblTargetTech.setText(Strings.TechLevelNames[system.TechLevel()
+					.CastToInt()]);
 			lblTargetPolSys.setText(system.PoliticalSystem().Name());
-			lblTargetResource.setText(system.Visited() ? Strings.SpecialResources[system.SpecialResource().CastToInt()]
-					: Strings.Unknown);
-			lblTargetPolice.setText(Strings.ActivityLevels[system.PoliticalSystem().ActivityPolice().CastToInt()]);
-			lblTargetPirates.setText(Strings.ActivityLevels[system.PoliticalSystem().ActivityPirates().CastToInt()]);
+			lblTargetResource
+					.setText(system.Visited() ? Strings.SpecialResources[system
+							.SpecialResource().CastToInt()] : Strings.Unknown);
+			lblTargetPolice.setText(Strings.ActivityLevels[system
+					.PoliticalSystem().ActivityPolice().CastToInt()]);
+			lblTargetPirates.setText(Strings.ActivityLevels[system
+					.PoliticalSystem().ActivityPirates().CastToInt()]);
 			lblTargetDistance.setText("" + distance);
-			lblTargetOutOfRange.setVisible(!system.DestOk() && system != commander.getCurrentSystem());
+			lblTargetOutOfRange.setVisible(!system.DestOk()
+					&& system != commander.getCurrentSystem());
 			btnWarp.setVisible(system.DestOk());
-			btnTrack.setVisible(lblTargetOutOfRange.getVisible() && system != game.TrackedSystem());
+			btnTrack.setVisible(lblTargetOutOfRange.getVisible()
+					&& system != game.TrackedSystem());
 		}
 	}
 
-	private void btnNextSystem_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnNextSystem_Click(Object sender, jwinforms.EventArgs e) {
 		game.SelectNextSystemWithinRange(true);
 		UpdateAll();
 	}
 
-	private void btnPrevSystem_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnPrevSystem_Click(Object sender, jwinforms.EventArgs e) {
 		game.SelectNextSystemWithinRange(false);
 		UpdateAll();
 	}

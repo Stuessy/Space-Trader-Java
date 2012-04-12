@@ -36,9 +36,7 @@ import jwinforms.ISupportInitialize;
 import jwinforms.Image;
 import jwinforms.Size;
 
-
-public class FormAbout extends jwinforms.WinformForm
-{
+public class FormAbout extends jwinforms.WinformForm {
 	// #region Control Declarations
 
 	private jwinforms.Button btnClose;
@@ -50,8 +48,7 @@ public class FormAbout extends jwinforms.WinformForm
 
 	// #region Methods
 
-	public FormAbout()
-	{
+	public FormAbout() {
 		InitializeComponent();
 	}
 
@@ -60,18 +57,18 @@ public class FormAbout extends jwinforms.WinformForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
-		jwinforms.ComponentResourceManager resources = new ComponentResourceManager(FormAbout.class);
+	private void InitializeComponent() {
+		jwinforms.ComponentResourceManager resources = new ComponentResourceManager(
+				FormAbout.class);
 		this.btnClose = new jwinforms.Button();
 		this.lblTitle = new jwinforms.Label();
 		this.lblAbout = new jwinforms.Label();
 		this.picLogo = new jwinforms.PictureBox();
 		((ISupportInitialize) (this.picLogo)).BeginInit();
 		this.SuspendLayout();
-		// 
+		//
 		// btnClose
-		// 
+		//
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new Point(-32, -32));
 		this.btnClose.setName("btnClose");
@@ -79,9 +76,9 @@ public class FormAbout extends jwinforms.WinformForm
 		this.btnClose.setTabIndex(32);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
-		// 
+		//
 		// lblTitle
-		// 
+		//
 		this.lblTitle.setAutoSize(true);
 		this.lblTitle.setFont(FontCollection.bold825);
 		this.lblTitle.setLocation(new Point(172, 8));
@@ -89,26 +86,26 @@ public class FormAbout extends jwinforms.WinformForm
 		this.lblTitle.setSize(new Size(187, 13));
 		this.lblTitle.setTabIndex(33);
 		this.lblTitle.setText("Java Space Trader");
-		// 
+		//
 		// lblAbout
-		// 
+		//
 		this.lblAbout.setLocation(new Point(172, 32));
 		this.lblAbout.setName("lblAbout");
 		this.lblAbout.setSize(new Size(272, 190));
 		this.lblAbout.setTabIndex(34);
 		this.lblAbout.setText(resources.GetString("lblAbout.Text"));
-		// 
+		//
 		// picLogo
-		// 
+		//
 		this.picLogo.setImage(((Image) (resources.GetObject("picLogo.Image"))));
 		this.picLogo.setLocation(new Point(8, 8));
 		this.picLogo.setName("picLogo");
 		this.picLogo.setSize(new Size(160, 160));
 		this.picLogo.setTabIndex(35);
 		this.picLogo.setTabStop(false);
-		// 
+		//
 		// FormAbout
-		// 
+		//
 		this.setAutoScaleBaseSize(new Size(5, 13));
 		this.setCancelButton(this.btnClose);
 		this.setClientSize(new Size(446, 250));
@@ -127,12 +124,14 @@ public class FormAbout extends jwinforms.WinformForm
 		this.PerformLayout();
 
 	}
+
 	// #endregion
 
 	// #endregion
-	
-	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException
-	{
+
+	public static void main(String[] args) throws ClassNotFoundException,
+			InstantiationException, IllegalAccessException,
+			UnsupportedLookAndFeelException {
 		Launcher.runForm(new FormAbout());
 	}
 }

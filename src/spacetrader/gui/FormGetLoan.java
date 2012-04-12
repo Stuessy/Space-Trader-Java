@@ -39,8 +39,7 @@ import jwinforms.ISupportInitialize;
 import spacetrader.Functions;
 import spacetrader.Strings;
 
-public class FormGetLoan extends SpaceTraderForm
-{
+public class FormGetLoan extends SpaceTraderForm {
 	// #region Control Declarations
 
 	private jwinforms.Button btnOk;
@@ -50,14 +49,14 @@ public class FormGetLoan extends SpaceTraderForm
 	private jwinforms.NumericUpDown numAmount;
 	private jwinforms.Label lblStatement;
 
-	public FormGetLoan(int max)
-	{
+	public FormGetLoan(int max) {
 		InitializeComponent();
 
 		numAmount.setMaximum(max);
 		numAmount.setValue(numAmount.getMinimum());
-		lblStatement.setText(Functions.StringVars(Strings.BankLoanStatementBorrow, Functions.Multiples(max,
-				Strings.MoneyUnit)));
+		lblStatement.setText(Functions.StringVars(
+				Strings.BankLoanStatementBorrow,
+				Functions.Multiples(max, Strings.MoneyUnit)));
 	}
 
 	// #region Windows Form Designer generated code
@@ -65,15 +64,14 @@ public class FormGetLoan extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		this.lblQuestion = new jwinforms.Label();
 		this.numAmount = new jwinforms.NumericUpDown();
 		this.btnOk = new jwinforms.Button();
 		this.btnMax = new jwinforms.Button();
 		this.btnNothing = new jwinforms.Button();
 		this.lblStatement = new jwinforms.Label();
-		((ISupportInitialize)(this.numAmount)).BeginInit();
+		((ISupportInitialize) (this.numAmount)).BeginInit();
 		this.SuspendLayout();
 		//
 		// lblQuestion
@@ -115,11 +113,9 @@ public class FormGetLoan extends SpaceTraderForm
 		this.btnMax.setSize(new jwinforms.Size(41, 22));
 		this.btnMax.setTabIndex(3);
 		this.btnMax.setText("Max");
-		this.btnMax.setClick(new EventHandler<Object, EventArgs>()
-		{
+		this.btnMax.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnMax_Click(sender, e);
 			}
 		});
@@ -149,14 +145,14 @@ public class FormGetLoan extends SpaceTraderForm
 		this.setCancelButton(this.btnNothing);
 		this.setClientSize(new jwinforms.Size(252, 79));
 		this.setControlBox(false);
-		this.Controls.addAll(Arrays.asList(this.lblStatement, this.btnNothing, this.btnMax, this.btnOk, this.numAmount,
-				this.lblQuestion));
+		this.Controls.addAll(Arrays.asList(this.lblStatement, this.btnNothing,
+				this.btnMax, this.btnOk, this.numAmount, this.lblQuestion));
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);
 		this.setName("FormGetLoan");
 		this.setShowInTaskbar(false);
 		this.setStartPosition(FormStartPosition.CenterParent);
 		this.setText("Get Loan");
-		((ISupportInitialize)(this.numAmount)).EndInit();
+		((ISupportInitialize) (this.numAmount)).EndInit();
 	}
 
 	// #endregion
@@ -165,8 +161,7 @@ public class FormGetLoan extends SpaceTraderForm
 
 	// #region Event Handlers
 
-	private void btnMax_Click(Object sender, EventArgs e)
-	{
+	private void btnMax_Click(Object sender, EventArgs e) {
 		numAmount.setValue(numAmount.getMaximum());
 	}
 
@@ -174,10 +169,7 @@ public class FormGetLoan extends SpaceTraderForm
 
 	// #region Properties
 
-	
-
-	public int Amount()
-	{
+	public int Amount() {
 		return numAmount.getValue();
 	}
 

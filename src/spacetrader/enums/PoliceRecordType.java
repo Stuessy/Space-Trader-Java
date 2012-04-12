@@ -16,13 +16,11 @@ public enum PoliceRecordType implements SpaceTraderEnum// : int
 	Hero; // = 9
 
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 
-	public String getName()
-	{
+	public String getName() {
 		return Strings.PoliceRecordNames[ordinal()];
 	}
 }

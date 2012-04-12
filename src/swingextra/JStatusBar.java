@@ -8,22 +8,17 @@ import java.awt.GridBagLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class JStatusBar extends JPanel
-{
-	public JStatusBar()
-	{
+public class JStatusBar extends JPanel {
+	public JStatusBar() {
 		super(new GridBagLayout());
 	}
 
-	public void addSection(JStatusBarSection section, boolean stretch)
-	{
+	public void addSection(JStatusBarSection section, boolean stretch) {
 		GridBagConstraints c = new GridBagConstraints();
-		if (stretch)
-		{
+		if (stretch) {
 			c.fill = GridBagConstraints.HORIZONTAL;
 			c.weightx = 1.0;
-		} else
-		{
+		} else {
 			c.fill = GridBagConstraints.NONE;
 			c.weightx = 0.0;
 		}
@@ -31,8 +26,7 @@ public class JStatusBar extends JPanel
 		this.add(section, c);
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		JStatusBar panel = new JStatusBar();
 
@@ -43,8 +37,8 @@ public class JStatusBar extends JPanel
 		panel.addSection(new JStatusBarSection("Foo bar!"), false);
 		panel.addSection(new JStatusBarSection("--fill--"), true);
 
-//		panel.addSection(new JStatusBarSection("Foo bar!"), false);
-//		panel.addSection(new JStatusBarSection("westest"), false);
+		// panel.addSection(new JStatusBarSection("Foo bar!"), false);
+		// panel.addSection(new JStatusBarSection("westest"), false);
 
 		frame.setSize(400, 400);
 		frame.setLocationRelativeTo(null);

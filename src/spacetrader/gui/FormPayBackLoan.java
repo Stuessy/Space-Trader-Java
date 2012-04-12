@@ -35,8 +35,7 @@ import spacetrader.Functions;
 import spacetrader.Game;
 import spacetrader.Strings;
 
-public class FormPayBackLoan extends SpaceTraderForm
-{
+public class FormPayBackLoan extends SpaceTraderForm {
 	private jwinforms.Button btnOk;
 	private jwinforms.Label lblQuestion;
 	private jwinforms.Button btnMax;
@@ -44,16 +43,16 @@ public class FormPayBackLoan extends SpaceTraderForm
 	private jwinforms.NumericUpDown numAmount;
 	private jwinforms.Label lblStatement;
 
-	public FormPayBackLoan()
-	{
+	public FormPayBackLoan() {
 		InitializeComponent();
 
 		Commander cmdr = Game.CurrentGame().Commander();
 		int max = Math.min(cmdr.getDebt(), cmdr.getCash());
 		numAmount.setMaximum(max);
 		numAmount.setValue(numAmount.getMinimum());
-		lblStatement.setText(Functions.StringVars(Strings.BankLoanStatementDebt, Functions.Multiples(cmdr.getDebt(),
-				Strings.MoneyUnit)));
+		lblStatement.setText(Functions.StringVars(
+				Strings.BankLoanStatementDebt,
+				Functions.Multiples(cmdr.getDebt(), Strings.MoneyUnit)));
 	}
 
 	// #region Windows Form Designer generated code
@@ -61,15 +60,14 @@ public class FormPayBackLoan extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		lblQuestion = new jwinforms.Label();
 		numAmount = new jwinforms.NumericUpDown();
 		btnOk = new jwinforms.Button();
 		btnMax = new jwinforms.Button();
 		btnNothing = new jwinforms.Button();
 		lblStatement = new jwinforms.Label();
-		((ISupportInitialize)(numAmount)).BeginInit();
+		((ISupportInitialize) (numAmount)).BeginInit();
 		this.SuspendLayout();
 		//
 		// lblQuestion
@@ -111,11 +109,9 @@ public class FormPayBackLoan extends SpaceTraderForm
 		btnMax.setSize(new jwinforms.Size(41, 22));
 		btnMax.setTabIndex(3);
 		btnMax.setText("Max");
-		btnMax.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnMax.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnMax_Click(sender, e);
 			}
 		});
@@ -152,21 +148,18 @@ public class FormPayBackLoan extends SpaceTraderForm
 		this.setShowInTaskbar(false);
 		this.setStartPosition(FormStartPosition.CenterParent);
 		this.setText("Pay Back Loan");
-		((ISupportInitialize)(numAmount)).EndInit();
+		((ISupportInitialize) (numAmount)).EndInit();
 	}
 
-	private void btnMax_Click(Object sender, EventArgs e)
-	{
+	private void btnMax_Click(Object sender, EventArgs e) {
 		numAmount.setValue(numAmount.getMaximum());
 	}
 
-	public int Amount()
-	{
+	public int Amount() {
 		return numAmount.getValue();
 	}
 
-	public static void main(String[] args) throws Exception
-	{
+	public static void main(String[] args) throws Exception {
 		FormPayBackLoan form = new FormPayBackLoan();
 		Launcher.runForm(form);
 		System.out.println(form.Amount());

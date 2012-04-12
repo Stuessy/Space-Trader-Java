@@ -43,10 +43,8 @@ import spacetrader.PoliceRecord;
 import spacetrader.Reputation;
 import spacetrader.Strings;
 
-public class FormViewCommander extends SpaceTraderForm
-{
-	public static void main(String[] args) throws Exception
-	{
+public class FormViewCommander extends SpaceTraderForm {
+	public static void main(String[] args) throws Exception {
 		FormViewCommander form = new FormViewCommander();
 		Launcher.runForm(form);
 	} // #region Control Declarations
@@ -93,8 +91,7 @@ public class FormViewCommander extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormViewCommander()
-	{
+	public FormViewCommander() {
 		InitializeComponent();
 
 		InitializeScreen();
@@ -105,8 +102,7 @@ public class FormViewCommander extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		this.lblNameLabel = new jwinforms.Label();
 		this.lblName = new jwinforms.Label();
 		this.lblDifficulty = new jwinforms.Label();
@@ -240,8 +236,10 @@ public class FormViewCommander extends SpaceTraderForm
 		//
 		// boxSkills
 		//
-		this.boxSkills.Controls.addAll((new WinformControl[] { this.lblEngineer, this.lblTrader, this.lblFighter,
-				this.lblPilot, this.lblEngineerLabel, this.lblTraderLabel, this.lblFighterLabel, this.lblPilotLabel }));
+		this.boxSkills.Controls.addAll((new WinformControl[] {
+				this.lblEngineer, this.lblTrader, this.lblFighter,
+				this.lblPilot, this.lblEngineerLabel, this.lblTraderLabel,
+				this.lblFighterLabel, this.lblPilotLabel }));
 		this.boxSkills.setLocation(new java.awt.Point(8, 64));
 		this.boxSkills.setName("boxSkills");
 		this.boxSkills.setSize(new jwinforms.Size(216, 56));
@@ -323,8 +321,9 @@ public class FormViewCommander extends SpaceTraderForm
 		//
 		// boxFinances
 		//
-		this.boxFinances.Controls.addAll(this.lblCash, this.lblDebt, this.lblNetWorth, this.lblNetWorthLabel,
-				this.lblCashLabel, this.lblDebtLabel);
+		this.boxFinances.Controls.addAll(this.lblCash, this.lblDebt,
+				this.lblNetWorth, this.lblNetWorthLabel, this.lblCashLabel,
+				this.lblDebtLabel);
 		this.boxFinances.setLocation(new java.awt.Point(8, 128));
 		this.boxFinances.setName("boxFinances");
 		this.boxFinances.setSize(new jwinforms.Size(216, 72));
@@ -361,9 +360,10 @@ public class FormViewCommander extends SpaceTraderForm
 		//
 		// boxNotoriety
 		//
-		this.boxNotoriety.Controls.addAll((new WinformControl[] { this.lblBountyLabel, this.lblBounty,
-				this.lblPoliceLabel, this.lblReputationLabel, this.lblKillsLabel, this.lblKills, this.lblReputation,
-				this.lblRecord }));
+		this.boxNotoriety.Controls.addAll((new WinformControl[] {
+				this.lblBountyLabel, this.lblBounty, this.lblPoliceLabel,
+				this.lblReputationLabel, this.lblKillsLabel, this.lblKills,
+				this.lblReputation, this.lblRecord }));
 		this.boxNotoriety.setLocation(new java.awt.Point(8, 208));
 		this.boxNotoriety.setName("boxNotoriety");
 		this.boxNotoriety.setSize(new jwinforms.Size(216, 88));
@@ -449,9 +449,10 @@ public class FormViewCommander extends SpaceTraderForm
 		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
 		this.setCancelButton(this.btnClose);
 		this.setClientSize(new jwinforms.Size(232, 304));
-		this.Controls.addAll(Arrays.asList(this.boxNotoriety, this.boxFinances, this.boxSkills, this.lblTime,
-				this.lblDifficultyLabel, this.lblTimeLabel, this.lblNameLabel, this.btnClose, this.lblDifficulty,
-				this.lblName));
+		this.Controls.addAll(Arrays.asList(this.boxNotoriety, this.boxFinances,
+				this.boxSkills, this.lblTime, this.lblDifficultyLabel,
+				this.lblTimeLabel, this.lblNameLabel, this.btnClose,
+				this.lblDifficulty, this.lblName));
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);
 		this.setMaximizeBox(false);
 		this.setMinimizeBox(false);
@@ -463,42 +464,44 @@ public class FormViewCommander extends SpaceTraderForm
 
 	// #endregion
 
-	private void InitializeScreen()
-	{
+	private void InitializeScreen() {
 		Commander cmdr = game.Commander();
-		
+
 		lblName.setText(cmdr.Name());
-		lblDifficulty.setText(Strings.DifficultyLevels[game.Difficulty().CastToInt()]);
+		lblDifficulty.setText(Strings.DifficultyLevels[game.Difficulty()
+				.CastToInt()]);
 		lblTime.setText(Functions.Multiples(cmdr.getDays(), Strings.TimeUnit));
 
 		lblPilot.setText(cmdr.Pilot() + " (" + cmdr.getShip().Pilot() + ")");
-		lblFighter.setText(cmdr.Fighter() + " (" + cmdr.getShip().Fighter() + ")");
+		lblFighter.setText(cmdr.Fighter() + " (" + cmdr.getShip().Fighter()
+				+ ")");
 		lblTrader.setText(cmdr.Trader() + " (" + cmdr.getShip().Trader() + ")");
-		lblEngineer.setText(cmdr.Engineer() + " (" + cmdr.getShip().Engineer() + ")");
+		lblEngineer.setText(cmdr.Engineer() + " (" + cmdr.getShip().Engineer()
+				+ ")");
 
 		lblCash.setText(Functions.FormatMoney(cmdr.getCash()));
 		lblDebt.setText(Functions.FormatMoney(cmdr.getDebt()));
 		lblNetWorth.setText(Functions.FormatMoney(cmdr.Worth()));
 
-		lblKills.setText(Functions.FormatNumber(cmdr.getKillsPirate() + cmdr.getKillsPolice() + cmdr.getKillsTrader()));
-		lblRecord.setText(PoliceRecord.GetPoliceRecordFromScore(cmdr.getPoliceRecordScore()).Name());
-		lblReputation.setText(Reputation.GetReputationFromScore(cmdr.getReputationScore()).Name());
+		lblKills.setText(Functions.FormatNumber(cmdr.getKillsPirate()
+				+ cmdr.getKillsPolice() + cmdr.getKillsTrader()));
+		lblRecord.setText(PoliceRecord.GetPoliceRecordFromScore(
+				cmdr.getPoliceRecordScore()).Name());
+		lblReputation.setText(Reputation.GetReputationFromScore(
+				cmdr.getReputationScore()).Name());
 
 		int score = cmdr.getPoliceRecordScore();
-		if (score <= Consts.PoliceRecordScoreCrook)
-		{
+		if (score <= Consts.PoliceRecordScoreCrook) {
 			lblBountyLabel.setVisible(true);
 			lblBountyLabel.setText("Bounty offered:");
 			lblBounty.setVisible(true);
 			lblBounty.setText(Functions.FormatMoney(-1000 * score));
-		} else if (score >= Consts.PoliceRecordScoreTrusted)
-		{
+		} else if (score >= Consts.PoliceRecordScoreTrusted) {
 			lblBountyLabel.setVisible(true);
 			lblBountyLabel.setText("Angry kingpins:");
 			lblBounty.setVisible(true);
 			lblBounty.setText(Functions.FormatNumber(score / 5));
-		} else
-		{
+		} else {
 			lblBountyLabel.setVisible(false);
 			lblBounty.setVisible(false);
 		}

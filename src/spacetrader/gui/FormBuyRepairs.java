@@ -43,8 +43,7 @@ import jwinforms.WinformControl;
 import spacetrader.Commander;
 import spacetrader.Game;
 
-public class FormBuyRepairs extends jwinforms.WinformForm
-{
+public class FormBuyRepairs extends jwinforms.WinformForm {
 	// #region Control Declarations
 
 	private jwinforms.Button btnOk;
@@ -63,12 +62,12 @@ public class FormBuyRepairs extends jwinforms.WinformForm
 
 	// #region Methods
 
-	public FormBuyRepairs()
-	{
+	public FormBuyRepairs() {
 		InitializeComponent();
 
 		Commander cmdr = game.Commander();
-		numAmount.setMaximum(Math.min(cmdr.getCash(), (cmdr.getShip().HullStrength() - cmdr.getShip().getHull())
+		numAmount.setMaximum(Math.min(cmdr.getCash(), (cmdr.getShip()
+				.HullStrength() - cmdr.getShip().getHull())
 				* cmdr.getShip().getRepairCost()));
 		numAmount.setValue(numAmount.getMaximum());
 	}
@@ -78,14 +77,13 @@ public class FormBuyRepairs extends jwinforms.WinformForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		this.lblQuestion = new jwinforms.Label();
 		this.numAmount = new jwinforms.NumericUpDown();
 		this.btnOk = new jwinforms.Button();
 		this.btnMax = new jwinforms.Button();
 		this.btnNothing = new jwinforms.Button();
-		((ISupportInitialize)(this.numAmount)).BeginInit();
+		((ISupportInitialize) (this.numAmount)).BeginInit();
 		this.SuspendLayout();
 		//
 		// lblQuestion
@@ -144,14 +142,15 @@ public class FormBuyRepairs extends jwinforms.WinformForm
 		this.setCancelButton(this.btnNothing);
 		this.setClientSize(new Size(286, 63));
 		this.setControlBox(false);
-		this.Controls.addAll(Arrays.asList(new WinformControl[] { this.btnNothing, this.btnMax, this.btnOk,
-				this.numAmount, this.lblQuestion }));
+		this.Controls.addAll(Arrays.asList(new WinformControl[] {
+				this.btnNothing, this.btnMax, this.btnOk, this.numAmount,
+				this.lblQuestion }));
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);
 		this.setName("FormBuyRepairs");
 		this.setShowInTaskbar(false);
 		this.setStartPosition(FormStartPosition.CenterParent);
 		this.setText("Hull Repair");
-		((ISupportInitialize)(this.numAmount)).EndInit();
+		((ISupportInitialize) (this.numAmount)).EndInit();
 	}
 
 	// #endregion
@@ -160,8 +159,7 @@ public class FormBuyRepairs extends jwinforms.WinformForm
 
 	// #region Event Handlers
 	// This action is not connected in the .NET version either.
-	private void btnMax_Click(Object sender, EventArgs e)
-	{
+	private void btnMax_Click(Object sender, EventArgs e) {
 		numAmount.setValue(numAmount.getMaximum());
 	}
 
@@ -169,15 +167,14 @@ public class FormBuyRepairs extends jwinforms.WinformForm
 
 	// #region Properties
 
-	public int Amount()
-	{
+	public int Amount() {
 		return numAmount.getValue();
 	}
 
 	// #endregion
-	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
-			IllegalAccessException, UnsupportedLookAndFeelException
-	{
+	public static void main(String[] args) throws ClassNotFoundException,
+			InstantiationException, IllegalAccessException,
+			UnsupportedLookAndFeelException {
 		FormBuyRepairs form = new FormBuyRepairs();
 		Launcher.runForm(form);
 		System.out.println(form.Amount());

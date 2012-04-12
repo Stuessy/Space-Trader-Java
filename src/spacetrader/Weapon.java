@@ -33,8 +33,7 @@ import spacetrader.util.EquipmentSubType;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Log;
 
-public class Weapon extends Equipment
-{
+public class Weapon extends Equipment {
 	// #region Member Declarations
 
 	private WeaponType _type;
@@ -46,31 +45,29 @@ public class Weapon extends Equipment
 	// #region Methods
 
 	public Weapon(WeaponType type, int power, boolean disabling, int price,
-			TechLevel minTechLevel, int chance)
-	{
-		super(spacetrader.enums.EquipmentType.Weapon, price, minTechLevel, chance);
+			TechLevel minTechLevel, int chance) {
+		super(spacetrader.enums.EquipmentType.Weapon, price, minTechLevel,
+				chance);
 		_type = type;
 		_power = power;
 		_disabling = disabling;
 	}
 
-	public Weapon(Hashtable hash)
-	{
+	public Weapon(Hashtable hash) {
 		super(hash);
-		_type = WeaponType.FromInt(GetValueFromHash(hash, "_type", Integer.class));
+		_type = WeaponType.FromInt(GetValueFromHash(hash, "_type",
+				Integer.class));
 		_power = GetValueFromHash(hash, "_power", Integer.class);
 		_disabling = GetValueFromHash(hash, "_disabling", false);
 	}
 
 	public @Override
-	Equipment Clone()
-	{
+	Equipment Clone() {
 		return new Weapon(_type, _power, _disabling, _price, _minTech, _chance);
 	}
 
 	public @Override
-	Hashtable Serialize()
-	{
+	Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.add("_type", _type.CastToInt());
@@ -81,16 +78,13 @@ public class Weapon extends Equipment
 	}
 
 	public @Override
-	boolean TypeEquals(Object type)
-	{
+	boolean TypeEquals(Object type) {
 		boolean equal = false;
 
-		try
-		{
+		try {
 			if (Type() == (WeaponType) type)
 				equal = true;
-		} catch (Exception e)
-		{
+		} catch (Exception e) {
 			Log.write("Ignored exeption " + e);
 		}
 
@@ -101,33 +95,26 @@ public class Weapon extends Equipment
 
 	// #region Properties
 
-	public boolean Disabling()
-	{
+	public boolean Disabling() {
 		return _disabling;
 
 	}
 
 	public @Override
-	String Name()
-	{
+	String Name() {
 		return Strings.WeaponNames[_type.CastToInt()];
 	}
 
-	public int Power()
-	{
+	public int Power() {
 		return _power;
 	}
 
 	public @Override
-	EquipmentSubType SubType()
-	{
+	EquipmentSubType SubType() {
 		return Type();
 	}
 
-	
-
-	public WeaponType Type()
-	{
+	public WeaponType Type() {
 		return _type;
 	}
 

@@ -1,6 +1,5 @@
 package jwinforms;
 
-public enum ComboBoxStyle
-{
+public enum ComboBoxStyle {
 	DropDownList
 }

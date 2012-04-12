@@ -51,13 +51,11 @@ public enum SpecialEventType implements SpaceTraderEnum// : int
 	PrincessReturned, // = 45
 	;
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal() - 1;
 	}
 
-	public static SpecialEventType FromInt(int i)
-	{
-		return values()[i+1];
+	public static SpecialEventType FromInt(int i) {
+		return values()[i + 1];
 	}
 }

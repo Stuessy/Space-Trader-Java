@@ -1,12 +1,10 @@
 package spacetrader.enums;
 
-public enum EncounterResult implements SpaceTraderEnum
-{
+public enum EncounterResult implements SpaceTraderEnum {
 	Continue, Normal, Killed, EscapePod, Arrested;
-	
+
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 }

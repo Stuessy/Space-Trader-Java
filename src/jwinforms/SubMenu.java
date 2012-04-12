@@ -2,27 +2,21 @@ package jwinforms;
 
 import javax.swing.JMenu;
 
-public class SubMenu extends MenuItem
-{
-	public SubMenu()
-	{
+public class SubMenu extends MenuItem {
+	public SubMenu() {
 		super(new JMenu());
 	}
 
-	public void add(MenuItem item)
-	{
+	public void add(MenuItem item) {
 		asJMenu().add(item.asJMenuItem());
 	}
 
-
-	public void addAll(MenuItem... items)
-	{
+	public void addAll(MenuItem... items) {
 		for (MenuItem item : items)
 			this.add(item);
 	}
-	
-	private JMenu asJMenu()
-	{
-		return (JMenu)swingVersion;
+
+	private JMenu asJMenu() {
+		return (JMenu) swingVersion;
 	}
 }

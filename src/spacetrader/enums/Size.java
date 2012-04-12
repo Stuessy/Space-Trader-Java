@@ -12,12 +12,11 @@ public enum Size implements SpaceTraderEnum// : int
 	;
 
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal();
 	}
 
-	public static Size FromInt(int i)
-	{return values()[i];
+	public static Size FromInt(int i) {
+		return values()[i];
 	}
 }

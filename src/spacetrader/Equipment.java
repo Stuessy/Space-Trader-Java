@@ -26,15 +26,15 @@ import spacetrader.guifacade.GuiEngine;
 import spacetrader.util.EquipmentSubType;
 import spacetrader.util.Hashtable;
 
-public abstract class Equipment extends STSerializableObject implements Cloneable
-{
+public abstract class Equipment extends STSerializableObject implements
+		Cloneable {
 	protected EquipmentType _equipType;
 	protected int _price;
 	protected TechLevel _minTech;
 	protected int _chance;
 
-	public Equipment(EquipmentType type, int price, TechLevel minTechLevel, int chance)
-	{
+	public Equipment(EquipmentType type, int price, TechLevel minTechLevel,
+			int chance) {
 		_equipType = type;
 		_price = price;
 		_minTech = minTechLevel;
@@ -44,17 +44,18 @@ public abstract class Equipment extends STSerializableObject implements Cloneabl
 	public Equipment(Hashtable hash)// : base(hash)
 	{
 		super(hash);
-		_equipType = EquipmentType.FromInt(GetValueFromHash(hash, "_equipType", Integer.class));
+		_equipType = EquipmentType.FromInt(GetValueFromHash(hash, "_equipType",
+				Integer.class));
 		_price = GetValueFromHash(hash, "_price", Integer.class);
-		_minTech = TechLevel.FromInt(GetValueFromHash(hash, "_minTech", Integer.class));
+		_minTech = TechLevel.FromInt(GetValueFromHash(hash, "_minTech",
+				Integer.class));
 		_chance = GetValueFromHash(hash, "_chance", Integer.class);
 	}
 
 	public abstract Equipment Clone();
 
 	@Override
-	public Hashtable Serialize()
-	{
+	public Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.put("_equipType", _equipType.CastToInt());
@@ -66,21 +67,19 @@ public abstract class Equipment extends STSerializableObject implements Cloneabl
 	}
 
 	@Override
-	public String toString()
-	{
+	public String toString() {
 		return Name();
 	}
 
 	public abstract boolean TypeEquals(Object type);
 
-	final protected int BaseImageIndex()
-	{
+	final protected int BaseImageIndex() {
 		int baseImageIndex = 0;
 
-		switch (EquipmentType())
-		{
+		switch (EquipmentType()) {
 		case Gadget:
-			baseImageIndex = Strings.WeaponNames.length + Strings.ShieldNames.length;
+			baseImageIndex = Strings.WeaponNames.length
+					+ Strings.ShieldNames.length;
 			break;
 		case Shield:
 			baseImageIndex = Strings.WeaponNames.length;
@@ -93,55 +92,48 @@ public abstract class Equipment extends STSerializableObject implements Cloneabl
 		return baseImageIndex;
 	}
 
-	public int Chance()
-	{
+	public int Chance() {
 		return _chance;
 	}
 
-	public EquipmentType EquipmentType()
-	{
+	public EquipmentType EquipmentType() {
 		return _equipType;
 	}
 
-	final public Image Image()
-	{
+	final public Image Image() {
 		return GuiEngine.imageProvider.getEquipmentImages().getImages()[BaseImageIndex()
 				+ SubType().CastToInt()];
 	}
 
-	public TechLevel MinimumTechLevel()
-	{
+	public TechLevel MinimumTechLevel() {
 		return _minTech;
 	}
 
-	public String Name()
-	{
+	public String Name() {
 		return "Name not defined";
 	}
 
-	public int Price()
-	{
+	public int Price() {
 		Commander cmdr = Game.CurrentGame().Commander();
 		int price = 0;
 
-		if (cmdr != null && cmdr.getCurrentSystem().TechLevel().CastToInt() >= MinimumTechLevel().CastToInt())
+		if (cmdr != null
+				&& cmdr.getCurrentSystem().TechLevel().CastToInt() >= MinimumTechLevel()
+						.CastToInt())
 			price = (_price * (100 - cmdr.getShip().Trader())) / 100;
 
 		return price;
 	}
 
-	public int SellPrice()
-	{
+	public int SellPrice() {
 		return _price * 3 / 4;
 	}
 
-	public EquipmentSubType SubType()
-	{
+	public EquipmentSubType SubType() {
 		return null;
 	}
 
-	public int TransferPrice()
-	{
+	public int TransferPrice() {
 		// The cost to transfer is 10% of the item worth. This is changed
 		// from actually PAYING the buyer about 8% to transfer items. - JAF
 		return SellPrice() * 110 / 90;

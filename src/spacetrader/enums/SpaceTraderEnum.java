@@ -1,6 +1,5 @@
 package spacetrader.enums;
 
-public interface SpaceTraderEnum
-{
+public interface SpaceTraderEnum {
 	int CastToInt();
 }

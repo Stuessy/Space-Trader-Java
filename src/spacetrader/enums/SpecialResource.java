@@ -18,13 +18,11 @@ public enum SpecialResource implements SpaceTraderEnum// : int
 	Warlike, // = 12
 	;
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal() - 1;
 	}
 
-	public static SpecialResource FromInt(int i)
-	{
-		return values()[i+1];
+	public static SpecialResource FromInt(int i) {
+		return values()[i + 1];
 	}
 }

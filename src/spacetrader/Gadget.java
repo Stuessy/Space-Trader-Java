@@ -33,8 +33,7 @@ import spacetrader.util.EquipmentSubType;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Log;
 
-public class Gadget extends Equipment
-{
+public class Gadget extends Equipment {
 	// #region Member Declarations
 
 	private GadgetType _type;
@@ -44,29 +43,29 @@ public class Gadget extends Equipment
 
 	// #region Methods
 
-	public Gadget(GadgetType type, SkillType skillBonus, int price, TechLevel minTechLevel, int chance)
-	{
-		super(spacetrader.enums.EquipmentType.Gadget, price, minTechLevel, chance);
+	public Gadget(GadgetType type, SkillType skillBonus, int price,
+			TechLevel minTechLevel, int chance) {
+		super(spacetrader.enums.EquipmentType.Gadget, price, minTechLevel,
+				chance);
 		_type = type;
 		_skillBonus = skillBonus;
 	}
 
-	public Gadget(Hashtable hash)
-	{
+	public Gadget(Hashtable hash) {
 		super(hash);
-		_type = GadgetType.FromInt(GetValueFromHash(hash, "_type", Integer.class));
-		_skillBonus = ( GetValueFromHash(hash, "_skillBonus", SkillType.NA,SkillType.class));
+		_type = GadgetType.FromInt(GetValueFromHash(hash, "_type",
+				Integer.class));
+		_skillBonus = (GetValueFromHash(hash, "_skillBonus", SkillType.NA,
+				SkillType.class));
 	}
 
 	public @Override
-	Equipment Clone()
-	{
+	Equipment Clone() {
 		return new Gadget(_type, _skillBonus, _price, _minTech, _chance);
 	}
 
 	public @Override
-	Hashtable Serialize()
-	{
+	Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.add("_type", _type.CastToInt());
@@ -76,16 +75,13 @@ public class Gadget extends Equipment
 	}
 
 	public @Override
-	boolean TypeEquals(Object type)
-	{
+	boolean TypeEquals(Object type) {
 		boolean equal = false;
 
-		try
-		{
+		try {
 			if (Type() == (GadgetType) type)
 				equal = true;
-		} catch (Exception e)
-		{
+		} catch (Exception e) {
 			Log.write("Ignored Exception " + e);
 		}
 
@@ -96,24 +92,20 @@ public class Gadget extends Equipment
 
 	// #region Properties
 	@Override
-	public String Name()
-	{
+	public String Name() {
 		return Strings.GadgetNames[_type.CastToInt()];
 	}
 
 	@Override
-	public EquipmentSubType SubType()
-	{
+	public EquipmentSubType SubType() {
 		return Type();
 	}
 
-	public GadgetType Type()
-	{
+	public GadgetType Type() {
 		return _type;
 	}
 
-	public SkillType SkillBonus()
-	{
+	public SkillType SkillBonus() {
 		return _skillBonus;
 	}
 

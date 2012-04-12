@@ -2,19 +2,15 @@ package jwinforms;
 
 import java.awt.event.MouseEvent;
 
-public class MouseEventArgs extends EventArgs
-{
-	public MouseEventArgs(MouseEvent e)
-	{
+public class MouseEventArgs extends EventArgs {
+	public MouseEventArgs(MouseEvent e) {
 		X = e.getX();
 		Y = e.getY();
 		Button = findMouseButton(e.getButton());
 	}
 
-	private MouseButtons findMouseButton(int button)
-	{
-		switch (button)
-		{
+	private MouseButtons findMouseButton(int button) {
+		switch (button) {
 		case MouseEvent.BUTTON1:
 			return MouseButtons.Left;
 		case MouseEvent.BUTTON2:

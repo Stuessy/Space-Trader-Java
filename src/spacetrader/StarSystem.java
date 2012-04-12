@@ -40,8 +40,7 @@ import spacetrader.enums.TradeItemType;
 import spacetrader.util.Hashtable;
 
 @SuppressWarnings("unchecked")
-public class StarSystem extends STSerializableObject
-{
+public class StarSystem extends STSerializableObject {
 	// #region Member Declarations
 
 	private StarSystemId _id;
@@ -62,9 +61,9 @@ public class StarSystem extends STSerializableObject
 
 	// #region Methods
 
-	public StarSystem(StarSystemId id, int x, int y, Size size, TechLevel techLevel,
-			PoliticalSystemType politicalSystemType, SystemPressure systemPressure, SpecialResource specialResource)
-	{
+	public StarSystem(StarSystemId id, int x, int y, Size size,
+			TechLevel techLevel, PoliticalSystemType politicalSystemType,
+			SystemPressure systemPressure, SpecialResource specialResource) {
 		_id = id;
 		_x = x;
 		_y = y;
@@ -77,56 +76,65 @@ public class StarSystem extends STSerializableObject
 		InitializeTradeItems();
 	}
 
-	public StarSystem(Hashtable hash)
-	{
+	public StarSystem(Hashtable hash) {
 		super(hash);
-		_id = StarSystemId.FromInt( GetValueFromHash(hash, "_id", _id, Integer.class));
+		_id = StarSystemId.FromInt(GetValueFromHash(hash, "_id", _id,
+				Integer.class));
 		_x = GetValueFromHash(hash, "_x", _x);
 		_y = GetValueFromHash(hash, "_y", _y);
-		_size = Size.FromInt( GetValueFromHash(hash, "_size", _size, Integer.class));
-		_techLevel = TechLevel.FromInt( GetValueFromHash(hash, "_techLevel", _techLevel, Integer.class));
-		_politicalSystemType = PoliticalSystemType.FromInt( GetValueFromHash(hash, "_politicalSystemType", _politicalSystemType, Integer.class));
-		_systemPressure = SystemPressure.FromInt( GetValueFromHash(hash, "_systemPressure", _systemPressure, Integer.class));
-		_specialResource = SpecialResource.FromInt( GetValueFromHash(hash, "_specialResource", _specialResource, Integer.class));
-		_specialEventType = SpecialEventType.FromInt( GetValueFromHash(hash, "_specialEventType", _specialEventType, Integer.class));
-		_tradeItems = GetValueFromHash(hash, "_tradeItems", _tradeItems, int[].class);
+		_size = Size.FromInt(GetValueFromHash(hash, "_size", _size,
+				Integer.class));
+		_techLevel = TechLevel.FromInt(GetValueFromHash(hash, "_techLevel",
+				_techLevel, Integer.class));
+		_politicalSystemType = PoliticalSystemType.FromInt(GetValueFromHash(
+				hash, "_politicalSystemType", _politicalSystemType,
+				Integer.class));
+		_systemPressure = SystemPressure.FromInt(GetValueFromHash(hash,
+				"_systemPressure", _systemPressure, Integer.class));
+		_specialResource = SpecialResource.FromInt(GetValueFromHash(hash,
+				"_specialResource", _specialResource, Integer.class));
+		_specialEventType = SpecialEventType.FromInt(GetValueFromHash(hash,
+				"_specialEventType", _specialEventType, Integer.class));
+		_tradeItems = GetValueFromHash(hash, "_tradeItems", _tradeItems,
+				int[].class);
 		_countDown = GetValueFromHash(hash, "_countDown", _countDown);
 		_visited = GetValueFromHash(hash, "_visited", _visited);
-		_shipyardId = ShipyardId.FromInt( GetValueFromHash(hash, "_shipyardId", _shipyardId, Integer.class));
+		_shipyardId = ShipyardId.FromInt(GetValueFromHash(hash, "_shipyardId",
+				_shipyardId, Integer.class));
 	}
 
-	public void InitializeTradeItems()
-	{
-		for (int i = 0; i < Consts.TradeItems.length; i++)
-		{
-			if (!ItemTraded(Consts.TradeItems[i]))
-			{
+	public void InitializeTradeItems() {
+		for (int i = 0; i < Consts.TradeItems.length; i++) {
+			if (!ItemTraded(Consts.TradeItems[i])) {
 				_tradeItems[i] = 0;
-			} else
-			{
+			} else {
 				_tradeItems[i] = (this.Size().CastToInt() + 1)
-						* (Functions.GetRandom(9, 14) - Math.abs(Consts.TradeItems[i].TechTopProduction().CastToInt()
-								- this.TechLevel().CastToInt()));
+						* (Functions.GetRandom(9, 14) - Math
+								.abs(Consts.TradeItems[i].TechTopProduction()
+										.CastToInt()
+										- this.TechLevel().CastToInt()));
 
 				// Because of the enormous profits possible, there shouldn't be
 				// too many robots or narcotics available.
 				if (i >= TradeItemType.Narcotics.CastToInt())
-					_tradeItems[i] = ((_tradeItems[i] * 
-							(5 - Game.CurrentGame()
-									.Difficulty()
-									.CastToInt())) /
-							(6 - Game.CurrentGame().Difficulty().CastToInt())) + 1;
+					_tradeItems[i] = ((_tradeItems[i] * (5 - Game.CurrentGame()
+							.Difficulty().CastToInt())) / (6 - Game
+							.CurrentGame().Difficulty().CastToInt())) + 1;
 
-				if (this.SpecialResource() == Consts.TradeItems[i].ResourceLowPrice())
+				if (this.SpecialResource() == Consts.TradeItems[i]
+						.ResourceLowPrice())
 					_tradeItems[i] = _tradeItems[i] * 4 / 3;
 
-				if (this.SpecialResource() == Consts.TradeItems[i].ResourceHighPrice())
+				if (this.SpecialResource() == Consts.TradeItems[i]
+						.ResourceHighPrice())
 					_tradeItems[i] = _tradeItems[i] * 3 / 4;
 
-				if (this.SystemPressure() == Consts.TradeItems[i].PressurePriceHike())
+				if (this.SystemPressure() == Consts.TradeItems[i]
+						.PressurePriceHike())
 					_tradeItems[i] = _tradeItems[i] / 5;
 
-				_tradeItems[i] = _tradeItems[i] - Functions.GetRandom(10) + Functions.GetRandom(10);
+				_tradeItems[i] = _tradeItems[i] - Functions.GetRandom(10)
+						+ Functions.GetRandom(10);
 
 				if (_tradeItems[i] < 0)
 					_tradeItems[i] = 0;
@@ -134,23 +142,24 @@ public class StarSystem extends STSerializableObject
 		}
 	}
 
-	public boolean ItemTraded(TradeItem item)
-	{
-		return ((item.Type() != TradeItemType.Narcotics || PoliticalSystem().DrugsOk())
-				&& (item.Type() != TradeItemType.Firearms || PoliticalSystem().FirearmsOk()) && TechLevel().CastToInt() >= item
+	public boolean ItemTraded(TradeItem item) {
+		return ((item.Type() != TradeItemType.Narcotics || PoliticalSystem()
+				.DrugsOk())
+				&& (item.Type() != TradeItemType.Firearms || PoliticalSystem()
+						.FirearmsOk()) && TechLevel().CastToInt() >= item
 				.TechProduction().CastToInt());
 	}
 
-	public boolean ItemUsed(TradeItem item)
-	{
-		return ((item.Type() != TradeItemType.Narcotics || PoliticalSystem().DrugsOk())
-				&& (item.Type() != TradeItemType.Firearms || PoliticalSystem().FirearmsOk()) && TechLevel().CastToInt() >= item
+	public boolean ItemUsed(TradeItem item) {
+		return ((item.Type() != TradeItemType.Narcotics || PoliticalSystem()
+				.DrugsOk())
+				&& (item.Type() != TradeItemType.Firearms || PoliticalSystem()
+						.FirearmsOk()) && TechLevel().CastToInt() >= item
 				.TechUsage().CastToInt());
 	}
 
 	public @Override
-	Hashtable Serialize()
-	{
+	Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.add("_id", _id.CastToInt());
@@ -170,13 +179,11 @@ public class StarSystem extends STSerializableObject
 		return hash;
 	}
 
-	public boolean ShowSpecialButton()
-	{
+	public boolean ShowSpecialButton() {
 		Game game = Game.CurrentGame();
 		boolean show = false;
 
-		switch (SpecialEventType())
-		{
+		switch (SpecialEventType()) {
 		case Artifact:
 		case Dragonfly:
 		case Experiment:
@@ -310,163 +317,137 @@ public class StarSystem extends STSerializableObject
 
 	// #region Properties
 
-	public int CountDown()
-	{
+	public int CountDown() {
 		return _countDown;
 	}
 
-	public void CountDown(int value)
-	{
+	public void CountDown(int value) {
 		_countDown = value;
 	}
 
-	public boolean DestOk()
-	{
+	public boolean DestOk() {
 		Commander comm = Game.CurrentGame().Commander();
 		return this != comm.getCurrentSystem()
-				&& (Distance() <= comm.getShip().getFuel() || Functions.WormholeExists(comm.getCurrentSystem(), this));
+				&& (Distance() <= comm.getShip().getFuel() || Functions
+						.WormholeExists(comm.getCurrentSystem(), this));
 	}
 
-	public int Distance()
-	{
-		return Functions.Distance(this, Game.CurrentGame().Commander().getCurrentSystem());
+	public int Distance() {
+		return Functions.Distance(this, Game.CurrentGame().Commander()
+				.getCurrentSystem());
 	}
 
-	public StarSystemId Id()
-	{
+	public StarSystemId Id() {
 		return _id;
 	}
 
-	public CrewMember[] MercenariesForHire()
-	{
+	public CrewMember[] MercenariesForHire() {
 		Commander cmdr = Game.CurrentGame().Commander();
 		CrewMember[] mercs = Game.CurrentGame().Mercenaries();
 		ArrayList forHire = new ArrayList(3);
 
-		for (int i = 1; i < mercs.length; i++)
-		{
-			if (mercs[i].getCurrentSystem() == cmdr.getCurrentSystem() && !cmdr.getShip().HasCrew(mercs[i].Id()))
+		for (int i = 1; i < mercs.length; i++) {
+			if (mercs[i].getCurrentSystem() == cmdr.getCurrentSystem()
+					&& !cmdr.getShip().HasCrew(mercs[i].Id()))
 				forHire.add(mercs[i]);
 		}
 
-		return (CrewMember[])forHire.toArray(new CrewMember[0]);
+		return (CrewMember[]) forHire.toArray(new CrewMember[0]);
 	}
 
-	public String Name()
-	{
+	public String Name() {
 		return Strings.SystemNames[_id.CastToInt()];
 	}
 
-	public PoliticalSystem PoliticalSystem()
-	{
+	public PoliticalSystem PoliticalSystem() {
 		return Consts.PoliticalSystems[_politicalSystemType.CastToInt()];
 	}
 
-	public PoliticalSystemType PoliticalSystemType()
-	{
+	public PoliticalSystemType PoliticalSystemType() {
 		return _politicalSystemType;
 	}
 
-	public void PoliticalSystemType(PoliticalSystemType value)
-	{
+	public void PoliticalSystemType(PoliticalSystemType value) {
 		_politicalSystemType = value;
 	}
 
-	public Shipyard Shipyard()
-	{
+	public Shipyard Shipyard() {
 		ShipyardId();
-		return (_shipyardId == spacetrader.enums.ShipyardId.NA ? null : Consts.Shipyards[_shipyardId.CastToInt()]);
+		return (_shipyardId == spacetrader.enums.ShipyardId.NA ? null
+				: Consts.Shipyards[_shipyardId.CastToInt()]);
 	}
 
-	public ShipyardId ShipyardId()
-	{
+	public ShipyardId ShipyardId() {
 		return _shipyardId;
 	}
 
-	public void ShipyardId(ShipyardId value)
-	{
+	public void ShipyardId(ShipyardId value) {
 		_shipyardId = value;
 	}
 
-	public Size Size()
-	{
+	public Size Size() {
 		return _size;
 	}
 
-	public SpecialEvent SpecialEvent()
-	{
+	public SpecialEvent SpecialEvent() {
 		SpecialEventType();
 		return (_specialEventType == spacetrader.enums.SpecialEventType.NA ? null
 				: Consts.SpecialEvents[_specialEventType.CastToInt()]);
 	}
 
-	public SpecialEventType SpecialEventType()
-	{
+	public SpecialEventType SpecialEventType() {
 		return _specialEventType;
 	}
 
-	public void SpecialEventType(SpecialEventType value)
-	{
+	public void SpecialEventType(SpecialEventType value) {
 		_specialEventType = value;
 	}
 
-	public SpecialResource SpecialResource()
-	{
+	public SpecialResource SpecialResource() {
 		return Visited() ? _specialResource : SpecialResource.Nothing;
 	}
 
-	public SystemPressure SystemPressure()
-	{
+	public SystemPressure SystemPressure() {
 		return _systemPressure;
 	}
 
-	public void SystemPressure(SystemPressure value)
-	{
+	public void SystemPressure(SystemPressure value) {
 		_systemPressure = value;
 	}
 
-	public TechLevel TechLevel()
-	{
+	public TechLevel TechLevel() {
 		return _techLevel;
 	}
 
-	public void TechLevel(TechLevel value)
-	{
+	public void TechLevel(TechLevel value) {
 		_techLevel = value;
 	}
 
-	public int[] TradeItems()
-	{
+	public int[] TradeItems() {
 		return _tradeItems;
 	}
 
-	public boolean Visited()
-	{
+	public boolean Visited() {
 		return _visited;
 	}
 
-	public void Visited(boolean value)
-	{
+	public void Visited(boolean value) {
 		_visited = value;
 	}
 
-	public int X()
-	{
+	public int X() {
 		return _x;
 	}
 
-	public void X(int value)
-	{
+	public void X(int value) {
 		_x = value;
 	}
 
-	public int Y()
-	{
+	public int Y() {
 		return _y;
 	}
 
-	public void Y(int value)
-	{
+	public void Y(int value) {
 		_y = value;
 	}
 

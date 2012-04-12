@@ -18,14 +18,13 @@ import spacetrader.Strings;
 import spacetrader.enums.AlertType;
 import spacetrader.guifacade.GuiFacade;
 
-public class SystemBox extends jwinforms.GroupBox
-{
+public class SystemBox extends jwinforms.GroupBox {
 	private CurrentSystemMgr game = null;
 	private GameController controller = null;
 	private Commander commander;
 
-	void setGame(CurrentSystemMgr game, GameController controller, Commander commander)
-	{
+	void setGame(CurrentSystemMgr game, GameController controller,
+			Commander commander) {
 		this.game = game;
 		this.controller = controller;
 		this.commander = commander;
@@ -33,13 +32,11 @@ public class SystemBox extends jwinforms.GroupBox
 
 	private final SpaceTrader mainWindow;
 
-	public SystemBox(SpaceTrader mainWindow)
-	{
+	public SystemBox(SpaceTrader mainWindow) {
 		this.mainWindow = mainWindow;
 	}
 
-	void InitializeComponent()
-	{
+	void InitializeComponent() {
 		btnMerc = new jwinforms.Button();
 		btnSpecial = new jwinforms.Button();
 		btnNews = new jwinforms.Button();
@@ -93,11 +90,9 @@ public class SystemBox extends jwinforms.GroupBox
 		btnMerc.setSize(new jwinforms.Size(112, 22));
 		btnMerc.setTabIndex(3);
 		btnMerc.setText("Mercenary For Hire");
-		btnMerc.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnMerc.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnMerc_Click(sender, e);
 			}
 		});
@@ -111,11 +106,9 @@ public class SystemBox extends jwinforms.GroupBox
 		btnSpecial.setSize(new jwinforms.Size(52, 22));
 		btnSpecial.setTabIndex(2);
 		btnSpecial.setText("Special");
-		btnSpecial.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnSpecial.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnSpecial_Click(sender, e);
 			}
 		});
@@ -128,11 +121,9 @@ public class SystemBox extends jwinforms.GroupBox
 		btnNews.setSize(new jwinforms.Size(42, 22));
 		btnNews.setTabIndex(1);
 		btnNews.setText("News");
-		btnNews.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnNews.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnNews_Click(sender, e);
 			}
 		});
@@ -285,10 +276,8 @@ public class SystemBox extends jwinforms.GroupBox
 		tipMerc = new jwinforms.ToolTip();
 	}
 
-	public void Update()
-	{
-		if (game == null || commander.getCurrentSystem() == null)
-		{
+	public void Update() {
+		if (game == null || commander.getCurrentSystem() == null) {
 			lblSystemName.setText("");
 			lblSystemSize.setText("");
 			lblSystemTech.setText("");
@@ -301,30 +290,36 @@ public class SystemBox extends jwinforms.GroupBox
 			btnNews.setVisible(false);
 			btnMerc.setVisible(false);
 			btnSpecial.setVisible(false);
-		} else
-		{
+		} else {
 			StarSystem system = commander.getCurrentSystem();
 			CrewMember[] mercs = system.MercenariesForHire();
 
 			lblSystemName.setText(system.Name());
 			lblSystemSize.setText(Strings.Sizes[system.Size().CastToInt()]);
-			lblSystemTech.setText(Strings.TechLevelNames[system.TechLevel().CastToInt()]);
+			lblSystemTech.setText(Strings.TechLevelNames[system.TechLevel()
+					.CastToInt()]);
 			lblSystemPolSys.setText(system.PoliticalSystem().Name());
-			lblSystemResource.setText(Strings.SpecialResources[system.SpecialResource().CastToInt()]);
-			lblSystemPolice.setText(Strings.ActivityLevels[system.PoliticalSystem().ActivityPolice().CastToInt()]);
-			lblSystemPirates.setText(Strings.ActivityLevels[system.PoliticalSystem().ActivityPirates().CastToInt()]);
-			lblSystemPressure.setText(Strings.SystemPressures[system.SystemPressure().CastToInt()]);
+			lblSystemResource.setText(Strings.SpecialResources[system
+					.SpecialResource().CastToInt()]);
+			lblSystemPolice.setText(Strings.ActivityLevels[system
+					.PoliticalSystem().ActivityPolice().CastToInt()]);
+			lblSystemPirates.setText(Strings.ActivityLevels[system
+					.PoliticalSystem().ActivityPirates().CastToInt()]);
+			lblSystemPressure.setText(Strings.SystemPressures[system
+					.SystemPressure().CastToInt()]);
 			lblSystemPressurePre.setVisible(true);
 			btnNews.setVisible(true);
 			btnMerc.setVisible(mercs.length > 0);
-			if (btnMerc.getVisible())
-			{
-				tipMerc.SetToolTip(btnMerc, Functions.StringVars(Strings.MercenariesForHire,
-						mercs.length == 1 ? mercs[0].Name() : mercs.length + Strings.Mercenaries));
+			if (btnMerc.getVisible()) {
+				tipMerc.SetToolTip(btnMerc, Functions.StringVars(
+						Strings.MercenariesForHire,
+						mercs.length == 1 ? mercs[0].Name() : mercs.length
+								+ Strings.Mercenaries));
 			}
 			btnSpecial.setVisible(system.ShowSpecialButton());
 			if (btnSpecial.getVisible())
-				tipSpecial.SetToolTip(btnSpecial, system.SpecialEvent().Title());
+				tipSpecial
+						.SetToolTip(btnSpecial, system.SpecialEvent().Title());
 		}
 	}
 
@@ -350,49 +345,41 @@ public class SystemBox extends jwinforms.GroupBox
 	private jwinforms.ToolTip tipSpecial;
 	private jwinforms.ToolTip tipMerc;
 
-	private void btnMerc_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnMerc_Click(Object sender, jwinforms.EventArgs e) {
 		(new FormViewPersonnel()).ShowDialog(mainWindow);
 		mainWindow.UpdateAll();
 	}
 
-	private void btnNews_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnNews_Click(Object sender, jwinforms.EventArgs e) {
 		game.ShowNewspaper();
 	}
 
-	private void btnSpecial_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnSpecial_Click(Object sender, jwinforms.EventArgs e) {
 		SpecialEvent specEvent = commander.getCurrentSystem().SpecialEvent();
 		String btn1, btn2;
 		DialogResult res1, res2;
 
-		if (specEvent.MessageOnly())
-		{
+		if (specEvent.MessageOnly()) {
 			btn1 = "Ok";
 			btn2 = null;
 			res1 = DialogResult.OK;
 			res2 = DialogResult.None;
-		} else
-		{
+		} else {
 			btn1 = "Yes";
 			btn2 = "No";
 			res1 = DialogResult.Yes;
 			res2 = DialogResult.No;
 		}
 
-		FormAlert alert = new FormAlert(specEvent.Title(), specEvent.String(), btn1, res1, btn2, res2, null);
-		if (alert.ShowDialog() != DialogResult.No)
-		{
+		FormAlert alert = new FormAlert(specEvent.Title(), specEvent.String(),
+				btn1, res1, btn2, res2, null);
+		if (alert.ShowDialog() != DialogResult.No) {
 			if (commander.CashToSpend() < specEvent.Price())
 				GuiFacade.alert(AlertType.SpecialIF);
-			else
-			{
-				try
-				{
+			else {
+				try {
 					game.HandleSpecialEvent();
-				} catch (GameEndException ex)
-				{
+				} catch (GameEndException ex) {
 					controller.GameEnd();
 				}
 			}

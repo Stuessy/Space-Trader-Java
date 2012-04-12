@@ -42,9 +42,8 @@ import spacetrader.Ship;
 import spacetrader.guifacade.Facaded;
 
 @Facaded
-public class FormJettison extends SpaceTraderForm
-{
-	//#region Control Declarations
+public class FormJettison extends SpaceTraderForm {
+	// #region Control Declarations
 
 	private jwinforms.Button btnJettisonAll9;
 	private jwinforms.Button btnJettisonQty9;
@@ -84,38 +83,40 @@ public class FormJettison extends SpaceTraderForm
 	private final Button[] btnJettisonQty;
 	private final Button[] btnJettisonAll;
 
-	//#endregion
+	// #endregion
 
-	//#region Member Declarations
+	// #region Member Declarations
 
 	private final Game game = Game.CurrentGame();
 
-	//#endregion
+	// #endregion
 
-	//#region Methods
+	// #region Methods
 
-	public FormJettison()
-	{
+	public FormJettison() {
 		InitializeComponent();
 
-		//#region Arrays of Cargo controls
-		btnJettisonQty = new Button[] { btnJettisonQty0, btnJettisonQty1, btnJettisonQty2, btnJettisonQty3,
-				btnJettisonQty4, btnJettisonQty5, btnJettisonQty6, btnJettisonQty7, btnJettisonQty8, btnJettisonQty9 };
+		// #region Arrays of Cargo controls
+		btnJettisonQty = new Button[] { btnJettisonQty0, btnJettisonQty1,
+				btnJettisonQty2, btnJettisonQty3, btnJettisonQty4,
+				btnJettisonQty5, btnJettisonQty6, btnJettisonQty7,
+				btnJettisonQty8, btnJettisonQty9 };
 
-		btnJettisonAll = new Button[] { btnJettisonAll0, btnJettisonAll1, btnJettisonAll2, btnJettisonAll3,
-				btnJettisonAll4, btnJettisonAll5, btnJettisonAll6, btnJettisonAll7, btnJettisonAll8, btnJettisonAll9 };
-		//#endregion
+		btnJettisonAll = new Button[] { btnJettisonAll0, btnJettisonAll1,
+				btnJettisonAll2, btnJettisonAll3, btnJettisonAll4,
+				btnJettisonAll5, btnJettisonAll6, btnJettisonAll7,
+				btnJettisonAll8, btnJettisonAll9 };
+		// #endregion
 
 		UpdateAll();
 	}
 
-	//#region Windows Form Designer generated code
-	/// <summary>
-	/// Required method for Designer support - do not modify
-	/// the contents of this method with the code editor.
-	/// </summary>
-	private void InitializeComponent()
-	{
+	// #region Windows Form Designer generated code
+	// / <summary>
+	// / Required method for Designer support - do not modify
+	// / the contents of this method with the code editor.
+	// / </summary>
+	private void InitializeComponent() {
 		btnJettisonAll9 = new jwinforms.Button();
 		btnJettisonQty9 = new jwinforms.Button();
 		btnJettisonAll8 = new jwinforms.Button();
@@ -159,11 +160,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll9.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll9.setTabIndex(141);
 		btnJettisonAll9.setText("All");
-		btnJettisonAll9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -176,11 +175,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty9.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty9.setTabIndex(140);
 		btnJettisonQty9.setText("88");
-		btnJettisonQty9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -193,11 +190,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll8.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll8.setTabIndex(139);
 		btnJettisonAll8.setText("All");
-		btnJettisonAll8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -210,11 +205,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty8.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty8.setTabIndex(138);
 		btnJettisonQty8.setText("88");
-		btnJettisonQty8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -227,11 +220,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll7.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll7.setTabIndex(137);
 		btnJettisonAll7.setText("All");
-		btnJettisonAll7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -244,11 +235,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty7.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty7.setTabIndex(136);
 		btnJettisonQty7.setText("88");
-		btnJettisonQty7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -261,11 +250,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll6.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll6.setTabIndex(135);
 		btnJettisonAll6.setText("All");
-		btnJettisonAll6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -278,11 +265,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty6.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty6.setTabIndex(134);
 		btnJettisonQty6.setText("88");
-		btnJettisonQty6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -295,11 +280,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll5.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll5.setTabIndex(133);
 		btnJettisonAll5.setText("All");
-		btnJettisonAll5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -312,11 +295,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty5.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty5.setTabIndex(132);
 		btnJettisonQty5.setText("88");
-		btnJettisonQty5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -329,11 +310,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll4.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll4.setTabIndex(131);
 		btnJettisonAll4.setText("All");
-		btnJettisonAll4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -346,11 +325,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty4.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty4.setTabIndex(130);
 		btnJettisonQty4.setText("88");
-		btnJettisonQty4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -363,11 +340,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll3.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll3.setTabIndex(129);
 		btnJettisonAll3.setText("All");
-		btnJettisonAll3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -380,11 +355,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty3.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty3.setTabIndex(128);
 		btnJettisonQty3.setText("88");
-		btnJettisonQty3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -397,11 +370,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll2.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll2.setTabIndex(127);
 		btnJettisonAll2.setText("All");
-		btnJettisonAll2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -414,11 +385,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty2.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty2.setTabIndex(126);
 		btnJettisonQty2.setText("88");
-		btnJettisonQty2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -431,11 +400,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll1.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll1.setTabIndex(125);
 		btnJettisonAll1.setText("All");
-		btnJettisonAll1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -448,11 +415,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty1.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty1.setTabIndex(124);
 		btnJettisonQty1.setText("88");
-		btnJettisonQty1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -465,11 +430,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonAll0.setSize(new jwinforms.Size(32, 22));
 		btnJettisonAll0.setTabIndex(123);
 		btnJettisonAll0.setText("All");
-		btnJettisonAll0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonAll0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -482,11 +445,9 @@ public class FormJettison extends SpaceTraderForm
 		btnJettisonQty0.setSize(new jwinforms.Size(28, 22));
 		btnJettisonQty0.setTabIndex(122);
 		btnJettisonQty0.setText("88");
-		btnJettisonQty0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettisonQty0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -614,12 +575,17 @@ public class FormJettison extends SpaceTraderForm
 		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
 		this.setCancelButton(btnDone);
 		this.setClientSize(new jwinforms.Size(218, 283));
-		Controls.addAll(Arrays.asList(btnDone, lblBays, lblBaysLabel, lblTradeCmdty9, lblTradeCmdty8, lblTradeCmdty2,
-				lblTradeCmdty0, lblTradeCmdty1, lblTradeCmdty6, lblTradeCmdty5, lblTradeCmdty4, lblTradeCmdty3,
-				lblTradeCmdty7, btnJettisonAll9, btnJettisonQty9, btnJettisonAll8, btnJettisonQty8, btnJettisonAll7,
-				btnJettisonQty7, btnJettisonAll6, btnJettisonQty6, btnJettisonAll5, btnJettisonQty5, btnJettisonAll4,
-				btnJettisonQty4, btnJettisonAll3, btnJettisonQty3, btnJettisonAll2, btnJettisonQty2, btnJettisonAll1,
-				btnJettisonQty1, btnJettisonAll0, btnJettisonQty0));
+		Controls.addAll(Arrays.asList(btnDone, lblBays, lblBaysLabel,
+				lblTradeCmdty9, lblTradeCmdty8, lblTradeCmdty2, lblTradeCmdty0,
+				lblTradeCmdty1, lblTradeCmdty6, lblTradeCmdty5, lblTradeCmdty4,
+				lblTradeCmdty3, lblTradeCmdty7, btnJettisonAll9,
+				btnJettisonQty9, btnJettisonAll8, btnJettisonQty8,
+				btnJettisonAll7, btnJettisonQty7, btnJettisonAll6,
+				btnJettisonQty6, btnJettisonAll5, btnJettisonQty5,
+				btnJettisonAll4, btnJettisonQty4, btnJettisonAll3,
+				btnJettisonQty3, btnJettisonAll2, btnJettisonQty2,
+				btnJettisonAll1, btnJettisonQty1, btnJettisonAll0,
+				btnJettisonQty0));
 		this.setFormBorderStyle(FormBorderStyle.FixedDialog);
 		this.setMaximizeBox(false);
 		this.setMinimizeBox(false);
@@ -629,16 +595,14 @@ public class FormJettison extends SpaceTraderForm
 		this.setText("Jettison Cargo");
 	}
 
-	//#endregion
+	// #endregion
 
-	private void Jettison(int tradeItem, boolean all)
-	{
+	private void Jettison(int tradeItem, boolean all) {
 		game.CargoJettison(tradeItem, all);
 		UpdateAll();
 	}
 
-	private void UpdateAll()
-	{
+	private void UpdateAll() {
 		Ship ship = game.Commander().getShip();
 
 		for (int i = 0; i < btnJettisonQty.length; i++)
@@ -647,18 +611,17 @@ public class FormJettison extends SpaceTraderForm
 		lblBays.setText(ship.FilledCargoBays() + "/" + ship.CargoBays());
 	}
 
-	//#endregion
+	// #endregion
 
-	//#region Event Handlers
+	// #region Event Handlers
 
-	private void btnJettison_Click(Object sender, EventArgs e)
-	{
-		String name = ((Button)sender).getName();
+	private void btnJettison_Click(Object sender, EventArgs e) {
+		String name = ((Button) sender).getName();
 		boolean all = name.indexOf("Qty") < 0;
 		int index = Integer.parseInt(name.substring(name.length() - 1));
 
 		Jettison(index, all);
 	}
 
-	//#endregion
+	// #endregion
 }

@@ -9,13 +9,11 @@ public enum GameEndType implements SpaceTraderEnum// : int
 	BoughtMoonGirl; // = 3
 
 	@Override
-	public int CastToInt()
-	{
+	public int CastToInt() {
 		return ordinal() - 1;
 	}
-	
-	public static GameEndType FromInt(int i)
-	{
-		return values()[i+1];
+
+	public static GameEndType FromInt(int i) {
+		return values()[i + 1];
 	}
 }

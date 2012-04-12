@@ -40,9 +40,8 @@ import spacetrader.Ship;
 import spacetrader.guifacade.Facaded;
 
 @Facaded
-public class FormPlunder extends SpaceTraderForm
-{
-	//#region Control Declarations
+public class FormPlunder extends SpaceTraderForm {
+	// #region Control Declarations
 
 	private jwinforms.Button btnPlunderAll9;
 	private jwinforms.Button btnPlunderQty9;
@@ -83,38 +82,38 @@ public class FormPlunder extends SpaceTraderForm
 	private final Button[] btnPlunderQty;
 	private final Button[] btnPlunderAll;
 
-	//#endregion
+	// #endregion
 
-	//#region Member Declarations
+	// #region Member Declarations
 
 	private final Game game = Game.CurrentGame();
 
-	//#endregion
+	// #endregion
 
-	//#region Methods
+	// #region Methods
 
-	public FormPlunder()
-	{
+	public FormPlunder() {
 		InitializeComponent();
 
-		//#region Arrays of Cargo controls
-		btnPlunderQty = new Button[] { btnPlunderQty0, btnPlunderQty1, btnPlunderQty2, btnPlunderQty3, btnPlunderQty4,
-				btnPlunderQty5, btnPlunderQty6, btnPlunderQty7, btnPlunderQty8, btnPlunderQty9 };
+		// #region Arrays of Cargo controls
+		btnPlunderQty = new Button[] { btnPlunderQty0, btnPlunderQty1,
+				btnPlunderQty2, btnPlunderQty3, btnPlunderQty4, btnPlunderQty5,
+				btnPlunderQty6, btnPlunderQty7, btnPlunderQty8, btnPlunderQty9 };
 
-		btnPlunderAll = new Button[] { btnPlunderAll0, btnPlunderAll1, btnPlunderAll2, btnPlunderAll3, btnPlunderAll4,
-				btnPlunderAll5, btnPlunderAll6, btnPlunderAll7, btnPlunderAll8, btnPlunderAll9 };
-		//#endregion
+		btnPlunderAll = new Button[] { btnPlunderAll0, btnPlunderAll1,
+				btnPlunderAll2, btnPlunderAll3, btnPlunderAll4, btnPlunderAll5,
+				btnPlunderAll6, btnPlunderAll7, btnPlunderAll8, btnPlunderAll9 };
+		// #endregion
 
 		UpdateAll();
 	}
 
-	//#region Windows Form Designer generated code
-	/// <summary>
-	/// Required method for Designer support - do not modify
-	/// the contents of this method with the code editor.
-	/// </summary>
-	private void InitializeComponent()
-	{
+	// #region Windows Form Designer generated code
+	// / <summary>
+	// / Required method for Designer support - do not modify
+	// / the contents of this method with the code editor.
+	// / </summary>
+	private void InitializeComponent() {
 		btnPlunderAll9 = new jwinforms.Button();
 		btnPlunderQty9 = new jwinforms.Button();
 		btnPlunderAll8 = new jwinforms.Button();
@@ -159,11 +158,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll9.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll9.setTabIndex(141);
 		btnPlunderAll9.setText("All");
-		btnPlunderAll9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -176,11 +173,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty9.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty9.setTabIndex(140);
 		btnPlunderQty9.setText("88");
-		btnPlunderQty9.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty9.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -193,11 +188,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll8.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll8.setTabIndex(139);
 		btnPlunderAll8.setText("All");
-		btnPlunderAll8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -210,11 +203,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty8.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty8.setTabIndex(138);
 		btnPlunderQty8.setText("88");
-		btnPlunderQty8.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty8.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -227,11 +218,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll7.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll7.setTabIndex(137);
 		btnPlunderAll7.setText("All");
-		btnPlunderAll7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -244,11 +233,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty7.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty7.setTabIndex(136);
 		btnPlunderQty7.setText("88");
-		btnPlunderQty7.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty7.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -261,11 +248,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll6.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll6.setTabIndex(135);
 		btnPlunderAll6.setText("All");
-		btnPlunderAll6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -278,11 +263,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty6.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty6.setTabIndex(134);
 		btnPlunderQty6.setText("88");
-		btnPlunderQty6.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty6.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -295,11 +278,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll5.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll5.setTabIndex(133);
 		btnPlunderAll5.setText("All");
-		btnPlunderAll5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -312,11 +293,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty5.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty5.setTabIndex(132);
 		btnPlunderQty5.setText("88");
-		btnPlunderQty5.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty5.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -329,11 +308,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll4.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll4.setTabIndex(131);
 		btnPlunderAll4.setText("All");
-		btnPlunderAll4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -346,11 +323,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty4.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty4.setTabIndex(130);
 		btnPlunderQty4.setText("88");
-		btnPlunderQty4.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty4.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -363,11 +338,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll3.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll3.setTabIndex(129);
 		btnPlunderAll3.setText("All");
-		btnPlunderAll3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -380,11 +353,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty3.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty3.setTabIndex(128);
 		btnPlunderQty3.setText("88");
-		btnPlunderQty3.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty3.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -397,11 +368,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll2.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll2.setTabIndex(127);
 		btnPlunderAll2.setText("All");
-		btnPlunderAll2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -414,11 +383,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty2.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty2.setTabIndex(126);
 		btnPlunderQty2.setText("88");
-		btnPlunderQty2.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty2.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -431,11 +398,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll1.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll1.setTabIndex(125);
 		btnPlunderAll1.setText("All");
-		btnPlunderAll1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -448,11 +413,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty1.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty1.setTabIndex(124);
 		btnPlunderQty1.setText("88");
-		btnPlunderQty1.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty1.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -465,11 +428,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderAll0.setSize(new jwinforms.Size(32, 22));
 		btnPlunderAll0.setTabIndex(123);
 		btnPlunderAll0.setText("All");
-		btnPlunderAll0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderAll0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -482,11 +443,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnPlunderQty0.setSize(new jwinforms.Size(28, 22));
 		btnPlunderQty0.setTabIndex(122);
 		btnPlunderQty0.setText("88");
-		btnPlunderQty0.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnPlunderQty0.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnPlunder_Click(sender, e);
 			}
 		});
@@ -616,11 +575,9 @@ public class FormPlunder extends SpaceTraderForm
 		btnJettison.setSize(new jwinforms.Size(53, 22));
 		btnJettison.setTabIndex(155);
 		btnJettison.setText("Jettison");
-		btnJettison.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnJettison.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnJettison_Click(sender, e);
 			}
 		});
@@ -676,17 +633,15 @@ public class FormPlunder extends SpaceTraderForm
 
 	}
 
-	//#endregion
+	// #endregion
 
-	private void Plunder(int tradeItem, boolean all)
-	{
+	private void Plunder(int tradeItem, boolean all) {
 		game.CargoPlunder(tradeItem, all);
 
 		UpdateAll();
 	}
 
-	private void UpdateAll()
-	{
+	private void UpdateAll() {
 		Ship ship = game.Commander().getShip();
 		Ship opp = game.getOpponent();
 
@@ -696,27 +651,25 @@ public class FormPlunder extends SpaceTraderForm
 		lblBays.setText(ship.FilledCargoBays() + "/" + ship.CargoBays());
 	}
 
-	//#endregion
+	// #endregion
 
-	//#region Event Handlers
+	// #region Event Handlers
 
-	private void btnJettison_Click(Object sender, EventArgs e)
-	{
+	private void btnJettison_Click(Object sender, EventArgs e) {
 		(new FormJettison()).ShowDialog(this);
 	}
 
-	//#endregion
+	// #endregion
 
-	//#region Properties
+	// #region Properties
 
-	private void btnPlunder_Click(Object sender, EventArgs e)
-	{
-		String name = ((Button)sender).getName();
+	private void btnPlunder_Click(Object sender, EventArgs e) {
+		String name = ((Button) sender).getName();
 		boolean all = name.indexOf("Qty") < 0;
 		int index = Integer.parseInt(name.substring(name.length() - 1));
 
 		Plunder(index, all);
 	}
 
-	//#endregion
+	// #endregion
 }

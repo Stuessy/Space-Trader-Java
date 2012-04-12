@@ -1,7 +1,6 @@
 package jwinforms;
 
-public enum FormBorderStyle
-{
+public enum FormBorderStyle {
 	FixedSingle, FixedDialog, None
 
 }

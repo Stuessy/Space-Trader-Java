@@ -25,8 +25,8 @@ import spacetrader.enums.Size;
 import spacetrader.guifacade.GuiEngine;
 import spacetrader.util.Hashtable;
 
-public class ShipTemplate extends STSerializableObject implements Comparable<ShipTemplate>
-{
+public class ShipTemplate extends STSerializableObject implements
+		Comparable<ShipTemplate> {
 	// #region Member Variables
 
 	private String _name = null;
@@ -45,15 +45,13 @@ public class ShipTemplate extends STSerializableObject implements Comparable<Shi
 
 	// #region Methods
 
-	public ShipTemplate(Size size, String name)
-	{
+	public ShipTemplate(Size size, String name) {
 		_name = name;
 		_size = size;
 		_images = GuiEngine.imageProvider.getCustomShipImages();
 	}
 
-	public ShipTemplate(ShipSpec spec, String name)
-	{
+	public ShipTemplate(ShipSpec spec, String name) {
 		_name = name;
 		_size = spec.getSize();
 		_imageIndex = spec.ImageIndex();
@@ -69,8 +67,7 @@ public class ShipTemplate extends STSerializableObject implements Comparable<Shi
 			_images = GuiEngine.imageProvider.getCustomShipImages();
 	}
 
-	public ShipTemplate(Hashtable hash)
-	{
+	public ShipTemplate(Hashtable hash) {
 		_name = GetValueFromHash(hash, "_name", _name, String.class);
 		_size = (GetValueFromHash(hash, "_size", _size));
 		_imageIndex = GetValueFromHash(hash, "_imageIndex", _imageIndex);
@@ -85,8 +82,7 @@ public class ShipTemplate extends STSerializableObject implements Comparable<Shi
 	}
 
 	@Override
-	public int compareTo(ShipTemplate other)
-	{
+	public int compareTo(ShipTemplate other) {
 		if (other == null)
 			return 1;
 		else
@@ -94,8 +90,7 @@ public class ShipTemplate extends STSerializableObject implements Comparable<Shi
 	}
 
 	@Override
-	public Hashtable Serialize()
-	{
+	public Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.add("_name", _name);
@@ -116,8 +111,7 @@ public class ShipTemplate extends STSerializableObject implements Comparable<Shi
 	}
 
 	public @Override
-	String toString()
-	{
+	String toString() {
 		return Name();
 	}
 
@@ -125,113 +119,91 @@ public class ShipTemplate extends STSerializableObject implements Comparable<Shi
 
 	// #region Properties
 
-	public int CargoBays()
-	{
+	public int CargoBays() {
 		return _cargoBays;
 	}
 
-	public void CargoBays(int value)
-	{
+	public void CargoBays(int value) {
 		_cargoBays = value;
 	}
 
-	public int CrewQuarters()
-	{
+	public int CrewQuarters() {
 		return _crewQuarters;
 	}
 
-	public void CrewQuarters(int value)
-	{
+	public void CrewQuarters(int value) {
 		_crewQuarters = value;
 	}
 
-	public int FuelTanks()
-	{
+	public int FuelTanks() {
 		return _fuelTanks;
 	}
 
-	public void FuelTanks(int value)
-	{
+	public void FuelTanks(int value) {
 		_fuelTanks = value;
 	}
 
-	public int GadgetSlots()
-	{
+	public int GadgetSlots() {
 		return _gadgetSlots;
 	}
 
-	public void GadgetSlots(int value)
-	{
+	public void GadgetSlots(int value) {
 		_gadgetSlots = value;
 	}
 
-	public int HullStrength()
-	{
+	public int HullStrength() {
 		return _hullStrength;
 	}
 
-	public void HullStrength(int value)
-	{
+	public void HullStrength(int value) {
 		_hullStrength = value;
 	}
 
-	public int ImageIndex()
-	{
+	public int ImageIndex() {
 		return _imageIndex;
 	}
 
-	public void ImageIndex(int value)
-	{
+	public void ImageIndex(int value) {
 		_imageIndex = value;
 	}
 
-	public Image[] Images()
-	{
+	public Image[] Images() {
 		return _images;
 	}
 
-	public void Images(Image[] value)
-	{
+	public void Images(Image[] value) {
 		_images = value;
 	}
 
-	public String Name()
-	{
+	public String Name() {
 		return _name;
 	}
 
-	public void Name(String value)
-	{
+	public void Name(String value) {
 		_name = value;
 	}
 
-	public int ShieldSlots()
-	{
+	public int ShieldSlots() {
 		return _shieldSlots;
 	}
 
-	public void ShieldSlots(int value)
-	{
+	public void ShieldSlots(int value) {
 		_shieldSlots = value;
 	}
 
-	public Size Size()
-	{
+	public Size Size() {
 		return _size;
 	}
 
-	public void Size(Size value)
-	{
+	public void Size(Size value) {
 		_size = value;
 	}
 
-	public int WeaponSlots()
-	{
+	public int WeaponSlots() {
 		return _weaponSlots;
 	}
 
-	public void WeaponSlots(int value)
-	{
+	public void WeaponSlots(int value) {
 		_weaponSlots = value;
 	}
 

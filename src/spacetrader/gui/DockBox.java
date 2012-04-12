@@ -10,19 +10,16 @@ import spacetrader.Functions;
 import spacetrader.Ship;
 import spacetrader.Strings;
 
-public class DockBox extends jwinforms.GroupBox
-{
+public class DockBox extends jwinforms.GroupBox {
 	private Commander commander;
 
-	void setGame(Commander commander)
-	{
+	void setGame(Commander commander) {
 		this.commander = commander;
 	}
 
 	private final SpaceTrader mainWindow;
 
-	public DockBox(SpaceTrader mainWindow)
-	{
+	public DockBox(SpaceTrader mainWindow) {
 		this.mainWindow = mainWindow;
 	}
 
@@ -33,8 +30,7 @@ public class DockBox extends jwinforms.GroupBox
 	private jwinforms.Label lblHullStatus;
 	private jwinforms.Label lblRepairCost;
 
-	void InitializeComponent()
-	{
+	void InitializeComponent() {
 		btnRepair = new jwinforms.Button();
 		btnFuel = new jwinforms.Button();
 		lblFuelStatus = new jwinforms.Label();
@@ -62,11 +58,9 @@ public class DockBox extends jwinforms.GroupBox
 		btnRepair.setSize(new jwinforms.Size(48, 22));
 		btnRepair.setTabIndex(5);
 		btnRepair.setText("Repair");
-		btnRepair.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnRepair.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnRepair_Click(sender, e);
 			}
 		});
@@ -79,11 +73,9 @@ public class DockBox extends jwinforms.GroupBox
 		btnFuel.setSize(new jwinforms.Size(36, 22));
 		btnFuel.setTabIndex(4);
 		btnFuel.setText("Fuel");
-		btnFuel.setClick(new EventHandler<Object, EventArgs>()
-		{
+		btnFuel.setClick(new EventHandler<Object, EventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.EventArgs e)
-			{
+			public void handle(Object sender, jwinforms.EventArgs e) {
 				btnFuel_Click(sender, e);
 			}
 		});
@@ -122,58 +114,59 @@ public class DockBox extends jwinforms.GroupBox
 
 	}
 
-	private void btnFuel_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnFuel_Click(Object sender, jwinforms.EventArgs e) {
 		FormBuyFuel form = new FormBuyFuel();
-		if (form.ShowDialog(mainWindow) == DialogResult.OK)
-		{
+		if (form.ShowDialog(mainWindow) == DialogResult.OK) {
 			int toAdd = form.Amount() / commander.getShip().getFuelCost();
 			commander.getShip().setFuel(commander.getShip().getFuel() + toAdd);
-			commander.setCash(commander.getCash() - (toAdd * commander.getShip().getFuelCost()));
+			commander.setCash(commander.getCash()
+					- (toAdd * commander.getShip().getFuelCost()));
 			// todo inline when done
 			mainWindow.UpdateAll();
 		}
 	}
 
-	private void btnRepair_Click(Object sender, jwinforms.EventArgs e)
-	{
+	private void btnRepair_Click(Object sender, jwinforms.EventArgs e) {
 		FormBuyRepairs form = new FormBuyRepairs();
-		if (form.ShowDialog(mainWindow) == DialogResult.OK)
-		{
+		if (form.ShowDialog(mainWindow) == DialogResult.OK) {
 			int toAdd = form.Amount() / commander.getShip().getRepairCost();
 			commander.getShip().setHull(commander.getShip().getHull() + toAdd);
-			commander.setCash(commander.getCash() - (toAdd * commander.getShip().getRepairCost()));
+			commander.setCash(commander.getCash()
+					- (toAdd * commander.getShip().getRepairCost()));
 			// todo inline when done
 			mainWindow.UpdateAll();
 		}
 	}
 
-	void Update()
-	{
-		if (commander == null)
-		{
+	void Update() {
+		if (commander == null) {
 			lblFuelStatus.setText("");
 			lblFuelCost.setText("");
 			btnFuel.setVisible(false);
 			lblHullStatus.setText("");
 			lblRepairCost.setText("");
 			btnRepair.setVisible(false);
-		} else
-		{
+		} else {
 			Ship ship = commander.getShip();
 
-			lblFuelStatus.setText(Functions.StringVars(Strings.DockFuelStatus, Functions.Multiples(ship.getFuel(),
-					"parsec")));
+			lblFuelStatus.setText(Functions.StringVars(Strings.DockFuelStatus,
+					Functions.Multiples(ship.getFuel(), "parsec")));
 			int tanksEmpty = ship.FuelTanks() - ship.getFuel();
-			lblFuelCost.setText(tanksEmpty > 0 ? Functions.StringVars(Strings.DockFuelCost, Functions
-					.FormatMoney(tanksEmpty * ship.getFuelCost())) : Strings.DockFuelFull);
+			lblFuelCost.setText(tanksEmpty > 0 ? Functions.StringVars(
+					Strings.DockFuelCost,
+					Functions.FormatMoney(tanksEmpty * ship.getFuelCost()))
+					: Strings.DockFuelFull);
 			btnFuel.setVisible(tanksEmpty > 0);
 
-			lblHullStatus.setText(Functions.StringVars(Strings.DockHullStatus, Functions.FormatNumber((int)Math
-					.floor((double)100 * ship.getHull() / ship.HullStrength()))));
+			lblHullStatus.setText(Functions.StringVars(
+					Strings.DockHullStatus,
+					Functions.FormatNumber((int) Math.floor((double) 100
+							* ship.getHull() / ship.HullStrength()))));
 			int hullLoss = ship.HullStrength() - ship.getHull();
-			lblRepairCost.setText(hullLoss > 0 ? Functions.StringVars(Strings.DockHullCost, Functions
-					.FormatMoney(hullLoss * ship.getRepairCost())) : Strings.DockHullFull);
+			lblRepairCost.setText(hullLoss > 0 ? Functions.StringVars(
+					Strings.DockHullCost,
+					Functions.FormatMoney(hullLoss * ship.getRepairCost()))
+					: Strings.DockHullFull);
 			btnRepair.setVisible(hullLoss > 0);
 		}
 	}

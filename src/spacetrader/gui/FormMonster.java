@@ -44,10 +44,9 @@ import spacetrader.stub.ArrayList;
 import spacetrader.util.CheatCode;
 import spacetrader.util.Util;
 
-@SuppressWarnings({"unchecked","synthetic-access"})
+@SuppressWarnings({ "unchecked", "synthetic-access" })
 @CheatCode
-public class FormMonster extends SpaceTraderForm
-{
+public class FormMonster extends SpaceTraderForm {
 	// #region Constants
 
 	private final int SplitSystems = 31;
@@ -103,8 +102,7 @@ public class FormMonster extends SpaceTraderForm
 
 	// #region Methods
 
-	public FormMonster()
-	{
+	public FormMonster() {
 		InitializeComponent();
 
 		PopulateIdArrays();
@@ -119,8 +117,7 @@ public class FormMonster extends SpaceTraderForm
 	// / Required method for Designer support - do not modify
 	// / the contents of this method with the code editor.
 	// / </summary>
-	private void InitializeComponent()
-	{
+	private void InitializeComponent() {
 		btnClose = new jwinforms.Button();
 		picLine1 = new jwinforms.PictureBox();
 		picLine0 = new jwinforms.PictureBox();
@@ -218,11 +215,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSkillLabelPilot.setTabStop(true);
 		lblMercSkillLabelPilot.setText("P");
 		lblMercSkillLabelPilot.TextAlign = ContentAlignment.TopRight;
-		lblMercSkillLabelPilot.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercSkillLabelPilot.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -238,11 +234,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSkillLabelFighter.setTabStop(true);
 		lblMercSkillLabelFighter.setText("F");
 		lblMercSkillLabelFighter.TextAlign = ContentAlignment.TopRight;
-		lblMercSkillLabelFighter.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercSkillLabelFighter.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -258,11 +253,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSkillLabelTrader.setTabStop(true);
 		lblMercSkillLabelTrader.setText("T");
 		lblMercSkillLabelTrader.TextAlign = ContentAlignment.TopRight;
-		lblMercSkillLabelTrader.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercSkillLabelTrader.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -278,11 +272,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSkillLabelEngineer.setTabStop(true);
 		lblMercSkillLabelEngineer.setText("E");
 		lblMercSkillLabelEngineer.TextAlign = ContentAlignment.TopRight;
-		lblMercSkillLabelEngineer.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercSkillLabelEngineer.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -297,11 +290,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSystemLabel.setTabIndex(11);
 		lblMercSystemLabel.setTabStop(true);
 		lblMercSystemLabel.setText("System");
-		lblMercSystemLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercSystemLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -316,11 +308,10 @@ public class FormMonster extends SpaceTraderForm
 		lblQuestSystemLabel.setTabIndex(1);
 		lblQuestSystemLabel.setTabStop(true);
 		lblQuestSystemLabel.setText("System");
-		lblQuestSystemLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblQuestSystemLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -335,11 +326,10 @@ public class FormMonster extends SpaceTraderForm
 		lblQuestDescLabel.setTabIndex(2);
 		lblQuestDescLabel.setTabStop(true);
 		lblQuestDescLabel.setText("Description");
-		lblQuestDescLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblQuestDescLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -355,11 +345,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercIDLabel.setTabStop(true);
 		lblMercIDLabel.setText("ID");
 		lblMercIDLabel.TextAlign = ContentAlignment.TopRight;
-		lblMercIDLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercIDLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -374,11 +363,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercNameLabel.setTabIndex(6);
 		lblMercNameLabel.setTabStop(true);
 		lblMercNameLabel.setText("Name");
-		lblMercNameLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercNameLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -393,11 +381,10 @@ public class FormMonster extends SpaceTraderForm
 		lblShipyardsDescLabel.setTabIndex(4);
 		lblShipyardsDescLabel.setTabStop(true);
 		lblShipyardsDescLabel.setText("Description");
-		lblShipyardsDescLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblShipyardsDescLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -412,11 +399,10 @@ public class FormMonster extends SpaceTraderForm
 		lblShipyardsSystemLabel.setTabIndex(3);
 		lblShipyardsSystemLabel.setTabStop(true);
 		lblShipyardsSystemLabel.setText("System");
-		lblShipyardsSystemLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblShipyardsSystemLabel.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SortLinkClicked(sender, e);
 			}
 		};
@@ -487,11 +473,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSystems.setName("lblMercSystems");
 		lblMercSystems.setSize(new jwinforms.Size(160, 387));
 		lblMercSystems.setTabIndex(14);
-		lblMercSystems.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercSystems.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SystemLinkClicked(sender, e);
 			}
 		};
@@ -518,11 +503,10 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSystems2.setName("lblMercSystems2");
 		lblMercSystems2.setSize(new jwinforms.Size(160, 175));
 		lblMercSystems2.setTabIndex(148);
-		lblMercSystems2.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblMercSystems2.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SystemLinkClicked(sender, e);
 			}
 		};
@@ -552,11 +536,10 @@ public class FormMonster extends SpaceTraderForm
 		lblQuestSystems.setName("lblQuestSystems");
 		lblQuestSystems.setSize(new jwinforms.Size(68, 350));
 		lblQuestSystems.setTabIndex(12);
-		lblQuestSystems.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblQuestSystems.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SystemLinkClicked(sender, e);
 			}
 		};
@@ -585,11 +568,10 @@ public class FormMonster extends SpaceTraderForm
 		lblShipyardSystems.setName("lblShipyardSystems");
 		lblShipyardSystems.setSize(new jwinforms.Size(68, 63));
 		lblShipyardSystems.setTabIndex(13);
-		lblShipyardSystems.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>()
-		{
+		lblShipyardSystems.LinkClicked = new EventHandler<Object, LinkLabelLinkClickedEventArgs>() {
 			@Override
-			public void handle(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-			{
+			public void handle(Object sender,
+					jwinforms.LinkLabelLinkClickedEventArgs e) {
 				SystemLinkClicked(sender, e);
 			}
 		};
@@ -640,8 +622,7 @@ public class FormMonster extends SpaceTraderForm
 
 	// #endregion
 
-	private int Compare(int a, int b, String sortWhat, String sortBy)
-	{
+	private int Compare(int a, int b, String sortWhat, String sortBy) {
 		int compareVal = 0;
 
 		if (sortWhat == "M") // Mercenaries
@@ -653,8 +634,7 @@ public class FormMonster extends SpaceTraderForm
 			Object valA = null;
 			Object valB = null;
 
-			switch (SomeStringsForCheatSwitch.valueOf(sortBy))
-			{
+			switch (SomeStringsForCheatSwitch.valueOf(sortBy)) {
 			case I: // Id
 				valA = (int) A.Id().CastToInt();
 				valB = (int) B.Id().CastToInt();
@@ -695,8 +675,7 @@ public class FormMonster extends SpaceTraderForm
 			// Secondary sort by Name
 			if (compareVal == 0 && sortBy != "N")
 				compareVal = A.Name().compareTo(B.Name());
-		} else
-		{
+		} else {
 			StarSystem A = game.Universe()[a];
 			StarSystem B = game.Universe()[b];
 
@@ -705,8 +684,7 @@ public class FormMonster extends SpaceTraderForm
 				String nameA = "";
 				String nameB = "";
 
-				switch (SomeStringsForCheatSwitch.valueOf(sortWhat))
-				{
+				switch (SomeStringsForCheatSwitch.valueOf(sortWhat)) {
 				case Q: // Quests
 					nameA = A.SpecialEvent().Title();
 					nameB = B.SpecialEvent().Title();
@@ -729,19 +707,18 @@ public class FormMonster extends SpaceTraderForm
 		return compareVal;
 	}
 
-	private String CurrentSystemDisplay(CrewMember merc)
-	{
+	private String CurrentSystemDisplay(CrewMember merc) {
 		return (merc.getCurrentSystem() == null ? Strings.Unknown
-				: (game.Commander().getShip().HasCrew(merc.Id()) ? Functions.StringVars(Strings.MercOnBoard, merc
-						.getCurrentSystem().Name()) : merc.getCurrentSystem().Name()));
+				: (game.Commander().getShip().HasCrew(merc.Id()) ? Functions
+						.StringVars(Strings.MercOnBoard, merc
+								.getCurrentSystem().Name()) : merc
+						.getCurrentSystem().Name()));
 	}
 
-	private void PopulateIdArrays()
-	{
+	private void PopulateIdArrays() {
 		// Populate the mercenary ids array.
 		ArrayList ids = new ArrayList();
-		for (CrewMember merc : game.Mercenaries())
-		{
+		for (CrewMember merc : game.Mercenaries()) {
 			if (!Util.ArrayContains(Consts.SpecialCrewMemberIds, merc.Id()))
 				ids.add(merc.Id().CastToInt());
 		}
@@ -750,8 +727,7 @@ public class FormMonster extends SpaceTraderForm
 		// Populate the quest and shipyard system ids arrays.
 		ArrayList quests = new ArrayList();
 		ArrayList shipyards = new ArrayList();
-		for (StarSystem system : game.Universe())
-		{
+		for (StarSystem system : game.Universe()) {
 			if (system.ShowSpecialButton())
 				quests.add(system.Id().CastToInt());
 
@@ -767,8 +743,7 @@ public class FormMonster extends SpaceTraderForm
 		Sort("S", "S"); // Sort shipyards by system name.
 	}
 
-	private void SetLabelHeights()
-	{
+	private void SetLabelHeights() {
 
 		int questHeight = (int) Math.ceil(questSystemIds.length * 12.5) + 1;
 		lblQuests.setHeight(questHeight);
@@ -788,23 +763,21 @@ public class FormMonster extends SpaceTraderForm
 
 		// Due to a limitation of the LinkLabel control, no more than 32 links
 		// can exist in the LinkLabel.
-		lblMercSystems.setHeight((int) Math.ceil(Math.min(mercIds.length, SplitSystems) * 12.5) + 1);
-		if (mercIds.length > SplitSystems)
-		{
+		lblMercSystems.setHeight((int) Math.ceil(Math.min(mercIds.length,
+				SplitSystems) * 12.5) + 1);
+		if (mercIds.length > SplitSystems) {
 			lblMercSystems2.setVisible(true);
-			lblMercSystems2.setHeight((int) Math.ceil((mercIds.length - SplitSystems) * 12.5) + 1);
-		} else
-		{
+			lblMercSystems2.setHeight((int) Math
+					.ceil((mercIds.length - SplitSystems) * 12.5) + 1);
+		} else {
 			lblMercSystems2.setVisible(false);
 			lblMercSystems2.setTop(lblMercSystems.getTop());
 		}
 	}
 
-	private void Sort(String sortWhat, String sortBy)
-	{
+	private void Sort(String sortWhat, String sortBy) {
 		Integer[] array = null;
-		switch (SomeStringsForCheatSwitch.valueOf(sortWhat))
-		{
+		switch (SomeStringsForCheatSwitch.valueOf(sortWhat)) {
 		case M:
 			array = mercIds;
 			break;
@@ -816,12 +789,9 @@ public class FormMonster extends SpaceTraderForm
 			break;
 		}
 
-		for (int i = 0; i < array.length - 1; i++)
-		{
-			for (int j = 0; j < array.length - i - 1; j++)
-			{
-				if (Compare(array[j], array[j + 1], sortWhat, sortBy) > 0)
-				{
+		for (int i = 0; i < array.length - 1; i++) {
+			for (int j = 0; j < array.length - i - 1; j++) {
+				if (Compare(array[j], array[j + 1], sortWhat, sortBy) > 0) {
 					int temp = array[j];
 					array[j] = array[j + 1];
 					array[j + 1] = temp;
@@ -830,15 +800,13 @@ public class FormMonster extends SpaceTraderForm
 		}
 	}
 
-	private void UpdateAll()
-	{
+	private void UpdateAll() {
 		UpdateMercs();
 		UpdateQuests();
 		UpdateShipyards();
 	}
 
-	private void UpdateMercs()
-	{
+	private void UpdateMercs() {
 		lblMercIds.setText("");
 		lblMercNames.setText("");
 		lblMercSkillsPilot.setText("");
@@ -850,30 +818,38 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSystems.Links.clear();
 		lblMercSystems2.Links.clear();
 
-		for (int i = 0; i < mercIds.length; i++)
-		{
+		for (int i = 0; i < mercIds.length; i++) {
 			CrewMember merc = game.Mercenaries()[mercIds[i]];
-			boolean link = merc.getCurrentSystem() != null && !game.Commander().getShip().HasCrew(merc.Id());
+			boolean link = merc.getCurrentSystem() != null
+					&& !game.Commander().getShip().HasCrew(merc.Id());
 
-			lblMercIds.setText(lblMercIds.getText() + ((merc.Id().CastToInt()) + Strings.newline));
-			lblMercNames.setText(lblMercNames.getText() + (merc.Name() + Strings.newline));
-			lblMercSkillsPilot.setText(lblMercSkillsPilot.getText() + (merc.Pilot() + Strings.newline));
-			lblMercSkillsFighter.setText(lblMercSkillsFighter.getText() + (merc.Fighter() + Strings.newline));
-			lblMercSkillsTrader.setText(lblMercSkillsTrader.getText() + (merc.Trader() + Strings.newline));
-			lblMercSkillsEngineer.setText(lblMercSkillsEngineer.getText() + (merc.Engineer() + Strings.newline));
+			lblMercIds.setText(lblMercIds.getText()
+					+ ((merc.Id().CastToInt()) + Strings.newline));
+			lblMercNames.setText(lblMercNames.getText()
+					+ (merc.Name() + Strings.newline));
+			lblMercSkillsPilot.setText(lblMercSkillsPilot.getText()
+					+ (merc.Pilot() + Strings.newline));
+			lblMercSkillsFighter.setText(lblMercSkillsFighter.getText()
+					+ (merc.Fighter() + Strings.newline));
+			lblMercSkillsTrader.setText(lblMercSkillsTrader.getText()
+					+ (merc.Trader() + Strings.newline));
+			lblMercSkillsEngineer.setText(lblMercSkillsEngineer.getText()
+					+ (merc.Engineer() + Strings.newline));
 
-			if (i < SplitSystems)
-			{
+			if (i < SplitSystems) {
 				int start = lblMercSystems.getText().length();
-				lblMercSystems.setText(lblMercSystems.getText() + (CurrentSystemDisplay(merc) + Strings.newline));
+				lblMercSystems.setText(lblMercSystems.getText()
+						+ (CurrentSystemDisplay(merc) + Strings.newline));
 				if (link)
-					lblMercSystems.Links.add(start, merc.getCurrentSystem().Name().length(), merc.getCurrentSystem().Name());
-			} else
-			{
+					lblMercSystems.Links.add(start, merc.getCurrentSystem()
+							.Name().length(), merc.getCurrentSystem().Name());
+			} else {
 				int start = lblMercSystems2.getText().length();
-				lblMercSystems2.setText(lblMercSystems2.getText() + (CurrentSystemDisplay(merc) + Strings.newline));
+				lblMercSystems2.setText(lblMercSystems2.getText()
+						+ (CurrentSystemDisplay(merc) + Strings.newline));
 				if (link)
-					lblMercSystems2.Links.add(start, merc.getCurrentSystem().Name().length(), merc.getCurrentSystem().Name());
+					lblMercSystems2.Links.add(start, merc.getCurrentSystem()
+							.Name().length(), merc.getCurrentSystem().Name());
 			}
 		}
 
@@ -887,42 +863,44 @@ public class FormMonster extends SpaceTraderForm
 		lblMercSystems2.setText(lblMercSystems2.getText().trim());
 	}
 
-	private void UpdateQuests()
-	{
+	private void UpdateQuests() {
 		lblQuestSystems.setText("");
 		lblQuests.setText("");
 		lblQuestSystems.Links.clear();
 
-		for (int i = 0; i < questSystemIds.length; i++)
-		{
+		for (int i = 0; i < questSystemIds.length; i++) {
 			StarSystem system = game.Universe()[questSystemIds[i]];
 			int start = lblQuestSystems.getText().length();
 
-			lblQuestSystems.setText(lblQuestSystems.getText() + (system.Name() + Strings.newline));
-			lblQuests.setText(lblQuests.getText() + (system.SpecialEvent().Title() + Strings.newline));
+			lblQuestSystems.setText(lblQuestSystems.getText()
+					+ (system.Name() + Strings.newline));
+			lblQuests.setText(lblQuests.getText()
+					+ (system.SpecialEvent().Title() + Strings.newline));
 
-			lblQuestSystems.Links.add(start, system.Name().length(), system.Name());
+			lblQuestSystems.Links.add(start, system.Name().length(),
+					system.Name());
 		}
 
 		lblQuestSystems.setText(lblQuestSystems.getText().trim());
 		lblQuests.setText(lblQuests.getText().trim());
 	}
 
-	private void UpdateShipyards()
-	{
+	private void UpdateShipyards() {
 		lblShipyardSystems.setText("");
 		lblShipyards.setText("");
 		lblShipyardSystems.Links.clear();
 
-		for (int i = 0; i < shipyardSystemIds.length; i++)
-		{
+		for (int i = 0; i < shipyardSystemIds.length; i++) {
 			StarSystem system = game.Universe()[shipyardSystemIds[i]];
 			int start = lblShipyardSystems.getText().length();
 
-			lblShipyardSystems.setText(lblShipyardSystems.getText() + (system.Name() + Strings.newline));
-			lblShipyards.setText(lblShipyards.getText() + (system.Shipyard().Name() + Strings.newline));
+			lblShipyardSystems.setText(lblShipyardSystems.getText()
+					+ (system.Name() + Strings.newline));
+			lblShipyards.setText(lblShipyards.getText()
+					+ (system.Shipyard().Name() + Strings.newline));
 
-			lblShipyardSystems.Links.add(start, system.Name().length(), system.Name());
+			lblShipyardSystems.Links.add(start, system.Name().length(),
+					system.Name());
 		}
 
 		lblShipyardSystems.setText(lblShipyardSystems.getText().trim());
@@ -933,16 +911,17 @@ public class FormMonster extends SpaceTraderForm
 
 	// #region Event Handlers
 
-	private void SystemLinkClicked(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-	{
+	private void SystemLinkClicked(Object sender,
+			jwinforms.LinkLabelLinkClickedEventArgs e) {
 		Game.CurrentGame().setSelectedSystemByName(e.Link.LinkData.toString());
 		Game.CurrentGame().getParentWindow().UpdateAll();
 		Close();
 	}
 
-	private void SortLinkClicked(Object sender, jwinforms.LinkLabelLinkClickedEventArgs e)
-	{
-		Sort(((LinkLabel) sender).getName().substring(3, 1), ((LinkLabel) sender).getText().substring(0, 1));
+	private void SortLinkClicked(Object sender,
+			jwinforms.LinkLabelLinkClickedEventArgs e) {
+		Sort(((LinkLabel) sender).getName().substring(3, 1),
+				((LinkLabel) sender).getText().substring(0, 1));
 		UpdateAll();
 	}
 

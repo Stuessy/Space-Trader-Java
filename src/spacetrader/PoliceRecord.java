@@ -22,8 +22,7 @@ package spacetrader;
 
 import spacetrader.enums.PoliceRecordType;
 
-public class PoliceRecord
-{
+public class PoliceRecord {
 	// #region Member Declarations
 
 	private final PoliceRecordType _type;
@@ -33,17 +32,16 @@ public class PoliceRecord
 
 	// #region Methods
 
-	public PoliceRecord(PoliceRecordType type, int minScore)
-	{
+	public PoliceRecord(PoliceRecordType type, int minScore) {
 		_type = type;
 		_minScore = minScore;
 	}
 
-	public static PoliceRecord GetPoliceRecordFromScore(int PoliceRecordScore)
-	{
+	public static PoliceRecord GetPoliceRecordFromScore(int PoliceRecordScore) {
 		int i;
 		for (i = 0; i < Consts.PoliceRecords.length
-				&& Game.CurrentGame().Commander().getPoliceRecordScore() >= Consts.PoliceRecords[i].MinScore(); i++)
+				&& Game.CurrentGame().Commander().getPoliceRecordScore() >= Consts.PoliceRecords[i]
+						.MinScore(); i++)
 			;
 		return Consts.PoliceRecords[Math.max(0, i - 1)];
 	}
@@ -52,24 +50,15 @@ public class PoliceRecord
 
 	// #region Properties
 
-
-
-	public int MinScore()
-	{
+	public int MinScore() {
 		return _minScore;
 	}
 
-
-
-	public String Name()
-	{
+	public String Name() {
 		return _type.getName();
 	}
 
-
-
-	public PoliceRecordType Type()
-	{
+	public PoliceRecordType Type() {
 		return _type;
 	}
 

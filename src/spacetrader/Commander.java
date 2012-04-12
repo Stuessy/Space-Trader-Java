@@ -38,8 +38,7 @@ import spacetrader.enums.WeaponType;
 import spacetrader.guifacade.GuiFacade;
 import spacetrader.util.Hashtable;
 
-public class Commander extends CrewMember
-{
+public class Commander extends CrewMember {
 	// //#region Member Declarations
 
 	private int _cash = 1000;
@@ -64,7 +63,8 @@ public class Commander extends CrewMember
 		super(baseCrewMember);
 		// Start off with a crew of only the commander and a Pulse Laser.
 		getShip().Crew()[0] = this;
-		getShip().AddEquipment(Consts.Weapons[WeaponType.PulseLaser.CastToInt()]);
+		getShip().AddEquipment(
+				Consts.Weapons[WeaponType.PulseLaser.CastToInt()]);
 	}
 
 	public Commander(Hashtable hash)// : base(hash)
@@ -75,28 +75,30 @@ public class Commander extends CrewMember
 		_killsPirate = GetValueFromHash(hash, "_killsPirate", _killsPirate);
 		_killsPolice = GetValueFromHash(hash, "_killsPolice", _killsPolice);
 		_killsTrader = GetValueFromHash(hash, "_killsTrader", _killsTrader);
-		_policeRecordScore = GetValueFromHash(hash, "_policeRecordScore", _policeRecordScore);
-		_reputationScore = GetValueFromHash(hash, "_reputationScore", _reputationScore);
+		_policeRecordScore = GetValueFromHash(hash, "_policeRecordScore",
+				_policeRecordScore);
+		_reputationScore = GetValueFromHash(hash, "_reputationScore",
+				_reputationScore);
 		_days = GetValueFromHash(hash, "_days", _days);
 		_insurance = GetValueFromHash(hash, "_insurance", _insurance);
 		_noclaim = GetValueFromHash(hash, "_noclaim", _noclaim);
-		_ship = new Ship(GetValueFromHash(hash, "_ship"/*,_ship*/, Hashtable.class));
-		_priceCargo = GetValueFromHash(hash, "_priceCargo", _priceCargo, int[].class);
+		_ship = new Ship(GetValueFromHash(hash, "_ship"/* ,_ship */,
+				Hashtable.class));
+		_priceCargo = GetValueFromHash(hash, "_priceCargo", _priceCargo,
+				int[].class);
 
 		Game.CurrentGame().Mercenaries()[CrewMemberId.Commander.CastToInt()] = this;
-		Strings.CrewMemberNames[CrewMemberId.Commander.CastToInt()] = GetValueFromHash(hash, "_name",
+		Strings.CrewMemberNames[CrewMemberId.Commander.CastToInt()] = GetValueFromHash(
+				hash, "_name",
 				Strings.CrewMemberNames[CrewMemberId.Commander.CastToInt()]);
 	}
 
-	public void PayInterest()
-	{
-		if (getDebt() > 0)
-		{
-			int interest = Math.max(1, (int)(getDebt() * Consts.IntRate));
+	public void PayInterest() {
+		if (getDebt() > 0) {
+			int interest = Math.max(1, (int) (getDebt() * Consts.IntRate));
 			if (getCash() > interest)
 				setCash(getCash() - interest);
-			else
-			{
+			else {
 				setDebt(getDebt() + (interest - getCash()));
 				setCash(0);
 			}
@@ -104,8 +106,7 @@ public class Commander extends CrewMember
 	}
 
 	@Override
-	public Hashtable Serialize()
-	{
+	public Hashtable Serialize() {
 		Hashtable hash = super.Serialize();
 
 		hash.add("_cash", _cash);
@@ -125,21 +126,19 @@ public class Commander extends CrewMember
 		return hash;
 	}
 
-	public boolean TradeShip(ShipSpec specToBuy, int netPrice)
-	{
+	public boolean TradeShip(ShipSpec specToBuy, int netPrice) {
 		return TradeShip(specToBuy, netPrice, specToBuy.Name());
 	}
 
-	public boolean TradeShip(ShipSpec specToBuy, int netPrice, String newShipName)
-	{
+	public boolean TradeShip(ShipSpec specToBuy, int netPrice,
+			String newShipName) {
 		boolean traded = false;
 
 		if (netPrice > 0 && getDebt() > 0)
 			GuiFacade.alert(AlertType.DebtNoBuy);
 		else if (netPrice > CashToSpend())
 			GuiFacade.alert(AlertType.ShipBuyIF);
-		else if (specToBuy.getCrewQuarters() < getShip().SpecialCrew().length)
-		{
+		else if (specToBuy.getCrewQuarters() < getShip().SpecialCrew().length) {
 			String passengers = getShip().SpecialCrew()[1].Name();
 			if (getShip().SpecialCrew().length > 2)
 				passengers += " and " + getShip().SpecialCrew()[2].Name();
@@ -149,9 +148,9 @@ public class Commander extends CrewMember
 			GuiFacade.alert(AlertType.ShipBuyCrewQuarters);
 		else if (getShip().ReactorOnBoard())
 			GuiFacade.alert(AlertType.ShipBuyReactor);
-		else
-		{
-			Equipment[] special = new Equipment[] { Consts.Weapons[WeaponType.MorgansLaser.CastToInt()],
+		else {
+			Equipment[] special = new Equipment[] {
+					Consts.Weapons[WeaponType.MorgansLaser.CastToInt()],
 					Consts.Weapons[WeaponType.QuantumDistruptor.CastToInt()],
 					Consts.Shields[ShieldType.Lightning.CastToInt()],
 					Consts.Gadgets[GadgetType.FuelCompactor.CastToInt()],
@@ -160,22 +159,21 @@ public class Commander extends CrewMember
 			boolean addPod = false;
 			int extraCost = 0;
 
-			for (int i = 0; i < special.length; i++)
-			{
-				if (getShip().HasEquipment(special[i]))
-				{
+			for (int i = 0; i < special.length; i++) {
+				if (getShip().HasEquipment(special[i])) {
 					if (specToBuy.Slots(special[i].EquipmentType()) == 0)
-						GuiFacade.alert(AlertType.ShipBuyNoSlots, newShipName, special[i].Name(), Strings.EquipmentTypes[special[i].EquipmentType().CastToInt()]);
-					else
-					{
+						GuiFacade.alert(AlertType.ShipBuyNoSlots, newShipName,
+								special[i].Name(),
+								Strings.EquipmentTypes[special[i]
+										.EquipmentType().CastToInt()]);
+					else {
 						extraCost += special[i].TransferPrice();
 						add[i] = true;
 					}
 				}
 			}
 
-			if (getShip().getEscapePod())
-			{
+			if (getShip().getEscapePod()) {
 				addPod = true;
 				extraCost += Consts.PodTransferCost;
 			}
@@ -185,51 +183,56 @@ public class Commander extends CrewMember
 
 			extraCost = 0;
 
-			for (int i = 0; i < special.length; i++)
-			{
-				if (add[i])
-				{
+			for (int i = 0; i < special.length; i++) {
+				if (add[i]) {
 					if (netPrice + extraCost + special[i].TransferPrice() > CashToSpend())
-						GuiFacade.alert(AlertType.ShipBuyNoTransfer, special[i].Name());
-					else if (GuiFacade.alert(AlertType.ShipBuyTransfer, special[i].Name(), special[i].Name()
-					.toLowerCase(), Functions.FormatNumber(special[i].TransferPrice())) == DialogResult.Yes)
+						GuiFacade.alert(AlertType.ShipBuyNoTransfer,
+								special[i].Name());
+					else if (GuiFacade.alert(AlertType.ShipBuyTransfer,
+							special[i].Name(), special[i].Name().toLowerCase(),
+							Functions.FormatNumber(special[i].TransferPrice())) == DialogResult.Yes)
 						extraCost += special[i].TransferPrice();
 					else
 						add[i] = false;
 				}
 			}
 
-			if (addPod)
-			{
+			if (addPod) {
 				if (netPrice + extraCost + Consts.PodTransferCost > CashToSpend())
-					GuiFacade.alert(AlertType.ShipBuyNoTransfer, Strings.ShipInfoEscapePod);
-				else if (GuiFacade.alert(AlertType.ShipBuyTransfer, Strings.ShipInfoEscapePod, Strings.ShipInfoEscapePod.toLowerCase(), Functions.FormatNumber(Consts.PodTransferCost)) == DialogResult.Yes)
+					GuiFacade.alert(AlertType.ShipBuyNoTransfer,
+							Strings.ShipInfoEscapePod);
+				else if (GuiFacade.alert(AlertType.ShipBuyTransfer,
+						Strings.ShipInfoEscapePod,
+						Strings.ShipInfoEscapePod.toLowerCase(),
+						Functions.FormatNumber(Consts.PodTransferCost)) == DialogResult.Yes)
 					extraCost += Consts.PodTransferCost;
 				else
 					addPod = false;
 			}
 
-			if (GuiFacade.alert(AlertType.ShipBuyConfirm, getShip().Name(), newShipName, (add[0] || add[1]
-			|| add[2] || addPod ? Strings.ShipBuyTransfer : "")) == DialogResult.Yes)
-			{
+			if (GuiFacade
+					.alert(AlertType.ShipBuyConfirm,
+							getShip().Name(),
+							newShipName,
+							(add[0] || add[1] || add[2] || addPod ? Strings.ShipBuyTransfer
+									: "")) == DialogResult.Yes) {
 				CrewMember[] oldCrew = getShip().Crew();
 
 				setShip(new Ship(specToBuy.Type()));
 				setCash(getCash() - (netPrice + extraCost));
 
-				for (int i = 0; i < Math.min(oldCrew.length, getShip().Crew().length); i++)
+				for (int i = 0; i < Math.min(oldCrew.length,
+						getShip().Crew().length); i++)
 					getShip().Crew()[i] = oldCrew[i];
 
-				for (int i = 0; i < special.length; i++)
-				{
+				for (int i = 0; i < special.length; i++) {
 					if (add[i])
 						getShip().AddEquipment(special[i]);
 				}
 
 				if (addPod)
 					getShip().setEscapePod(true);
-				else if (getInsurance())
-				{
+				else if (getInsurance()) {
 					setInsurance(false);
 					NoClaim(0);
 				}
@@ -245,159 +248,137 @@ public class Commander extends CrewMember
 
 	// //#region Properties
 
-
-	public int CashToSpend()
-	{
-		return _cash - (Game.CurrentGame().Options().getReserveMoney() ? CurrentCosts() : 0);
+	public int CashToSpend() {
+		return _cash
+				- (Game.CurrentGame().Options().getReserveMoney() ? CurrentCosts()
+						: 0);
 	}
 
-	public int CurrentCosts()
-	{
+	public int CurrentCosts() {
 		return Game.CurrentGame().CurrentCosts();
 	}
 
-	public int NoClaim()
-	{
+	public int NoClaim() {
 		return _noclaim;
 	}
 
-	public void NoClaim(int value)
-	{
+	public void NoClaim(int value) {
 		_noclaim = Math.max(0, Math.min(Consts.MaxNoClaim, value));
 	}
 
-	public int[] PriceCargo()
-	{
+	public int[] PriceCargo() {
 		return _priceCargo;
 	}
 
-	public int Worth()
-	{
-		return getShip().getPrice() + _cash - _debt
-				+ (Game.CurrentGame().getQuestStatusMoon() > 0 ? SpecialEvent.MoonCost : 0);
+	public int Worth() {
+		return getShip().getPrice()
+				+ _cash
+				- _debt
+				+ (Game.CurrentGame().getQuestStatusMoon() > 0 ? SpecialEvent.MoonCost
+						: 0);
 	}
 
-	public void setShip(Ship ship)
-	{
+	public void setShip(Ship ship) {
 		_ship = ship;
 	}
 
-	public Ship getShip()
-	{
+	public Ship getShip() {
 		return _ship;
 	}
 
-	public void setReputationScore(int reputationScore)
-	{
+	public void setReputationScore(int reputationScore) {
 		_reputationScore = reputationScore;
 	}
 
-	public int getReputationScore()
-	{
+	public int getReputationScore() {
 		return _reputationScore;
 	}
 
-	public void setPoliceRecordScore(int policeRecordScore)
-	{
+	public void setPoliceRecordScore(int policeRecordScore) {
 		_policeRecordScore = policeRecordScore;
 	}
 
 	/**
 	 * @return
 	 */
-	public int getPoliceRecordScore()
-	{
+	public int getPoliceRecordScore() {
 		return _policeRecordScore;
 	}
 
-	public void setKillsTrader(int killsTrader)
-	{
+	public void setKillsTrader(int killsTrader) {
 		_killsTrader = killsTrader;
 	}
 
 	/**
 	 * @return
 	 */
-	public int getKillsTrader()
-	{
+	public int getKillsTrader() {
 		return _killsTrader;
 	}
 
-	public void setKillsPolice(int killsPolice)
-	{
+	public void setKillsPolice(int killsPolice) {
 		_killsPolice = killsPolice;
 	}
 
 	/**
 	 * @return
 	 */
-	public int getKillsPolice()
-	{
+	public int getKillsPolice() {
 		return _killsPolice;
 	}
 
-	public void setKillsPirate(int killsPirate)
-	{
+	public void setKillsPirate(int killsPirate) {
 		_killsPirate = killsPirate;
 	}
 
 	/**
 	 * @return
 	 */
-	public int getKillsPirate()
-	{
+	public int getKillsPirate() {
 		return _killsPirate;
 	}
 
-	public void setInsurance(boolean insurance)
-	{
+	public void setInsurance(boolean insurance) {
 		_insurance = insurance;
 	}
 
 	/**
 	 * @return
 	 */
-	public boolean getInsurance()
-	{
+	public boolean getInsurance() {
 		return _insurance;
 	}
 
-	public void setDebt(int debt)
-	{
+	public void setDebt(int debt) {
 		_debt = debt;
 	}
 
 	/**
 	 * @return
 	 */
-	public int getDebt()
-	{
+	public int getDebt() {
 		return _debt;
 	}
 
-	public void setDays(int days)
-	{
+	public void setDays(int days) {
 		_days = days;
 	}
 
 	/**
 	 * @return
 	 */
-	public int getDays()
-	{
+	public int getDays() {
 		return _days;
 	}
 
-	public void setCash(int cash)
-	{
+	public void setCash(int cash) {
 		_cash = cash;
 	}
 
 	/**
 	 * @return
 	 */
-	public int getCash()
-	{
+	public int getCash() {
 		return _cash;
 	}
 

@@ -7,19 +7,17 @@ import javax.swing.JDialog;
 import javax.swing.WindowConstants;
 
 // TODO make Closing etc work.
-public class WinformForm extends WinformPane
-{
+public class WinformForm extends WinformPane {
 	private final JDialog jdialog;
 	private final WinformJPanel panel;
 	protected final WinformJPanel Controls;
 
 	DialogResult result;
 
-	public WinformForm()
-	{
+	public WinformForm() {
 		// super(new WinformJPanel());
 		super(new JDialog());
-		jdialog = (JDialog)swingVersion;
+		jdialog = (JDialog) swingVersion;
 		jdialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		panel = new WinformJPanel(this);
 		jdialog.setContentPane(panel);
@@ -28,19 +26,16 @@ public class WinformForm extends WinformPane
 	}
 
 	// ///////////// implementation ends here.
-	public Graphics CreateGraphics()
-	{
+	public Graphics CreateGraphics() {
 		return new Graphics(jdialog.getGraphics());
 	}
 
-	public DialogResult ShowDialog()
-	{
+	public DialogResult ShowDialog() {
 		return ShowDialog(null);
 	}
 
 	// This should be "modal", i.e. - parent is blocked.
-	public DialogResult ShowDialog(WinformPane owner)
-	{
+	public DialogResult ShowDialog(WinformPane owner) {
 		parent = owner;
 
 		panel.addMouseListener(getMouseListener());
@@ -52,14 +47,13 @@ public class WinformForm extends WinformPane
 		return result;
 	}
 
-	private void fixLocation()
-	{
+	private void fixLocation() {
 		if (StartPosition == null)
 			return;
-		switch (StartPosition)
-		{
+		switch (StartPosition) {
 		case CenterParent:
-			jdialog.setLocationRelativeTo(parent == null ? null : parent.asSwingObject());
+			jdialog.setLocationRelativeTo(parent == null ? null : parent
+					.asSwingObject());
 			break;
 		case Manual:
 			break;
@@ -68,14 +62,13 @@ public class WinformForm extends WinformPane
 		}
 	}
 
-	public void Close()
-	{
+	public void Close() {
 		jdialog.setVisible(false);
 		jdialog.dispose();
 	}
 
-	public void PerformLayout()
-	{}
+	public void PerformLayout() {
+	}
 
 	// Must encapsulate most of these.
 	private Size AutoScaleBaseSize;
@@ -88,92 +81,75 @@ public class WinformForm extends WinformPane
 	private String Title;
 	private WinformPane parent;
 
-	public void setAutoScaleBaseSize(Size autoScaleBaseSize)
-	{
+	public void setAutoScaleBaseSize(Size autoScaleBaseSize) {
 		AutoScaleBaseSize = autoScaleBaseSize;
 	}
 
-	public Size getAutoScaleBaseSize()
-	{
+	public Size getAutoScaleBaseSize() {
 		return AutoScaleBaseSize;
 	}
 
-	public void setTitle(String title)
-	{
+	public void setTitle(String title) {
 		Title = title;
 	}
 
-	public String getTitle()
-	{
+	public String getTitle() {
 		return Title;
 	}
 
-	public void setAcceptButton(Button acceptButton)
-	{
+	public void setAcceptButton(Button acceptButton) {
 		jdialog.getRootPane().setDefaultButton(acceptButton.asJButtton());
 	}
 
-	public Button getAcceptButton()
-	{
+	public Button getAcceptButton() {
 		return AcceptButton;
 	}
 
 	// TODO handle.
-	public void setCancelButton(Button cancelButton)
-	{
+	public void setCancelButton(Button cancelButton) {
 		CancelButton = cancelButton;
 	}
 
-	public Button getCancelButton()
-	{
+	public Button getCancelButton() {
 		return CancelButton;
 	}
 
-	public void setStartPosition(FormStartPosition startPosition)
-	{
+	public void setStartPosition(FormStartPosition startPosition) {
 		StartPosition = startPosition;
 	}
 
-	public void setControlBox(boolean controlBox)
-	{
-		jdialog.setDefaultCloseOperation(controlBox ? WindowConstants.DISPOSE_ON_CLOSE : WindowConstants.DO_NOTHING_ON_CLOSE);
+	public void setControlBox(boolean controlBox) {
+		jdialog.setDefaultCloseOperation(controlBox ? WindowConstants.DISPOSE_ON_CLOSE
+				: WindowConstants.DO_NOTHING_ON_CLOSE);
 	}
 
 	// TODO ShowInTaskbar
-	public void setShowInTaskbar(boolean showInTaskbar)
-	{
+	public void setShowInTaskbar(boolean showInTaskbar) {
 		ShowInTaskbar = showInTaskbar;
 	}
 
-	public boolean getShowInTaskbar()
-	{
+	public boolean getShowInTaskbar() {
 		return ShowInTaskbar;
 	}
 
-	public void setMinimizeBox(boolean minimizeBox)
-	{
+	public void setMinimizeBox(boolean minimizeBox) {
 		MinimizeBox = minimizeBox;
 	}
 
-	public boolean getMinimizeBox()
-	{
+	public boolean getMinimizeBox() {
 		return MinimizeBox;
 	}
 
-	public void setMaximizeBox(boolean maximizeBox)
-	{
+	public void setMaximizeBox(boolean maximizeBox) {
 		MaximizeBox = maximizeBox;
 	}
 
-	public boolean getMaximizeBox()
-	{
+	public boolean getMaximizeBox() {
 		return MaximizeBox;
 	}
 
-	public void setFormBorderStyle(FormBorderStyle style)
-	{
-		switch (style)
-		{
+	public void setFormBorderStyle(FormBorderStyle style) {
+		switch (style) {
 		case FixedDialog:
 			jdialog.setUndecorated(false);
 			break;
@@ -189,46 +165,38 @@ public class WinformForm extends WinformPane
 		}
 	}
 
-	public void setClientSize(Dimension clientSize)
-	{
+	public void setClientSize(Dimension clientSize) {
 		// bigger, cause decorations count in swing.
-		if (clientSize == null)
-		{
+		if (clientSize == null) {
 			System.out.println("null here");
 			return;
 		}
 		setSize(new Dimension(clientSize.width + 10, clientSize.height + 30));
 	}
 
-	public String getText()
-	{
+	public String getText() {
 		return jdialog.getTitle();
 	}
 
-	public void setText(String text)
-	{
+	public void setText(String text) {
 		jdialog.setTitle(text);
 	}
 
 	@Override
-	public void dispose()
-	{
+	public void dispose() {
 		jdialog.dispose();
 	}
 
 	@Override
-	public void setResult(DialogResult dialogResult)
-	{
+	public void setResult(DialogResult dialogResult) {
 		result = dialogResult;
 	}
 
-	protected void setBackgroundImage(Image backgroundImage)
-	{
+	protected void setBackgroundImage(Image backgroundImage) {
 		panel.BackgroundImage = backgroundImage;
 	}
 
-	protected Image getBackgroundImage()
-	{
+	protected Image getBackgroundImage() {
 		return panel.BackgroundImage;
 	}
 }
