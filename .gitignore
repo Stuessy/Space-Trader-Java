@@ -19,3 +19,6 @@ out/
 
 #except this file
 !.gitignore
+
+#ignore specific files for Space-Trader-Java
+registryKey.properties
