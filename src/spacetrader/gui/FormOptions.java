@@ -29,6 +29,7 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.awt.Point;
 
 import jwinforms.Button;
@@ -41,7 +42,6 @@ import jwinforms.FormStartPosition;
 import jwinforms.ISupportInitialize;
 import jwinforms.Label;
 import jwinforms.NumericUpDown;
-import jwinforms.Size;
 import spacetrader.Game;
 import spacetrader.GameOptions;
 import spacetrader.enums.AlertType;
@@ -137,7 +137,7 @@ public class FormOptions extends SpaceTraderForm {
 		this.btnOk.setFlatStyle(FlatStyle.Flat);
 		this.btnOk.setLocation(new Point(14, 240));
 		this.btnOk.setName("btnOk");
-		this.btnOk.setSize(new Size(40, 22));
+		this.btnOk.setSize(new Dimension(40, 22));
 		this.btnOk.setTabIndex(15);
 		this.btnOk.setText("Ok");
 		//
@@ -147,7 +147,7 @@ public class FormOptions extends SpaceTraderForm {
 		this.btnCancel.setFlatStyle(FlatStyle.Flat);
 		this.btnCancel.setLocation(new Point(62, 240));
 		this.btnCancel.setName("btnCancel");
-		this.btnCancel.setSize(new Size(49, 22));
+		this.btnCancel.setSize(new Dimension(49, 22));
 		this.btnCancel.setTabIndex(16);
 		this.btnCancel.setText("Cancel");
 		//
@@ -156,7 +156,7 @@ public class FormOptions extends SpaceTraderForm {
 		this.lblEmpty.setAutoSize(true);
 		this.lblEmpty.setLocation(new Point(52, 90));
 		this.lblEmpty.setName("lblEmpty");
-		this.lblEmpty.setSize(new Size(292, 16));
+		this.lblEmpty.setSize(new Dimension(292, 16));
 		this.lblEmpty.setTabIndex(38);
 		this.lblEmpty
 				.setText("Cargo Bays to leave empty when buying goods in-system");
@@ -165,7 +165,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkFuel.setLocation(new Point(8, 8));
 		this.chkFuel.setName("chkFuel");
-		this.chkFuel.setSize(new Size(160, 16));
+		this.chkFuel.setSize(new Dimension(160, 16));
 		this.chkFuel.setTabIndex(1);
 		this.chkFuel.setText("Get full fuel tanks on arrival");
 		this.chkFuel.setCheckedChanged(new EventHandler<Object, EventArgs>() {
@@ -179,7 +179,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkContinuousAttack.setLocation(new Point(8, 176));
 		this.chkContinuousAttack.setName("chkContinuousAttack");
-		this.chkContinuousAttack.setSize(new Size(163, 16));
+		this.chkContinuousAttack.setSize(new Dimension(163, 16));
 		this.chkContinuousAttack.setTabIndex(13);
 		this.chkContinuousAttack.setText("Continuous attack and flight");
 		this.chkContinuousAttack
@@ -194,7 +194,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkAttackFleeing.setLocation(new Point(24, 192));
 		this.chkAttackFleeing.setName("chkAttackFleeing");
-		this.chkAttackFleeing.setSize(new Size(177, 16));
+		this.chkAttackFleeing.setSize(new Dimension(177, 16));
 		this.chkAttackFleeing.setTabIndex(14);
 		this.chkAttackFleeing.setText("Continue attacking fleeing ship");
 		this.chkAttackFleeing
@@ -209,7 +209,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkNewspaper.setLocation(new Point(8, 40));
 		this.chkNewspaper.setName("chkNewspaper");
-		this.chkNewspaper.setSize(new Size(155, 16));
+		this.chkNewspaper.setSize(new Dimension(155, 16));
 		this.chkNewspaper.setTabIndex(3);
 		this.chkNewspaper.setText("Always pay for newspaper");
 		this.chkNewspaper
@@ -224,7 +224,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkRange.setLocation(new Point(184, 8));
 		this.chkRange.setName("chkRange");
-		this.chkRange.setSize(new Size(175, 16));
+		this.chkRange.setSize(new Dimension(175, 16));
 		this.chkRange.setTabIndex(5);
 		this.chkRange.setText("Show range to tracked system");
 		this.chkRange.setCheckedChanged(new EventHandler<Object, EventArgs>() {
@@ -238,7 +238,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkStopTracking.setLocation(new Point(184, 24));
 		this.chkStopTracking.setName("chkStopTracking");
-		this.chkStopTracking.setSize(new Size(139, 16));
+		this.chkStopTracking.setSize(new Dimension(139, 16));
 		this.chkStopTracking.setTabIndex(6);
 		this.chkStopTracking.setText("Stop tracking on arrival");
 		this.chkStopTracking
@@ -253,7 +253,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkLoan.setLocation(new Point(184, 56));
 		this.chkLoan.setName("chkLoan");
-		this.chkLoan.setSize(new Size(124, 16));
+		this.chkLoan.setSize(new Dimension(124, 16));
 		this.chkLoan.setTabIndex(4);
 		this.chkLoan.setText("Remind about loans");
 		this.chkLoan.setCheckedChanged(new EventHandler<Object, EventArgs>() {
@@ -267,7 +267,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkIgnoreTradersDealing.setLocation(new Point(152, 152));
 		this.chkIgnoreTradersDealing.setName("chkIgnoreTradersDealing");
-		this.chkIgnoreTradersDealing.setSize(new Size(133, 16));
+		this.chkIgnoreTradersDealing.setSize(new Dimension(133, 16));
 		this.chkIgnoreTradersDealing.setTabIndex(12);
 		this.chkIgnoreTradersDealing.setText("Ignore dealing traders");
 		this.chkIgnoreTradersDealing
@@ -282,7 +282,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkReserveMoney.setLocation(new Point(184, 40));
 		this.chkReserveMoney.setName("chkReserveMoney");
-		this.chkReserveMoney.setSize(new Size(176, 16));
+		this.chkReserveMoney.setSize(new Dimension(176, 16));
 		this.chkReserveMoney.setTabIndex(7);
 		this.chkReserveMoney.setText("Reserve money for warp costs");
 		this.chkReserveMoney
@@ -297,7 +297,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkIgnoreTraders.setLocation(new Point(136, 136));
 		this.chkIgnoreTraders.setName("chkIgnoreTraders");
-		this.chkIgnoreTraders.setSize(new Size(62, 16));
+		this.chkIgnoreTraders.setSize(new Dimension(62, 16));
 		this.chkIgnoreTraders.setTabIndex(11);
 		this.chkIgnoreTraders.setText("Traders");
 		this.chkIgnoreTraders
@@ -312,7 +312,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkIgnorePirates.setLocation(new Point(8, 136));
 		this.chkIgnorePirates.setName("chkIgnorePirates");
-		this.chkIgnorePirates.setSize(new Size(58, 16));
+		this.chkIgnorePirates.setSize(new Dimension(58, 16));
 		this.chkIgnorePirates.setTabIndex(9);
 		this.chkIgnorePirates.setText("Pirates");
 		this.chkIgnorePirates
@@ -327,7 +327,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkIgnorePolice.setLocation(new Point(74, 136));
 		this.chkIgnorePolice.setName("chkIgnorePolice");
-		this.chkIgnorePolice.setSize(new Size(54, 16));
+		this.chkIgnorePolice.setSize(new Dimension(54, 16));
 		this.chkIgnorePolice.setTabIndex(10);
 		this.chkIgnorePolice.setText("Police");
 		this.chkIgnorePolice
@@ -342,7 +342,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkRepair.setLocation(new Point(8, 24));
 		this.chkRepair.setName("chkRepair");
-		this.chkRepair.setSize(new Size(167, 16));
+		this.chkRepair.setSize(new Dimension(167, 16));
 		this.chkRepair.setTabIndex(2);
 		this.chkRepair.setText("Get full hull repairs on arrival");
 		this.chkRepair.setCheckedChanged(new EventHandler<Object, EventArgs>() {
@@ -357,7 +357,7 @@ public class FormOptions extends SpaceTraderForm {
 		this.lblIgnore.setAutoSize(true);
 		this.lblIgnore.setLocation(new Point(8, 120));
 		this.lblIgnore.setName("lblIgnore");
-		this.lblIgnore.setSize(new Size(152, 16));
+		this.lblIgnore.setSize(new Dimension(152, 16));
 		this.lblIgnore.setTabIndex(52);
 		this.lblIgnore.setText("Always ignore when it is safe:");
 		//
@@ -366,7 +366,7 @@ public class FormOptions extends SpaceTraderForm {
 		this.numEmpty.setLocation(new Point(8, 88));
 		this.numEmpty.setMaximum(99);
 		this.numEmpty.setName("numEmpty");
-		this.numEmpty.setSize(new Size(40, 20));
+		this.numEmpty.setSize(new Dimension(40, 20));
 		this.numEmpty.setTabIndex(8);
 		this.numEmpty.setValue(88);
 		this.numEmpty.setValueChanged(new EventHandler<Object, EventArgs>() {
@@ -381,7 +381,7 @@ public class FormOptions extends SpaceTraderForm {
 		this.btnSave.setFlatStyle(FlatStyle.Flat);
 		this.btnSave.setLocation(new Point(119, 240));
 		this.btnSave.setName("btnSave");
-		this.btnSave.setSize(new Size(107, 22));
+		this.btnSave.setSize(new Dimension(107, 22));
 		this.btnSave.setTabIndex(17);
 		this.btnSave.setText("Save As Defaults");
 		this.btnSave.setClick(new EventHandler<Object, EventArgs>() {
@@ -396,7 +396,7 @@ public class FormOptions extends SpaceTraderForm {
 		this.btnLoad.setFlatStyle(FlatStyle.Flat);
 		this.btnLoad.setLocation(new Point(234, 240));
 		this.btnLoad.setName("btnLoad");
-		this.btnLoad.setSize(new Size(114, 22));
+		this.btnLoad.setSize(new Dimension(114, 22));
 		this.btnLoad.setTabIndex(18);
 		this.btnLoad.setText("Load from Defaults");
 		this.btnLoad.setClick(new EventHandler<Object, EventArgs>() {
@@ -410,7 +410,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkNewspaperShow.setLocation(new Point(24, 56));
 		this.chkNewspaperShow.setName("chkNewspaperShow");
-		this.chkNewspaperShow.setSize(new Size(160, 16));
+		this.chkNewspaperShow.setSize(new Dimension(160, 16));
 		this.chkNewspaperShow.setTabIndex(53);
 		this.chkNewspaperShow.setText("Show newspaper on arrival");
 		this.chkNewspaperShow
@@ -425,7 +425,7 @@ public class FormOptions extends SpaceTraderForm {
 		//
 		this.chkDisable.setLocation(new Point(8, 208));
 		this.chkDisable.setName("chkDisable");
-		this.chkDisable.setSize(new Size(244, 16));
+		this.chkDisable.setSize(new Dimension(244, 16));
 		this.chkDisable.setTabIndex(54);
 		this.chkDisable.setText("Attempt to disable opponents when possible");
 		this.chkDisable
@@ -439,9 +439,9 @@ public class FormOptions extends SpaceTraderForm {
 		// FormOptions
 		//
 		this.setAcceptButton(this.btnOk);
-		this.setAutoScaleBaseSize(new Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnCancel);
-		this.setClientSize(new Size(362, 271));
+		this.setClientSize(new Dimension(362, 271));
 		this.Controls.add(this.chkDisable);
 		this.Controls.add(this.chkLoan);
 		this.Controls.add(this.chkNewspaperShow);

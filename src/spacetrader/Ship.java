@@ -26,6 +26,9 @@
 //using System.Collections;
 package spacetrader;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import spacetrader.enums.CrewMemberId;
 import spacetrader.enums.Difficulty;
 import spacetrader.enums.EquipmentType;
@@ -36,7 +39,6 @@ import spacetrader.enums.ShipType;
 import spacetrader.enums.SkillType;
 import spacetrader.enums.StarSystemId;
 import spacetrader.enums.WeaponType;
-import spacetrader.stub.ArrayList;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Util;
 
@@ -1123,8 +1125,8 @@ public class Ship extends ShipSpec {
 			for (int count = 0; count < Cargo()[tradeItem]; count++)
 				tradeItems.add(tradeItem);
 		}
-		tradeItems.Sort();
-		tradeItems.Reverse();
+		Collections.sort(tradeItems);
+		Collections.reverse(tradeItems);
 
 		int hidden = HiddenCargoBays();
 		if (PrincessOnBoard())
@@ -1132,8 +1134,11 @@ public class Ship extends ShipSpec {
 		if (SculptureOnBoard())
 			hidden--;
 
-		if (hidden > 0)
-			tradeItems.RemoveRange(0, hidden);
+		if (hidden > 0) {
+			for (int i = 0; i < hidden; i++) {
+				tradeItems.remove(0);
+			}
+		}
 
 		return tradeItems;
 	}

@@ -21,6 +21,7 @@
 package spacetrader.gui;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Point;
 
 import javax.swing.UIManager;
@@ -446,7 +447,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow {
 		picLine.setBackColor(Color.darkGray);
 		picLine.setLocation(new Point(0, 0));
 		picLine.setName("picLine");
-		picLine.setSize(new jwinforms.Size(770, 1));
+		picLine.setSize(new Dimension(770, 1));
 		picLine.setTabIndex(132);
 		picLine.setTabStop(false);
 		//
@@ -461,21 +462,21 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow {
 		//
 		// ilChartImages
 		//
-		ilChartImages.setImageSize(new jwinforms.Size(7, 7));
+		ilChartImages.setImageSize(new Dimension(7, 7));
 		ilChartImages.setImageStream(((jwinforms.ImageListStreamer) (resources
 				.GetObject("ilChartImages.ImageStream"))));
 		ilChartImages.setTransparentColor(Color.white);
 		//
 		// ilShipImages
 		//
-		ilShipImages.setImageSize(new jwinforms.Size(64, 52));
+		ilShipImages.setImageSize(new Dimension(64, 52));
 		ilShipImages.setImageStream(((jwinforms.ImageListStreamer) (resources
 				.GetObject("ilShipImages.ImageStream"))));
 		ilShipImages.setTransparentColor(Color.white);
 		//
 		// ilDirectionImages
 		//
-		ilDirectionImages.setImageSize(new jwinforms.Size(13, 13));
+		ilDirectionImages.setImageSize(new Dimension(13, 13));
 		ilDirectionImages
 				.setImageStream(((jwinforms.ImageListStreamer) (resources
 						.GetObject("ilDirectionImages.ImageStream"))));
@@ -483,7 +484,7 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow {
 		//
 		// ilEquipmentImages
 		//
-		ilEquipmentImages.setImageSize(new jwinforms.Size(64, 52));
+		ilEquipmentImages.setImageSize(new Dimension(64, 52));
 		ilEquipmentImages
 				.setImageStream(((jwinforms.ImageListStreamer) (resources
 						.GetObject("ilEquipmentImages.ImageStream"))));
@@ -492,8 +493,8 @@ public class SpaceTrader extends jwinforms.WinformWindow implements MainWindow {
 		//
 		// SpaceTrader
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
-		this.setClientSize(new jwinforms.Size(768, 505));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
+		this.setClientSize(new Dimension(768, 505));
 		Controls.add(picLine);
 		Controls.add(dockBox);
 		Controls.add(cargoBox);

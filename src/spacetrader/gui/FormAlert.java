@@ -19,6 +19,8 @@
  ******************************************************************************/
 package spacetrader.gui;
 
+import java.awt.Dimension;
+
 import jwinforms.Container;
 import jwinforms.DialogResult;
 import jwinforms.EventArgs;
@@ -27,7 +29,6 @@ import jwinforms.FormStartPosition;
 import jwinforms.Graphics;
 import jwinforms.IContainer;
 import jwinforms.ResourceManager;
-import jwinforms.SizeF;
 import spacetrader.Functions;
 import spacetrader.Game;
 import spacetrader.Strings;
@@ -116,7 +117,7 @@ public class FormAlert extends SpaceTraderForm {
 
 		// Set the background image.
 		setBackgroundImage(ilImages.getImages()[imageIndex]);
-		setClientSize((new SizeF(getBackgroundImage().getWidth(),
+		setClientSize((new Dimension(getBackgroundImage().getWidth(),
 				getBackgroundImage().getHeight())));
 
 		// Set the title.
@@ -159,7 +160,7 @@ public class FormAlert extends SpaceTraderForm {
 		btn1.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btn1.setLocation(new java.awt.Point(115, 32));
 		btn1.setName("btn1");
-		btn1.setSize(new jwinforms.Size(40, 22));
+		btn1.setSize(new Dimension(40, 22));
 		btn1.setTabIndex(1);
 		btn1.setText("Ok");
 		//
@@ -169,7 +170,7 @@ public class FormAlert extends SpaceTraderForm {
 		btn2.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btn2.setLocation(new java.awt.Point(200, 32));
 		btn2.setName("btn2");
-		btn2.setSize(new jwinforms.Size(40, 22));
+		btn2.setSize(new Dimension(40, 22));
 		btn2.setTabIndex(2);
 		btn2.setText("No");
 		btn2.setVisible(false);
@@ -177,7 +178,7 @@ public class FormAlert extends SpaceTraderForm {
 		// ilImages
 		//
 		ilImages.ColorDepth = jwinforms.ColorDepth.Depth24Bit;
-		ilImages.setImageSize(new jwinforms.Size(160, 160));
+		ilImages.setImageSize(new Dimension(160, 160));
 		ilImages.setImageStream(((jwinforms.ImageListStreamer) (resources
 				.GetObject("ilImages.ImageStream"))));
 		ilImages.setTransparentColor(null);
@@ -194,8 +195,8 @@ public class FormAlert extends SpaceTraderForm {
 		//
 		// FormAlert
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
-		this.setClientSize(new jwinforms.Size(270, 63));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
+		this.setClientSize(new Dimension(270, 63));
 		this.setControlBox(false);
 		Controls.add(btn2);
 		Controls.add(btn1);

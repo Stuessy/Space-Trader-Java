@@ -29,6 +29,8 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
+
 import jwinforms.DialogResult;
 import jwinforms.EventArgs;
 import jwinforms.EventHandler;
@@ -136,7 +138,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		lblQuestion.setAutoSize(true);
 		lblQuestion.setLocation(new java.awt.Point(8, 24));
 		lblQuestion.setName("lblQuestion");
-		lblQuestion.setSize(new jwinforms.Size(161, 16));
+		lblQuestion.setSize(new Dimension(161, 16));
 		lblQuestion.setTabIndex(1);
 		lblQuestion.setText("How many do you want to buy?");
 		//
@@ -144,7 +146,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		//
 		lblStatement.setLocation(new java.awt.Point(8, 8));
 		lblStatement.setName("lblStatement");
-		lblStatement.setSize(new jwinforms.Size(326, 13));
+		lblStatement.setSize(new Dimension(326, 13));
 		lblStatement.setTabIndex(3);
 		lblStatement
 				.setText("The trader wants to sell Machines for the price of 8,888 cr. each.");
@@ -155,7 +157,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		numAmount.setMaximum(999);
 		numAmount.setMinimum(1);
 		numAmount.setName("numAmount");
-		numAmount.setSize(new jwinforms.Size(44, 20));
+		numAmount.setSize(new Dimension(44, 20));
 		numAmount.setTabIndex(1);
 		numAmount.setValue(1);
 		//
@@ -165,7 +167,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		btnOk.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnOk.setLocation(new java.awt.Point(95, 48));
 		btnOk.setName("btnOk");
-		btnOk.setSize(new jwinforms.Size(41, 22));
+		btnOk.setSize(new Dimension(41, 22));
 		btnOk.setTabIndex(2);
 		btnOk.setText("Ok");
 		//
@@ -175,7 +177,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		btnAll.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnAll.setLocation(new java.awt.Point(143, 48));
 		btnAll.setName("btnAll");
-		btnAll.setSize(new jwinforms.Size(41, 22));
+		btnAll.setSize(new Dimension(41, 22));
 		btnAll.setTabIndex(3);
 		btnAll.setText("All");
 		btnAll.setClick(new EventHandler<Object, EventArgs>() {
@@ -191,7 +193,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		btnNone.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnNone.setLocation(new java.awt.Point(191, 48));
 		btnNone.setName("btnNone");
-		btnNone.setSize(new jwinforms.Size(41, 22));
+		btnNone.setSize(new Dimension(41, 22));
 		btnNone.setTabIndex(4);
 		btnNone.setText("None");
 		//
@@ -199,7 +201,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		//
 		lblAvailable.setLocation(new java.awt.Point(8, 21));
 		lblAvailable.setName("lblAvailable");
-		lblAvailable.setSize(new jwinforms.Size(163, 13));
+		lblAvailable.setSize(new Dimension(163, 13));
 		lblAvailable.setTabIndex(5);
 		lblAvailable.setText("The trader has 88 units for sale.");
 		lblAvailable.setVisible(false);
@@ -208,7 +210,7 @@ public class FormCargoBuy extends SpaceTraderForm {
 		//
 		lblAfford.setLocation(new java.awt.Point(8, 34));
 		lblAfford.setName("lblAfford");
-		lblAfford.setSize(new jwinforms.Size(157, 13));
+		lblAfford.setSize(new Dimension(157, 13));
 		lblAfford.setTabIndex(6);
 		lblAfford.setText("You can afford to buy 88 units.");
 		lblAfford.setVisible(false);
@@ -216,9 +218,9 @@ public class FormCargoBuy extends SpaceTraderForm {
 		// FormCargoBuy
 		//
 		this.setAcceptButton(btnOk);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(btnNone);
-		this.setClientSize(new jwinforms.Size(326, 105));
+		this.setClientSize(new Dimension(326, 105));
 		this.setControlBox(false);
 		Controls.add(btnNone);
 		Controls.add(btnAll);

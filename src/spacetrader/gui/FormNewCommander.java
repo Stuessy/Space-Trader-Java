@@ -29,6 +29,7 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.util.Arrays;
 
 import jwinforms.ContentAlignment;
@@ -105,7 +106,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblName.setAutoSize(true);
 		this.lblName.setLocation(new java.awt.Point(8, 8));
 		this.lblName.setName("lblName");
-		this.lblName.setSize(new jwinforms.Size(38, 13));
+		this.lblName.setSize(new Dimension(38, 13));
 		this.lblName.setTabIndex(0);
 		this.lblName.setText("Name:");
 		//
@@ -113,7 +114,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		//
 		this.txtName.setLocation(new java.awt.Point(72, 5));
 		this.txtName.setName("txtName");
-		this.txtName.setSize(new jwinforms.Size(120, 20));
+		this.txtName.setSize(new Dimension(120, 20));
 		this.txtName.setTabIndex(1);
 		this.txtName.setText("");
 		this.txtName.setTextChanged(new EventHandler<Object, EventArgs>() {
@@ -128,7 +129,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new java.awt.Point(-32, -32));
 		this.btnClose.setName("btnClose");
-		this.btnClose.setSize(new jwinforms.Size(30, 31));
+		this.btnClose.setSize(new Dimension(30, 31));
 		this.btnClose.setTabIndex(33);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
@@ -138,7 +139,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblDifficulty.setAutoSize(true);
 		this.lblDifficulty.setLocation(new java.awt.Point(8, 40));
 		this.lblDifficulty.setName("lblDifficulty");
-		this.lblDifficulty.setSize(new jwinforms.Size(50, 13));
+		this.lblDifficulty.setSize(new Dimension(50, 13));
 		this.lblDifficulty.setTabIndex(34);
 		this.lblDifficulty.setText("Difficulty:");
 		//
@@ -147,7 +148,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblSkillPoints.setAutoSize(true);
 		this.lblSkillPoints.setLocation(new java.awt.Point(8, 72));
 		this.lblSkillPoints.setName("lblSkillPoints");
-		this.lblSkillPoints.setSize(new jwinforms.Size(63, 13));
+		this.lblSkillPoints.setSize(new Dimension(63, 13));
 		this.lblSkillPoints.setTabIndex(35);
 		this.lblSkillPoints.setText("Skill Points:");
 		//
@@ -156,7 +157,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblPilot.setAutoSize(true);
 		this.lblPilot.setLocation(new java.awt.Point(16, 96));
 		this.lblPilot.setName("lblPilot");
-		this.lblPilot.setSize(new jwinforms.Size(29, 13));
+		this.lblPilot.setSize(new Dimension(29, 13));
 		this.lblPilot.setTabIndex(36);
 		this.lblPilot.setText("Pilot:");
 		//
@@ -165,7 +166,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblFighter.setAutoSize(true);
 		this.lblFighter.setLocation(new java.awt.Point(16, 120));
 		this.lblFighter.setName("lblFighter");
-		this.lblFighter.setSize(new jwinforms.Size(43, 13));
+		this.lblFighter.setSize(new Dimension(43, 13));
 		this.lblFighter.setTabIndex(37);
 		this.lblFighter.setText("Fighter:");
 		//
@@ -174,7 +175,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblTrader.setAutoSize(true);
 		this.lblTrader.setLocation(new java.awt.Point(16, 144));
 		this.lblTrader.setName("lblTrader");
-		this.lblTrader.setSize(new jwinforms.Size(41, 13));
+		this.lblTrader.setSize(new Dimension(41, 13));
 		this.lblTrader.setTabIndex(38);
 		this.lblTrader.setText("Trader:");
 		//
@@ -183,7 +184,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblEngineer.setAutoSize(true);
 		this.lblEngineer.setLocation(new java.awt.Point(16, 168));
 		this.lblEngineer.setName("lblEngineer");
-		this.lblEngineer.setSize(new jwinforms.Size(53, 13));
+		this.lblEngineer.setSize(new Dimension(53, 13));
 		this.lblEngineer.setTabIndex(39);
 		this.lblEngineer.setText("Engineer:");
 		//
@@ -194,7 +195,7 @@ public class FormNewCommander extends SpaceTraderForm {
 				"Normal", "Hard", "Impossible" });
 		this.selDifficulty.setLocation(new java.awt.Point(72, 37));
 		this.selDifficulty.setName("selDifficulty");
-		this.selDifficulty.setSize(new jwinforms.Size(120, 21));
+		this.selDifficulty.setSize(new Dimension(120, 21));
 		this.selDifficulty.setTabIndex(2);
 		//
 		// numPilot
@@ -203,7 +204,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.numPilot.setMaximum(10);
 		this.numPilot.setMinimum(1);
 		this.numPilot.setName("numPilot");
-		this.numPilot.setSize(new jwinforms.Size(36, 20));
+		this.numPilot.setSize(new Dimension(36, 20));
 		this.numPilot.setTabIndex(3);
 		this.numPilot.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numPilot.setValue(1);
@@ -232,7 +233,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.numFighter.setMaximum(10);
 		this.numFighter.setMinimum(1);
 		this.numFighter.setName("numFighter");
-		this.numFighter.setSize(new jwinforms.Size(36, 20));
+		this.numFighter.setSize(new Dimension(36, 20));
 		this.numFighter.setTabIndex(4);
 		this.numFighter.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numFighter.setValue(1);
@@ -261,7 +262,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.numTrader.setMaximum(10);
 		this.numTrader.setMinimum(1);
 		this.numTrader.setName("numTrader");
-		this.numTrader.setSize(new jwinforms.Size(36, 20));
+		this.numTrader.setSize(new Dimension(36, 20));
 		this.numTrader.setTabIndex(5);
 		this.numTrader.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numTrader.setValue(1);
@@ -290,7 +291,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.numEngineer.setMaximum(10);
 		this.numEngineer.setMinimum(1);
 		this.numEngineer.setName("numEngineer");
-		this.numEngineer.setSize(new jwinforms.Size(36, 20));
+		this.numEngineer.setSize(new Dimension(36, 20));
 		this.numEngineer.setTabIndex(6);
 		this.numEngineer.TextAlign = jwinforms.HorizontalAlignment.Center;
 		this.numEngineer.setValue(1);
@@ -320,7 +321,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.btnOk.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnOk.setLocation(new java.awt.Point(83, 200));
 		this.btnOk.setName("btnOk");
-		this.btnOk.setSize(new jwinforms.Size(36, 22));
+		this.btnOk.setSize(new Dimension(36, 22));
 		this.btnOk.setTabIndex(7);
 		this.btnOk.setText("Ok");
 		this.btnOk.setEnabled(false);
@@ -330,7 +331,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		this.lblPointsRemaining.setAutoSize(true);
 		this.lblPointsRemaining.setLocation(new java.awt.Point(91, 72));
 		this.lblPointsRemaining.setName("lblPointsRemaining");
-		this.lblPointsRemaining.setSize(new jwinforms.Size(90, 13));
+		this.lblPointsRemaining.setSize(new Dimension(90, 13));
 		this.lblPointsRemaining.setTabIndex(40);
 		this.lblPointsRemaining.setText("points remaining.");
 		//
@@ -338,7 +339,7 @@ public class FormNewCommander extends SpaceTraderForm {
 		//
 		this.lblPoints.setLocation(new java.awt.Point(73, 72));
 		this.lblPoints.setName("lblPoints");
-		this.lblPoints.setSize(new jwinforms.Size(17, 13));
+		this.lblPoints.setSize(new Dimension(17, 13));
 		this.lblPoints.setTabIndex(41);
 		this.lblPoints.setText("16");
 		this.lblPoints.TextAlign = ContentAlignment.TopRight;
@@ -346,9 +347,9 @@ public class FormNewCommander extends SpaceTraderForm {
 		// FormNewCommander
 		//
 		this.setAcceptButton(this.btnOk);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnClose);
-		this.setClientSize(new jwinforms.Size(202, 231));
+		this.setClientSize(new Dimension(202, 231));
 		this.Controls.addAll(Arrays.asList(this.lblPoints,
 				this.lblPointsRemaining, this.lblEngineer, this.lblTrader,
 				this.lblFighter, this.lblPilot, this.lblSkillPoints,

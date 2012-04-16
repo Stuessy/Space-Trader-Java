@@ -1,6 +1,7 @@
 package spacetrader.gui;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Point;
 
 import jwinforms.Brush;
@@ -65,13 +66,8 @@ public class GalacticChart extends jwinforms.GroupBox {
 	private final int OFF_X = ChartsGraphicsConsts.OFF_X;
 	private final int OFF_Y = ChartsGraphicsConsts.OFF_Y;
 	private final int OFF_X_WORM = ChartsGraphicsConsts.OFF_X_WORM;
-	private final int IMG_G_N = ChartsGraphicsConsts.IMG_G_N;
-	private final int IMG_G_V = ChartsGraphicsConsts.IMG_G_V;
-	private final int IMG_G_W = ChartsGraphicsConsts.IMG_G_W;
 	private final int IMG_S_N = ChartsGraphicsConsts.IMG_S_N;
-	private final int IMG_S_NS = ChartsGraphicsConsts.IMG_S_NS;
 	private final int IMG_S_V = ChartsGraphicsConsts.IMG_S_V;
-	private final int IMG_S_VS = ChartsGraphicsConsts.IMG_S_VS;
 	private final int IMG_S_W = ChartsGraphicsConsts.IMG_S_W;
 	private final Pen DEFAULT_PEN = new Pen(Color.black);
 	private final Brush DEFAULT_BRUSH = new SolidBrush(Color.white);
@@ -86,7 +82,7 @@ public class GalacticChart extends jwinforms.GroupBox {
 		picGalacticChart.setBackColor(Color.white);
 		picGalacticChart.setLocation(new Point(8, 16));
 		picGalacticChart.setName("picGalacticChart");
-		picGalacticChart.setSize(new jwinforms.Size(160, 116));
+		picGalacticChart.setSize(new Dimension(160, 116));
 		picGalacticChart.setTabIndex(0);
 		picGalacticChart.setTabStop(false);
 		picGalacticChart
@@ -115,7 +111,7 @@ public class GalacticChart extends jwinforms.GroupBox {
 		Controls.add(btnFind);
 		Controls.add(picGalacticChart);
 		setName("boxGalacticChart");
-		setSize(new jwinforms.Size(176, 168));
+		setSize(new Dimension(176, 168));
 		setTabIndex(5);
 		setTabStop(false);
 		setText("Galactic Chart");
@@ -124,7 +120,7 @@ public class GalacticChart extends jwinforms.GroupBox {
 		//
 		lblWormhole.setLocation(new Point(8, 148));
 		lblWormhole.setName("lblWormhole");
-		lblWormhole.setSize(new jwinforms.Size(72, 13));
+		lblWormhole.setSize(new Dimension(72, 13));
 		lblWormhole.setTabIndex(29);
 		lblWormhole.setText("Tarchannen");
 		//
@@ -132,7 +128,7 @@ public class GalacticChart extends jwinforms.GroupBox {
 		//
 		lblWormholeLabel.setLocation(new Point(8, 135));
 		lblWormholeLabel.setName("lblWormholeLabel");
-		lblWormholeLabel.setSize(new jwinforms.Size(72, 13));
+		lblWormholeLabel.setSize(new Dimension(72, 13));
 		lblWormholeLabel.setTabIndex(28);
 		lblWormholeLabel.setText("Wormhole to");
 		//
@@ -141,7 +137,7 @@ public class GalacticChart extends jwinforms.GroupBox {
 		btnJump.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnJump.setLocation(new Point(81, 138));
 		btnJump.setName("btnJump");
-		btnJump.setSize(new jwinforms.Size(42, 22));
+		btnJump.setSize(new Dimension(42, 22));
 		btnJump.setTabIndex(55);
 		btnJump.setText("Jump");
 		btnJump.setClick(new EventHandler<Object, EventArgs>() {
@@ -156,7 +152,7 @@ public class GalacticChart extends jwinforms.GroupBox {
 		btnFind.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnFind.setLocation(new Point(132, 138));
 		btnFind.setName("btnFind");
-		btnFind.setSize(new jwinforms.Size(36, 22));
+		btnFind.setSize(new Dimension(36, 22));
 		btnFind.setTabIndex(56);
 		btnFind.setText("Find");
 		btnFind.setClick(new EventHandler<Object, EventArgs>() {

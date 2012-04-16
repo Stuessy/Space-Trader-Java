@@ -22,6 +22,7 @@
 // using System.Windows.Forms;
 package spacetrader;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -55,12 +56,10 @@ import spacetrader.enums.VeryRareEncounter;
 import spacetrader.enums.WeaponType;
 import spacetrader.guifacade.GuiFacade;
 import spacetrader.guifacade.MainWindow;
-import spacetrader.stub.ArrayList;
 import spacetrader.util.CheatCode;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Util;
 
-@SuppressWarnings({ "unchecked" })
 public class Game extends STSerializableObject implements SpaceTraderGame,
 		SystemTracker, CurrentSystemMgr {
 	// #region Member Declarations
@@ -96,7 +95,7 @@ public class Game extends STSerializableObject implements SpaceTraderGame,
 	// again.
 	private boolean _litterWarning = false; // Warning against littering has
 	// been issued.
-	private ArrayList _newsEvents = new ArrayList(30);
+	private ArrayList<?> _newsEvents = new ArrayList<Comparable<?>>(30);
 
 	// Current Selections
 	private Difficulty _difficulty = spacetrader.enums.Difficulty.Normal; // Difficulty
@@ -176,7 +175,7 @@ public class Game extends STSerializableObject implements SpaceTraderGame,
 	private boolean _canSuperWarp = false; // Do you have the Portable
 	// Singularity on board?
 	private int _chanceOfVeryRareEncounter = 5;
-	private ArrayList<VeryRareEncounter> _veryRareEncounters = new ArrayList(6); // Array
+	private ArrayList<VeryRareEncounter> _veryRareEncounters = new ArrayList<VeryRareEncounter>(6); // Array
 																					// of
 																					// Very
 	// Rare
@@ -284,7 +283,7 @@ public class Game extends STSerializableObject implements SpaceTraderGame,
 				_paidForNewspaper);
 		_litterWarning = GetValueFromHash(hash, "_litterWarning",
 				_litterWarning);
-		_newsEvents = new ArrayList(Arrays.asList((Integer[]) GetValueFromHash(
+		_newsEvents = new ArrayList<Comparable>(Arrays.asList((Integer[]) GetValueFromHash(
 				hash, "_newsEvents", _newsEvents.toArray(new Integer[0]))));
 		_difficulty = Difficulty.FromInt(GetValueFromHash(hash, "_difficulty",
 				_difficulty, Integer.class));
@@ -2460,7 +2459,7 @@ public class Game extends STSerializableObject implements SpaceTraderGame,
 			setRaided(true);
 
 			if (Commander().getShip().HasGadget(GadgetType.HiddenCargoBays)) {
-				ArrayList precious = new ArrayList();
+				ArrayList<String> precious = new ArrayList<String>();
 				if (Commander().getShip().PrincessOnBoard())
 					precious.add(Strings.EncounterHidePrincess);
 				if (Commander().getShip().SculptureOnBoard())
@@ -2474,7 +2473,7 @@ public class Game extends STSerializableObject implements SpaceTraderGame,
 				GuiFacade.alert(AlertType.EncounterPiratesTakeSculpture);
 			}
 
-			ArrayList cargoToSteal = Commander().getShip().StealableCargo();
+			ArrayList<?> cargoToSteal = Commander().getShip().StealableCargo();
 			if (cargoToSteal.size() == 0) {
 				int blackmail = Math.min(25000,
 						Math.max(500, Commander().Worth() / 20));
@@ -4236,14 +4235,14 @@ public class Game extends STSerializableObject implements SpaceTraderGame,
 
 	public String NewspaperText() {
 		StarSystem curSys = Commander().getCurrentSystem();
-		List items = new ArrayList();
+		List<String> items = new ArrayList<String>();
 
 		// We're //using the GetRandom2 function so that the same number is
 		// generated each time for the same
 		// "version" of the newspaper. -JAF
 		Functions.RandSeed(curSys.Id().CastToInt(), Commander().getDays());
 
-		for (Iterator en = NewsEvents().iterator(); en.hasNext();)
+		for (Iterator<Comparable> en = NewsEvents().iterator(); en.hasNext();)
 			items.add(Functions.StringVars(
 					Strings.NewsEvent[((spacetrader.enums.NewsEvent) en.next())
 							.CastToInt()], new String[] { Commander().Name(),

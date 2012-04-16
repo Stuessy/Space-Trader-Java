@@ -39,7 +39,6 @@ import spacetrader.enums.TechLevel;
 import spacetrader.enums.TradeItemType;
 import spacetrader.util.Hashtable;
 
-@SuppressWarnings("unchecked")
 public class StarSystem extends STSerializableObject {
 	// #region Member Declarations
 
@@ -344,7 +343,7 @@ public class StarSystem extends STSerializableObject {
 	public CrewMember[] MercenariesForHire() {
 		Commander cmdr = Game.CurrentGame().Commander();
 		CrewMember[] mercs = Game.CurrentGame().Mercenaries();
-		ArrayList forHire = new ArrayList(3);
+		ArrayList<CrewMember> forHire = new ArrayList<CrewMember>(3);
 
 		for (int i = 1; i < mercs.length; i++) {
 			if (mercs[i].getCurrentSystem() == cmdr.getCurrentSystem()

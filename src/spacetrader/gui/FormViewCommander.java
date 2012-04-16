@@ -29,6 +29,7 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.util.Arrays;
 
 import jwinforms.ContentAlignment;
@@ -146,7 +147,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblNameLabel.setFont(FontCollection.bold825);
 		this.lblNameLabel.setLocation(new java.awt.Point(8, 8));
 		this.lblNameLabel.setName("lblNameLabel");
-		this.lblNameLabel.setSize(new jwinforms.Size(39, 16));
+		this.lblNameLabel.setSize(new Dimension(39, 16));
 		this.lblNameLabel.setTabIndex(2);
 		this.lblNameLabel.setText("Name:");
 		//
@@ -154,7 +155,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblName.setLocation(new java.awt.Point(69, 8));
 		this.lblName.setName("lblName");
-		this.lblName.setSize(new jwinforms.Size(155, 13));
+		this.lblName.setSize(new Dimension(155, 13));
 		this.lblName.setTabIndex(4);
 		this.lblName.setText("XXXXXXXXXXXXXXXXXX");
 		//
@@ -162,7 +163,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblDifficulty.setLocation(new java.awt.Point(69, 24));
 		this.lblDifficulty.setName("lblDifficulty");
-		this.lblDifficulty.setSize(new jwinforms.Size(58, 13));
+		this.lblDifficulty.setSize(new Dimension(58, 13));
 		this.lblDifficulty.setTabIndex(5);
 		this.lblDifficulty.setText("Impossible");
 		//
@@ -171,7 +172,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new java.awt.Point(-32, -32));
 		this.btnClose.setName("btnClose");
-		this.btnClose.setSize(new jwinforms.Size(26, 27));
+		this.btnClose.setSize(new Dimension(26, 27));
 		this.btnClose.setTabIndex(32);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
@@ -182,7 +183,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblTimeLabel.setFont(FontCollection.bold825);
 		this.lblTimeLabel.setLocation(new java.awt.Point(8, 40));
 		this.lblTimeLabel.setName("lblTimeLabel");
-		this.lblTimeLabel.setSize(new jwinforms.Size(34, 16));
+		this.lblTimeLabel.setSize(new Dimension(34, 16));
 		this.lblTimeLabel.setTabIndex(37);
 		this.lblTimeLabel.setText("Time:");
 		//
@@ -192,7 +193,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblCashLabel.setFont(FontCollection.bold825);
 		this.lblCashLabel.setLocation(new java.awt.Point(8, 16));
 		this.lblCashLabel.setName("lblCashLabel");
-		this.lblCashLabel.setSize(new jwinforms.Size(35, 16));
+		this.lblCashLabel.setSize(new Dimension(35, 16));
 		this.lblCashLabel.setTabIndex(38);
 		this.lblCashLabel.setText("Cash:");
 		//
@@ -202,7 +203,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblDebtLabel.setFont(FontCollection.bold825);
 		this.lblDebtLabel.setLocation(new java.awt.Point(8, 32));
 		this.lblDebtLabel.setName("lblDebtLabel");
-		this.lblDebtLabel.setSize(new jwinforms.Size(32, 16));
+		this.lblDebtLabel.setSize(new Dimension(32, 16));
 		this.lblDebtLabel.setTabIndex(39);
 		this.lblDebtLabel.setText("Debt:");
 		//
@@ -212,7 +213,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblNetWorthLabel.setFont(FontCollection.bold825);
 		this.lblNetWorthLabel.setLocation(new java.awt.Point(8, 48));
 		this.lblNetWorthLabel.setName("lblNetWorthLabel");
-		this.lblNetWorthLabel.setSize(new jwinforms.Size(60, 16));
+		this.lblNetWorthLabel.setSize(new Dimension(60, 16));
 		this.lblNetWorthLabel.setTabIndex(40);
 		this.lblNetWorthLabel.setText("Net Worth:");
 		//
@@ -222,7 +223,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblDifficultyLabel.setFont(FontCollection.bold825);
 		this.lblDifficultyLabel.setLocation(new java.awt.Point(8, 24));
 		this.lblDifficultyLabel.setName("lblDifficultyLabel");
-		this.lblDifficultyLabel.setSize(new jwinforms.Size(53, 16));
+		this.lblDifficultyLabel.setSize(new Dimension(53, 16));
 		this.lblDifficultyLabel.setTabIndex(43);
 		this.lblDifficultyLabel.setText("Difficulty:");
 		//
@@ -230,7 +231,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblTime.setLocation(new java.awt.Point(69, 40));
 		this.lblTime.setName("lblTime");
-		this.lblTime.setSize(new jwinforms.Size(66, 13));
+		this.lblTime.setSize(new Dimension(66, 13));
 		this.lblTime.setTabIndex(44);
 		this.lblTime.setText("88,888 days");
 		//
@@ -242,7 +243,7 @@ public class FormViewCommander extends SpaceTraderForm {
 				this.lblFighterLabel, this.lblPilotLabel }));
 		this.boxSkills.setLocation(new java.awt.Point(8, 64));
 		this.boxSkills.setName("boxSkills");
-		this.boxSkills.setSize(new jwinforms.Size(216, 56));
+		this.boxSkills.setSize(new Dimension(216, 56));
 		this.boxSkills.setTabIndex(49);
 		this.boxSkills.setTabStop(false);
 		this.boxSkills.setText("Skills");
@@ -251,7 +252,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblEngineer.setLocation(new java.awt.Point(167, 32));
 		this.lblEngineer.setName("lblEngineer");
-		this.lblEngineer.setSize(new jwinforms.Size(40, 13));
+		this.lblEngineer.setSize(new Dimension(40, 13));
 		this.lblEngineer.setTabIndex(56);
 		this.lblEngineer.setText("88 (88)");
 		//
@@ -259,7 +260,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblTrader.setLocation(new java.awt.Point(58, 32));
 		this.lblTrader.setName("lblTrader");
-		this.lblTrader.setSize(new jwinforms.Size(40, 13));
+		this.lblTrader.setSize(new Dimension(40, 13));
 		this.lblTrader.setTabIndex(55);
 		this.lblTrader.setText("88 (88)");
 		//
@@ -267,7 +268,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblFighter.setLocation(new java.awt.Point(167, 16));
 		this.lblFighter.setName("lblFighter");
-		this.lblFighter.setSize(new jwinforms.Size(40, 13));
+		this.lblFighter.setSize(new Dimension(40, 13));
 		this.lblFighter.setTabIndex(54);
 		this.lblFighter.setText("88 (88)");
 		//
@@ -275,7 +276,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblPilot.setLocation(new java.awt.Point(58, 16));
 		this.lblPilot.setName("lblPilot");
-		this.lblPilot.setSize(new jwinforms.Size(40, 13));
+		this.lblPilot.setSize(new Dimension(40, 13));
 		this.lblPilot.setTabIndex(53);
 		this.lblPilot.setText("88 (88)");
 		//
@@ -285,7 +286,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblEngineerLabel.setFont(FontCollection.bold825);
 		this.lblEngineerLabel.setLocation(new java.awt.Point(104, 32));
 		this.lblEngineerLabel.setName("lblEngineerLabel");
-		this.lblEngineerLabel.setSize(new jwinforms.Size(55, 16));
+		this.lblEngineerLabel.setSize(new Dimension(55, 16));
 		this.lblEngineerLabel.setTabIndex(52);
 		this.lblEngineerLabel.setText("Engineer:");
 		//
@@ -295,7 +296,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblTraderLabel.setFont(FontCollection.bold825);
 		this.lblTraderLabel.setLocation(new java.awt.Point(8, 32));
 		this.lblTraderLabel.setName("lblTraderLabel");
-		this.lblTraderLabel.setSize(new jwinforms.Size(42, 16));
+		this.lblTraderLabel.setSize(new Dimension(42, 16));
 		this.lblTraderLabel.setTabIndex(51);
 		this.lblTraderLabel.setText("Trader:");
 		//
@@ -305,7 +306,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblFighterLabel.setFont(FontCollection.bold825);
 		this.lblFighterLabel.setLocation(new java.awt.Point(104, 16));
 		this.lblFighterLabel.setName("lblFighterLabel");
-		this.lblFighterLabel.setSize(new jwinforms.Size(44, 16));
+		this.lblFighterLabel.setSize(new Dimension(44, 16));
 		this.lblFighterLabel.setTabIndex(50);
 		this.lblFighterLabel.setText("Fighter:");
 		//
@@ -315,7 +316,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblPilotLabel.setFont(FontCollection.bold825);
 		this.lblPilotLabel.setLocation(new java.awt.Point(8, 16));
 		this.lblPilotLabel.setName("lblPilotLabel");
-		this.lblPilotLabel.setSize(new jwinforms.Size(31, 16));
+		this.lblPilotLabel.setSize(new Dimension(31, 16));
 		this.lblPilotLabel.setTabIndex(49);
 		this.lblPilotLabel.setText("Pilot:");
 		//
@@ -326,7 +327,7 @@ public class FormViewCommander extends SpaceTraderForm {
 				this.lblDebtLabel);
 		this.boxFinances.setLocation(new java.awt.Point(8, 128));
 		this.boxFinances.setName("boxFinances");
-		this.boxFinances.setSize(new jwinforms.Size(216, 72));
+		this.boxFinances.setSize(new Dimension(216, 72));
 		this.boxFinances.setTabIndex(50);
 		this.boxFinances.setTabStop(false);
 		this.boxFinances.setText("Finances");
@@ -335,7 +336,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblCash.setLocation(new java.awt.Point(104, 16));
 		this.lblCash.setName("lblCash");
-		this.lblCash.setSize(new jwinforms.Size(70, 13));
+		this.lblCash.setSize(new Dimension(70, 13));
 		this.lblCash.setTabIndex(43);
 		this.lblCash.setText("8,888,888 cr.");
 		this.lblCash.TextAlign = ContentAlignment.TopRight;
@@ -344,7 +345,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblDebt.setLocation(new java.awt.Point(104, 32));
 		this.lblDebt.setName("lblDebt");
-		this.lblDebt.setSize(new jwinforms.Size(70, 13));
+		this.lblDebt.setSize(new Dimension(70, 13));
 		this.lblDebt.setTabIndex(42);
 		this.lblDebt.setText("8,888,888 cr.");
 		this.lblDebt.TextAlign = ContentAlignment.TopRight;
@@ -353,7 +354,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblNetWorth.setLocation(new java.awt.Point(104, 48));
 		this.lblNetWorth.setName("lblNetWorth");
-		this.lblNetWorth.setSize(new jwinforms.Size(70, 13));
+		this.lblNetWorth.setSize(new Dimension(70, 13));
 		this.lblNetWorth.setTabIndex(41);
 		this.lblNetWorth.setText("8,888,888 cr.");
 		this.lblNetWorth.TextAlign = ContentAlignment.TopRight;
@@ -366,7 +367,7 @@ public class FormViewCommander extends SpaceTraderForm {
 				this.lblReputation, this.lblRecord }));
 		this.boxNotoriety.setLocation(new java.awt.Point(8, 208));
 		this.boxNotoriety.setName("boxNotoriety");
-		this.boxNotoriety.setSize(new jwinforms.Size(216, 88));
+		this.boxNotoriety.setSize(new Dimension(216, 88));
 		this.boxNotoriety.setTabIndex(51);
 		this.boxNotoriety.setTabStop(false);
 		this.boxNotoriety.setText("Notoriety");
@@ -377,7 +378,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblPoliceLabel.setFont(FontCollection.bold825);
 		this.lblPoliceLabel.setLocation(new java.awt.Point(8, 48));
 		this.lblPoliceLabel.setName("lblPoliceLabel");
-		this.lblPoliceLabel.setSize(new jwinforms.Size(81, 16));
+		this.lblPoliceLabel.setSize(new Dimension(81, 16));
 		this.lblPoliceLabel.setTabIndex(46);
 		this.lblPoliceLabel.setText("Police Record:");
 		//
@@ -387,7 +388,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblReputationLabel.setFont(FontCollection.bold825);
 		this.lblReputationLabel.setLocation(new java.awt.Point(8, 32));
 		this.lblReputationLabel.setName("lblReputationLabel");
-		this.lblReputationLabel.setSize(new jwinforms.Size(65, 16));
+		this.lblReputationLabel.setSize(new Dimension(65, 16));
 		this.lblReputationLabel.setTabIndex(45);
 		this.lblReputationLabel.setText("Reputation:");
 		//
@@ -397,7 +398,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblKillsLabel.setFont(FontCollection.bold825);
 		this.lblKillsLabel.setLocation(new java.awt.Point(8, 16));
 		this.lblKillsLabel.setName("lblKillsLabel");
-		this.lblKillsLabel.setSize(new jwinforms.Size(30, 16));
+		this.lblKillsLabel.setSize(new Dimension(30, 16));
 		this.lblKillsLabel.setTabIndex(44);
 		this.lblKillsLabel.setText("Kills:");
 		//
@@ -405,7 +406,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblKills.setLocation(new java.awt.Point(104, 16));
 		this.lblKills.setName("lblKills");
-		this.lblKills.setSize(new jwinforms.Size(33, 13));
+		this.lblKills.setSize(new Dimension(33, 13));
 		this.lblKills.setTabIndex(43);
 		this.lblKills.setText("8,888");
 		//
@@ -413,7 +414,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblReputation.setLocation(new java.awt.Point(104, 32));
 		this.lblReputation.setName("lblReputation");
-		this.lblReputation.setSize(new jwinforms.Size(88, 13));
+		this.lblReputation.setSize(new Dimension(88, 13));
 		this.lblReputation.setTabIndex(42);
 		this.lblReputation.setText("Mostly Harmless");
 		//
@@ -421,7 +422,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblRecord.setLocation(new java.awt.Point(104, 48));
 		this.lblRecord.setName("lblRecord");
-		this.lblRecord.setSize(new jwinforms.Size(63, 13));
+		this.lblRecord.setSize(new Dimension(63, 13));
 		this.lblRecord.setTabIndex(41);
 		this.lblRecord.setText("Psychopath");
 		//
@@ -431,7 +432,7 @@ public class FormViewCommander extends SpaceTraderForm {
 		this.lblBountyLabel.setFont(FontCollection.bold825);
 		this.lblBountyLabel.setLocation(new java.awt.Point(8, 64));
 		this.lblBountyLabel.setName("lblBountyLabel");
-		this.lblBountyLabel.setSize(new jwinforms.Size(84, 16));
+		this.lblBountyLabel.setSize(new Dimension(84, 16));
 		this.lblBountyLabel.setTabIndex(48);
 		this.lblBountyLabel.setText("Bounty offered:");
 		this.lblBountyLabel.setVisible(false);
@@ -440,15 +441,15 @@ public class FormViewCommander extends SpaceTraderForm {
 		//
 		this.lblBounty.setLocation(new java.awt.Point(104, 64));
 		this.lblBounty.setName("lblBounty");
-		this.lblBounty.setSize(new jwinforms.Size(72, 13));
+		this.lblBounty.setSize(new Dimension(72, 13));
 		this.lblBounty.setTabIndex(47);
 		this.lblBounty.setText("8,888,888 cr.");
 		this.lblBounty.setVisible(false);
 		// FormViewCommander
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnClose);
-		this.setClientSize(new jwinforms.Size(232, 304));
+		this.setClientSize(new Dimension(232, 304));
 		this.Controls.addAll(Arrays.asList(this.boxNotoriety, this.boxFinances,
 				this.boxSkills, this.lblTime, this.lblDifficultyLabel,
 				this.lblTimeLabel, this.lblNameLabel, this.btnClose,

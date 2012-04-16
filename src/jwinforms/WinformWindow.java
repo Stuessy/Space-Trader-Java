@@ -82,18 +82,18 @@ public class WinformWindow extends WinformPane {
 	}
 
 	// Must encapsulate most of these.
-	private Size AutoScaleBaseSize;
+	private Dimension AutoScaleBaseSize;
 	private FormBorderStyle FormBorderStyle;
 	private boolean ControlBox;
 	private boolean MinimizeBox;
 	private boolean MaximizeBox;
 	private String Title;
 
-	public void setAutoScaleBaseSize(Size autoScaleBaseSize) {
+	public void setAutoScaleBaseSize(Dimension autoScaleBaseSize) {
 		AutoScaleBaseSize = autoScaleBaseSize;
 	}
 
-	public Size getAutoScaleBaseSize() {
+	public Dimension getAutoScaleBaseSize() {
 		return AutoScaleBaseSize;
 	}
 

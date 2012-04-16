@@ -30,9 +30,9 @@
 
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.util.Arrays;
 
-import jwinforms.Container;
 import jwinforms.ContentAlignment;
 import jwinforms.DialogResult;
 import jwinforms.EventArgs;
@@ -67,12 +67,6 @@ public class FormViewBank extends SpaceTraderForm {
 	private jwinforms.Button btnPayBack;
 	private jwinforms.Button btnClose;
 	private jwinforms.Label lblMaxNoClaim;
-	private final Container components = null;
-
-	// #endregion
-
-	// #region Member Declarations
-
 	private final Game game = Game.CurrentGame();
 	private final Commander cmdr = Game.CurrentGame().Commander();
 	private final int MaxLoan = Game.CurrentGame().Commander()
@@ -121,7 +115,7 @@ public class FormViewBank extends SpaceTraderForm {
 		lblLoan.setFont(FontCollection.bold12);
 		lblLoan.setLocation(new java.awt.Point(8, 8));
 		lblLoan.setName("lblLoan");
-		lblLoan.setSize(new jwinforms.Size(44, 19));
+		lblLoan.setSize(new Dimension(44, 19));
 		lblLoan.setTabIndex(1);
 		lblLoan.setText("Loan");
 		//
@@ -131,7 +125,7 @@ public class FormViewBank extends SpaceTraderForm {
 		lblCurrentDebtLabel.setFont(FontCollection.bold825);
 		lblCurrentDebtLabel.setLocation(new java.awt.Point(16, 32));
 		lblCurrentDebtLabel.setName("lblCurrentDebtLabel");
-		lblCurrentDebtLabel.setSize(new jwinforms.Size(75, 13));
+		lblCurrentDebtLabel.setSize(new Dimension(75, 13));
 		lblCurrentDebtLabel.setTabIndex(2);
 		lblCurrentDebtLabel.setText("Current Debt:");
 		//
@@ -141,7 +135,7 @@ public class FormViewBank extends SpaceTraderForm {
 		lblMaxLoanLabel.setFont(FontCollection.bold825);
 		lblMaxLoanLabel.setLocation(new java.awt.Point(16, 52));
 		lblMaxLoanLabel.setName("lblMaxLoanLabel");
-		lblMaxLoanLabel.setSize(new jwinforms.Size(88, 13));
+		lblMaxLoanLabel.setSize(new Dimension(88, 13));
 		lblMaxLoanLabel.setTabIndex(3);
 		lblMaxLoanLabel.setText("Maximum Loan:");
 		//
@@ -149,7 +143,7 @@ public class FormViewBank extends SpaceTraderForm {
 		//
 		lblCurrentDebt.setLocation(new java.awt.Point(136, 32));
 		lblCurrentDebt.setName("lblCurrentDebt");
-		lblCurrentDebt.setSize(new jwinforms.Size(56, 13));
+		lblCurrentDebt.setSize(new Dimension(56, 13));
 		lblCurrentDebt.setTabIndex(4);
 		lblCurrentDebt.setText("88,888 cr.");
 		lblCurrentDebt.TextAlign = ContentAlignment.TopRight;
@@ -158,7 +152,7 @@ public class FormViewBank extends SpaceTraderForm {
 		//
 		lblMaxLoan.setLocation(new java.awt.Point(136, 52));
 		lblMaxLoan.setName("lblMaxLoan");
-		lblMaxLoan.setSize(new jwinforms.Size(56, 13));
+		lblMaxLoan.setSize(new Dimension(56, 13));
 		lblMaxLoan.setTabIndex(5);
 		lblMaxLoan.setText("88,888 cr.");
 		lblMaxLoan.TextAlign = ContentAlignment.TopRight;
@@ -168,7 +162,7 @@ public class FormViewBank extends SpaceTraderForm {
 		btnGetLoan.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnGetLoan.setLocation(new java.awt.Point(16, 72));
 		btnGetLoan.setName("btnGetLoan");
-		btnGetLoan.setSize(new jwinforms.Size(61, 22));
+		btnGetLoan.setSize(new Dimension(61, 22));
 		btnGetLoan.setTabIndex(1);
 		btnGetLoan.setText("Get Loan");
 		btnGetLoan.setClick(new EventHandler<Object, EventArgs>() {
@@ -183,7 +177,7 @@ public class FormViewBank extends SpaceTraderForm {
 		btnBuyInsurance.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnBuyInsurance.setLocation(new java.awt.Point(16, 196));
 		btnBuyInsurance.setName("btnBuyInsurance");
-		btnBuyInsurance.setSize(new jwinforms.Size(90, 22));
+		btnBuyInsurance.setSize(new Dimension(90, 22));
 		btnBuyInsurance.setTabIndex(3);
 		btnBuyInsurance.setText("Stop Insurance");
 		btnBuyInsurance.setClick(new EventHandler<Object, EventArgs>() {
@@ -197,7 +191,7 @@ public class FormViewBank extends SpaceTraderForm {
 		//
 		lblNoClaim.setLocation(new java.awt.Point(154, 156));
 		lblNoClaim.setName("lblNoClaim");
-		lblNoClaim.setSize(new jwinforms.Size(32, 13));
+		lblNoClaim.setSize(new Dimension(32, 13));
 		lblNoClaim.setTabIndex(27);
 		lblNoClaim.setText("88%");
 		lblNoClaim.TextAlign = ContentAlignment.TopRight;
@@ -206,7 +200,7 @@ public class FormViewBank extends SpaceTraderForm {
 		//
 		lblShipValue.setLocation(new java.awt.Point(136, 136));
 		lblShipValue.setName("lblShipValue");
-		lblShipValue.setSize(new jwinforms.Size(56, 13));
+		lblShipValue.setSize(new Dimension(56, 13));
 		lblShipValue.setTabIndex(26);
 		lblShipValue.setText("88,888 cr.");
 		lblShipValue.TextAlign = ContentAlignment.TopRight;
@@ -217,7 +211,7 @@ public class FormViewBank extends SpaceTraderForm {
 		lblNoClaimLabel.setFont(FontCollection.bold825);
 		lblNoClaimLabel.setLocation(new java.awt.Point(16, 156));
 		lblNoClaimLabel.setName("lblNoClaimLabel");
-		lblNoClaimLabel.setSize(new jwinforms.Size(106, 13));
+		lblNoClaimLabel.setSize(new Dimension(106, 13));
 		lblNoClaimLabel.setTabIndex(25);
 		lblNoClaimLabel.setText("No-Claim Discount:");
 		//
@@ -227,7 +221,7 @@ public class FormViewBank extends SpaceTraderForm {
 		lblShipValueLabel.setFont(FontCollection.bold825);
 		lblShipValueLabel.setLocation(new java.awt.Point(16, 136));
 		lblShipValueLabel.setName("lblShipValueLabel");
-		lblShipValueLabel.setSize(new jwinforms.Size(65, 13));
+		lblShipValueLabel.setSize(new Dimension(65, 13));
 		lblShipValueLabel.setTabIndex(24);
 		lblShipValueLabel.setText("Ship Value:");
 		//
@@ -237,7 +231,7 @@ public class FormViewBank extends SpaceTraderForm {
 		lblInsurance.setFont(FontCollection.bold12);
 		lblInsurance.setLocation(new java.awt.Point(8, 112));
 		lblInsurance.setName("lblInsurance");
-		lblInsurance.setSize(new jwinforms.Size(81, 19));
+		lblInsurance.setSize(new Dimension(81, 19));
 		lblInsurance.setTabIndex(23);
 		lblInsurance.setText("Insurance");
 		//
@@ -245,7 +239,7 @@ public class FormViewBank extends SpaceTraderForm {
 		//
 		lblInsAmt.setLocation(new java.awt.Point(136, 176));
 		lblInsAmt.setName("lblInsAmt");
-		lblInsAmt.setSize(new jwinforms.Size(82, 13));
+		lblInsAmt.setSize(new Dimension(82, 13));
 		lblInsAmt.setTabIndex(30);
 		lblInsAmt.setText("8,888 cr. daily");
 		lblInsAmt.TextAlign = ContentAlignment.TopRight;
@@ -256,7 +250,7 @@ public class FormViewBank extends SpaceTraderForm {
 		lblInsAmtLabel.setFont(FontCollection.bold825);
 		lblInsAmtLabel.setLocation(new java.awt.Point(16, 176));
 		lblInsAmtLabel.setName("lblInsAmtLabel");
-		lblInsAmtLabel.setSize(new jwinforms.Size(38, 13));
+		lblInsAmtLabel.setSize(new Dimension(38, 13));
 		lblInsAmtLabel.setTabIndex(29);
 		lblInsAmtLabel.setText("Costs:");
 		//
@@ -265,7 +259,7 @@ public class FormViewBank extends SpaceTraderForm {
 		btnPayBack.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnPayBack.setLocation(new java.awt.Point(88, 72));
 		btnPayBack.setName("btnPayBack");
-		btnPayBack.setSize(new jwinforms.Size(90, 22));
+		btnPayBack.setSize(new Dimension(90, 22));
 		btnPayBack.setTabIndex(2);
 		btnPayBack.setText("Pay Back Loan");
 		btnPayBack.setClick(new EventHandler<Object, EventArgs>() {
@@ -280,7 +274,7 @@ public class FormViewBank extends SpaceTraderForm {
 		btnClose.setDialogResult(DialogResult.Cancel);
 		btnClose.setLocation(new java.awt.Point(-32, -32));
 		btnClose.setName("btnClose");
-		btnClose.setSize(new jwinforms.Size(26, 27));
+		btnClose.setSize(new Dimension(26, 27));
 		btnClose.setTabIndex(32);
 		btnClose.setTabStop(false);
 		btnClose.setText("X");
@@ -290,16 +284,16 @@ public class FormViewBank extends SpaceTraderForm {
 		lblMaxNoClaim.setAutoSize(true);
 		lblMaxNoClaim.setLocation(new java.awt.Point(182, 156));
 		lblMaxNoClaim.setName("lblMaxNoClaim");
-		lblMaxNoClaim.setSize(new jwinforms.Size(33, 13));
+		lblMaxNoClaim.setSize(new Dimension(33, 13));
 		lblMaxNoClaim.setTabIndex(33);
 		lblMaxNoClaim.setText("(max)");
 		lblMaxNoClaim.setVisible(false);
 		//
 		// FormViewBank
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(btnClose);
-		this.setClientSize(new jwinforms.Size(226, 231));
+		this.setClientSize(new Dimension(226, 231));
 		Controls.addAll(Arrays.asList(lblMaxNoClaim, btnClose, btnPayBack,
 				lblInsAmt, lblInsAmtLabel, lblNoClaimLabel, lblShipValueLabel,
 				lblInsurance, lblMaxLoanLabel, lblCurrentDebtLabel, lblLoan,

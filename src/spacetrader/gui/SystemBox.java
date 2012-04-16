@@ -1,6 +1,7 @@
 package spacetrader.gui;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Point;
 
 import jwinforms.DialogResult;
@@ -77,7 +78,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		Controls.add(lblSystemName);
 		Controls.add(lblSystemNameLabel);
 		setName("boxSystem");
-		setSize(new jwinforms.Size(240, 206));
+		setSize(new Dimension(240, 206));
 		setTabIndex(1);
 		setTabStop(false);
 		setText("System Info");
@@ -87,7 +88,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		btnMerc.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnMerc.setLocation(new Point(118, 174));
 		btnMerc.setName("btnMerc");
-		btnMerc.setSize(new jwinforms.Size(112, 22));
+		btnMerc.setSize(new Dimension(112, 22));
 		btnMerc.setTabIndex(3);
 		btnMerc.setText("Mercenary For Hire");
 		btnMerc.setClick(new EventHandler<Object, EventArgs>() {
@@ -103,7 +104,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		btnSpecial.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnSpecial.setLocation(new Point(58, 174));
 		btnSpecial.setName("btnSpecial");
-		btnSpecial.setSize(new jwinforms.Size(52, 22));
+		btnSpecial.setSize(new Dimension(52, 22));
 		btnSpecial.setTabIndex(2);
 		btnSpecial.setText("Special");
 		btnSpecial.setClick(new EventHandler<Object, EventArgs>() {
@@ -118,7 +119,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		btnNews.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnNews.setLocation(new Point(8, 174));
 		btnNews.setName("btnNews");
-		btnNews.setSize(new jwinforms.Size(42, 22));
+		btnNews.setSize(new Dimension(42, 22));
 		btnNews.setTabIndex(1);
 		btnNews.setText("News");
 		btnNews.setClick(new EventHandler<Object, EventArgs>() {
@@ -132,7 +133,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemPressure.setLocation(new Point(8, 147));
 		lblSystemPressure.setName("lblSystemPressure");
-		lblSystemPressure.setSize(new jwinforms.Size(168, 16));
+		lblSystemPressure.setSize(new Dimension(168, 16));
 		lblSystemPressure.setTabIndex(18);
 		lblSystemPressure.setText("suffering from extreme bordom.");
 		//
@@ -141,7 +142,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemPressurePre.setAutoSize(true);
 		lblSystemPressurePre.setLocation(new Point(8, 134));
 		lblSystemPressurePre.setName("lblSystemPressurePre");
-		lblSystemPressurePre.setSize(new jwinforms.Size(122, 16));
+		lblSystemPressurePre.setSize(new Dimension(122, 16));
 		lblSystemPressurePre.setTabIndex(17);
 		lblSystemPressurePre.setText("This system is currently");
 		//
@@ -149,7 +150,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemPolSys.setLocation(new Point(88, 64));
 		lblSystemPolSys.setName("lblSystemPolSys");
-		lblSystemPolSys.setSize(new jwinforms.Size(91, 13));
+		lblSystemPolSys.setSize(new Dimension(91, 13));
 		lblSystemPolSys.setTabIndex(15);
 		lblSystemPolSys.setText("Cybernetic State");
 		//
@@ -157,7 +158,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemSize.setLocation(new Point(88, 32));
 		lblSystemSize.setName("lblSystemSize");
-		lblSystemSize.setSize(new jwinforms.Size(45, 13));
+		lblSystemSize.setSize(new Dimension(45, 13));
 		lblSystemSize.setTabIndex(14);
 		lblSystemSize.setText("Medium");
 		//
@@ -165,7 +166,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemTech.setLocation(new Point(88, 48));
 		lblSystemTech.setName("lblSystemTech");
-		lblSystemTech.setSize(new jwinforms.Size(82, 13));
+		lblSystemTech.setSize(new Dimension(82, 13));
 		lblSystemTech.setTabIndex(13);
 		lblSystemTech.setText("Pre-Agricultural");
 		//
@@ -173,7 +174,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemPirates.setLocation(new Point(88, 112));
 		lblSystemPirates.setName("lblSystemPirates");
-		lblSystemPirates.setSize(new jwinforms.Size(53, 13));
+		lblSystemPirates.setSize(new Dimension(53, 13));
 		lblSystemPirates.setTabIndex(11);
 		lblSystemPirates.setText("Abundant");
 
@@ -182,7 +183,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemPolice.setLocation(new Point(88, 96));
 		lblSystemPolice.setName("lblSystemPolice");
-		lblSystemPolice.setSize(new jwinforms.Size(53, 13));
+		lblSystemPolice.setSize(new Dimension(53, 13));
 		lblSystemPolice.setTabIndex(10);
 		lblSystemPolice.setText("Moderate");
 		//
@@ -190,7 +191,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemResource.setLocation(new Point(88, 80));
 		lblSystemResource.setName("lblSystemResource");
-		lblSystemResource.setSize(new jwinforms.Size(105, 13));
+		lblSystemResource.setSize(new Dimension(105, 13));
 		lblSystemResource.setTabIndex(9);
 		lblSystemResource.setText("Sweetwater Oceans");
 		//
@@ -200,7 +201,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemPiratesLabel.setFont(FontCollection.bold825);
 		lblSystemPiratesLabel.setLocation(new Point(8, 112));
 		lblSystemPiratesLabel.setName("lblSystemPiratesLabel");
-		lblSystemPiratesLabel.setSize(new jwinforms.Size(44, 16));
+		lblSystemPiratesLabel.setSize(new Dimension(44, 16));
 		lblSystemPiratesLabel.setTabIndex(7);
 		lblSystemPiratesLabel.setText("Pirates:");
 		//
@@ -210,7 +211,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemPoliceLabel.setFont(FontCollection.bold825);
 		lblSystemPoliceLabel.setLocation(new Point(8, 96));
 		lblSystemPoliceLabel.setName("lblSystemPoliceLabel");
-		lblSystemPoliceLabel.setSize(new jwinforms.Size(40, 16));
+		lblSystemPoliceLabel.setSize(new Dimension(40, 16));
 		lblSystemPoliceLabel.setTabIndex(6);
 		lblSystemPoliceLabel.setText("Police:");
 		//
@@ -220,7 +221,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemResourseLabel.setFont(FontCollection.bold825);
 		lblSystemResourseLabel.setLocation(new Point(8, 80));
 		lblSystemResourseLabel.setName("lblSystemResourseLabel");
-		lblSystemResourseLabel.setSize(new jwinforms.Size(58, 16));
+		lblSystemResourseLabel.setSize(new Dimension(58, 16));
 		lblSystemResourseLabel.setTabIndex(5);
 		lblSystemResourseLabel.setText("Resource:");
 		//
@@ -230,7 +231,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemGovtLabel.setFont(FontCollection.bold825);
 		lblSystemGovtLabel.setLocation(new Point(8, 64));
 		lblSystemGovtLabel.setName("lblSystemGovtLabel");
-		lblSystemGovtLabel.setSize(new jwinforms.Size(72, 16));
+		lblSystemGovtLabel.setSize(new Dimension(72, 16));
 		lblSystemGovtLabel.setTabIndex(4);
 		lblSystemGovtLabel.setText("Government:");
 		//
@@ -240,7 +241,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemTechLabel.setFont(FontCollection.bold825);
 		lblSystemTechLabel.setLocation(new Point(8, 48));
 		lblSystemTechLabel.setName("lblSystemTechLabel");
-		lblSystemTechLabel.setSize(new jwinforms.Size(65, 16));
+		lblSystemTechLabel.setSize(new Dimension(65, 16));
 		lblSystemTechLabel.setTabIndex(3);
 		lblSystemTechLabel.setText("Tech Level:");
 		//
@@ -250,7 +251,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemSizeLabel.setFont(FontCollection.bold825);
 		lblSystemSizeLabel.setLocation(new Point(8, 32));
 		lblSystemSizeLabel.setName("lblSystemSizeLabel");
-		lblSystemSizeLabel.setSize(new jwinforms.Size(31, 16));
+		lblSystemSizeLabel.setSize(new Dimension(31, 16));
 		lblSystemSizeLabel.setTabIndex(2);
 		lblSystemSizeLabel.setText("Size:");
 		//
@@ -258,7 +259,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		//
 		lblSystemName.setLocation(new Point(88, 16));
 		lblSystemName.setName("lblSystemName");
-		lblSystemName.setSize(new jwinforms.Size(65, 13));
+		lblSystemName.setSize(new Dimension(65, 13));
 		lblSystemName.setTabIndex(1);
 		lblSystemName.setText("Tarchannen");
 		//
@@ -268,7 +269,7 @@ public class SystemBox extends jwinforms.GroupBox {
 		lblSystemNameLabel.setFont(FontCollection.bold825);
 		lblSystemNameLabel.setLocation(new Point(8, 16));
 		lblSystemNameLabel.setName("lblSystemNameLabel");
-		lblSystemNameLabel.setSize(new jwinforms.Size(39, 16));
+		lblSystemNameLabel.setSize(new Dimension(39, 16));
 		lblSystemNameLabel.setTabIndex(0);
 		lblSystemNameLabel.setText("Name:");
 

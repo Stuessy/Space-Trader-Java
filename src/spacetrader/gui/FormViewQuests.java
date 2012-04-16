@@ -29,6 +29,8 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import jwinforms.Container;
@@ -44,10 +46,8 @@ import spacetrader.SpecialEvent;
 import spacetrader.Strings;
 import spacetrader.enums.CrewMemberId;
 import spacetrader.enums.SpecialEventType;
-import spacetrader.stub.ArrayList;
 import spacetrader.util.Util;
 
-@SuppressWarnings("unchecked")
 public class FormViewQuests extends SpaceTraderForm {
 	// #region Control Declarations
 
@@ -80,7 +80,7 @@ public class FormViewQuests extends SpaceTraderForm {
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new java.awt.Point(-32, -32));
 		this.btnClose.setName("btnClose");
-		this.btnClose.setSize(new jwinforms.Size(32, 32));
+		this.btnClose.setSize(new Dimension(32, 32));
 		this.btnClose.setTabIndex(32);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
@@ -90,7 +90,7 @@ public class FormViewQuests extends SpaceTraderForm {
 		this.lblQuests.LinkArea = new jwinforms.LinkArea(0, 0);
 		this.lblQuests.setLocation(new java.awt.Point(8, 8));
 		this.lblQuests.setName("lblQuests");
-		this.lblQuests.setSize(new jwinforms.Size(368, 312));
+		this.lblQuests.setSize(new Dimension(368, 312));
 		this.lblQuests.setTabIndex(44);
 		this.lblQuests
 				.setText("Kill the space monster at Acamar."
@@ -124,9 +124,9 @@ public class FormViewQuests extends SpaceTraderForm {
 		//
 		// FormViewQuests
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnClose);
-		this.setClientSize(new jwinforms.Size(378, 325));
+		this.setClientSize(new Dimension(378, 325));
 		this.Controls.addAll(Arrays.asList(this.btnClose, this.lblQuests));
 		this.setFormBorderStyle(FormBorderStyle.FixedDialog);
 		this.setMaximizeBox(false);
@@ -141,7 +141,7 @@ public class FormViewQuests extends SpaceTraderForm {
 
 	private String[] GetQuestStrings() {
 		Game game = Game.CurrentGame();
-		ArrayList quests = new ArrayList(12);
+		ArrayList<String> quests = new ArrayList<String>(12);
 
 		if (game.getQuestStatusGemulon() > SpecialEvent.StatusGemulonNotStarted
 				&& game.getQuestStatusGemulon() < SpecialEvent.StatusGemulonDate) {

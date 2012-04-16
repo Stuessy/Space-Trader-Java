@@ -6,19 +6,12 @@ import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class FileDialog // extends WinformForm
-{
+public class FileDialog {
+	
 	protected final JFileChooser chooser = new JFileChooser();
-
 	private String buttonText;
-	private String Filter;
-	private String DefaultExt;
-
-	private String title;
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
+	
+	public void setTitle(String title) { }
 
 	protected void setButtonText(String text) {
 		buttonText = text;
@@ -59,7 +52,6 @@ public class FileDialog // extends WinformForm
 	}
 
 	public void setDefaultExt(String defaultExt) {
-		DefaultExt = defaultExt;
 	}
 
 	public void setFileName(String fileName) {

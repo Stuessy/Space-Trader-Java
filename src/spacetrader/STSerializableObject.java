@@ -19,10 +19,10 @@
  ******************************************************************************/
 package spacetrader;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import spacetrader.enums.SpaceTraderEnum;
-import spacetrader.stub.ArrayList;
 import spacetrader.util.DWIM;
 import spacetrader.util.Hashtable;
 
@@ -121,35 +121,34 @@ public abstract class STSerializableObject {
 		CrewMember, Gadget, HighScoreRecord, Shield, StarSystem, Weapon
 	}
 
-	@SuppressWarnings("cast")
-	public static Integer[] ArrayListToIntArray(
-			ArrayList<? extends SpaceTraderEnum> list) {
-		Integer[] array = new Integer[list.size()];
-		if (list.size() == 0)
+	public static Integer[] ArrayListToIntArray(ArrayList<?> _newsEvents) {
+		Integer[] array = new Integer[_newsEvents.size()];
+		
+		if (_newsEvents.size() == 0) {
 			return array;
-
-		{
-			// Sometimes weird stuff happens when you mess with casts &
-			// generics.
-			if ((Object) list.get(0) instanceof Integer)
-				return list.toArray(array);
 		}
 
-		for (int index = 0; index < array.length; index++)
-			array[index] = list.get(index).CastToInt();
+		// Sometimes weird stuff happens when you mess with casts & generics.
+		if ((Object) _newsEvents.get(0) instanceof Integer) {
+			return _newsEvents.toArray(array);
+		}
+
+		for (int index = 0; index < array.length; index++) {
+			array[index] = ((SpaceTraderEnum) _newsEvents.get(index)).CastToInt();
+		}
 
 		return array;
 	}
 
-	public static ArrayList<Hashtable> ArrayToArrayList(
-			STSerializableObject[] array) {
+	public static ArrayList<Hashtable> ArrayToArrayList(STSerializableObject[] array) {
 		ArrayList<Hashtable> list = null;
 
 		if (array != null) {
 			list = new ArrayList<Hashtable>();
 
-			for (STSerializableObject obj : array)
+			for (STSerializableObject obj : array) {
 				list.add(obj == null ? null : obj.Serialize());
+			}
 		}
 
 		return list;

@@ -29,7 +29,8 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
-import jwinforms.Container;
+import java.awt.Dimension;
+
 import jwinforms.DialogResult;
 import jwinforms.EventArgs;
 import jwinforms.EventHandler;
@@ -56,12 +57,6 @@ public class FormCargoSell extends SpaceTraderForm {
 	private jwinforms.NumericUpDown numAmount;
 	private jwinforms.Label lblPaid;
 	private jwinforms.Label lblProfit;
-	private final Container components = null;
-
-	// #endregion
-
-	// #region Member Declarations
-
 	private final Game game = Game.CurrentGame();
 
 	// #endregion
@@ -143,7 +138,7 @@ public class FormCargoSell extends SpaceTraderForm {
 		//
 		lblQuestion.setLocation(new java.awt.Point(8, 50));
 		lblQuestion.setName("lblQuestion");
-		lblQuestion.setSize(new jwinforms.Size(160, 13));
+		lblQuestion.setSize(new Dimension(160, 13));
 		lblQuestion.setTabIndex(1);
 		lblQuestion.setText("How many do you want to sell?");
 		//
@@ -151,7 +146,7 @@ public class FormCargoSell extends SpaceTraderForm {
 		//
 		lblStatement.setLocation(new java.awt.Point(8, 8));
 		lblStatement.setName("lblStatement");
-		lblStatement.setSize(new jwinforms.Size(302, 13));
+		lblStatement.setSize(new Dimension(302, 13));
 		lblStatement.setTabIndex(3);
 		lblStatement
 				.setText("The trader wants to by Machines, and offers 8,888 cr. each.");
@@ -161,7 +156,7 @@ public class FormCargoSell extends SpaceTraderForm {
 		numAmount.setLocation(new java.awt.Point(168, 48));
 		numAmount.setMinimum(1);
 		numAmount.setName("numAmount");
-		numAmount.setSize(new jwinforms.Size(38, 20));
+		numAmount.setSize(new Dimension(38, 20));
 		numAmount.setTabIndex(1);
 		numAmount.setValue(88);
 		//
@@ -171,7 +166,7 @@ public class FormCargoSell extends SpaceTraderForm {
 		btnOk.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnOk.setLocation(new java.awt.Point(83, 74));
 		btnOk.setName("btnOk");
-		btnOk.setSize(new jwinforms.Size(41, 22));
+		btnOk.setSize(new Dimension(41, 22));
 		btnOk.setTabIndex(2);
 		btnOk.setText("Ok");
 		//
@@ -181,7 +176,7 @@ public class FormCargoSell extends SpaceTraderForm {
 		btnAll.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnAll.setLocation(new java.awt.Point(131, 74));
 		btnAll.setName("btnAll");
-		btnAll.setSize(new jwinforms.Size(41, 22));
+		btnAll.setSize(new Dimension(41, 22));
 		btnAll.setTabIndex(3);
 		btnAll.setText("All");
 		btnAll.setClick(new EventHandler<Object, EventArgs>() {
@@ -197,7 +192,7 @@ public class FormCargoSell extends SpaceTraderForm {
 		btnNone.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnNone.setLocation(new java.awt.Point(179, 74));
 		btnNone.setName("btnNone");
-		btnNone.setSize(new jwinforms.Size(41, 22));
+		btnNone.setSize(new Dimension(41, 22));
 		btnNone.setTabIndex(4);
 		btnNone.setText("None");
 		//
@@ -205,7 +200,7 @@ public class FormCargoSell extends SpaceTraderForm {
 		//
 		lblPaid.setLocation(new java.awt.Point(8, 21));
 		lblPaid.setName("lblPaid");
-		lblPaid.setSize(new jwinforms.Size(280, 13));
+		lblPaid.setSize(new Dimension(280, 13));
 		lblPaid.setTabIndex(5);
 		lblPaid.setText("You paid about 8,888 cr. per unit, and can sell 88 units.");
 		//
@@ -213,16 +208,16 @@ public class FormCargoSell extends SpaceTraderForm {
 		//
 		lblProfit.setLocation(new java.awt.Point(8, 34));
 		lblProfit.setName("lblProfit");
-		lblProfit.setSize(new jwinforms.Size(200, 13));
+		lblProfit.setSize(new Dimension(200, 13));
 		lblProfit.setTabIndex(6);
 		lblProfit.setText("It costs 8,888 cr. per unit for disposal.");
 		//
 		// FormCargoSell
 		//
 		this.setAcceptButton(btnOk);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(btnNone);
-		this.setClientSize(new jwinforms.Size(302, 105));
+		this.setClientSize(new Dimension(302, 105));
 		this.setControlBox(false);
 		Controls.add(lblProfit);
 		Controls.add(lblPaid);

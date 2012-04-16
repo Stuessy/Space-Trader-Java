@@ -25,6 +25,7 @@
 
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.awt.Point;
 
 import javax.swing.UnsupportedLookAndFeelException;
@@ -34,7 +35,6 @@ import jwinforms.DialogResult;
 import jwinforms.FormStartPosition;
 import jwinforms.ISupportInitialize;
 import jwinforms.Image;
-import jwinforms.Size;
 
 public class FormAbout extends jwinforms.WinformForm {
 	// #region Control Declarations
@@ -72,7 +72,7 @@ public class FormAbout extends jwinforms.WinformForm {
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new Point(-32, -32));
 		this.btnClose.setName("btnClose");
-		this.btnClose.setSize(new Size(32, 32));
+		this.btnClose.setSize(new Dimension(32, 32));
 		this.btnClose.setTabIndex(32);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
@@ -83,7 +83,7 @@ public class FormAbout extends jwinforms.WinformForm {
 		this.lblTitle.setFont(FontCollection.bold825);
 		this.lblTitle.setLocation(new Point(172, 8));
 		this.lblTitle.setName("lblTitle");
-		this.lblTitle.setSize(new Size(187, 13));
+		this.lblTitle.setSize(new Dimension(187, 13));
 		this.lblTitle.setTabIndex(33);
 		this.lblTitle.setText("Java Space Trader");
 		//
@@ -91,7 +91,7 @@ public class FormAbout extends jwinforms.WinformForm {
 		//
 		this.lblAbout.setLocation(new Point(172, 32));
 		this.lblAbout.setName("lblAbout");
-		this.lblAbout.setSize(new Size(272, 190));
+		this.lblAbout.setSize(new Dimension(272, 190));
 		this.lblAbout.setTabIndex(34);
 		this.lblAbout.setText(resources.GetString("lblAbout.Text"));
 		//
@@ -100,15 +100,15 @@ public class FormAbout extends jwinforms.WinformForm {
 		this.picLogo.setImage(((Image) (resources.GetObject("picLogo.Image"))));
 		this.picLogo.setLocation(new Point(8, 8));
 		this.picLogo.setName("picLogo");
-		this.picLogo.setSize(new Size(160, 160));
+		this.picLogo.setSize(new Dimension(160, 160));
 		this.picLogo.setTabIndex(35);
 		this.picLogo.setTabStop(false);
 		//
 		// FormAbout
 		//
-		this.setAutoScaleBaseSize(new Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnClose);
-		this.setClientSize(new Size(446, 250));
+		this.setClientSize(new Dimension(446, 250));
 		this.Controls.add(this.picLogo);
 		this.Controls.add(this.lblAbout);
 		this.Controls.add(this.lblTitle);

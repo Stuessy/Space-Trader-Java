@@ -29,6 +29,7 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.util.Arrays;
 
 import jwinforms.DialogResult;
@@ -87,7 +88,7 @@ public class FormBuyFuel extends SpaceTraderForm {
 		this.lblQuestion.setAutoSize(true);
 		this.lblQuestion.setLocation(new java.awt.Point(8, 8));
 		this.lblQuestion.setName("lblQuestion");
-		this.lblQuestion.setSize(new jwinforms.Size(211, 13));
+		this.lblQuestion.setSize(new Dimension(211, 13));
 		this.lblQuestion.setTabIndex(3);
 		this.lblQuestion.setText("How much do you want to spend on fuel?");
 		//
@@ -97,7 +98,7 @@ public class FormBuyFuel extends SpaceTraderForm {
 		this.numAmount.setMaximum(999);
 		this.numAmount.setMinimum(1);
 		this.numAmount.setName("numAmount");
-		this.numAmount.setSize(new jwinforms.Size(44, 20));
+		this.numAmount.setSize(new Dimension(44, 20));
 		this.numAmount.setTabIndex(1);
 		this.numAmount.setValue(888);
 		//
@@ -107,7 +108,7 @@ public class FormBuyFuel extends SpaceTraderForm {
 		this.btnOk.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnOk.setLocation(new java.awt.Point(61, 32));
 		this.btnOk.setName("btnOk");
-		this.btnOk.setSize(new jwinforms.Size(41, 22));
+		this.btnOk.setSize(new Dimension(41, 22));
 		this.btnOk.setTabIndex(2);
 		this.btnOk.setText("Ok");
 		//
@@ -117,7 +118,7 @@ public class FormBuyFuel extends SpaceTraderForm {
 		this.btnMax.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnMax.setLocation(new java.awt.Point(109, 32));
 		this.btnMax.setName("btnMax");
-		this.btnMax.setSize(new jwinforms.Size(41, 22));
+		this.btnMax.setSize(new Dimension(41, 22));
 		this.btnMax.setTabIndex(3);
 		this.btnMax.setText("Max");
 		this.btnMax.setClick(new EventHandler<Object, EventArgs>() {
@@ -133,16 +134,16 @@ public class FormBuyFuel extends SpaceTraderForm {
 		this.btnNothing.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnNothing.setLocation(new java.awt.Point(157, 32));
 		this.btnNothing.setName("btnNothing");
-		this.btnNothing.setSize(new jwinforms.Size(53, 22));
+		this.btnNothing.setSize(new Dimension(53, 22));
 		this.btnNothing.setTabIndex(4);
 		this.btnNothing.setText("Nothing");
 		//
 		// FormBuyFuel
 		//
 		this.setAcceptButton(this.btnOk);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnNothing);
-		this.setClientSize(new jwinforms.Size(270, 63));
+		this.setClientSize(new Dimension(270, 63));
 		this.setControlBox(false);
 		this.Controls.addAll(Arrays.asList(this.btnNothing, this.btnMax,
 				this.btnOk, this.numAmount, this.lblQuestion));

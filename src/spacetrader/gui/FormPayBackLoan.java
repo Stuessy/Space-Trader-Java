@@ -25,6 +25,8 @@
 
 package spacetrader.gui;
 
+import java.awt.Dimension;
+
 import jwinforms.DialogResult;
 import jwinforms.EventArgs;
 import jwinforms.EventHandler;
@@ -75,7 +77,7 @@ public class FormPayBackLoan extends SpaceTraderForm {
 		lblQuestion.setAutoSize(true);
 		lblQuestion.setLocation(new java.awt.Point(8, 24));
 		lblQuestion.setName("lblQuestion");
-		lblQuestion.setSize(new jwinforms.Size(188, 13));
+		lblQuestion.setSize(new Dimension(188, 13));
 		lblQuestion.setTabIndex(3);
 		lblQuestion.setText("How much do you want to pay back?");
 		//
@@ -85,7 +87,7 @@ public class FormPayBackLoan extends SpaceTraderForm {
 		numAmount.setMaximum(999999);
 		numAmount.setMinimum(1);
 		numAmount.setName("numAmount");
-		numAmount.setSize(new jwinforms.Size(58, 20));
+		numAmount.setSize(new Dimension(58, 20));
 		numAmount.setTabIndex(1);
 		numAmount.ThousandsSeparator = true;
 		numAmount.setValue(88888);
@@ -96,7 +98,7 @@ public class FormPayBackLoan extends SpaceTraderForm {
 		btnOk.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnOk.setLocation(new java.awt.Point(58, 48));
 		btnOk.setName("btnOk");
-		btnOk.setSize(new jwinforms.Size(41, 22));
+		btnOk.setSize(new Dimension(41, 22));
 		btnOk.setTabIndex(2);
 		btnOk.setText("Ok");
 		//
@@ -106,7 +108,7 @@ public class FormPayBackLoan extends SpaceTraderForm {
 		btnMax.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnMax.setLocation(new java.awt.Point(106, 48));
 		btnMax.setName("btnMax");
-		btnMax.setSize(new jwinforms.Size(41, 22));
+		btnMax.setSize(new Dimension(41, 22));
 		btnMax.setTabIndex(3);
 		btnMax.setText("Max");
 		btnMax.setClick(new EventHandler<Object, EventArgs>() {
@@ -122,7 +124,7 @@ public class FormPayBackLoan extends SpaceTraderForm {
 		btnNothing.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnNothing.setLocation(new java.awt.Point(154, 48));
 		btnNothing.setName("btnNothing");
-		btnNothing.setSize(new jwinforms.Size(53, 22));
+		btnNothing.setSize(new Dimension(53, 22));
 		btnNothing.setTabIndex(4);
 		btnNothing.setText("Nothing");
 		//
@@ -130,16 +132,16 @@ public class FormPayBackLoan extends SpaceTraderForm {
 		//
 		lblStatement.setLocation(new java.awt.Point(8, 8));
 		lblStatement.setName("lblStatement");
-		lblStatement.setSize(new jwinforms.Size(176, 13));
+		lblStatement.setSize(new Dimension(176, 13));
 		lblStatement.setTabIndex(5);
 		lblStatement.setText("You have a debt of 88,888 credits.");
 		//
 		// FormPayBackLoan
 		//
 		this.setAcceptButton(btnOk);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(btnNothing);
-		this.setClientSize(new jwinforms.Size(264, 79));
+		this.setClientSize(new Dimension(264, 79));
 		this.setControlBox(false);
 		Controls.addAll(lblStatement, btnNothing, btnMax, btnOk, numAmount,
 				lblQuestion);

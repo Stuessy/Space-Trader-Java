@@ -40,9 +40,9 @@ public class DWIM {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	public static <T extends SpaceTraderEnum> T[] dwim(Object[] ob, Class<T> cls) {
 		try {
+			@SuppressWarnings("unchecked")
 			T[] arrayVal = (T[]) Array.newInstance(cls, ob.length);
 			for (int i = 0; i < ob.length; i++)
 				arrayVal[i] = dwim(ob[i], cls);

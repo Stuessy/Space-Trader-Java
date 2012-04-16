@@ -1,5 +1,6 @@
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.awt.Point;
 
 import jwinforms.DialogResult;
@@ -52,7 +53,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		Controls.add(lblEquipForSale);
 		Controls.add(lblShipsForSale);
 		setName("boxShipYard");
-		setSize(new jwinforms.Size(168, 168));
+		setSize(new Dimension(168, 168));
 		setTabIndex(4);
 		setTabStop(false);
 		setText("Shipyard");
@@ -62,7 +63,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		btnDesign.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnDesign.setLocation(new Point(8, 32));
 		btnDesign.setName("btnDesign");
-		btnDesign.setSize(new jwinforms.Size(54, 22));
+		btnDesign.setSize(new Dimension(54, 22));
 		btnDesign.setTabIndex(55);
 		btnDesign.setText("Design");
 		btnDesign.setClick(new EventHandler<Object, EventArgs>() {
@@ -77,7 +78,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		btnPod.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnPod.setLocation(new Point(98, 138));
 		btnPod.setName("btnPod");
-		btnPod.setSize(new jwinforms.Size(58, 22));
+		btnPod.setSize(new Dimension(58, 22));
 		btnPod.setTabIndex(54);
 		btnPod.setText("Buy Pod");
 		btnPod.setClick(new EventHandler<Object, EventArgs>() {
@@ -91,7 +92,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		//
 		lblEscapePod.setLocation(new Point(8, 122));
 		lblEscapePod.setName("lblEscapePod");
-		lblEscapePod.setSize(new jwinforms.Size(152, 26));
+		lblEscapePod.setSize(new Dimension(152, 26));
 		lblEscapePod.setTabIndex(27);
 		lblEscapePod.setText("You can buy an escape pod for  2,000 cr.");
 		//
@@ -100,7 +101,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		btnEquip.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnEquip.setLocation(new Point(43, 85));
 		btnEquip.setName("btnEquip");
-		btnEquip.setSize(new jwinforms.Size(113, 22));
+		btnEquip.setSize(new Dimension(113, 22));
 		btnEquip.setTabIndex(53);
 		btnEquip.setText("Buy/Sell Equipment");
 		btnEquip.setClick(new EventHandler<Object, EventArgs>() {
@@ -115,7 +116,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		btnBuyShip.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnBuyShip.setLocation(new Point(70, 32));
 		btnBuyShip.setName("btnBuyShip");
-		btnBuyShip.setSize(new jwinforms.Size(86, 22));
+		btnBuyShip.setSize(new Dimension(86, 22));
 		btnBuyShip.setTabIndex(52);
 		btnBuyShip.setText("View Ship Info");
 		btnBuyShip.setClick(new EventHandler<Object, EventArgs>() {
@@ -129,7 +130,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		//
 		lblEquipForSale.setLocation(new Point(8, 69));
 		lblEquipForSale.setName("lblEquipForSale");
-		lblEquipForSale.setSize(new jwinforms.Size(152, 13));
+		lblEquipForSale.setSize(new Dimension(152, 13));
 		lblEquipForSale.setTabIndex(21);
 		lblEquipForSale.setText("There is equipment for sale.");
 		//
@@ -137,7 +138,7 @@ public class ShipyardBox extends jwinforms.GroupBox {
 		//
 		lblShipsForSale.setLocation(new Point(8, 16));
 		lblShipsForSale.setName("lblShipsForSale");
-		lblShipsForSale.setSize(new jwinforms.Size(152, 13));
+		lblShipsForSale.setSize(new Dimension(152, 13));
 		lblShipsForSale.setTabIndex(20);
 		lblShipsForSale.setText("There are new ships for sale.");
 	}

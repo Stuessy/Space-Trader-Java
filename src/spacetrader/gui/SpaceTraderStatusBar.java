@@ -1,5 +1,6 @@
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.util.Arrays;
 
 import jwinforms.StatusBar;
@@ -31,7 +32,7 @@ class SpaceTraderStatusBar extends StatusBar {
 				statusBarPanelCash, statusBarPanelBays, statusBarPanelCosts,
 				statusBarPanelExtra }));
 		ShowPanels = true;
-		this.setSize(new jwinforms.Size(768, 24));
+		this.setSize(new Dimension(768, 24));
 		SizingGrip = false;
 		this.setTabIndex(2);
 		PanelClick = new jwinforms.EventHandler<Object, StatusBarPanelClickEventArgs>() {

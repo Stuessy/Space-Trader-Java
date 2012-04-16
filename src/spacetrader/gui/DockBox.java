@@ -1,5 +1,6 @@
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.awt.Point;
 
 import jwinforms.DialogResult;
@@ -45,7 +46,7 @@ public class DockBox extends jwinforms.GroupBox {
 		Controls.add(lblHullStatus);
 		Controls.add(lblRepairCost);
 		setName("boxDock");
-		setSize(new jwinforms.Size(240, 90));
+		setSize(new Dimension(240, 90));
 		setTabIndex(2);
 		setTabStop(false);
 		setText("Dock");
@@ -55,7 +56,7 @@ public class DockBox extends jwinforms.GroupBox {
 		btnRepair.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnRepair.setLocation(new Point(180, 56));
 		btnRepair.setName("btnRepair");
-		btnRepair.setSize(new jwinforms.Size(48, 22));
+		btnRepair.setSize(new Dimension(48, 22));
 		btnRepair.setTabIndex(5);
 		btnRepair.setText("Repair");
 		btnRepair.setClick(new EventHandler<Object, EventArgs>() {
@@ -70,7 +71,7 @@ public class DockBox extends jwinforms.GroupBox {
 		btnFuel.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnFuel.setLocation(new Point(192, 18));
 		btnFuel.setName("btnFuel");
-		btnFuel.setSize(new jwinforms.Size(36, 22));
+		btnFuel.setSize(new Dimension(36, 22));
 		btnFuel.setTabIndex(4);
 		btnFuel.setText("Fuel");
 		btnFuel.setClick(new EventHandler<Object, EventArgs>() {
@@ -84,7 +85,7 @@ public class DockBox extends jwinforms.GroupBox {
 		//
 		lblFuelStatus.setLocation(new Point(8, 16));
 		lblFuelStatus.setName("lblFuelStatus");
-		lblFuelStatus.setSize(new jwinforms.Size(162, 13));
+		lblFuelStatus.setSize(new Dimension(162, 13));
 		lblFuelStatus.setTabIndex(20);
 		lblFuelStatus.setText("You have fuel to fly 88 parsecs.");
 		//
@@ -92,7 +93,7 @@ public class DockBox extends jwinforms.GroupBox {
 		//
 		lblFuelCost.setLocation(new Point(8, 31));
 		lblFuelCost.setName("lblFuelCost");
-		lblFuelCost.setSize(new jwinforms.Size(121, 13));
+		lblFuelCost.setSize(new Dimension(121, 13));
 		lblFuelCost.setTabIndex(19);
 		lblFuelCost.setText("A full tank costs 888 cr.");
 		//
@@ -100,7 +101,7 @@ public class DockBox extends jwinforms.GroupBox {
 		//
 		lblHullStatus.setLocation(new Point(8, 52));
 		lblHullStatus.setName("lblHullStatus");
-		lblHullStatus.setSize(new jwinforms.Size(152, 13));
+		lblHullStatus.setSize(new Dimension(152, 13));
 		lblHullStatus.setTabIndex(18);
 		lblHullStatus.setText("Your hull strength is at 888%.");
 		//
@@ -108,7 +109,7 @@ public class DockBox extends jwinforms.GroupBox {
 		//
 		lblRepairCost.setLocation(new Point(8, 67));
 		lblRepairCost.setName("lblRepairCost");
-		lblRepairCost.setSize(new jwinforms.Size(150, 13));
+		lblRepairCost.setSize(new Dimension(150, 13));
 		lblRepairCost.setTabIndex(19);
 		lblRepairCost.setText("Full repairs will cost 8,888 cr.");
 

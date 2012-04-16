@@ -1,6 +1,7 @@
 package jwinforms;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Point;
 
@@ -63,14 +64,14 @@ public class Graphics {
 						+ rect.Hight, null);
 	}
 
-	public SizeF MeasureString(String text, java.awt.Font font) {
+	public Dimension MeasureString(String text, java.awt.Font font) {
 		if (impl == null)
-			return new SizeF(30, text.length() * 5);
+			return new Dimension(text.length() * 5, 30);
 
 		FontMetrics metrics = impl.getFontMetrics(font);
 		int w = metrics.stringWidth(text);
 		int h = metrics.getHeight();
-		return new SizeF(h, w);
+		return new Dimension(w, h);
 	}
 
 }

@@ -20,7 +20,10 @@
 package spacetrader.gui;
 
 import java.awt.Color;
+import java.awt.Dimension;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 import jwinforms.Bitmap;
 import jwinforms.Container;
@@ -50,12 +53,10 @@ import spacetrader.enums.ShipType;
 import spacetrader.enums.Size;
 import spacetrader.guifacade.GuiEngine;
 import spacetrader.guifacade.GuiFacade;
-import spacetrader.stub.ArrayList;
 import spacetrader.stub.Directory;
 import spacetrader.util.Hashtable;
 import util.Path;
 
-@SuppressWarnings({ "synthetic-access", "unchecked" })
 public class FormShipyard extends SpaceTraderForm {
 	// #region Control Declarations
 
@@ -266,7 +267,7 @@ public class FormShipyard extends SpaceTraderForm {
 				lblSizeSpecialtyLabel, lblWarning, picLogo, lblWelcome }));
 		boxWelcome.setLocation(new java.awt.Point(8, 0));
 		boxWelcome.setName("boxWelcome");
-		boxWelcome.setSize(new jwinforms.Size(270, 204));
+		boxWelcome.setSize(new Dimension(270, 204));
 		boxWelcome.setTabIndex(1);
 		boxWelcome.setTabStop(false);
 		//
@@ -274,7 +275,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblSkillDescription.setLocation(new java.awt.Point(8, 98));
 		lblSkillDescription.setName("lblSkillDescription");
-		lblSkillDescription.setSize(new jwinforms.Size(258, 26));
+		lblSkillDescription.setSize(new Dimension(258, 26));
 		lblSkillDescription.setTabIndex(27);
 		lblSkillDescription
 				.setText("All ships finalructed at this shipyard use 2 fewer units per crew quarter.");
@@ -283,7 +284,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblSkill.setLocation(new java.awt.Point(180, 79));
 		lblSkill.setName("lblSkill");
-		lblSkill.setSize(new jwinforms.Size(87, 13));
+		lblSkill.setSize(new Dimension(87, 13));
 		lblSkill.setTabIndex(26);
 		lblSkill.setText("Crew Quartering");
 		//
@@ -291,7 +292,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblSizeSpecialty.setLocation(new java.awt.Point(180, 65));
 		lblSizeSpecialty.setName("lblSizeSpecialty");
-		lblSizeSpecialty.setSize(new jwinforms.Size(64, 13));
+		lblSizeSpecialty.setSize(new Dimension(64, 13));
 		lblSizeSpecialty.setTabIndex(25);
 		lblSizeSpecialty.setText("Gargantuan");
 		//
@@ -301,7 +302,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblSkillLabel.setFont(FontCollection.bold825);
 		lblSkillLabel.setLocation(new java.awt.Point(92, 79));
 		lblSkillLabel.setName("lblSkillLabel");
-		lblSkillLabel.setSize(new jwinforms.Size(72, 13));
+		lblSkillLabel.setSize(new Dimension(72, 13));
 		lblSkillLabel.setTabIndex(24);
 		lblSkillLabel.setText("Special Skill:");
 		//
@@ -311,7 +312,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblSizeSpecialtyLabel.setFont(FontCollection.bold825);
 		lblSizeSpecialtyLabel.setLocation(new java.awt.Point(92, 65));
 		lblSizeSpecialtyLabel.setName("lblSizeSpecialtyLabel");
-		lblSizeSpecialtyLabel.setSize(new jwinforms.Size(82, 13));
+		lblSizeSpecialtyLabel.setSize(new Dimension(82, 13));
 		lblSizeSpecialtyLabel.setTabIndex(23);
 		lblSizeSpecialtyLabel.setText("Size Specialty:");
 		//
@@ -319,7 +320,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblWelcome.setLocation(new java.awt.Point(92, 12));
 		lblWelcome.setName("lblWelcome");
-		lblWelcome.setSize(new jwinforms.Size(176, 52));
+		lblWelcome.setSize(new Dimension(176, 52));
 		lblWelcome.setTabIndex(3);
 		lblWelcome
 				.setText("Welcome to Sorosuub Engineering Shipyards! Our best engineer, Obi-Wan, is at your"
@@ -329,7 +330,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblWarning.setLocation(new java.awt.Point(8, 134));
 		lblWarning.setName("lblWarning");
-		lblWarning.setSize(new jwinforms.Size(258, 65));
+		lblWarning.setSize(new Dimension(258, 65));
 		lblWarning.setTabIndex(5);
 		lblWarning
 				.setText("Bear in mind that getting too close to the maximum number of units will result in"
@@ -341,7 +342,7 @@ public class FormShipyard extends SpaceTraderForm {
 		picLogo.setBackColor(java.awt.Color.black);
 		picLogo.setLocation(new java.awt.Point(8, 12));
 		picLogo.setName("picLogo");
-		picLogo.setSize(new jwinforms.Size(80, 80));
+		picLogo.setSize(new Dimension(80, 80));
 		picLogo.SizeMode = jwinforms.PictureBoxSizeMode.StretchImage;
 		picLogo.setTabIndex(22);
 		picLogo.setTabStop(false);
@@ -354,7 +355,7 @@ public class FormShipyard extends SpaceTraderForm {
 				btnSetCustomImage, picShip, txtName, lblName }));
 		boxInfo.setLocation(new java.awt.Point(8, 208));
 		boxInfo.setName("boxInfo");
-		boxInfo.setSize(new jwinforms.Size(270, 160));
+		boxInfo.setSize(new Dimension(270, 160));
 		boxInfo.setTabIndex(2);
 		boxInfo.setTabStop(false);
 		boxInfo.setText("Info");
@@ -364,7 +365,7 @@ public class FormShipyard extends SpaceTraderForm {
 		btnSave.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnSave.setLocation(new java.awt.Point(216, 40));
 		btnSave.setName("btnSave");
-		btnSave.setSize(new jwinforms.Size(44, 20));
+		btnSave.setSize(new Dimension(44, 20));
 		btnSave.setTabIndex(4);
 		btnSave.setText("Save");
 		btnSave.setClick(new EventHandler<Object, EventArgs>() {
@@ -391,7 +392,7 @@ public class FormShipyard extends SpaceTraderForm {
 		btnLoad.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnLoad.setLocation(new java.awt.Point(216, 16));
 		btnLoad.setName("btnLoad");
-		btnLoad.setSize(new jwinforms.Size(44, 20));
+		btnLoad.setSize(new Dimension(44, 20));
 		btnLoad.setTabIndex(2);
 		btnLoad.setText("Load");
 		btnLoad.setClick(new EventHandler<Object, EventArgs>() {
@@ -406,7 +407,7 @@ public class FormShipyard extends SpaceTraderForm {
 		picInfoLine.setBackColor(java.awt.Color.darkGray);
 		picInfoLine.setLocation(new java.awt.Point(8, 89));
 		picInfoLine.setName("picInfoLine");
-		picInfoLine.setSize(new jwinforms.Size(254, 1));
+		picInfoLine.setSize(new Dimension(254, 1));
 		picInfoLine.setTabIndex(132);
 		picInfoLine.setTabStop(false);
 		//
@@ -415,7 +416,7 @@ public class FormShipyard extends SpaceTraderForm {
 		btnPrevImage.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnPrevImage.setLocation(new java.awt.Point(154, 95));
 		btnPrevImage.setName("btnPrevImage");
-		btnPrevImage.setSize(new jwinforms.Size(18, 18));
+		btnPrevImage.setSize(new Dimension(18, 18));
 		btnPrevImage.setTabIndex(6);
 		btnPrevImage.setText("<");
 		btnPrevImage.setClick(new EventHandler<Object, EventArgs>() {
@@ -430,7 +431,7 @@ public class FormShipyard extends SpaceTraderForm {
 		btnNextImage.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnNextImage.setLocation(new java.awt.Point(242, 95));
 		btnNextImage.setName("btnNextImage");
-		btnNextImage.setSize(new jwinforms.Size(18, 18));
+		btnNextImage.setSize(new Dimension(18, 18));
 		btnNextImage.setTabIndex(7);
 		btnNextImage.setText(">");
 		btnNextImage.setClick(new EventHandler<Object, EventArgs>() {
@@ -444,7 +445,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblImage.setLocation(new java.awt.Point(174, 98));
 		lblImage.setName("lblImage");
-		lblImage.setSize(new jwinforms.Size(70, 13));
+		lblImage.setSize(new Dimension(70, 13));
 		lblImage.setTabIndex(61);
 		lblImage.setText("Custom Ship");
 		lblImage.TextAlign = ContentAlignment.TopCenter;
@@ -454,7 +455,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblImageLabel.setAutoSize(true);
 		lblImageLabel.setLocation(new java.awt.Point(8, 95));
 		lblImageLabel.setName("lblImageLabel");
-		lblImageLabel.setSize(new jwinforms.Size(39, 13));
+		lblImageLabel.setSize(new Dimension(39, 13));
 		lblImageLabel.setTabIndex(22);
 		lblImageLabel.setText("Image:");
 		//
@@ -463,7 +464,7 @@ public class FormShipyard extends SpaceTraderForm {
 		selTemplate.DropDownStyle = jwinforms.ComboBoxStyle.DropDownList;
 		selTemplate.setLocation(new java.awt.Point(80, 16));
 		selTemplate.setName("selTemplate");
-		selTemplate.setSize(new jwinforms.Size(132, 21));
+		selTemplate.setSize(new Dimension(132, 21));
 		selTemplate.setTabIndex(1);
 		//
 		// lblTemplate
@@ -471,7 +472,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblTemplate.setAutoSize(true);
 		lblTemplate.setLocation(new java.awt.Point(8, 19));
 		lblTemplate.setName("lblTemplate");
-		lblTemplate.setSize(new jwinforms.Size(55, 13));
+		lblTemplate.setSize(new Dimension(55, 13));
 		lblTemplate.setTabIndex(20);
 		lblTemplate.setText("Template:");
 		//
@@ -480,7 +481,7 @@ public class FormShipyard extends SpaceTraderForm {
 		selSize.DropDownStyle = jwinforms.ComboBoxStyle.DropDownList;
 		selSize.setLocation(new java.awt.Point(80, 63));
 		selSize.setName("selSize");
-		selSize.setSize(new jwinforms.Size(180, 21));
+		selSize.setSize(new Dimension(180, 21));
 		selSize.setTabIndex(5);
 		selSize.setSelectedIndexChanged(new EventHandler<Object, EventArgs>() {
 			@Override
@@ -494,7 +495,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblSize.setAutoSize(true);
 		lblSize.setLocation(new java.awt.Point(8, 66));
 		lblSize.setName("lblSize");
-		lblSize.setSize(new jwinforms.Size(29, 13));
+		lblSize.setSize(new Dimension(29, 13));
 		lblSize.setTabIndex(18);
 		lblSize.setText("Size:");
 		//
@@ -503,7 +504,7 @@ public class FormShipyard extends SpaceTraderForm {
 		btnSetCustomImage.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnSetCustomImage.setLocation(new java.awt.Point(154, 121));
 		btnSetCustomImage.setName("btnSetCustomImage");
-		btnSetCustomImage.setSize(new jwinforms.Size(106, 22));
+		btnSetCustomImage.setSize(new Dimension(106, 22));
 		btnSetCustomImage.setTabIndex(8);
 		btnSetCustomImage.setText("Set Custom...");
 		btnSetCustomImage.setClick(new EventHandler<Object, EventArgs>() {
@@ -519,7 +520,7 @@ public class FormShipyard extends SpaceTraderForm {
 		picShip.setBorderStyle(jwinforms.BorderStyle.FixedSingle);
 		picShip.setLocation(new java.awt.Point(80, 95));
 		picShip.setName("picShip");
-		picShip.setSize(new jwinforms.Size(66, 54));
+		picShip.setSize(new Dimension(66, 54));
 		picShip.setTabIndex(14);
 		picShip.setTabStop(false);
 		//
@@ -527,7 +528,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		txtName.setLocation(new java.awt.Point(80, 40));
 		txtName.setName("txtName");
-		txtName.setSize(new jwinforms.Size(132, 20));
+		txtName.setSize(new Dimension(132, 20));
 		txtName.setTabIndex(3);
 		txtName.setText("");
 		txtName.setTextChanged(new EventHandler<Object, EventArgs>() {
@@ -542,7 +543,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblName.setAutoSize(true);
 		lblName.setLocation(new java.awt.Point(8, 44));
 		lblName.setName("lblName");
-		lblName.setSize(new jwinforms.Size(63, 13));
+		lblName.setSize(new Dimension(63, 13));
 		lblName.setTabIndex(5);
 		lblName.setText("Ship Name:");
 		//
@@ -550,7 +551,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblUnitsUsed.setLocation(new java.awt.Point(110, 186));
 		lblUnitsUsed.setName("lblUnitsUsed");
-		lblUnitsUsed.setSize(new jwinforms.Size(23, 13));
+		lblUnitsUsed.setSize(new Dimension(23, 13));
 		lblUnitsUsed.setTabIndex(17);
 		lblUnitsUsed.setText("888");
 		lblUnitsUsed.TextAlign = ContentAlignment.TopRight;
@@ -560,7 +561,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblUnitsUsedLabel.setAutoSize(true);
 		lblUnitsUsedLabel.setLocation(new java.awt.Point(8, 186));
 		lblUnitsUsedLabel.setName("lblUnitsUsedLabel");
-		lblUnitsUsedLabel.setSize(new jwinforms.Size(63, 13));
+		lblUnitsUsedLabel.setSize(new Dimension(63, 13));
 		lblUnitsUsedLabel.setTabIndex(16);
 		lblUnitsUsedLabel.setText("Units Used:");
 		//
@@ -572,7 +573,7 @@ public class FormShipyard extends SpaceTraderForm {
 				lblDesignFee, lblDesignFeeLabel }));
 		boxCosts.setLocation(new java.awt.Point(286, 230));
 		boxCosts.setName("boxCosts");
-		boxCosts.setSize(new jwinforms.Size(184, 106));
+		boxCosts.setSize(new Dimension(184, 106));
 		boxCosts.setTabIndex(4);
 		boxCosts.setTabStop(false);
 		boxCosts.setText("Costs");
@@ -581,7 +582,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblTradeIn.setLocation(new java.awt.Point(106, 64));
 		lblTradeIn.setName("lblTradeIn");
-		lblTradeIn.setSize(new jwinforms.Size(75, 16));
+		lblTradeIn.setSize(new Dimension(75, 16));
 		lblTradeIn.setTabIndex(135);
 		lblTradeIn.setText("-8,888,888 cr.");
 		lblTradeIn.TextAlign = ContentAlignment.TopRight;
@@ -591,7 +592,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblTradeInLabel.setAutoSize(true);
 		lblTradeInLabel.setLocation(new java.awt.Point(8, 64));
 		lblTradeInLabel.setName("lblTradeInLabel");
-		lblTradeInLabel.setSize(new jwinforms.Size(77, 13));
+		lblTradeInLabel.setSize(new Dimension(77, 13));
 		lblTradeInLabel.setTabIndex(134);
 		lblTradeInLabel.setText("Less Trade-In:");
 		//
@@ -600,7 +601,7 @@ public class FormShipyard extends SpaceTraderForm {
 		picCostsLine.setBackColor(java.awt.Color.darkGray);
 		picCostsLine.setLocation(new java.awt.Point(8, 80));
 		picCostsLine.setName("picCostsLine");
-		picCostsLine.setSize(new jwinforms.Size(168, 1));
+		picCostsLine.setSize(new Dimension(168, 1));
 		picCostsLine.setTabIndex(133);
 		picCostsLine.setTabStop(false);
 		//
@@ -608,7 +609,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblPenalty.setLocation(new java.awt.Point(106, 32));
 		lblPenalty.setName("lblPenalty");
-		lblPenalty.setSize(new jwinforms.Size(74, 16));
+		lblPenalty.setSize(new Dimension(74, 16));
 		lblPenalty.setTabIndex(21);
 		lblPenalty.setText("8,888,888 cr.");
 		lblPenalty.TextAlign = ContentAlignment.TopRight;
@@ -618,7 +619,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblPenaltyLabel.setAutoSize(true);
 		lblPenaltyLabel.setLocation(new java.awt.Point(8, 32));
 		lblPenaltyLabel.setName("lblPenaltyLabel");
-		lblPenaltyLabel.setSize(new jwinforms.Size(96, 13));
+		lblPenaltyLabel.setSize(new Dimension(96, 13));
 		lblPenaltyLabel.setTabIndex(20);
 		lblPenaltyLabel.setText("Crowding Penalty:");
 		//
@@ -626,7 +627,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblShipCost.setLocation(new java.awt.Point(106, 16));
 		lblShipCost.setName("lblShipCost");
-		lblShipCost.setSize(new jwinforms.Size(74, 16));
+		lblShipCost.setSize(new Dimension(74, 16));
 		lblShipCost.setTabIndex(19);
 		lblShipCost.setText("8,888,888 cr.");
 		lblShipCost.TextAlign = ContentAlignment.TopRight;
@@ -635,7 +636,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblTotalCost.setLocation(new java.awt.Point(106, 84));
 		lblTotalCost.setName("lblTotalCost");
-		lblTotalCost.setSize(new jwinforms.Size(74, 16));
+		lblTotalCost.setSize(new Dimension(74, 16));
 		lblTotalCost.setTabIndex(18);
 		lblTotalCost.setText("8,888,888 cr.");
 		lblTotalCost.TextAlign = ContentAlignment.TopRight;
@@ -645,7 +646,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblTotalCostLabel.setAutoSize(true);
 		lblTotalCostLabel.setLocation(new java.awt.Point(8, 84));
 		lblTotalCostLabel.setName("lblTotalCostLabel");
-		lblTotalCostLabel.setSize(new jwinforms.Size(59, 13));
+		lblTotalCostLabel.setSize(new Dimension(59, 13));
 		lblTotalCostLabel.setTabIndex(17);
 		lblTotalCostLabel.setText("Total Cost:");
 		//
@@ -654,7 +655,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblShipCostLabel.setAutoSize(true);
 		lblShipCostLabel.setLocation(new java.awt.Point(8, 16));
 		lblShipCostLabel.setName("lblShipCostLabel");
-		lblShipCostLabel.setSize(new jwinforms.Size(56, 13));
+		lblShipCostLabel.setSize(new Dimension(56, 13));
 		lblShipCostLabel.setTabIndex(16);
 		lblShipCostLabel.setText("Ship Cost:");
 		//
@@ -662,7 +663,7 @@ public class FormShipyard extends SpaceTraderForm {
 		//
 		lblDesignFee.setLocation(new java.awt.Point(106, 48));
 		lblDesignFee.setName("lblDesignFee");
-		lblDesignFee.setSize(new jwinforms.Size(74, 16));
+		lblDesignFee.setSize(new Dimension(74, 16));
 		lblDesignFee.setTabIndex(15);
 		lblDesignFee.setText("888,888 cr.");
 		lblDesignFee.TextAlign = ContentAlignment.TopRight;
@@ -672,7 +673,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblDesignFeeLabel.setAutoSize(true);
 		lblDesignFeeLabel.setLocation(new java.awt.Point(8, 48));
 		lblDesignFeeLabel.setName("lblDesignFeeLabel");
-		lblDesignFeeLabel.setSize(new jwinforms.Size(65, 13));
+		lblDesignFeeLabel.setSize(new Dimension(65, 13));
 		lblDesignFeeLabel.setTabIndex(14);
 		lblDesignFeeLabel.setText("Design Fee:");
 		//
@@ -682,7 +683,7 @@ public class FormShipyard extends SpaceTraderForm {
 		btnConstruct.setForeColor(SystemColors.ControlText);
 		btnConstruct.setLocation(new java.awt.Point(382, 344));
 		btnConstruct.setName("btnConstruct");
-		btnConstruct.setSize(new jwinforms.Size(88, 22));
+		btnConstruct.setSize(new Dimension(88, 22));
 		btnConstruct.setTabIndex(6);
 		btnConstruct.setText("Construct Ship");
 		btnConstruct.setClick(new EventHandler<Object, EventArgs>() {
@@ -710,7 +711,7 @@ public class FormShipyard extends SpaceTraderForm {
 		btnCancel.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnCancel.setLocation(new java.awt.Point(286, 344));
 		btnCancel.setName("btnCancel");
-		btnCancel.setSize(new jwinforms.Size(88, 22));
+		btnCancel.setSize(new Dimension(88, 22));
 		btnCancel.setTabIndex(5);
 		btnCancel.setText("Cancel Design");
 		//
@@ -724,7 +725,7 @@ public class FormShipyard extends SpaceTraderForm {
 				lblWeaponsSlots, lblUnitsUsedLabel, lblUnitsUsed }));
 		boxAllocation.setLocation(new java.awt.Point(286, 0));
 		boxAllocation.setName("boxAllocation");
-		boxAllocation.setSize(new jwinforms.Size(184, 226));
+		boxAllocation.setSize(new Dimension(184, 226));
 		boxAllocation.setTabIndex(3);
 		boxAllocation.setTabStop(false);
 		boxAllocation.setText("Space Allocation");
@@ -735,7 +736,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblPct.setForeColor(java.awt.Color.red);
 		lblPct.setLocation(new java.awt.Point(110, 204));
 		lblPct.setName("lblPct");
-		lblPct.setSize(new jwinforms.Size(34, 13));
+		lblPct.setSize(new Dimension(34, 13));
 		lblPct.setTabIndex(19);
 		lblPct.setText("888%");
 		lblPct.TextAlign = ContentAlignment.TopRight;
@@ -745,7 +746,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblPctLabel.setAutoSize(true);
 		lblPctLabel.setLocation(new java.awt.Point(8, 204));
 		lblPctLabel.setName("lblPctLabel");
-		lblPctLabel.setSize(new jwinforms.Size(54, 13));
+		lblPctLabel.setSize(new Dimension(54, 13));
 		lblPctLabel.setTabIndex(18);
 		lblPctLabel.setText("% of Max:");
 		//
@@ -756,7 +757,7 @@ public class FormShipyard extends SpaceTraderForm {
 		numHullStrength.setMaximum(9999);
 		numHullStrength.setName("numHullStrength");
 		numHullStrength.setReadOnly(true);
-		numHullStrength.setSize(new jwinforms.Size(64, 20));
+		numHullStrength.setSize(new Dimension(64, 20));
 		numHullStrength.setTabIndex(1);
 		numHullStrength.TextAlign = jwinforms.HorizontalAlignment.Right;
 		numHullStrength.setEnter(new EventHandler<Object, EventArgs>() {
@@ -777,7 +778,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblHullStrenghLabel.setAutoSize(true);
 		lblHullStrenghLabel.setLocation(new java.awt.Point(8, 66));
 		lblHullStrenghLabel.setName("lblHullStrenghLabel");
-		lblHullStrenghLabel.setSize(new jwinforms.Size(70, 13));
+		lblHullStrenghLabel.setSize(new Dimension(70, 13));
 		lblHullStrenghLabel.setTabIndex(13);
 		lblHullStrenghLabel.setText("Hull Strengh:");
 		//
@@ -788,7 +789,7 @@ public class FormShipyard extends SpaceTraderForm {
 		numCargoBays.setMaximum(999);
 		numCargoBays.setName("numCargoBays");
 		numCargoBays.setReadOnly(true);
-		numCargoBays.setSize(new jwinforms.Size(64, 20));
+		numCargoBays.setSize(new Dimension(64, 20));
 		numCargoBays.setTabIndex(3);
 		numCargoBays.TextAlign = jwinforms.HorizontalAlignment.Right;
 		numCargoBays.setEnter(new EventHandler<Object, EventArgs>() {
@@ -811,7 +812,7 @@ public class FormShipyard extends SpaceTraderForm {
 		numCrewQuarters.setMinimum(1);
 		numCrewQuarters.setName("numCrewQuarters");
 		numCrewQuarters.setReadOnly(true);
-		numCrewQuarters.setSize(new jwinforms.Size(64, 20));
+		numCrewQuarters.setSize(new Dimension(64, 20));
 		numCrewQuarters.setTabIndex(4);
 		numCrewQuarters.TextAlign = jwinforms.HorizontalAlignment.Right;
 		numCrewQuarters.setValue(1);
@@ -834,7 +835,7 @@ public class FormShipyard extends SpaceTraderForm {
 		numFuelTanks.setLocation(new java.awt.Point(110, 40));
 		numFuelTanks.setName("numFuelTanks");
 		numFuelTanks.setReadOnly(true);
-		numFuelTanks.setSize(new jwinforms.Size(64, 20));
+		numFuelTanks.setSize(new Dimension(64, 20));
 		numFuelTanks.setTabIndex(2);
 		numFuelTanks.TextAlign = jwinforms.HorizontalAlignment.Right;
 		numFuelTanks.setEnter(new EventHandler<Object, EventArgs>() {
@@ -856,7 +857,7 @@ public class FormShipyard extends SpaceTraderForm {
 		numShieldSlots.setLocation(new java.awt.Point(110, 112));
 		numShieldSlots.setName("numShieldSlots");
 		numShieldSlots.setReadOnly(true);
-		numShieldSlots.setSize(new jwinforms.Size(64, 20));
+		numShieldSlots.setSize(new Dimension(64, 20));
 		numShieldSlots.setTabIndex(6);
 		numShieldSlots.TextAlign = jwinforms.HorizontalAlignment.Right;
 		numShieldSlots.setEnter(new EventHandler<Object, EventArgs>() {
@@ -878,7 +879,7 @@ public class FormShipyard extends SpaceTraderForm {
 		numGadgetSlots.setLocation(new java.awt.Point(110, 136));
 		numGadgetSlots.setName("numGadgetSlots");
 		numGadgetSlots.setReadOnly(true);
-		numGadgetSlots.setSize(new jwinforms.Size(64, 20));
+		numGadgetSlots.setSize(new Dimension(64, 20));
 		numGadgetSlots.setTabIndex(7);
 		numGadgetSlots.TextAlign = jwinforms.HorizontalAlignment.Right;
 		numGadgetSlots.setEnter(new EventHandler<Object, EventArgs>() {
@@ -900,7 +901,7 @@ public class FormShipyard extends SpaceTraderForm {
 		numWeaponSlots.setLocation(new java.awt.Point(110, 88));
 		numWeaponSlots.setName("numWeaponSlots");
 		numWeaponSlots.setReadOnly(true);
-		numWeaponSlots.setSize(new jwinforms.Size(64, 20));
+		numWeaponSlots.setSize(new Dimension(64, 20));
 		numWeaponSlots.setTabIndex(5);
 		numWeaponSlots.TextAlign = jwinforms.HorizontalAlignment.Right;
 		numWeaponSlots.setEnter(new EventHandler<Object, EventArgs>() {
@@ -921,7 +922,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblCargoBays.setAutoSize(true);
 		lblCargoBays.setLocation(new java.awt.Point(8, 18));
 		lblCargoBays.setName("lblCargoBays");
-		lblCargoBays.setSize(new jwinforms.Size(66, 13));
+		lblCargoBays.setSize(new Dimension(66, 13));
 		lblCargoBays.setTabIndex(5);
 		lblCargoBays.setText("Cargo Bays:");
 		//
@@ -930,7 +931,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblFuelTanks.setAutoSize(true);
 		lblFuelTanks.setLocation(new java.awt.Point(8, 42));
 		lblFuelTanks.setName("lblFuelTanks");
-		lblFuelTanks.setSize(new jwinforms.Size(41, 13));
+		lblFuelTanks.setSize(new Dimension(41, 13));
 		lblFuelTanks.setTabIndex(4);
 		lblFuelTanks.setText("Range:");
 		//
@@ -939,7 +940,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblCrewQuarters.setAutoSize(true);
 		lblCrewQuarters.setLocation(new java.awt.Point(8, 162));
 		lblCrewQuarters.setName("lblCrewQuarters");
-		lblCrewQuarters.setSize(new jwinforms.Size(81, 13));
+		lblCrewQuarters.setSize(new Dimension(81, 13));
 		lblCrewQuarters.setTabIndex(3);
 		lblCrewQuarters.setText("Crew Quarters:");
 		//
@@ -948,7 +949,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblShieldSlots.setAutoSize(true);
 		lblShieldSlots.setLocation(new java.awt.Point(8, 114));
 		lblShieldSlots.setName("lblShieldSlots");
-		lblShieldSlots.setSize(new jwinforms.Size(67, 13));
+		lblShieldSlots.setSize(new Dimension(67, 13));
 		lblShieldSlots.setTabIndex(2);
 		lblShieldSlots.setText("Shield Slots:");
 		//
@@ -957,7 +958,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblGadgetSlots.setAutoSize(true);
 		lblGadgetSlots.setLocation(new java.awt.Point(8, 138));
 		lblGadgetSlots.setName("lblGadgetSlots");
-		lblGadgetSlots.setSize(new jwinforms.Size(73, 13));
+		lblGadgetSlots.setSize(new Dimension(73, 13));
 		lblGadgetSlots.setTabIndex(1);
 		lblGadgetSlots.setText("Gadget Slots:");
 		//
@@ -966,14 +967,14 @@ public class FormShipyard extends SpaceTraderForm {
 		lblWeaponsSlots.setAutoSize(true);
 		lblWeaponsSlots.setLocation(new java.awt.Point(8, 90));
 		lblWeaponsSlots.setName("lblWeaponsSlots");
-		lblWeaponsSlots.setSize(new jwinforms.Size(78, 13));
+		lblWeaponsSlots.setSize(new Dimension(78, 13));
 		lblWeaponsSlots.setTabIndex(0);
 		lblWeaponsSlots.setText("Weapon Slots:");
 		//
 		// ilShipyardLogos
 		//
 		ilShipyardLogos.ColorDepth = jwinforms.ColorDepth.Depth24Bit;
-		ilShipyardLogos.setImageSize(new jwinforms.Size(80, 80));
+		ilShipyardLogos.setImageSize(new Dimension(80, 80));
 		ilShipyardLogos
 				.setImageStream(((jwinforms.ImageListStreamer) (resources
 						.GetObject("ilShipyardLogos.ImageStream"))));
@@ -991,7 +992,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblDisabledPct.ImageAlign = ContentAlignment.MiddleRight;
 		lblDisabledPct.setLocation(new java.awt.Point(154, 182));
 		lblDisabledPct.setName("lblDisabledPct");
-		lblDisabledPct.setSize(new jwinforms.Size(276, 20));
+		lblDisabledPct.setSize(new Dimension(276, 20));
 		lblDisabledPct.setTabIndex(8);
 		lblDisabledPct
 				.setText("Your % of Max must be less than or equal to 100%.");
@@ -1012,7 +1013,7 @@ public class FormShipyard extends SpaceTraderForm {
 		lblDisabledName.ImageAlign = ContentAlignment.MiddleLeft;
 		lblDisabledName.setLocation(new java.awt.Point(96, 222));
 		lblDisabledName.setName("lblDisabledName");
-		lblDisabledName.setSize(new jwinforms.Size(170, 20));
+		lblDisabledName.setSize(new Dimension(170, 20));
 		lblDisabledName.setTabIndex(7);
 		lblDisabledName.setText("You must enter a Ship Name.");
 		lblDisabledName.TextAlign = ContentAlignment.MiddleRight;
@@ -1021,9 +1022,9 @@ public class FormShipyard extends SpaceTraderForm {
 		// Form_Shipyard
 		//
 		this.setAcceptButton(btnConstruct);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(btnCancel);
-		this.setClientSize(new jwinforms.Size(478, 375));
+		this.setClientSize(new Dimension(478, 375));
 		Controls.addAll(Arrays.asList(lblDisabledPct, boxWelcome,
 				lblDisabledName, boxAllocation, boxCosts, boxInfo, btnCancel,
 				btnConstruct));
@@ -1147,7 +1148,7 @@ public class FormShipyard extends SpaceTraderForm {
 		selTemplate.Items.add(Consts.ShipTemplateSeparator);
 
 		// Add the user-created templates.
-		ArrayList userTemplates = new ArrayList();
+		ArrayList<ShipTemplate> userTemplates = new ArrayList<ShipTemplate>();
 		for (String fileName : Directory.GetFiles(
 				Consts.CustomTemplatesDirectory, "*.sst")) {
 			ShipTemplate template = new ShipTemplate(
@@ -1155,7 +1156,7 @@ public class FormShipyard extends SpaceTraderForm {
 			if (sizes.contains(template.Size()))
 				userTemplates.add(template);
 		}
-		userTemplates.Sort();
+		Collections.sort(userTemplates);
 		selTemplate.Items.AddRange(userTemplates.toArray(new ShipTemplate[0]));
 
 		selTemplate.setSelectedIndex(0);

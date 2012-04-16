@@ -1,12 +1,13 @@
 package jwinforms;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.image.ColorModel;
 import java.util.ArrayList;
 
 public class ImageList {
 	private Image[] images;
-	private Size size;
+	private Dimension size;
 	public Object ColorDepth;
 
 	public ImageList(IContainer components) {
@@ -35,7 +36,7 @@ public class ImageList {
 			image.setTransparentColor(transparentColor);
 	}
 
-	public void setImageSize(Size imageSize) {
+	public void setImageSize(Dimension imageSize) {
 		size = imageSize;
 	}
 }

@@ -24,6 +24,8 @@
 // using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
+
 import jwinforms.DialogResult;
 import jwinforms.EventArgs;
 import jwinforms.EventHandler;
@@ -109,7 +111,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new java.awt.Point(-32, -32));
 		this.btnClose.setName("btnClose");
-		this.btnClose.setSize(new jwinforms.Size(32, 32));
+		this.btnClose.setSize(new Dimension(32, 32));
 		this.btnClose.setTabIndex(32);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
@@ -120,7 +122,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.boxCurrentCrew.Controls.add(this.lstCrew);
 		this.boxCurrentCrew.setLocation(new java.awt.Point(8, 8));
 		this.boxCurrentCrew.setName("boxCurrentCrew");
-		this.boxCurrentCrew.setSize(new jwinforms.Size(144, 114));
+		this.boxCurrentCrew.setSize(new Dimension(144, 114));
 		this.boxCurrentCrew.setTabIndex(33);
 		this.boxCurrentCrew.setTabStop(false);
 		this.boxCurrentCrew.setText("Current Crew");
@@ -130,7 +132,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.lstCrew.setBorderStyle(jwinforms.BorderStyle.FixedSingle);
 		this.lstCrew.setLocation(new java.awt.Point(8, 24));
 		this.lstCrew.setName("lstCrew");
-		this.lstCrew.setSize(new jwinforms.Size(126, 80));
+		this.lstCrew.setSize(new Dimension(126, 80));
 		this.lstCrew.setTabIndex(6);
 		this.lstCrew.setDoubleClick(new EventHandler<Object, EventArgs>() {
 			@Override
@@ -152,7 +154,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.boxForHire.Controls.add(this.lstForHire);
 		this.boxForHire.setLocation(new java.awt.Point(160, 8));
 		this.boxForHire.setName("boxForHire");
-		this.boxForHire.setSize(new jwinforms.Size(144, 114));
+		this.boxForHire.setSize(new Dimension(144, 114));
 		this.boxForHire.setTabIndex(34);
 		this.boxForHire.setTabStop(false);
 		this.boxForHire.setText("Mercenaries For Hire");
@@ -162,7 +164,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.lstForHire.setBorderStyle(jwinforms.BorderStyle.FixedSingle);
 		this.lstForHire.setLocation(new java.awt.Point(8, 24));
 		this.lstForHire.setName("lstForHire");
-		this.lstForHire.setSize(new jwinforms.Size(126, 80));
+		this.lstForHire.setSize(new Dimension(126, 80));
 		this.lstForHire.setTabIndex(5);
 		this.lstForHire.setDoubleClick(new EventHandler<Object, EventArgs>() {
 			@Override
@@ -193,7 +195,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.boxInfo.Controls.add(this.lblPilotLabel);
 		this.boxInfo.setLocation(new java.awt.Point(312, 8));
 		this.boxInfo.setName("boxInfo");
-		this.boxInfo.setSize(new jwinforms.Size(168, 114));
+		this.boxInfo.setSize(new Dimension(168, 114));
 		this.boxInfo.setTabIndex(35);
 		this.boxInfo.setTabStop(false);
 		this.boxInfo.setText("Mercenary Information");
@@ -203,7 +205,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.btnHireFire.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnHireFire.setLocation(new java.awt.Point(120, 80));
 		this.btnHireFire.setName("btnHireFire");
-		this.btnHireFire.setSize(new jwinforms.Size(36, 22));
+		this.btnHireFire.setSize(new Dimension(36, 22));
 		this.btnHireFire.setTabIndex(4);
 		this.btnHireFire.setText("Hire");
 		this.btnHireFire.setClick(new EventHandler<Object, EventArgs>() {
@@ -217,7 +219,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		//
 		this.lblRate.setLocation(new java.awt.Point(104, 40));
 		this.lblRate.setName("lblRate");
-		this.lblRate.setSize(new jwinforms.Size(59, 13));
+		this.lblRate.setSize(new Dimension(59, 13));
 		this.lblRate.setTabIndex(97);
 		this.lblRate.setText("88 cr. daily");
 		//
@@ -226,7 +228,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.lblName.setFont(FontCollection.bold825);
 		this.lblName.setLocation(new java.awt.Point(12, 18));
 		this.lblName.setName("lblName");
-		this.lblName.setSize(new jwinforms.Size(72, 13));
+		this.lblName.setSize(new Dimension(72, 13));
 		this.lblName.setTabIndex(96);
 		this.lblName.setText("Xxxxxxxxxxx");
 		//
@@ -234,7 +236,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		//
 		this.lblEngineer.setLocation(new java.awt.Point(64, 88));
 		this.lblEngineer.setName("lblEngineer");
-		this.lblEngineer.setSize(new jwinforms.Size(17, 13));
+		this.lblEngineer.setSize(new Dimension(17, 13));
 		this.lblEngineer.setTabIndex(95);
 		this.lblEngineer.setText("88");
 		//
@@ -242,7 +244,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		//
 		this.lblTrader.setLocation(new java.awt.Point(64, 72));
 		this.lblTrader.setName("lblTrader");
-		this.lblTrader.setSize(new jwinforms.Size(17, 13));
+		this.lblTrader.setSize(new Dimension(17, 13));
 		this.lblTrader.setTabIndex(94);
 		this.lblTrader.setText("88");
 		//
@@ -250,7 +252,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		//
 		this.lblFighter.setLocation(new java.awt.Point(64, 56));
 		this.lblFighter.setName("lblFighter");
-		this.lblFighter.setSize(new jwinforms.Size(17, 13));
+		this.lblFighter.setSize(new Dimension(17, 13));
 		this.lblFighter.setTabIndex(93);
 		this.lblFighter.setText("88");
 		//
@@ -258,7 +260,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		//
 		this.lblPilot.setLocation(new java.awt.Point(64, 40));
 		this.lblPilot.setName("lblPilot");
-		this.lblPilot.setSize(new jwinforms.Size(17, 13));
+		this.lblPilot.setSize(new Dimension(17, 13));
 		this.lblPilot.setTabIndex(92);
 		this.lblPilot.setText("88");
 		//
@@ -267,7 +269,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.lblEngineerLabel.setAutoSize(true);
 		this.lblEngineerLabel.setLocation(new java.awt.Point(12, 88));
 		this.lblEngineerLabel.setName("lblEngineerLabel");
-		this.lblEngineerLabel.setSize(new jwinforms.Size(53, 16));
+		this.lblEngineerLabel.setSize(new Dimension(53, 16));
 		this.lblEngineerLabel.setTabIndex(91);
 		this.lblEngineerLabel.setText("Engineer:");
 		//
@@ -276,7 +278,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.lblTraderLabel.setAutoSize(true);
 		this.lblTraderLabel.setLocation(new java.awt.Point(12, 72));
 		this.lblTraderLabel.setName("lblTraderLabel");
-		this.lblTraderLabel.setSize(new jwinforms.Size(41, 16));
+		this.lblTraderLabel.setSize(new Dimension(41, 16));
 		this.lblTraderLabel.setTabIndex(90);
 		this.lblTraderLabel.setText("Trader:");
 		//
@@ -285,7 +287,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.lblFighterLabel.setAutoSize(true);
 		this.lblFighterLabel.setLocation(new java.awt.Point(12, 56));
 		this.lblFighterLabel.setName("lblFighterLabel");
-		this.lblFighterLabel.setSize(new jwinforms.Size(43, 16));
+		this.lblFighterLabel.setSize(new Dimension(43, 16));
 		this.lblFighterLabel.setTabIndex(89);
 		this.lblFighterLabel.setText("Fighter:");
 		//
@@ -294,7 +296,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		this.lblPilotLabel.setAutoSize(true);
 		this.lblPilotLabel.setLocation(new java.awt.Point(12, 40));
 		this.lblPilotLabel.setName("lblPilotLabel");
-		this.lblPilotLabel.setSize(new jwinforms.Size(29, 16));
+		this.lblPilotLabel.setSize(new Dimension(29, 16));
 		this.lblPilotLabel.setTabIndex(88);
 		this.lblPilotLabel.setText("Pilot:");
 		//
@@ -302,7 +304,7 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		//
 		this.lblCrewNoQuarters.setLocation(new java.awt.Point(16, 24));
 		this.lblCrewNoQuarters.setName("lblCrewNoQuarters");
-		this.lblCrewNoQuarters.setSize(new jwinforms.Size(120, 16));
+		this.lblCrewNoQuarters.setSize(new Dimension(120, 16));
 		this.lblCrewNoQuarters.setTabIndex(7);
 		this.lblCrewNoQuarters.setText("No quarters available");
 		this.lblCrewNoQuarters.setVisible(false);
@@ -311,16 +313,16 @@ public class FormViewPersonnel extends SpaceTraderForm {
 		//
 		this.lblForHireNone.setLocation(new java.awt.Point(16, 24));
 		this.lblForHireNone.setName("lblForHireNone");
-		this.lblForHireNone.setSize(new jwinforms.Size(120, 16));
+		this.lblForHireNone.setSize(new Dimension(120, 16));
 		this.lblForHireNone.setTabIndex(8);
 		this.lblForHireNone.setText("No one for hire");
 		this.lblForHireNone.setVisible(false);
 		//
 		// FormViewPersonnel
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnClose);
-		this.setClientSize(new jwinforms.Size(488, 129));
+		this.setClientSize(new Dimension(488, 129));
 		this.Controls.add(this.boxInfo);
 		this.Controls.add(this.boxForHire);
 		this.Controls.add(this.boxCurrentCrew);

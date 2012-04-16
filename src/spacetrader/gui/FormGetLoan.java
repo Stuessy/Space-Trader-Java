@@ -29,6 +29,7 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.util.Arrays;
 
 import jwinforms.DialogResult;
@@ -79,7 +80,7 @@ public class FormGetLoan extends SpaceTraderForm {
 		this.lblQuestion.setAutoSize(true);
 		this.lblQuestion.setLocation(new java.awt.Point(8, 24));
 		this.lblQuestion.setName("lblQuestion");
-		this.lblQuestion.setSize(new jwinforms.Size(178, 13));
+		this.lblQuestion.setSize(new Dimension(178, 13));
 		this.lblQuestion.setTabIndex(3);
 		this.lblQuestion.setText("How much do you want to borrow?");
 		//
@@ -89,7 +90,7 @@ public class FormGetLoan extends SpaceTraderForm {
 		this.numAmount.setMaximum(99999);
 		this.numAmount.setMinimum(1);
 		this.numAmount.setName("numAmount");
-		this.numAmount.setSize(new jwinforms.Size(58, 20));
+		this.numAmount.setSize(new Dimension(58, 20));
 		this.numAmount.setTabIndex(1);
 		this.numAmount.ThousandsSeparator = true;
 		this.numAmount.setValue(88888);
@@ -100,7 +101,7 @@ public class FormGetLoan extends SpaceTraderForm {
 		this.btnOk.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnOk.setLocation(new java.awt.Point(52, 48));
 		this.btnOk.setName("btnOk");
-		this.btnOk.setSize(new jwinforms.Size(41, 22));
+		this.btnOk.setSize(new Dimension(41, 22));
 		this.btnOk.setTabIndex(2);
 		this.btnOk.setText("Ok");
 		//
@@ -110,7 +111,7 @@ public class FormGetLoan extends SpaceTraderForm {
 		this.btnMax.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnMax.setLocation(new java.awt.Point(100, 48));
 		this.btnMax.setName("btnMax");
-		this.btnMax.setSize(new jwinforms.Size(41, 22));
+		this.btnMax.setSize(new Dimension(41, 22));
 		this.btnMax.setTabIndex(3);
 		this.btnMax.setText("Max");
 		this.btnMax.setClick(new EventHandler<Object, EventArgs>() {
@@ -126,7 +127,7 @@ public class FormGetLoan extends SpaceTraderForm {
 		this.btnNothing.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnNothing.setLocation(new java.awt.Point(148, 48));
 		this.btnNothing.setName("btnNothing");
-		this.btnNothing.setSize(new jwinforms.Size(53, 22));
+		this.btnNothing.setSize(new Dimension(53, 22));
 		this.btnNothing.setTabIndex(4);
 		this.btnNothing.setText("Nothing");
 		//
@@ -134,16 +135,16 @@ public class FormGetLoan extends SpaceTraderForm {
 		//
 		this.lblStatement.setLocation(new java.awt.Point(8, 8));
 		this.lblStatement.setName("lblStatement");
-		this.lblStatement.setSize(new jwinforms.Size(189, 13));
+		this.lblStatement.setSize(new Dimension(189, 13));
 		this.lblStatement.setTabIndex(5);
 		this.lblStatement.setText("You can borrow up to 88,888 credits.");
 		//
 		// FormGetLoan
 		//
 		this.setAcceptButton(this.btnOk);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnNothing);
-		this.setClientSize(new jwinforms.Size(252, 79));
+		this.setClientSize(new Dimension(252, 79));
 		this.setControlBox(false);
 		this.Controls.addAll(Arrays.asList(this.lblStatement, this.btnNothing,
 				this.btnMax, this.btnOk, this.numAmount, this.lblQuestion));

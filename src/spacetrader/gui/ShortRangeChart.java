@@ -1,6 +1,7 @@
 package spacetrader.gui;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Point;
 
 import jwinforms.Brush;
@@ -9,7 +10,6 @@ import jwinforms.MouseButtons;
 import jwinforms.MouseEventArgs;
 import jwinforms.PaintEventArgs;
 import jwinforms.Pen;
-import jwinforms.SizeF;
 import jwinforms.SolidBrush;
 import spacetrader.Commander;
 import spacetrader.Consts;
@@ -48,7 +48,7 @@ public class ShortRangeChart extends jwinforms.GroupBox {
 		picShortRangeChart.setBackColor(Color.white);
 		picShortRangeChart.setLocation(new Point(8, 16));
 		picShortRangeChart.setName("picShortRangeChart");
-		picShortRangeChart.setSize(new jwinforms.Size(160, 145));
+		picShortRangeChart.setSize(new Dimension(160, 145));
 		picShortRangeChart.setTabIndex(1);
 		picShortRangeChart.setTabStop(false);
 		picShortRangeChart
@@ -69,7 +69,7 @@ public class ShortRangeChart extends jwinforms.GroupBox {
 		Anchor = (((jwinforms.AnchorStyles.Top_Right)));
 		Controls.add(picShortRangeChart);
 		setName("boxShortRangeChart");
-		setSize(new jwinforms.Size(176, 168));
+		setSize(new Dimension(176, 168));
 		setTabIndex(6);
 		setTabStop(false);
 		setText("Short-Range Chart");
@@ -230,7 +230,7 @@ public class ShortRangeChart extends jwinforms.GroupBox {
 										- OFF_Y, IMG_G_W);
 							}
 						} else {
-							SizeF size = e.Graphics.MeasureString(
+							Dimension size = e.Graphics.MeasureString(
 									universe[i].Name(), getFont());
 							e.Graphics.DrawString(universe[i].Name(),
 									smallFont, new SolidBrush(Color.black), x

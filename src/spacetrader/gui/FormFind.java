@@ -29,6 +29,8 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
+import java.awt.Dimension;
+
 import jwinforms.DialogResult;
 import jwinforms.FormStartPosition;
 
@@ -70,7 +72,7 @@ public class FormFind extends SpaceTraderForm {
 		lblText.setAutoSize(true);
 		lblText.setLocation(new java.awt.Point(8, 8));
 		lblText.setName("lblText");
-		lblText.setSize(new jwinforms.Size(177, 13));
+		lblText.setSize(new Dimension(177, 13));
 		lblText.setTabIndex(3);
 		lblText.setText("Which system are you looking for?");
 		//
@@ -80,7 +82,7 @@ public class FormFind extends SpaceTraderForm {
 		btnOk.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnOk.setLocation(new java.awt.Point(43, 68));
 		btnOk.setName("btnOk");
-		btnOk.setSize(new jwinforms.Size(40, 22));
+		btnOk.setSize(new Dimension(40, 22));
 		btnOk.setTabIndex(3);
 		btnOk.setText("Ok");
 		//
@@ -90,7 +92,7 @@ public class FormFind extends SpaceTraderForm {
 		btnCancel.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnCancel.setLocation(new java.awt.Point(91, 68));
 		btnCancel.setName("btnCancel");
-		btnCancel.setSize(new jwinforms.Size(50, 22));
+		btnCancel.setSize(new Dimension(50, 22));
 		btnCancel.setTabIndex(4);
 		btnCancel.setText("Cancel");
 		//
@@ -98,7 +100,7 @@ public class FormFind extends SpaceTraderForm {
 		//
 		txtSystem.setLocation(new java.awt.Point(8, 24));
 		txtSystem.setName("txtSystem");
-		txtSystem.setSize(new jwinforms.Size(168, 20));
+		txtSystem.setSize(new Dimension(168, 20));
 		txtSystem.setTabIndex(1);
 		txtSystem.setText("");
 		//
@@ -106,16 +108,16 @@ public class FormFind extends SpaceTraderForm {
 		//
 		chkTrack.setLocation(new java.awt.Point(8, 48));
 		chkTrack.setName("chkTrack");
-		chkTrack.setSize(new jwinforms.Size(112, 16));
+		chkTrack.setSize(new Dimension(112, 16));
 		chkTrack.setTabIndex(2);
 		chkTrack.setText("Track this system");
 		//
 		// FormFind
 		//
 		this.setAcceptButton(btnOk);
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(btnCancel);
-		this.setClientSize(new jwinforms.Size(184, 97));
+		this.setClientSize(new Dimension(184, 97));
 		this.setControlBox(false);
 		Controls.addAll(chkTrack, txtSystem, btnCancel, btnOk, lblText);
 		this.setFormBorderStyle(jwinforms.FormBorderStyle.FixedDialog);

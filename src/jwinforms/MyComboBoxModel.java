@@ -3,6 +3,8 @@ package jwinforms;
 import javax.swing.DefaultComboBoxModel;
 
 public class MyComboBoxModel extends DefaultComboBoxModel {
+	private static final long serialVersionUID = -7755261365450926171L;
+
 	// TODO inline methods, use super-class.
 	public void add(Object obj) {
 		this.addElement(obj);

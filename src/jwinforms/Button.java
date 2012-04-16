@@ -39,7 +39,6 @@ public class Button extends WinformControl {
 		DialogResult = dialogResult;
 	}
 
-	// @SuppressWarnings("serial")
 	@Override
 	public void setClick(final EventHandler<Object, EventArgs> click) {
 		userAction = new AbstractAction() {

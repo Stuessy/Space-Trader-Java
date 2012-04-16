@@ -26,6 +26,7 @@
 package spacetrader.gui;
 
 import java.awt.Color;
+import java.awt.Dimension;
 
 import jwinforms.Button;
 import jwinforms.Container;
@@ -263,7 +264,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblEncounter.setLocation(new java.awt.Point(8, 152));
 		lblEncounter.setName("lblEncounter");
-		lblEncounter.setSize(new jwinforms.Size(232, 26));
+		lblEncounter.setSize(new Dimension(232, 26));
 		lblEncounter.setTabIndex(0);
 		lblEncounter
 				.setText("At 20 clicks from Tarchannen, you encounter the famous Captain Ahab.");
@@ -274,7 +275,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picShipYou.setBorderStyle(jwinforms.BorderStyle.FixedSingle);
 		picShipYou.setLocation(new java.awt.Point(26, 24));
 		picShipYou.setName("picShipYou");
-		picShipYou.setSize(new jwinforms.Size(70, 58));
+		picShipYou.setSize(new Dimension(70, 58));
 		picShipYou.setTabIndex(13);
 		picShipYou.setTabStop(false);
 		picShipYou.setPaint(new EventHandler<Object, PaintEventArgs>() {
@@ -290,7 +291,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picShipOpponent.setBorderStyle(jwinforms.BorderStyle.FixedSingle);
 		picShipOpponent.setLocation(new java.awt.Point(138, 24));
 		picShipOpponent.setName("picShipOpponent");
-		picShipOpponent.setSize(new jwinforms.Size(70, 58));
+		picShipOpponent.setSize(new Dimension(70, 58));
 		picShipOpponent.setTabIndex(14);
 		picShipOpponent.setTabStop(false);
 		picShipOpponent.setPaint(new EventHandler<Object, PaintEventArgs>() {
@@ -304,7 +305,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblAction.setLocation(new java.awt.Point(8, 192));
 		lblAction.setName("lblAction");
-		lblAction.setSize(new jwinforms.Size(232, 39));
+		lblAction.setSize(new Dimension(232, 39));
 		lblAction.setTabIndex(15);
 		lblAction
 				.setText("\"We know you removed illegal goods from the Marie Celeste. You must give them up "
@@ -316,7 +317,7 @@ public class FormEncounter extends SpaceTraderForm {
 		lblOpponentLabel.setFont(FontCollection.bold825);
 		lblOpponentLabel.setLocation(new java.awt.Point(141, 8));
 		lblOpponentLabel.setName("lblOpponentLabel");
-		lblOpponentLabel.setSize(new jwinforms.Size(59, 16));
+		lblOpponentLabel.setSize(new Dimension(59, 16));
 		lblOpponentLabel.setTabIndex(16);
 		lblOpponentLabel.setText("Opponent:");
 		//
@@ -326,7 +327,7 @@ public class FormEncounter extends SpaceTraderForm {
 		lblYouLabel.setFont(FontCollection.bold825);
 		lblYouLabel.setLocation(new java.awt.Point(45, 8));
 		lblYouLabel.setName("lblYouLabel");
-		lblYouLabel.setSize(new jwinforms.Size(28, 16));
+		lblYouLabel.setSize(new Dimension(28, 16));
 		lblYouLabel.setTabIndex(17);
 		lblYouLabel.setText("You:");
 		//
@@ -334,7 +335,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblOpponentShip.setLocation(new java.awt.Point(138, 88));
 		lblOpponentShip.setName("lblOpponentShip");
-		lblOpponentShip.setSize(new jwinforms.Size(80, 13));
+		lblOpponentShip.setSize(new Dimension(80, 13));
 		lblOpponentShip.setTabIndex(18);
 		lblOpponentShip.setText("Space Monster");
 		//
@@ -342,7 +343,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblYouShip.setLocation(new java.awt.Point(26, 88));
 		lblYouShip.setName("lblYouShip");
-		lblYouShip.setSize(new jwinforms.Size(100, 13));
+		lblYouShip.setSize(new Dimension(100, 13));
 		lblYouShip.setTabIndex(19);
 		lblYouShip.setText("Grasshopper");
 		//
@@ -350,7 +351,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblYouHull.setLocation(new java.awt.Point(26, 104));
 		lblYouHull.setName("lblYouHull");
-		lblYouHull.setSize(new jwinforms.Size(68, 13));
+		lblYouHull.setSize(new Dimension(68, 13));
 		lblYouHull.setTabIndex(20);
 		lblYouHull.setText("Hull at 100%");
 		//
@@ -358,7 +359,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblYouShields.setLocation(new java.awt.Point(26, 120));
 		lblYouShields.setName("lblYouShields");
-		lblYouShields.setSize(new jwinforms.Size(86, 13));
+		lblYouShields.setSize(new Dimension(86, 13));
 		lblYouShields.setTabIndex(21);
 		lblYouShields.setText("Shields at 100%");
 		//
@@ -366,7 +367,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblOpponentShields.setLocation(new java.awt.Point(138, 120));
 		lblOpponentShields.setName("lblOpponentShields");
-		lblOpponentShields.setSize(new jwinforms.Size(86, 13));
+		lblOpponentShields.setSize(new Dimension(86, 13));
 		lblOpponentShields.setTabIndex(23);
 		lblOpponentShields.setText("Shields at 100%");
 		//
@@ -374,7 +375,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		lblOpponentHull.setLocation(new java.awt.Point(138, 104));
 		lblOpponentHull.setName("lblOpponentHull");
-		lblOpponentHull.setSize(new jwinforms.Size(68, 13));
+		lblOpponentHull.setSize(new Dimension(68, 13));
 		lblOpponentHull.setTabIndex(22);
 		lblOpponentHull.setText("Hull at 100%");
 		//
@@ -383,7 +384,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnAttack.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnAttack.setLocation(new java.awt.Point(8, 240));
 		btnAttack.setName("btnAttack");
-		btnAttack.setSize(new jwinforms.Size(46, 22));
+		btnAttack.setSize(new Dimension(46, 22));
 		btnAttack.setTabIndex(24);
 		btnAttack.setText("Attack");
 		btnAttack.setVisible(false);
@@ -399,7 +400,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnFlee.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnFlee.setLocation(new java.awt.Point(62, 240));
 		btnFlee.setName("btnFlee");
-		btnFlee.setSize(new jwinforms.Size(36, 22));
+		btnFlee.setSize(new Dimension(36, 22));
 		btnFlee.setTabIndex(25);
 		btnFlee.setText("Flee");
 		btnFlee.setVisible(false);
@@ -415,7 +416,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnSubmit.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnSubmit.setLocation(new java.awt.Point(106, 240));
 		btnSubmit.setName("btnSubmit");
-		btnSubmit.setSize(new jwinforms.Size(49, 22));
+		btnSubmit.setSize(new Dimension(49, 22));
 		btnSubmit.setTabIndex(26);
 		btnSubmit.setText("Submit");
 		btnSubmit.setVisible(false);
@@ -431,7 +432,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnBribe.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnBribe.setLocation(new java.awt.Point(163, 240));
 		btnBribe.setName("btnBribe");
-		btnBribe.setSize(new jwinforms.Size(41, 22));
+		btnBribe.setSize(new Dimension(41, 22));
 		btnBribe.setTabIndex(27);
 		btnBribe.setText("Bribe");
 		btnBribe.setVisible(false);
@@ -447,7 +448,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnSurrender.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnSurrender.setLocation(new java.awt.Point(106, 240));
 		btnSurrender.setName("btnSurrender");
-		btnSurrender.setSize(new jwinforms.Size(65, 22));
+		btnSurrender.setSize(new Dimension(65, 22));
 		btnSurrender.setTabIndex(28);
 		btnSurrender.setText("Surrender");
 		btnSurrender.setVisible(false);
@@ -463,7 +464,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnIgnore.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnIgnore.setLocation(new java.awt.Point(62, 240));
 		btnIgnore.setName("btnIgnore");
-		btnIgnore.setSize(new jwinforms.Size(46, 22));
+		btnIgnore.setSize(new Dimension(46, 22));
 		btnIgnore.setTabIndex(29);
 		btnIgnore.setText("Ignore");
 		btnIgnore.setVisible(false);
@@ -479,7 +480,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnTrade.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnTrade.setLocation(new java.awt.Point(116, 240));
 		btnTrade.setName("btnTrade");
-		btnTrade.setSize(new jwinforms.Size(44, 22));
+		btnTrade.setSize(new Dimension(44, 22));
 		btnTrade.setTabIndex(30);
 		btnTrade.setText("Trade");
 		btnTrade.setVisible(false);
@@ -495,7 +496,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnPlunder.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnPlunder.setLocation(new java.awt.Point(62, 240));
 		btnPlunder.setName("btnPlunder");
-		btnPlunder.setSize(new jwinforms.Size(53, 22));
+		btnPlunder.setSize(new Dimension(53, 22));
 		btnPlunder.setTabIndex(31);
 		btnPlunder.setText("Plunder");
 		btnPlunder.setVisible(false);
@@ -511,7 +512,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnBoard.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnBoard.setLocation(new java.awt.Point(8, 240));
 		btnBoard.setName("btnBoard");
-		btnBoard.setSize(new jwinforms.Size(44, 22));
+		btnBoard.setSize(new Dimension(44, 22));
 		btnBoard.setTabIndex(32);
 		btnBoard.setText("Board");
 		btnBoard.setVisible(false);
@@ -527,7 +528,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnMeet.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnMeet.setLocation(new java.awt.Point(116, 240));
 		btnMeet.setName("btnMeet");
-		btnMeet.setSize(new jwinforms.Size(39, 22));
+		btnMeet.setSize(new Dimension(39, 22));
 		btnMeet.setTabIndex(34);
 		btnMeet.setText("Meet");
 		btnMeet.setVisible(false);
@@ -543,7 +544,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnDrink.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnDrink.setLocation(new java.awt.Point(8, 240));
 		btnDrink.setName("btnDrink");
-		btnDrink.setSize(new jwinforms.Size(41, 22));
+		btnDrink.setSize(new Dimension(41, 22));
 		btnDrink.setTabIndex(35);
 		btnDrink.setText("Drink");
 		btnDrink.setVisible(false);
@@ -559,7 +560,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnInt.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnInt.setLocation(new java.awt.Point(179, 240));
 		btnInt.setName("btnInt");
-		btnInt.setSize(new jwinforms.Size(30, 22));
+		btnInt.setSize(new Dimension(30, 22));
 		btnInt.setTabIndex(36);
 		btnInt.setText("Int.");
 		btnInt.setVisible(false);
@@ -575,7 +576,7 @@ public class FormEncounter extends SpaceTraderForm {
 		btnYield.setFlatStyle(jwinforms.FlatStyle.Flat);
 		btnYield.setLocation(new java.awt.Point(106, 240));
 		btnYield.setName("btnYield");
-		btnYield.setSize(new jwinforms.Size(39, 22));
+		btnYield.setSize(new Dimension(39, 22));
 		btnYield.setTabIndex(37);
 		btnYield.setText("Yield");
 		btnYield.setVisible(false);
@@ -590,14 +591,14 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		picContinuous.setLocation(new java.awt.Point(214, 247));
 		picContinuous.setName("picContinuous");
-		picContinuous.setSize(new jwinforms.Size(9, 9));
+		picContinuous.setSize(new Dimension(9, 9));
 		picContinuous.setTabIndex(38);
 		picContinuous.setTabStop(false);
 		picContinuous.setVisible(false);
 		//
 		// ilContinuous
 		//
-		ilContinuous.setImageSize(new jwinforms.Size(9, 9));
+		ilContinuous.setImageSize(new Dimension(9, 9));
 		ilContinuous.setImageStream(((jwinforms.ImageListStreamer) (resources
 				.GetObject("ilContinuous.ImageStream"))));
 		ilContinuous.setTransparentColor(java.awt.Color.white);
@@ -606,13 +607,13 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		picEncounterType.setLocation(new java.awt.Point(220, 2));
 		picEncounterType.setName("picEncounterType");
-		picEncounterType.setSize(new jwinforms.Size(12, 12));
+		picEncounterType.setSize(new Dimension(12, 12));
 		picEncounterType.setTabIndex(39);
 		picEncounterType.setTabStop(false);
 		//
 		// ilEncounterType
 		//
-		ilEncounterType.setImageSize(new jwinforms.Size(12, 12));
+		ilEncounterType.setImageSize(new Dimension(12, 12));
 		ilEncounterType
 				.setImageStream(((jwinforms.ImageListStreamer) (resources
 						.GetObject("ilEncounterType.ImageStream"))));
@@ -623,7 +624,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib00.setBackColor(SystemColors.Control);
 		picTrib00.setLocation(new java.awt.Point(16, 16));
 		picTrib00.setName("picTrib00");
-		picTrib00.setSize(new jwinforms.Size(12, 12));
+		picTrib00.setSize(new Dimension(12, 12));
 		picTrib00.setTabIndex(41);
 		picTrib00.setTabStop(false);
 		picTrib00.setVisible(false);
@@ -636,7 +637,7 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		// ilTribbles
 		//
-		ilTribbles.setImageSize(new jwinforms.Size(12, 12));
+		ilTribbles.setImageSize(new Dimension(12, 12));
 		ilTribbles.setImageStream(((jwinforms.ImageListStreamer) (resources
 				.GetObject("ilTribbles.ImageStream"))));
 		ilTribbles.setTransparentColor(java.awt.Color.white);
@@ -646,7 +647,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib50.setBackColor(SystemColors.Control);
 		picTrib50.setLocation(new java.awt.Point(16, 224));
 		picTrib50.setName("picTrib50");
-		picTrib50.setSize(new jwinforms.Size(12, 12));
+		picTrib50.setSize(new Dimension(12, 12));
 		picTrib50.setTabIndex(42);
 		picTrib50.setTabStop(false);
 		picTrib50.setVisible(false);
@@ -662,7 +663,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib10.setBackColor(SystemColors.Control);
 		picTrib10.setLocation(new java.awt.Point(8, 56));
 		picTrib10.setName("picTrib10");
-		picTrib10.setSize(new jwinforms.Size(12, 12));
+		picTrib10.setSize(new Dimension(12, 12));
 		picTrib10.setTabIndex(43);
 		picTrib10.setTabStop(false);
 		picTrib10.setVisible(false);
@@ -678,7 +679,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib40.setBackColor(SystemColors.Control);
 		picTrib40.setLocation(new java.awt.Point(8, 184));
 		picTrib40.setName("picTrib40");
-		picTrib40.setSize(new jwinforms.Size(12, 12));
+		picTrib40.setSize(new Dimension(12, 12));
 		picTrib40.setTabIndex(44);
 		picTrib40.setTabStop(false);
 		picTrib40.setVisible(false);
@@ -694,7 +695,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib20.setBackColor(SystemColors.Control);
 		picTrib20.setLocation(new java.awt.Point(8, 96));
 		picTrib20.setName("picTrib20");
-		picTrib20.setSize(new jwinforms.Size(12, 12));
+		picTrib20.setSize(new Dimension(12, 12));
 		picTrib20.setTabIndex(45);
 		picTrib20.setTabStop(false);
 		picTrib20.setVisible(false);
@@ -710,7 +711,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib30.setBackColor(SystemColors.Control);
 		picTrib30.setLocation(new java.awt.Point(16, 136));
 		picTrib30.setName("picTrib30");
-		picTrib30.setSize(new jwinforms.Size(12, 12));
+		picTrib30.setSize(new Dimension(12, 12));
 		picTrib30.setTabIndex(46);
 		picTrib30.setTabStop(false);
 		picTrib30.setVisible(false);
@@ -726,7 +727,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib04.setBackColor(SystemColors.Control);
 		picTrib04.setLocation(new java.awt.Point(176, 8));
 		picTrib04.setName("picTrib04");
-		picTrib04.setSize(new jwinforms.Size(12, 12));
+		picTrib04.setSize(new Dimension(12, 12));
 		picTrib04.setTabIndex(47);
 		picTrib04.setTabStop(false);
 		picTrib04.setVisible(false);
@@ -742,7 +743,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib03.setBackColor(SystemColors.Control);
 		picTrib03.setLocation(new java.awt.Point(128, 8));
 		picTrib03.setName("picTrib03");
-		picTrib03.setSize(new jwinforms.Size(12, 12));
+		picTrib03.setSize(new Dimension(12, 12));
 		picTrib03.setTabIndex(48);
 		picTrib03.setTabStop(false);
 		picTrib03.setVisible(false);
@@ -758,7 +759,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib02.setBackColor(SystemColors.Control);
 		picTrib02.setLocation(new java.awt.Point(96, 16));
 		picTrib02.setName("picTrib02");
-		picTrib02.setSize(new jwinforms.Size(12, 12));
+		picTrib02.setSize(new Dimension(12, 12));
 		picTrib02.setTabIndex(49);
 		picTrib02.setTabStop(false);
 		picTrib02.setVisible(false);
@@ -774,7 +775,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib01.setBackColor(SystemColors.Control);
 		picTrib01.setLocation(new java.awt.Point(56, 8));
 		picTrib01.setName("picTrib01");
-		picTrib01.setSize(new jwinforms.Size(12, 12));
+		picTrib01.setSize(new Dimension(12, 12));
 		picTrib01.setTabIndex(50);
 		picTrib01.setTabStop(false);
 		picTrib01.setVisible(false);
@@ -790,7 +791,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib05.setBackColor(SystemColors.Control);
 		picTrib05.setLocation(new java.awt.Point(208, 16));
 		picTrib05.setName("picTrib05");
-		picTrib05.setSize(new jwinforms.Size(12, 12));
+		picTrib05.setSize(new Dimension(12, 12));
 		picTrib05.setTabIndex(51);
 		picTrib05.setTabStop(false);
 		picTrib05.setVisible(false);
@@ -806,7 +807,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib11.setBackColor(SystemColors.Control);
 		picTrib11.setLocation(new java.awt.Point(32, 80));
 		picTrib11.setName("picTrib11");
-		picTrib11.setSize(new jwinforms.Size(12, 12));
+		picTrib11.setSize(new Dimension(12, 12));
 		picTrib11.setTabIndex(52);
 		picTrib11.setTabStop(false);
 		picTrib11.setVisible(false);
@@ -822,7 +823,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib12.setBackColor(SystemColors.Control);
 		picTrib12.setLocation(new java.awt.Point(88, 56));
 		picTrib12.setName("picTrib12");
-		picTrib12.setSize(new jwinforms.Size(12, 12));
+		picTrib12.setSize(new Dimension(12, 12));
 		picTrib12.setTabIndex(53);
 		picTrib12.setTabStop(false);
 		picTrib12.setVisible(false);
@@ -838,7 +839,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib13.setBackColor(SystemColors.Control);
 		picTrib13.setLocation(new java.awt.Point(128, 40));
 		picTrib13.setName("picTrib13");
-		picTrib13.setSize(new jwinforms.Size(12, 12));
+		picTrib13.setSize(new Dimension(12, 12));
 		picTrib13.setTabIndex(54);
 		picTrib13.setTabStop(false);
 		picTrib13.setVisible(false);
@@ -854,7 +855,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib14.setBackColor(SystemColors.Control);
 		picTrib14.setLocation(new java.awt.Point(192, 72));
 		picTrib14.setName("picTrib14");
-		picTrib14.setSize(new jwinforms.Size(12, 12));
+		picTrib14.setSize(new Dimension(12, 12));
 		picTrib14.setTabIndex(55);
 		picTrib14.setTabStop(false);
 		picTrib14.setVisible(false);
@@ -870,7 +871,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib15.setBackColor(SystemColors.Control);
 		picTrib15.setLocation(new java.awt.Point(216, 48));
 		picTrib15.setName("picTrib15");
-		picTrib15.setSize(new jwinforms.Size(12, 12));
+		picTrib15.setSize(new Dimension(12, 12));
 		picTrib15.setTabIndex(56);
 		picTrib15.setTabStop(false);
 		picTrib15.setVisible(false);
@@ -886,7 +887,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib21.setBackColor(SystemColors.Control);
 		picTrib21.setLocation(new java.awt.Point(56, 96));
 		picTrib21.setName("picTrib21");
-		picTrib21.setSize(new jwinforms.Size(12, 12));
+		picTrib21.setSize(new Dimension(12, 12));
 		picTrib21.setTabIndex(57);
 		picTrib21.setTabStop(false);
 		picTrib21.setVisible(false);
@@ -902,7 +903,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib22.setBackColor(SystemColors.Control);
 		picTrib22.setLocation(new java.awt.Point(96, 80));
 		picTrib22.setName("picTrib22");
-		picTrib22.setSize(new jwinforms.Size(12, 12));
+		picTrib22.setSize(new Dimension(12, 12));
 		picTrib22.setTabIndex(58);
 		picTrib22.setTabStop(false);
 		picTrib22.setVisible(false);
@@ -918,7 +919,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib23.setBackColor(SystemColors.Control);
 		picTrib23.setLocation(new java.awt.Point(136, 88));
 		picTrib23.setName("picTrib23");
-		picTrib23.setSize(new jwinforms.Size(12, 12));
+		picTrib23.setSize(new Dimension(12, 12));
 		picTrib23.setTabIndex(59);
 		picTrib23.setTabStop(false);
 		picTrib23.setVisible(false);
@@ -934,7 +935,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib24.setBackColor(SystemColors.Control);
 		picTrib24.setLocation(new java.awt.Point(176, 104));
 		picTrib24.setName("picTrib24");
-		picTrib24.setSize(new jwinforms.Size(12, 12));
+		picTrib24.setSize(new Dimension(12, 12));
 		picTrib24.setTabIndex(60);
 		picTrib24.setTabStop(false);
 		picTrib24.setVisible(false);
@@ -950,7 +951,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib25.setBackColor(SystemColors.Control);
 		picTrib25.setLocation(new java.awt.Point(216, 96));
 		picTrib25.setName("picTrib25");
-		picTrib25.setSize(new jwinforms.Size(12, 12));
+		picTrib25.setSize(new Dimension(12, 12));
 		picTrib25.setTabIndex(61);
 		picTrib25.setTabStop(false);
 		picTrib25.setVisible(false);
@@ -966,7 +967,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib31.setBackColor(SystemColors.Control);
 		picTrib31.setLocation(new java.awt.Point(56, 128));
 		picTrib31.setName("picTrib31");
-		picTrib31.setSize(new jwinforms.Size(12, 12));
+		picTrib31.setSize(new Dimension(12, 12));
 		picTrib31.setTabIndex(62);
 		picTrib31.setTabStop(false);
 		picTrib31.setVisible(false);
@@ -982,7 +983,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib32.setBackColor(SystemColors.Control);
 		picTrib32.setLocation(new java.awt.Point(96, 120));
 		picTrib32.setName("picTrib32");
-		picTrib32.setSize(new jwinforms.Size(12, 12));
+		picTrib32.setSize(new Dimension(12, 12));
 		picTrib32.setTabIndex(63);
 		picTrib32.setTabStop(false);
 		picTrib32.setVisible(false);
@@ -998,7 +999,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib33.setBackColor(SystemColors.Control);
 		picTrib33.setLocation(new java.awt.Point(128, 128));
 		picTrib33.setName("picTrib33");
-		picTrib33.setSize(new jwinforms.Size(12, 12));
+		picTrib33.setSize(new Dimension(12, 12));
 		picTrib33.setTabIndex(64);
 		picTrib33.setTabStop(false);
 		picTrib33.setVisible(false);
@@ -1014,7 +1015,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib34.setBackColor(SystemColors.Control);
 		picTrib34.setLocation(new java.awt.Point(168, 144));
 		picTrib34.setName("picTrib34");
-		picTrib34.setSize(new jwinforms.Size(12, 12));
+		picTrib34.setSize(new Dimension(12, 12));
 		picTrib34.setTabIndex(65);
 		picTrib34.setTabStop(false);
 		picTrib34.setVisible(false);
@@ -1030,7 +1031,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib35.setBackColor(SystemColors.Control);
 		picTrib35.setLocation(new java.awt.Point(208, 128));
 		picTrib35.setName("picTrib35");
-		picTrib35.setSize(new jwinforms.Size(12, 12));
+		picTrib35.setSize(new Dimension(12, 12));
 		picTrib35.setTabIndex(66);
 		picTrib35.setTabStop(false);
 		picTrib35.setVisible(false);
@@ -1046,7 +1047,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib41.setBackColor(SystemColors.Control);
 		picTrib41.setLocation(new java.awt.Point(48, 176));
 		picTrib41.setName("picTrib41");
-		picTrib41.setSize(new jwinforms.Size(12, 12));
+		picTrib41.setSize(new Dimension(12, 12));
 		picTrib41.setTabIndex(67);
 		picTrib41.setTabStop(false);
 		picTrib41.setVisible(false);
@@ -1062,7 +1063,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib51.setBackColor(SystemColors.Control);
 		picTrib51.setLocation(new java.awt.Point(64, 216));
 		picTrib51.setName("picTrib51");
-		picTrib51.setSize(new jwinforms.Size(12, 12));
+		picTrib51.setSize(new Dimension(12, 12));
 		picTrib51.setTabIndex(68);
 		picTrib51.setTabStop(false);
 		picTrib51.setVisible(false);
@@ -1078,7 +1079,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib42.setBackColor(SystemColors.Control);
 		picTrib42.setLocation(new java.awt.Point(88, 168));
 		picTrib42.setName("picTrib42");
-		picTrib42.setSize(new jwinforms.Size(12, 12));
+		picTrib42.setSize(new Dimension(12, 12));
 		picTrib42.setTabIndex(69);
 		picTrib42.setTabStop(false);
 		picTrib42.setVisible(false);
@@ -1094,7 +1095,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib52.setBackColor(SystemColors.Control);
 		picTrib52.setLocation(new java.awt.Point(96, 224));
 		picTrib52.setName("picTrib52");
-		picTrib52.setSize(new jwinforms.Size(12, 12));
+		picTrib52.setSize(new Dimension(12, 12));
 		picTrib52.setTabIndex(70);
 		picTrib52.setTabStop(false);
 		picTrib52.setVisible(false);
@@ -1110,7 +1111,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib43.setBackColor(SystemColors.Control);
 		picTrib43.setLocation(new java.awt.Point(136, 176));
 		picTrib43.setName("picTrib43");
-		picTrib43.setSize(new jwinforms.Size(12, 12));
+		picTrib43.setSize(new Dimension(12, 12));
 		picTrib43.setTabIndex(71);
 		picTrib43.setTabStop(false);
 		picTrib43.setVisible(false);
@@ -1126,7 +1127,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib53.setBackColor(SystemColors.Control);
 		picTrib53.setLocation(new java.awt.Point(144, 216));
 		picTrib53.setName("picTrib53");
-		picTrib53.setSize(new jwinforms.Size(12, 12));
+		picTrib53.setSize(new Dimension(12, 12));
 		picTrib53.setTabIndex(72);
 		picTrib53.setTabStop(false);
 		picTrib53.setVisible(false);
@@ -1142,7 +1143,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib44.setBackColor(SystemColors.Control);
 		picTrib44.setLocation(new java.awt.Point(184, 184));
 		picTrib44.setName("picTrib44");
-		picTrib44.setSize(new jwinforms.Size(12, 12));
+		picTrib44.setSize(new Dimension(12, 12));
 		picTrib44.setTabIndex(73);
 		picTrib44.setTabStop(false);
 		picTrib44.setVisible(false);
@@ -1158,7 +1159,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib45.setBackColor(SystemColors.Control);
 		picTrib45.setLocation(new java.awt.Point(216, 176));
 		picTrib45.setName("picTrib45");
-		picTrib45.setSize(new jwinforms.Size(12, 12));
+		picTrib45.setSize(new Dimension(12, 12));
 		picTrib45.setTabIndex(74);
 		picTrib45.setTabStop(false);
 		picTrib45.setVisible(false);
@@ -1174,7 +1175,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib54.setBackColor(SystemColors.Control);
 		picTrib54.setLocation(new java.awt.Point(176, 224));
 		picTrib54.setName("picTrib54");
-		picTrib54.setSize(new jwinforms.Size(12, 12));
+		picTrib54.setSize(new Dimension(12, 12));
 		picTrib54.setTabIndex(75);
 		picTrib54.setTabStop(false);
 		picTrib54.setVisible(false);
@@ -1190,7 +1191,7 @@ public class FormEncounter extends SpaceTraderForm {
 		picTrib55.setBackColor(SystemColors.Control);
 		picTrib55.setLocation(new java.awt.Point(208, 216));
 		picTrib55.setName("picTrib55");
-		picTrib55.setSize(new jwinforms.Size(12, 12));
+		picTrib55.setSize(new Dimension(12, 12));
 		picTrib55.setTabIndex(76);
 		picTrib55.setTabStop(false);
 		picTrib55.setVisible(false);
@@ -1213,8 +1214,8 @@ public class FormEncounter extends SpaceTraderForm {
 		//
 		// FormEncounter
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
-		this.setClientSize(new jwinforms.Size(234, 271));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
+		this.setClientSize(new Dimension(234, 271));
 		this.setControlBox(false);
 		Controls.add(picTrib55);
 		Controls.add(picTrib54);

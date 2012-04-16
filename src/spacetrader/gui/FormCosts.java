@@ -29,7 +29,8 @@
 //using System.Windows.Forms;
 package spacetrader.gui;
 
-import jwinforms.Container;
+import java.awt.Dimension;
+
 import jwinforms.ContentAlignment;
 import jwinforms.DialogResult;
 import jwinforms.FormStartPosition;
@@ -51,12 +52,6 @@ public class FormCosts extends SpaceTraderForm {
 	private jwinforms.Label lblMercLabel;
 	private jwinforms.Label lblInsLabel;
 	private jwinforms.PictureBox picLine;
-	private Container components = null;
-
-	// #endregion
-
-	// #region Member Declarations
-
 	private Game game = Game.CurrentGame();
 
 	// #endregion
@@ -98,7 +93,7 @@ public class FormCosts extends SpaceTraderForm {
 		this.btnClose.setDialogResult(DialogResult.Cancel);
 		this.btnClose.setLocation(new java.awt.Point(-32, -32));
 		this.btnClose.setName("btnClose");
-		this.btnClose.setSize(new jwinforms.Size(32, 32));
+		this.btnClose.setSize(new Dimension(32, 32));
 		this.btnClose.setTabIndex(32);
 		this.btnClose.setTabStop(false);
 		this.btnClose.setText("X");
@@ -107,7 +102,7 @@ public class FormCosts extends SpaceTraderForm {
 		//
 		this.lblMerc.setLocation(new java.awt.Point(104, 8));
 		this.lblMerc.setName("lblMerc");
-		this.lblMerc.setSize(new jwinforms.Size(39, 13));
+		this.lblMerc.setSize(new Dimension(39, 13));
 		this.lblMerc.setTabIndex(36);
 		this.lblMerc.setText("888 cr.");
 		this.lblMerc.TextAlign = ContentAlignment.TopRight;
@@ -116,7 +111,7 @@ public class FormCosts extends SpaceTraderForm {
 		//
 		this.lblIns.setLocation(new java.awt.Point(104, 24));
 		this.lblIns.setName("lblIns");
-		this.lblIns.setSize(new jwinforms.Size(39, 13));
+		this.lblIns.setSize(new Dimension(39, 13));
 		this.lblIns.setTabIndex(40);
 		this.lblIns.setText("888 cr.");
 		this.lblIns.TextAlign = ContentAlignment.TopRight;
@@ -125,7 +120,7 @@ public class FormCosts extends SpaceTraderForm {
 		//
 		this.lblInt.setLocation(new java.awt.Point(104, 40));
 		this.lblInt.setName("lblInt");
-		this.lblInt.setSize(new jwinforms.Size(39, 13));
+		this.lblInt.setSize(new Dimension(39, 13));
 		this.lblInt.setTabIndex(44);
 		this.lblInt.setText("888 cr.");
 		this.lblInt.TextAlign = ContentAlignment.TopRight;
@@ -134,7 +129,7 @@ public class FormCosts extends SpaceTraderForm {
 		//
 		this.lblTax.setLocation(new java.awt.Point(104, 56));
 		this.lblTax.setName("lblTax");
-		this.lblTax.setSize(new jwinforms.Size(39, 13));
+		this.lblTax.setSize(new Dimension(39, 13));
 		this.lblTax.setTabIndex(48);
 		this.lblTax.setText("888 cr.");
 		this.lblTax.TextAlign = ContentAlignment.TopRight;
@@ -143,7 +138,7 @@ public class FormCosts extends SpaceTraderForm {
 		//
 		this.lblTotal.setLocation(new java.awt.Point(104, 79));
 		this.lblTotal.setName("lblTotal");
-		this.lblTotal.setSize(new jwinforms.Size(39, 13));
+		this.lblTotal.setSize(new Dimension(39, 13));
 		this.lblTotal.setTabIndex(52);
 		this.lblTotal.setText("888 cr.");
 		this.lblTotal.TextAlign = ContentAlignment.TopRight;
@@ -154,7 +149,7 @@ public class FormCosts extends SpaceTraderForm {
 		this.lblTotalLabel.setFont(FontCollection.bold825);
 		this.lblTotalLabel.setLocation(new java.awt.Point(8, 79));
 		this.lblTotalLabel.setName("lblTotalLabel");
-		this.lblTotalLabel.setSize(new jwinforms.Size(34, 13));
+		this.lblTotalLabel.setSize(new Dimension(34, 13));
 		this.lblTotalLabel.setTabIndex(7);
 		this.lblTotalLabel.setText("Total:");
 		//
@@ -164,7 +159,7 @@ public class FormCosts extends SpaceTraderForm {
 		this.lblTaxLabel.setFont(FontCollection.bold825);
 		this.lblTaxLabel.setLocation(new java.awt.Point(8, 56));
 		this.lblTaxLabel.setName("lblTaxLabel");
-		this.lblTaxLabel.setSize(new jwinforms.Size(84, 13));
+		this.lblTaxLabel.setSize(new Dimension(84, 13));
 		this.lblTaxLabel.setTabIndex(6);
 		this.lblTaxLabel.setText("Wormhole Tax:");
 		//
@@ -174,7 +169,7 @@ public class FormCosts extends SpaceTraderForm {
 		this.lblIntLabel.setFont(FontCollection.bold825);
 		this.lblIntLabel.setLocation(new java.awt.Point(8, 40));
 		this.lblIntLabel.setName("lblIntLabel");
-		this.lblIntLabel.setSize(new jwinforms.Size(47, 13));
+		this.lblIntLabel.setSize(new Dimension(47, 13));
 		this.lblIntLabel.setTabIndex(5);
 		this.lblIntLabel.setText("Interest:");
 		//
@@ -184,7 +179,7 @@ public class FormCosts extends SpaceTraderForm {
 		this.lblMercLabel.setFont(FontCollection.bold825);
 		this.lblMercLabel.setLocation(new java.awt.Point(8, 8));
 		this.lblMercLabel.setName("lblMercLabel");
-		this.lblMercLabel.setSize(new jwinforms.Size(72, 13));
+		this.lblMercLabel.setSize(new Dimension(72, 13));
 		this.lblMercLabel.setTabIndex(4);
 		this.lblMercLabel.setText("Mercenaries:");
 		//
@@ -194,7 +189,7 @@ public class FormCosts extends SpaceTraderForm {
 		this.lblInsLabel.setFont(FontCollection.bold825);
 		this.lblInsLabel.setLocation(new java.awt.Point(8, 24));
 		this.lblInsLabel.setName("lblInsLabel");
-		this.lblInsLabel.setSize(new jwinforms.Size(59, 13));
+		this.lblInsLabel.setSize(new Dimension(59, 13));
 		this.lblInsLabel.setTabIndex(3);
 		this.lblInsLabel.setText("Insurance:");
 		//
@@ -203,15 +198,15 @@ public class FormCosts extends SpaceTraderForm {
 		this.picLine.setBackColor(java.awt.Color.darkGray);
 		this.picLine.setLocation(new java.awt.Point(6, 73));
 		this.picLine.setName("picLine");
-		this.picLine.setSize(new jwinforms.Size(138, 1));
+		this.picLine.setSize(new Dimension(138, 1));
 		this.picLine.setTabIndex(134);
 		this.picLine.setTabStop(false);
 		//
 		// FormCosts
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
 		this.setCancelButton(this.btnClose);
-		this.setClientSize(new jwinforms.Size(148, 99));
+		this.setClientSize(new Dimension(148, 99));
 		this.Controls.addAll(this.picLine, this.lblTotal, this.lblTax,
 				this.lblInt, this.lblIns, this.lblMerc, this.btnClose,
 				this.lblInsLabel, this.lblTotalLabel, this.lblTaxLabel,

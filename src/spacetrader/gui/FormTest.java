@@ -30,9 +30,9 @@
 
 package spacetrader.gui;
 
+import java.awt.Dimension;
 import java.util.Arrays;
 
-import jwinforms.Container;
 import jwinforms.DialogResult;
 import jwinforms.EventArgs;
 import jwinforms.EventHandler;
@@ -62,12 +62,6 @@ public class FormTest extends SpaceTraderForm {
 	private jwinforms.Button btnTestSpecialEvent;
 	private jwinforms.ComboBox selSpecialEvent;
 	private jwinforms.Label lblSpecialEvent;
-	private Container components = null;
-
-	// #endregion
-
-	// #region Methods
-
 	public FormTest() {
 		InitializeComponent();
 
@@ -119,7 +113,7 @@ public class FormTest extends SpaceTraderForm {
 		this.lblAlertType.setAutoSize(true);
 		this.lblAlertType.setLocation(new java.awt.Point(8, 19));
 		this.lblAlertType.setName("lblAlertType");
-		this.lblAlertType.setSize(new jwinforms.Size(56, 13));
+		this.lblAlertType.setSize(new Dimension(56, 13));
 		this.lblAlertType.setTabIndex(0);
 		this.lblAlertType.setText("Alert Type");
 		//
@@ -131,7 +125,7 @@ public class FormTest extends SpaceTraderForm {
 				this.lblValue1, this.lblValue2, this.lblAlertType }));
 		this.boxAlert.setLocation(new java.awt.Point(8, 8));
 		this.boxAlert.setName("boxAlert");
-		this.boxAlert.setSize(new jwinforms.Size(200, 152));
+		this.boxAlert.setSize(new Dimension(200, 152));
 		this.boxAlert.setTabIndex(1);
 		this.boxAlert.setTabStop(false);
 		this.boxAlert.setText("Test Alert");
@@ -141,7 +135,7 @@ public class FormTest extends SpaceTraderForm {
 		this.btnTestAlert.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnTestAlert.setLocation(new java.awt.Point(80, 120));
 		this.btnTestAlert.setName("btnTestAlert");
-		this.btnTestAlert.setSize(new jwinforms.Size(41, 22));
+		this.btnTestAlert.setSize(new Dimension(41, 22));
 		this.btnTestAlert.setTabIndex(8);
 		this.btnTestAlert.setText("Test");
 		this.btnTestAlert.setClick(new EventHandler<Object, EventArgs>() {
@@ -155,7 +149,7 @@ public class FormTest extends SpaceTraderForm {
 		//
 		this.txtValue3.setLocation(new java.awt.Point(72, 88));
 		this.txtValue3.setName("txtValue3");
-		this.txtValue3.setSize(new jwinforms.Size(120, 20));
+		this.txtValue3.setSize(new Dimension(120, 20));
 		this.txtValue3.setTabIndex(7);
 		this.txtValue3.setText("");
 		//
@@ -163,7 +157,7 @@ public class FormTest extends SpaceTraderForm {
 		//
 		this.txtValue2.setLocation(new java.awt.Point(72, 64));
 		this.txtValue2.setName("txtValue2");
-		this.txtValue2.setSize(new jwinforms.Size(120, 20));
+		this.txtValue2.setSize(new Dimension(120, 20));
 		this.txtValue2.setTabIndex(6);
 		this.txtValue2.setText("");
 		//
@@ -171,7 +165,7 @@ public class FormTest extends SpaceTraderForm {
 		//
 		this.txtValue1.setLocation(new java.awt.Point(72, 40));
 		this.txtValue1.setName("txtValue1");
-		this.txtValue1.setSize(new jwinforms.Size(120, 20));
+		this.txtValue1.setSize(new Dimension(120, 20));
 		this.txtValue1.setTabIndex(5);
 		this.txtValue1.setText("");
 		//
@@ -180,7 +174,7 @@ public class FormTest extends SpaceTraderForm {
 		this.selAlertType.DropDownStyle = jwinforms.ComboBoxStyle.DropDownList;
 		this.selAlertType.setLocation(new java.awt.Point(72, 16));
 		this.selAlertType.setName("selAlertType");
-		this.selAlertType.setSize(new jwinforms.Size(120, 21));
+		this.selAlertType.setSize(new Dimension(120, 21));
 		this.selAlertType.setTabIndex(4);
 		//
 		// lblValue3
@@ -188,7 +182,7 @@ public class FormTest extends SpaceTraderForm {
 		this.lblValue3.setAutoSize(true);
 		this.lblValue3.setLocation(new java.awt.Point(8, 91));
 		this.lblValue3.setName("lblValue3");
-		this.lblValue3.setSize(new jwinforms.Size(43, 13));
+		this.lblValue3.setSize(new Dimension(43, 13));
 		this.lblValue3.setTabIndex(3);
 		this.lblValue3.setText("Value 3");
 		//
@@ -197,7 +191,7 @@ public class FormTest extends SpaceTraderForm {
 		this.lblValue1.setAutoSize(true);
 		this.lblValue1.setLocation(new java.awt.Point(8, 43));
 		this.lblValue1.setName("lblValue1");
-		this.lblValue1.setSize(new jwinforms.Size(43, 13));
+		this.lblValue1.setSize(new Dimension(43, 13));
 		this.lblValue1.setTabIndex(2);
 		this.lblValue1.setText("Value 1");
 		//
@@ -206,7 +200,7 @@ public class FormTest extends SpaceTraderForm {
 		this.lblValue2.setAutoSize(true);
 		this.lblValue2.setLocation(new java.awt.Point(8, 67));
 		this.lblValue2.setName("lblValue2");
-		this.lblValue2.setSize(new jwinforms.Size(43, 13));
+		this.lblValue2.setSize(new Dimension(43, 13));
 		this.lblValue2.setTabIndex(1);
 		this.lblValue2.setText("Value 2");
 		//
@@ -217,7 +211,7 @@ public class FormTest extends SpaceTraderForm {
 				this.lblSpecialEvent }));
 		this.groupBox1.setLocation(new java.awt.Point(8, 168));
 		this.groupBox1.setName("groupBox1");
-		this.groupBox1.setSize(new jwinforms.Size(200, 80));
+		this.groupBox1.setSize(new Dimension(200, 80));
 		this.groupBox1.setTabIndex(2);
 		this.groupBox1.setTabStop(false);
 		this.groupBox1.setText("Test Special Alert");
@@ -227,7 +221,7 @@ public class FormTest extends SpaceTraderForm {
 		this.btnTestSpecialEvent.setFlatStyle(jwinforms.FlatStyle.Flat);
 		this.btnTestSpecialEvent.setLocation(new java.awt.Point(80, 48));
 		this.btnTestSpecialEvent.setName("btnTestSpecialEvent");
-		this.btnTestSpecialEvent.setSize(new jwinforms.Size(41, 22));
+		this.btnTestSpecialEvent.setSize(new Dimension(41, 22));
 		this.btnTestSpecialEvent.setTabIndex(8);
 		this.btnTestSpecialEvent.setText("Test");
 		this.btnTestSpecialEvent
@@ -243,7 +237,7 @@ public class FormTest extends SpaceTraderForm {
 		this.selSpecialEvent.DropDownStyle = jwinforms.ComboBoxStyle.DropDownList;
 		this.selSpecialEvent.setLocation(new java.awt.Point(88, 16));
 		this.selSpecialEvent.setName("selSpecialEvent");
-		this.selSpecialEvent.setSize(new jwinforms.Size(104, 21));
+		this.selSpecialEvent.setSize(new Dimension(104, 21));
 		this.selSpecialEvent.setTabIndex(4);
 		//
 		// lblSpecialEvent
@@ -251,14 +245,14 @@ public class FormTest extends SpaceTraderForm {
 		this.lblSpecialEvent.setAutoSize(true);
 		this.lblSpecialEvent.setLocation(new java.awt.Point(8, 19));
 		this.lblSpecialEvent.setName("lblSpecialEvent");
-		this.lblSpecialEvent.setSize(new jwinforms.Size(73, 13));
+		this.lblSpecialEvent.setSize(new Dimension(73, 13));
 		this.lblSpecialEvent.setTabIndex(0);
 		this.lblSpecialEvent.setText("Special Event");
 		//
 		// FormTest
 		//
-		this.setAutoScaleBaseSize(new jwinforms.Size(5, 13));
-		this.setClientSize(new jwinforms.Size(370, 255));
+		this.setAutoScaleBaseSize(new Dimension(5, 13));
+		this.setClientSize(new Dimension(370, 255));
 		this.Controls.addAll(Arrays.asList(this.groupBox1, this.boxAlert));
 		this.setFormBorderStyle(FormBorderStyle.FixedDialog);
 		this.setMaximizeBox(false);

@@ -71,7 +71,7 @@ public class WinformForm extends WinformPane {
 	}
 
 	// Must encapsulate most of these.
-	private Size AutoScaleBaseSize;
+	private Dimension AutoScaleBaseSize;
 	private boolean ShowInTaskbar;
 	private boolean MinimizeBox;
 	private boolean MaximizeBox;
@@ -81,11 +81,11 @@ public class WinformForm extends WinformPane {
 	private String Title;
 	private WinformPane parent;
 
-	public void setAutoScaleBaseSize(Size autoScaleBaseSize) {
+	public void setAutoScaleBaseSize(Dimension autoScaleBaseSize) {
 		AutoScaleBaseSize = autoScaleBaseSize;
 	}
 
-	public Size getAutoScaleBaseSize() {
+	public Dimension getAutoScaleBaseSize() {
 		return AutoScaleBaseSize;
 	}
 

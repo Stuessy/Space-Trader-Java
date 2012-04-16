@@ -5,6 +5,8 @@ import javax.swing.Icon;
 import javax.swing.JLabel;
 
 public class JStatusBarSection extends JLabel {
+	private static final long serialVersionUID = -8750721176309914721L;
+
 	public JStatusBarSection() {
 		setBorder(BorderFactory.createLoweredBevelBorder());
 	}

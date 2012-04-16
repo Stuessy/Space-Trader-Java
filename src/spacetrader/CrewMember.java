@@ -21,18 +21,16 @@
 // using System.Collections;
 package spacetrader;
 
-// import java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import spacetrader.enums.CrewMemberId;
 import spacetrader.enums.Difficulty;
 import spacetrader.enums.SkillType;
 import spacetrader.enums.StarSystemId;
-import spacetrader.stub.ArrayList;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Util;
 
-@SuppressWarnings("unchecked")
 public class CrewMember extends STSerializableObject {
 	// #region Member Declarations
 
@@ -69,7 +67,7 @@ public class CrewMember extends STSerializableObject {
 	}
 
 	private void ChangeRandomSkill(int amount) {
-		ArrayList skillIdList = new ArrayList(4);
+		ArrayList<Integer> skillIdList = new ArrayList<Integer>(4);
 		for (int i = 0; i < Skills().length; i++) {
 			if (Skills()[i] + amount > 0
 					&& Skills()[i] + amount < Consts.MaxSkill)
