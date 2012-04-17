@@ -30,6 +30,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.List;
 import java.util.Random;
 
@@ -41,9 +43,7 @@ import jwinforms.Rectangle;
 import spacetrader.enums.AlertType;
 import spacetrader.enums.Difficulty;
 import spacetrader.guifacade.GuiFacade;
-import spacetrader.stub.BinaryFormatter;
 import spacetrader.stub.RegistryKey;
-import spacetrader.stub.SerializationException;
 import spacetrader.util.Hashtable;
 import spacetrader.util.Log;
 import spacetrader.util.Util;
@@ -178,24 +178,24 @@ public class Functions {
 		FileInputStream inStream = null;
 
 		try {
-			inStream = new FileInputStream(fileName/* , FileMode.Open */);
-			return (new BinaryFormatter()).Deserialize(inStream);
+			inStream = new FileInputStream(fileName);
+			return new ObjectInputStream(inStream).readObject();
 		} catch (FileNotFoundException e) {
-			if (!ignoreMissingFile)
-				GuiFacade.alert(AlertType.FileErrorOpen, fileName,
-						e.getMessage());
+			if (!ignoreMissingFile) {
+				GuiFacade.alert(AlertType.FileErrorOpen, fileName, e.getMessage());
+			}
 		} catch (IOException ex) {
 			GuiFacade.alert(AlertType.FileErrorOpen, fileName, ex.getMessage());
-		} catch (SerializationException ex) {
-			GuiFacade.alert(AlertType.FileErrorOpen, fileName,
-					Strings.FileFormatBad);
+		} catch (ClassNotFoundException ex) {
+			GuiFacade.alert(AlertType.FileErrorOpen, fileName, Strings.FileFormatBad);
 		} finally {
-			if (inStream != null)
+			if (inStream != null) {
 				try {
 					inStream.close();
 				} catch (IOException e) {
-					Log.write("Can't close instream... 231");
+					Log.write("Can't close instream...");
 				}
+			}
 		}
 
 		return null;
@@ -271,19 +271,19 @@ public class Functions {
 		try {
 			new File(fileName).createNewFile();
 			outStream = new FileOutputStream(fileName, false);
-			(new BinaryFormatter()).Serialize(outStream, toSerialize);
-
+			new ObjectOutputStream(outStream).writeObject(toSerialize);
 			saveOk = true;
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			GuiFacade.alert(AlertType.FileErrorSave, fileName, ex.getMessage());
 		} finally {
-			if (outStream != null)
+			if (outStream != null) {			
 				try {
 					outStream.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+			}
 		}
 
 		return saveOk;
